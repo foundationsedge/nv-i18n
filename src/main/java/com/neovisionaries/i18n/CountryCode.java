@@ -1508,7 +1508,7 @@ public enum CountryCode
     NZ("New Zealand", "NZL", 554, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
-     * <a href=http://en.wikipedia.org/wiki/Oman"">Oman</a>
+     * <a href="http://en.wikipedia.org/wiki/Oman">Oman</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#OM">OM</a>, OMN, 512,
      * Officially assigned]
      */
@@ -2411,8 +2411,9 @@ public enum CountryCode
      * {@code Locale} class.
      * </p>
      *
-     * <table border="1" style="border-collapse: collapse;" cellpadding="5">
-     * <tr bgcolor="#FF8C00">
+     * <table border="1" style="border-collapse: collapse; padding: 5px">
+     * <caption>placeholder</caption>
+     * <tr style="background: #FF8C00;">
      *   <th>CountryCode</th>
      *   <th>Locale</th>
      * </tr>
@@ -2770,36 +2771,37 @@ public enum CountryCode
      *
      * <br>
      * <blockquote>
-     * <table border="1" style="border-collapse: collapse" cellpadding="5">
-     * <tr bgcolor="orange">
+     * <table border="1" style="border-collapse: collapse; padding: 5px;">
+     * <caption>placeholder</caption>
+     * <tr style="background: orange;">
      *   <th>Alpha-4 Code</th>
      *   <th><code>CountryCode</code></th>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>ANHH</code></td>
      *   <td>{@link #AN}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>BUMM</code></td>
      *   <td>{@link #BU}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>CSXX</code></td>
      *   <td>{@link #CS}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>NTHH</code></td>
      *   <td>{@link #NT}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>TPTL</code></td>
      *   <td>{@link #TP}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>YUCS</code></td>
      *   <td>{@link #YU}</td>
      * </tr>
-     * <tr align="center">
+     * <tr>
      *   <td><code>ZRCD</code></td>
      *   <td>{@link #ZR}</td>
      * </tr>
@@ -2833,41 +2835,42 @@ public enum CountryCode
      *
      * <br>
      * <blockquote>
-     * <table border="1" style="border-collapse: collapse" cellpadding="5">
-     * <tr bgcolor="orange">
+     * <table border="1" style="border-collapse: collapse; padding: 5px">
+     * <caption>placeholder</caption>
+     * <tr style="background: orange;">
      *   <th>Shared Numeric Code</th>
      *   <th colspan="2">Alpha-3 Codes</th>
      *   <th>Returned Alpha-3 Code</th>
      * </tr>
      * <tr>
-     *   <td align="center">104</td>
-     *   <td align="center">{@link #BU}</td>
-     *   <td align="center">{@link #MM}</td>
-     *   <td align="center">{@link #MM}</td>
+     *   <td>104</td>
+     *   <td>{@link #BU}</td>
+     *   <td>{@link #MM}</td>
+     *   <td>{@link #MM}</td>
      * </tr>
      * <tr>
-     *   <td align="center">180</td>
-     *   <td align="center">{@link #CD}</td>
-     *   <td align="center">{@link #ZR}</td>
-     *   <td align="center">{@link #CD}</td>
+     *   <td>180</td>
+     *   <td>{@link #CD}</td>
+     *   <td>{@link #ZR}</td>
+     *   <td>{@link #CD}</td>
      * </tr>
      * <tr>
-     *   <td align="center">246</td>
-     *   <td align="center">{@link #FI}</td>
-     *   <td align="center">{@link #SF}</td>
-     *   <td align="center">{@link #FI}</td>
+     *   <td>246</td>
+     *   <td>{@link #FI}</td>
+     *   <td>{@link #SF}</td>
+     *   <td>{@link #FI}</td>
      * </tr>
      * <tr>
-     *   <td align="center">826</td>
-     *   <td align="center">{@link #GB}</td>
-     *   <td align="center">{@link #UK}</td>
-     *   <td align="center">{@link #GB}</td>
+     *   <td>826</td>
+     *   <td>{@link #GB}</td>
+     *   <td>{@link #UK}</td>
+     *   <td>{@link #GB}</td>
      * </tr>
      * <tr>
-     *   <td align="center">626</td>
-     *   <td align="center">{@link #TL}</td>
-     *   <td align="center">{@link #TP}</td>
-     *   <td align="center">{@link #TL}</td>
+     *   <td>626</td>
+     *   <td>{@link #TL}</td>
+     *   <td>{@link #TP}</td>
+     *   <td>{@link #TL}</td>
      * </tr>
      * </table>
      * </blockquote>

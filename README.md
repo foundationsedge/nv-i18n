@@ -28,7 +28,7 @@ Maven
 
 ```xml
 <dependency>
-    <groupId>com.neovisionaries</groupId>
+    <groupId>uk.co.foundationsedge</groupId>
     <artifactId>nv-i18n</artifactId>
     <version>1.29</version>
 </dependency>
@@ -40,7 +40,7 @@ Gradle
 
 ```gradle
 dependencies {
-    compile 'com.neovisionaries:nv-i18n:1.28'
+    compile 'uk.co.foundationsedge:nv-i18n:1.29'
 }
 ```
 
@@ -48,20 +48,21 @@ dependencies {
 OSGi
 ----
 
-    Bundle-SymbolicName: com.neovisionaries.i18n
-    Export-Package: com.neovisionaries.i18n;version="1.28.0"
+    Bundle-SymbolicName: uk.co.foundationsedge
+    Export-Package: uk.co.foundationsedge;version="1.29.0"
 
 
 Source Code
 -----------
 
-  <code>https://github.com/TakahikoKawasaki/nv-i18n.git</code>
+  <code>https://github.com/foundationsedge/nv-i18n.git</code>
 
 
 JavaDoc
 -------
 
-  <code>http://TakahikoKawasaki.github.io/nv-i18n/</code>
+  <code>https://foundationsedge.github.io/nv-i18n/</code>
+  (coming soon)
 
 
 Example
@@ -128,10 +129,11 @@ TODO
 Note
 ----
 
+This nv-i18n supersedes https://github.com/TakahikoKawasaki/nv-i18n/
 This nv-i18n supersedes https://github.com/TakahikoKawasaki/CountryCode
 
 
-Author
+Original Author
 ------
 
 Takahiko Kawasaki, [Authlete, Inc.](https://www.authlete.com/)

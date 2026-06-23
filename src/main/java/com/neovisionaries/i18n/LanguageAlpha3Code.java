@@ -32,8 +32,9 @@ import java.util.regex.Pattern;
  * ISO 639-2 codes.
  * </p>
  *
- * <table border="1" style="border-collapse: collapse" cellpadding="5">
- * <tr bgcolor="orange">
+ * <table border="1" style="border-collapse: collapse; padding: 5px">
+ * <caption>placeholder</caption>
+ * <tr style="background: orange;">
  * <th>ISO 639-1</th>
  * <th>ISO 639-2/T</th>
  * <th>ISO 639-2/B</th>
@@ -355,7 +356,7 @@ public enum LanguageAlpha3Code
     alt("Southern Altai"),
 
     /**
-     * <a href="http://en.wikipedia.org/wiki/Atlantic-Congo_languages">Atlantic-Congo languages<a/>
+     * <a href="http://en.wikipedia.org/wiki/Atlantic-Congo_languages">Atlantic-Congo languages</a>
      *
      * @since 1.10
      */
@@ -2258,9 +2259,7 @@ public enum LanguageAlpha3Code
     grk("Greek languages"),
 
     /**
-     * <a
-     * href="http://en.wikipedia.org/wiki/Guaran%C3%AD_language">Guaran&iacute
-     * ;</a>
+     * <a href="http://en.wikipedia.org/wiki/Guaran%C3%AD_language">Guaran&iacute;</a>
      * ({@link LanguageCode#gn gn}).
      */
     grn("Guaran\u00ED")
@@ -4441,7 +4440,7 @@ public enum LanguageAlpha3Code
     pra("Prakrit languages"),
 
     /**
-     * <a href="">Old Proven&ccedil;al</a> (to 1500)
+     * <a href="https://iso639-3.sil.org/code/pro">Old Proven&ccedil;al</a> (to 1500)
      *
      * @since 1.10
      */

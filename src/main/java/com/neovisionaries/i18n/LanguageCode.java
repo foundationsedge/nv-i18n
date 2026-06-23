@@ -2562,8 +2562,9 @@ public enum LanguageCode
      * {@code Locale} class.
      * </p>
      *
-     * <table border="1" style="border-collapse: collapse;" cellpadding="5">
-     * <tr bgcolor="#FF8C00">
+     * <table border="1" style="border-collapse: collapse; padding: 5px;">
+     * <caption>placeholder</caption>
+     * <tr style="background: #FF8C00">
      *   <th>LanguageCode</th>
      *   <th>Locale</th>
      * </tr>
@@ -2637,8 +2638,9 @@ public enum LanguageCode
      * The table below lists languages having two ISO 639-2 codes.
      * </p>
      *
-     * <table border="1" style="border-collapse: collapse" cellpadding="5">
-     * <tr bgcolor="orange">
+     * <table border="1" style="border-collapse: collapse; padding: 5px;">
+     * <caption>placeholder</caption>
+     * <tr style="background: orange;">
      *   <th>ISO 639-1</th>
      *   <th>ISO 639-2/T</th>
      *   <th>ISO 639-2/B</th>
