@@ -16,14 +16,19 @@
 package com.neovisionaries.i18n;
 
 
-import static com.neovisionaries.i18n.CurrencyCode.getByCode;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Test;
+import java.util.stream.Collectors;
+import org.junit.jupiter.api.Test;
+
+import static com.neovisionaries.i18n.CurrencyCode.getByCode;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class CurrencyCodeTest
@@ -178,5 +183,28 @@ public class CurrencyCodeTest
     public void test17()
     {
         assertSame(CurrencyCode.UNDEFINED, getByCode("undefined", false));
+    }
+
+    @Test
+    public void test18()
+    {
+        List<CurrencyCode> deprecated = Arrays.stream(CurrencyCode.values()).filter(value -> {
+            try {
+                Field field = CurrencyCode.class.getField(value.name());
+                return field.isAnnotationPresent(Deprecated.class);
+            } catch (NoSuchFieldException | SecurityException e) {
+                return false;
+            }
+        }).collect(Collectors.toList());
+
+        ArrayList<CurrencyCode> deprecatedCurrencies = new ArrayList<>();
+        deprecatedCurrencies.add(CurrencyCode.BYR);
+        deprecatedCurrencies.add(CurrencyCode.MRO);
+        deprecatedCurrencies.add(CurrencyCode.STD);
+        deprecatedCurrencies.add(CurrencyCode.RUR);
+        deprecatedCurrencies.add(CurrencyCode.LTL);
+        deprecatedCurrencies.add(CurrencyCode.VEF);
+
+        assertTrue(deprecated.containsAll(deprecatedCurrencies));
     }
 }

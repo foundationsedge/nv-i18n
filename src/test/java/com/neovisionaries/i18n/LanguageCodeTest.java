@@ -16,15 +16,16 @@
 package com.neovisionaries.i18n;
 
 
-import static com.neovisionaries.i18n.LanguageCode.getByCode;
-import static com.neovisionaries.i18n.LanguageCode.getByLocale;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
 import java.util.List;
 import java.util.Locale;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static com.neovisionaries.i18n.LanguageCode.getByCode;
+import static com.neovisionaries.i18n.LanguageCode.getByLocale;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LanguageCodeTest

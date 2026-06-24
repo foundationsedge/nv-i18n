@@ -60,13 +60,6 @@ Source Code
   <code>https://github.com/foundationsedge/nv-i18n.git</code>
 
 
-JavaDoc
--------
-
-  <code>https://foundationsedge.github.io/nv-i18n/</code>
-  (coming soon)
-
-
 Example
 -------
 

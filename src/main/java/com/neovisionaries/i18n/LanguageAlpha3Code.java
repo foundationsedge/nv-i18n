@@ -1222,6 +1222,13 @@ public enum LanguageAlpha3Code
     cmc("Chamic languages"),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Montenegrin_language">Montenegrin</a>
+     *
+     * @since 1.30
+     */
+    cnr("Montenegrin"),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Coptic_language">Coptic</a>
      *
      * @since 1.1.0

@@ -16,15 +16,17 @@
 package com.neovisionaries.i18n;
 
 
+import java.util.List;
+import java.util.Locale;
+import org.junit.jupiter.api.Test;
+
 import static com.neovisionaries.i18n.ScriptCode.getByCode;
 import static com.neovisionaries.i18n.ScriptCode.getByCodeIgnoreCase;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
-import java.util.List;
-import org.junit.Test;
-
+import static com.neovisionaries.i18n.ScriptCode.getByLocale;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ScriptCodeTest
 {
@@ -400,5 +402,29 @@ public class ScriptCodeTest
     public void test52()
     {
         assertSame(ScriptCode.Undefined, getByCodeIgnoreCase("UNDEFINED"));
+    }
+
+    @Test
+    public void test53()
+    {
+        assertSame(ScriptCode.Undefined, getByLocale(new Locale.Builder().build()));
+    }
+
+    @Test
+    public void test54()
+    {
+        assertSame(ScriptCode.Jpan, getByLocale(new Locale.Builder().setScript(ScriptCode.Jpan.name()).build()));
+    }
+
+    @Test
+    public void test55()
+    {
+        assertSame(ScriptCode.Undefined.toLocale(), new Locale.Builder().build());
+    }
+
+    @Test
+    public void test56()
+    {
+        assertSame(ScriptCode.Jpan.toLocale(), new Locale.Builder().setScript(ScriptCode.Jpan.name()).build());
     }
 }

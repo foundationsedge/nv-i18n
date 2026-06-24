@@ -15,27 +15,33 @@
  */
 package com.neovisionaries.i18n;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import org.junit.jupiter.api.Test;
 
+import static com.neovisionaries.i18n.CountryCode.Assignment.EXCEPTIONALLY_RESERVED;
+import static com.neovisionaries.i18n.CountryCode.Assignment.INDETERMINATELY_RESERVED;
+import static com.neovisionaries.i18n.CountryCode.Assignment.OFFICIALLY_ASSIGNED;
+import static com.neovisionaries.i18n.CountryCode.Assignment.TRANSITIONALLY_RESERVED;
+import static com.neovisionaries.i18n.CountryCode.Assignment.USER_ASSIGNED;
 import static com.neovisionaries.i18n.CountryCode.getByCode;
 import static com.neovisionaries.i18n.CountryCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.CountryCode.getByLocale;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
-import java.util.List;
-import java.util.Locale;
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
-public class CountryCodeTest
+class CountryCodeTest
 {
     @Test
     public void test1()
     {
         List<CountryCode> list = CountryCode.findByName(".*United.*");
 
-        assertEquals(7, list.size());
+        assertEquals(8, list.size());
 
         // AE: United Arab Emirates
         assertTrue(list.contains(CountryCode.AE));
@@ -57,6 +63,9 @@ public class CountryCodeTest
 
         // XU: United Kingdom (excluding Northern Ireland)
         assertTrue(list.contains(CountryCode.XU));
+
+        // UN: United Nations
+        assertTrue(list.contains(CountryCode.UN));
     }
 
 
@@ -357,7 +366,7 @@ public class CountryCodeTest
     @Test
     public void test39()
     {
-        // TL and TP have the same numeric code 626. GB should be used.
+        // TL and TP have the same numeric code 626. TL should be used.
         assertSame(CountryCode.TL, CountryCode.getByCode(626));
         assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TL.getNumeric()));
         assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TP.getNumeric()));
@@ -386,5 +395,46 @@ public class CountryCodeTest
     public void test42() {
         // Country code 280 should map to 278, due to legacy applications in payment industry.
         assertEquals(CountryCode.DE, CountryCode.getByCode(280));
+    }
+
+    @Test
+    void officiallyAssigned() {
+        CountryCode[] things = CountryCode.values();
+
+        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(OFFICIALLY_ASSIGNED)))
+          .hasSize(249);
+    }
+
+    @Test
+    void userAssigned() {
+        CountryCode[] things = CountryCode.values();
+
+        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(USER_ASSIGNED)))
+          //.hasSize(43); // Assume these have not been added so that users _can_ define them - AA, QM->QZ, XA-XZ, ZZ
+          .hasSize(4);
+    }
+
+    @Test
+    void exceptionallyReserved() {
+        CountryCode[] things = CountryCode.values();
+
+        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(EXCEPTIONALLY_RESERVED)))
+          .hasSize(13);
+    }
+
+    @Test
+    void indeterminatelyReserved() {
+        CountryCode[] things = CountryCode.values();
+
+        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(INDETERMINATELY_RESERVED)))
+          .hasSize(30);
+    }
+
+    @Test
+    void transitionallyReserved() {
+        CountryCode[] things = CountryCode.values();
+
+        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(TRANSITIONALLY_RESERVED)))
+          .hasSize(7);
     }
 }

@@ -16,16 +16,18 @@
 package com.neovisionaries.i18n;
 
 
+import org.junit.jupiter.api.Test;
+
 import static com.neovisionaries.i18n.LanguageAlpha3Code.getByCode;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.BIBLIOGRAPHY;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.COMMON;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.TERMINOLOGY;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.List;
-import org.junit.Test;
 
 
 public class LanguageAlpha3CodeTest
