@@ -16,18 +16,19 @@
 package com.neovisionaries.i18n;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import org.junit.jupiter.api.Test;
+
 import static com.neovisionaries.i18n.LocaleCode.getByCode;
 import static com.neovisionaries.i18n.LocaleCode.getByCountry;
 import static com.neovisionaries.i18n.LocaleCode.getByLanguage;
 import static com.neovisionaries.i18n.LocaleCode.getByLocale;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.fail;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.fail;
 
 
 public class LocaleCodeTest
@@ -438,4 +439,19 @@ public class LocaleCodeTest
     {
         assertSame(LocaleCode.ro_MD, getByCode("ro_MD", false));
     }
+
+
+    @Test
+    public void test47()
+    {
+        assertSame(LocaleCode.ur_PK, getByCode("ur_PK", false));
+    }
+
+
+    @Test
+    public void test48()
+    {
+        assertSame(LocaleCode.bs_BA, getByCode("bs_BA", false));
+    }
+
 }

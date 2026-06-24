@@ -204,6 +204,13 @@ public enum CountryCode
     AO("Angola", "AGO", 24, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization">African Regional Intellectual Property Organization</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#AP">AP</a>, null, -1,
+     * indeterminately reserved]
+     */
+    AP("African Regional Intellectual Property Organization", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Antarctica">Antarctica</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#AQ">AQ</a>, ATA, 10,
      * Officially assigned]
@@ -412,6 +419,13 @@ public enum CountryCode
     BW("Botswana", "BWA", 72, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Benelux_Office_for_Intellectual_Property">Benelux Trademarks and Designs Office</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#BX">BX</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    BX("Benelux Trademarks and Designs Office", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Belarus">Belarus</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#BY">BY</a>, BLR, 112,
      * Officially assigned]
@@ -533,6 +547,13 @@ public enum CountryCode
     CP("Clipperton Island", "CPT", -1, Assignment.EXCEPTIONALLY_RESERVED),
 
     /**
+     * <a href="Island of Sark">Island of Sark</a>
+     * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#CQ">CQ</a>, CRQ, -1,
+     * Exceptionally reserved]
+     */
+    CQ("Island of Sark", "CRQ", -1, Assignment.EXCEPTIONALLY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Costa_Rica">Costa Rica</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#CR">CR</a>, CRI, 188,
      * Officially assigned]
@@ -540,9 +561,9 @@ public enum CountryCode
     CR("Costa Rica", "CRI", 188, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
-     * <a href="http://en.wikipedia.org/wiki/Serbia_and_Montenegro">Serbia and Montenegro</a>
-     * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#CS">CS</a>, SCG, 891,
-     * Traditionally reserved]
+     * <a href="http://en.wikipedia.org/wiki/Serbia">Serbia</a>
+     * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RS">RS</a>, SCG, 891,
+     * Transitionally reserved]
      *
      * <p>
      * Since version 1.16, the value of alpha-3 code of this entry is {@code SCG}
@@ -650,6 +671,15 @@ public enum CountryCode
     DZ("Algeria", "DZA", 12, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Benin">Benin</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#DY">DY</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #BJ
+     */
+    DY("Benin", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Ceuta">Ceuta</a>,
      * <a href="http://en.wikipedia.org/wiki/Melilla">Melilla</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EA">EA</a>, null, -1,
@@ -672,6 +702,13 @@ public enum CountryCode
     EE("Estonia", "EST", 233, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Unitary_patent#1970s_and_1980s:_proposed_Community_Patent_Convention">Union of Countries under the European Community Patent Convention</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EF">EF</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    EF("Union of Countries under the European Community Patent Convention", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Egypt">Egypt</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EG">EG</a>, EGY, 818,
      * Officially assigned]
@@ -684,6 +721,20 @@ public enum CountryCode
      * Officially assigned]
      */
     EH("Western Sahara", "ESH", 732, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/European_Union_Intellectual_Property_Office">European Trademark Office</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EM">EM</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    EM("European Trademark Office", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/European_Patent_Organisation">European Patent Organization</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EP">EP</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    EP("European Patent Organization", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Eritrea">Eritrea</a>
@@ -712,6 +763,22 @@ public enum CountryCode
      * Exceptionally reserved]
      */
     EU("European Union", null, -1, Assignment.EXCEPTIONALLY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Eurasian_Patent_Organization">Eurasian Patent Organization</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EP">EV</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    EV("Eurasian Patent Organization", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Estonia">Estonia</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EW">EW</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #EE
+     */
+    EW("Estonia", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Eurozone">Eurozone</a>
@@ -744,6 +811,15 @@ public enum CountryCode
      * Officially assigned]
      */
     FK("Falkland Islands (Malvinas)", "FLK", 238, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Liechtenstein">Liechtenstein</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#FL">FL</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #LI
+     */
+    FL("Liechtenstein", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Federated_States_of_Micronesia">Micronesia, Federated States of</a>
@@ -806,6 +882,13 @@ public enum CountryCode
             return Locale.UK;
         }
     },
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/GCC_Patent_Office">Patent Office of the Cooperation Council for the Arab States of the Gulf</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#GC">GC</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    GC("Patent Office of the Cooperation Council for the Arab States of the Gulf", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Grenada">Grenada</a>
@@ -969,6 +1052,13 @@ public enum CountryCode
     HU("Hungary", "HUN", 348, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization">International Bureau of WIPO</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#IB">IB</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    IB("International Bureau of WIPO", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Canary_Islands">Canary Islands</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#IC">IC</a>, null, -1,
      * Exceptionally reserved]
@@ -1051,6 +1141,15 @@ public enum CountryCode
             return Locale.ITALY;
         }
     },
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Jamaica">Jamaica</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#JA">JA</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #JM
+     */
+    JA("Jamaica", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Jersey">Jersey</a>
@@ -1193,6 +1292,13 @@ public enum CountryCode
     LC("Saint Lucia", "LCA", 662, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Fezzan">Libya Fezzan</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#LF">LF</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    LF("Libya Fezzan", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Liechtenstein">Liechtenstein</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#LI">LI</a>, LIE, 438,
      * Officially assigned]
@@ -1302,7 +1408,7 @@ public enum CountryCode
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#MK">MK</a>, MKD, 807,
      * Officially assigned]
      */
-    MK("North Macedonia, Republic of", "MKD", 807, Assignment.OFFICIALLY_ASSIGNED),
+    MK("North Macedonia", "MKD", 807, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Mali">Mali</a>
@@ -1508,6 +1614,13 @@ public enum CountryCode
     NZ("New Zealand", "NZL", 554, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Organisation_Africaine_de_la_Propri%C3%A9t%C3%A9_Intellectuelle">African Intellectual Property Organization</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#OA">OA</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    OA("African Intellectual Property Organization", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Oman">Oman</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#OM">OM</a>, OMN, 512,
      * Officially assigned]
@@ -1548,6 +1661,15 @@ public enum CountryCode
      * Officially assigned]
      */
     PH("Philippines", "PHL", 608, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Philippines">Philippines</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#PI">PI</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #PH
+     */
+    PI("Philippines", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Pakistan">Pakistan</a>
@@ -1620,11 +1742,86 @@ public enum CountryCode
     QA("Qatar", "QAT", 634, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Argentina">Argentina</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RA">RA</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #AR
+     */
+    RA("Argentina", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Bolivia">Bolivia</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RB">RB</a>, null, -1,
+     * Indeterminately reserved] or
+     * <a href="https://en.wikipedia.org/wiki/Botswana">Botswana</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RB">RB</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #BO or #BW
+     */
+    RB("Bolivia or Botswana", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/China_(disambiguation)">China</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RC">RC</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #CN or #TW
+     */
+    RC("China", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/R%C3%A9union">R&eacute;union</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RE">RE</a>, REU, 638,
      * Officially assigned]
      */
     RE("R\u00E9union", "REU", 638, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Haiti">Haiti</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RH">RH</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #HT
+     */
+    RH("Haiti", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Indonesia">Indonesia</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RI">RI</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #ID
+     */
+    RI("Indonesia", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Lebanon">Lebanon</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RL">RL</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #LB
+     */
+    RL("Lebanon", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Madagascar">Madagascar</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RM">RM</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #MG
+     */
+    RM("Madagascar", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Niger">Niger</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RN">RN</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #NE
+     */
+    RN("Niger", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Romania">Romania</a>
@@ -1634,11 +1831,20 @@ public enum CountryCode
     RO("Romania", "ROU", 642, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Philippines">Philippines</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RP">RP</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #PH
+     */
+    RP("Philippines", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Serbia">Serbia</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RS">RS</a>, SRB, 688,
      * Officially assigned]
      */
-    RS("Serbia", "SRB", 688, Assignment.OFFICIALLY_ASSIGNED),
+    RS("Republic of Serbia", "SRB", 688, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Russia">Russian Federation</a>
@@ -1692,11 +1898,11 @@ public enum CountryCode
     /**
      * <a href="http://en.wikipedia.org/wiki/Finland">Finland</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#SF">SF</a>, FIN, 246,
-     * Traditionally reserved]
+     * Indeterminately reserved]
      *
      * @see #FI
      */
-    SF("Finland", "FIN", 246, Assignment.TRANSITIONALLY_RESERVED),
+    SF("Finland", "FIN", 246, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Singapore">Singapore</a>
@@ -1926,11 +2132,11 @@ public enum CountryCode
     TP("East Timor", "TMP", 626, Assignment.TRANSITIONALLY_RESERVED),
 
     /**
-     * <a href="http://en.wikipedia.org/wiki/Turkey">Turkey</a>
+     * <a href="http://en.wikipedia.org/wiki/Turkey">Türkiye</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#TR">TR</a>, TUR, 792,
      * Officially assigned]
      */
-    TR("Turkey", "TUR", 792, Assignment.OFFICIALLY_ASSIGNED),
+    TR("T\u00FCrkiye", "TUR", 792, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Trinidad_and_Tobago">Trinidad and Tobago</a>
@@ -2007,6 +2213,13 @@ public enum CountryCode
      * Officially assigned]
      */
     UM("United States Minor Outlying Islands", "UMI", 581, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="United Nations">United Nations</a>
+     * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#UN">UN</a>, null, -1,
+     * Exceptionally reserved]
+     */
+    UN("United Nations", null, -1, Assignment.EXCEPTIONALLY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/United_States">United States</a>
@@ -2093,11 +2306,45 @@ public enum CountryCode
     WF("Wallis and Futuna", "WLF", 876, Assignment.OFFICIALLY_ASSIGNED),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Grenada">Grenada</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WG">WG</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #GD
+     */
+    WG("Grenada", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Saint_Lucia">Saint Lucia</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WL">WL</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #LC
+     */
+    WL("Saint Lucia", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization">World Intellectual Property Organization</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WO">WO</a>, null, -1,
+     * Indeterminately reserved]
+     */
+    WO("World Intellectual Property Organization", null, -1, Assignment.INDETERMINATELY_RESERVED),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Samoa">Samoa</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WS">WS</a>, WSM, 882,
      * Officially assigned]
      */
     WS("Samoa", "WSM", 882, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines">Saint Vincent</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WV">WV</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #VC
+     */
+    WV("Saint Vincent", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Northern_Ireland">Northern Ireland</a>
@@ -2137,6 +2384,15 @@ public enum CountryCode
      * Officially assigned]
      */
     YT("Mayotte", "MYT", 175, Assignment.OFFICIALLY_ASSIGNED),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Venezuela">Venezuela</a>
+     * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#YV">YV</a>, null, -1,
+     * Indeterminately reserved]
+     *
+     * @see #VE
+     */
+    YV("Venezuela", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Yugoslavia">Yugoslavia</a>

@@ -87,6 +87,11 @@ public enum LocaleCode
     },
 
     /**
+      * {@link LanguageCode#af Afrikaans}
+      */
+     af(LanguageCode.af, null),
+
+    /**
      * {@link LanguageCode#ar Arabic}
      */
     ar(LanguageCode.ar, null),
@@ -195,6 +200,11 @@ public enum LocaleCode
      * {@link LanguageCode#bg Bulgarian}, {@link CountryCode#BG Bulgaria}
      */
     bg_BG(LanguageCode.bg, CountryCode.BG),
+
+    /**
+     * {@link LanguageCode#bs Bosnian}, {@link CountryCode#BA Bosnia and Herzegovina}
+     */
+    bs_BA(LanguageCode.bs, CountryCode.BA),
 
     /**
      * {@link LanguageCode#ca Catalan}
@@ -549,6 +559,11 @@ public enum LocaleCode
      * {@link LanguageCode#he Hebrew}, {@link CountryCode#IL Israel}
      */
     he_IL(LanguageCode.he, CountryCode.IL),
+
+    /**
+     * {@link LanguageCode#hi Hindi}
+     */
+    hi(LanguageCode.hi, null),
 
     /**
      * {@link LanguageCode#hi Hindi}, {@link CountryCode#IN India}
@@ -933,6 +948,11 @@ public enum LocaleCode
     uk_UA(LanguageCode.uk, CountryCode.UA),
 
     /**
+     * {@link LanguageCode#ur Urdu}, {@link CountryCode#PK Pakistan}
+     */
+    ur_PK(LanguageCode.ur, CountryCode.PK),
+
+    /**
      * {@link LanguageCode#vi Vietnamese}
      */
     vi(LanguageCode.vi, null),
@@ -986,7 +1006,12 @@ public enum LocaleCode
         {
             return Locale.TRADITIONAL_CHINESE;
         }
-    }
+    },
+
+    /**
+     * {@link LanguageCode#zu Zulu}
+     */
+    zu(LanguageCode.zu, null),
     ;
 
 
