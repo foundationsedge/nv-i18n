@@ -4,6 +4,7 @@
     <artifactId>nv-i18n</artifactId>
     <version>1.30</version>
     <packaging>bundle</packaging>
+    <name>Foundations Edge Internationalization Package</name>
     <description>Package to support internationalization</description>
     <url>https://github.com/foundationsedge/nv-i18n.git</url>
     <licenses>
@@ -12,6 +13,14 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <name>Justin Wilson</name>
+        </developer>
+        <developer>
+            <name>Alan Graham</name>
+        </developer>
+    </developers>
     <scm>
         <connection>scm:git:git@github.com:foundationsedge/nv-i18n.git</connection>
         <developerConnection>scm:git:https://github.com/foundationsedge/nv-i18n.git</developerConnection>
