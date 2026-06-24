@@ -30,9 +30,11 @@ Maven
 <dependency>
     <groupId>uk.co.foundationsedge</groupId>
     <artifactId>nv-i18n</artifactId>
-    <version>1.30</version>
+    <version>version-number</version>
 </dependency>
 ```
+
+For latest version look at [sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
 
 
 Gradle
@@ -40,7 +42,7 @@ Gradle
 
 ```gradle
 dependencies {
-    compile 'uk.co.foundationsedge:nv-i18n:1.30'
+    compile 'uk.co.foundationsedge:nv-i18n:version-number'
 }
 ```
 
@@ -49,7 +51,7 @@ OSGi
 ----
 
     Bundle-SymbolicName: uk.co.foundationsedge
-    Export-Package: uk.co.foundationsedge;version="1.30.0"
+    Export-Package: uk.co.foundationsedge;version="version-number"
 
 
 Source Code
