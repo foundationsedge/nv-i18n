@@ -30,7 +30,7 @@ Maven
 <dependency>
     <groupId>uk.co.foundationsedge</groupId>
     <artifactId>nv-i18n</artifactId>
-    <version>1.29</version>
+    <version>1.30</version>
 </dependency>
 ```
 
@@ -40,7 +40,7 @@ Gradle
 
 ```gradle
 dependencies {
-    compile 'uk.co.foundationsedge:nv-i18n:1.29'
+    compile 'uk.co.foundationsedge:nv-i18n:1.30'
 }
 ```
 
@@ -49,7 +49,7 @@ OSGi
 ----
 
     Bundle-SymbolicName: uk.co.foundationsedge
-    Export-Package: uk.co.foundationsedge;version="1.29.0"
+    Export-Package: uk.co.foundationsedge;version="1.30.0"
 
 
 Source Code

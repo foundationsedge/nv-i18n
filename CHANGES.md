@@ -1,6 +1,10 @@
 CHANGES
 =======
 
+### 1.30 (2026-06-24)
+
+* Forked repo to [Foundations Edge](https://github.com/foundationsedge/nv-i18n/)
+
 ### 1.29 (2021-08-26)
 
 * Added `XU` (United Kingdom (excluding Northern Ireland)) to CountryCode
