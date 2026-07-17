@@ -16,6 +16,7 @@
 package com.neovisionaries.i18n;
 
 import java.util.Arrays;
+import java.util.Currency;
 import java.util.List;
 import java.util.Locale;
 import org.junit.jupiter.api.Test;
@@ -170,6 +171,23 @@ class CountryCodeTest
         assertNull(getByCode("undefined"));
     }
 
+    @Test
+    void getByCodeWithAValueZeroReturnsNull()
+    {
+        assertThat(getByCode(0)).isNull();
+    }
+
+    @Test
+    void getByCodeWithAValueBelowZeroReturnsNull()
+    {
+        assertThat(getByCode(1)).isNull();
+    }
+
+    @Test
+    void getByCodeWithAValueAboveZeroDoesNotReturnNull()
+    {
+        assertThat(getByCode(104)).isNotNull();
+    }
 
     @Test
     public void test15()
@@ -298,7 +316,25 @@ class CountryCodeTest
 
 
     @Test
-    public void test33()
+    void alpha2Lengths()
+    {
+        for (CountryCode cc : CountryCode.values())
+        {
+            String alpha2 = cc.getAlpha2();
+
+            if (alpha2 == null)
+            {
+                continue;
+            }
+
+            if (cc != CountryCode.UNDEFINED) {
+                assertThat(alpha2.length()).isEqualTo(2);
+            }
+        }
+    }
+
+    @Test
+    void alpha3Lengths()
     {
         for (CountryCode cc : CountryCode.values())
         {
@@ -309,10 +345,9 @@ class CountryCodeTest
                 continue;
             }
 
-            assertEquals(3, alpha3.length());
+            assertThat(alpha3.length()).isEqualTo(3);
         }
     }
-
 
     @Test
     public void test34()
@@ -436,5 +471,48 @@ class CountryCodeTest
 
         assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(TRANSITIONALLY_RESERVED)))
           .hasSize(7);
+    }
+
+    @Test
+    void getAlpha2CheckingValue() {
+        CountryCode underTest = CountryCode.GB;
+
+        assertThat(underTest.getAlpha2()).isEqualTo(underTest.name());
+    }
+
+    @Test
+    void toLocaleCheckingValue() {
+        CountryCode underTest = CountryCode.UK;
+
+        assertThat(underTest.toLocale()).isEqualTo(Locale.UK);
+    }
+
+    @Test
+    void getCurrencyCheckingValue() {
+        CountryCode underTest = CountryCode.GB;
+
+        assertThat(underTest.getCurrency()).isEqualTo(Currency.getInstance(Locale.UK));
+    }
+
+    @Test
+    void getCurrencyForCountryWithoutOne() {
+        CountryCode underTest = CountryCode.AC;
+
+        assertThat(underTest.getCurrency()).isNull();
+    }
+
+    @Test
+    void getByLocaleValidValue() {
+        assertThat(CountryCode.getByLocale(Locale.UK)).isEqualTo(CountryCode.GB);
+    }
+
+    @Test
+    void getByLocaleUndefinedValue() {
+        assertThat(CountryCode.getByLocale(Locale.ROOT)).isEqualTo(CountryCode.UNDEFINED);
+    }
+
+    @Test
+    void getByLocaleReturnsNullWhenPassedNUll() {
+        assertThat(CountryCode.getByLocale(null)).isNull();
     }
 }
