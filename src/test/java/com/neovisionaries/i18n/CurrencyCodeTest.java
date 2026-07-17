@@ -15,23 +15,24 @@
  */
 package com.neovisionaries.i18n;
 
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Currency;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.CurrencyCode.getByCode;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
-public class CurrencyCodeTest
+class CurrencyCodeTest
 {
     @Test
     public void test1()
@@ -97,19 +98,19 @@ public class CurrencyCodeTest
 
 
     @Test
-    public void test10()
-    {
-        assertFalse(CurrencyCode.JPY.isFund());
+    void checkAllFunds() {
+        assertThat(CurrencyCode.JPY.isFund()).isFalse();
 
-        assertTrue(CurrencyCode.BOV.isFund());
-        assertTrue(CurrencyCode.CHE.isFund());
-        assertTrue(CurrencyCode.CHW.isFund());
-        assertTrue(CurrencyCode.CLF.isFund());
-        assertTrue(CurrencyCode.COU.isFund());
-        assertTrue(CurrencyCode.MXV.isFund());
-        assertTrue(CurrencyCode.USN.isFund());
-        assertTrue(CurrencyCode.USS.isFund());
-        assertTrue(CurrencyCode.UYI.isFund());
+        assertThat(CurrencyCode.BOV.isFund()).isTrue();
+        assertThat(CurrencyCode.CHE.isFund()).isTrue();
+        assertThat(CurrencyCode.CHW.isFund()).isTrue();
+        assertThat(CurrencyCode.CLF.isFund()).isTrue();
+        assertThat(CurrencyCode.COU.isFund()).isTrue();
+        assertThat(CurrencyCode.MXV.isFund()).isTrue();
+        assertThat(CurrencyCode.USN.isFund()).isTrue();
+        assertThat(CurrencyCode.USS.isFund()).isTrue();
+        assertThat(CurrencyCode.UYI.isFund()).isTrue();
+        assertThat(CurrencyCode.UYW.isFund()).isTrue();
     }
 
 
@@ -206,5 +207,87 @@ public class CurrencyCodeTest
         deprecatedCurrencies.add(CurrencyCode.VEF);
 
         assertTrue(deprecated.containsAll(deprecatedCurrencies));
+    }
+
+    @Test
+    void getNumericValue() {
+        assertThat(CurrencyCode.GBP.getNumeric()).isEqualTo(826);
+    }
+
+    @Test
+    void getMinorUnitValue() {
+        assertThat(CurrencyCode.GBP.getMinorUnit()).isEqualTo(2);
+    }
+
+    @Test
+    void getCurrencyValue() {
+        assertThat(CurrencyCode.GBP.getCurrency()).isEqualTo(Currency.getInstance("GBP"));
+    }
+
+    @Test
+    void getByCodeValidValue() {
+        assertThat(CurrencyCode.getByCode("GBP")).isEqualTo(CurrencyCode.GBP);
+    }
+
+    @Test
+    void canonicalizeIsNullWhenCodeIsNull() {
+        assertThat(CurrencyCode.getByCode(null)).isNull();
+    }
+
+    @Test
+    void canonicalizeIsNullWhenCodeLengthIsZero() {
+        assertThat(CurrencyCode.getByCode("")).isNull();
+    }
+
+    @Test
+    void getByCodeIgnoreCaseValidValue() {
+        assertThat(CurrencyCode.getByCodeIgnoreCase("gbp")).isEqualTo(CurrencyCode.GBP);
+    }
+
+    @Test
+    void getByCodeValidNumericalValue() {
+        assertThat(CurrencyCode.getByCode(826)).isEqualTo(CurrencyCode.GBP);
+    }
+
+    @Test
+    void getByCodeBoundaryNumericalValue() {
+        assertThat(CurrencyCode.getByCode(0)).isNull();
+    }
+
+    @Test
+    void getByCodeBelowBoundaryNumericalValue() {
+        assertThat(CurrencyCode.getByCode(-1)).isNull();
+    }
+
+    @Test
+    void getByCountryValidValue() {
+        List<CurrencyCode> codes = new ArrayList<>();
+        codes.add(CurrencyCode.GBP);
+
+        assertThat(CurrencyCode.getByCountry(CountryCode.GB)).isEqualTo(codes);
+    }
+
+    @Test
+    void getByCountryWithNullReturnsEmptyList() {
+        List<CurrencyCode> codes = Collections.emptyList();
+        CountryCode country = null;
+
+        assertThat(CurrencyCode.getByCountry(country)).isEqualTo(codes);
+    }
+
+    @Test
+    void getByCountryValidValueString() {
+        List<CurrencyCode> codes = new ArrayList<>();
+        codes.add(CurrencyCode.GBP);
+
+        assertThat(CurrencyCode.getByCountry("GB")).isEqualTo(codes);
+    }
+
+    @Test
+    void getByCountryIgnoreCaseValidValueString() {
+        List<CurrencyCode> codes = new ArrayList<>();
+        codes.add(CurrencyCode.GBP);
+
+        assertThat(CurrencyCode.getByCountryIgnoreCase("gb")).isEqualTo(codes);
     }
 }

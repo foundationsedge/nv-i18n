@@ -113,7 +113,12 @@ public enum CurrencyCode
      * <li>{@link CountryCode#CW CW}: CURA&Ccedil;AO
      * <li>{@link CountryCode#SX SX}: SINT MAARTEN (DUTCH PART)
      * </ul>
+     *
+     * @see #XCG
+     *
+     * @deprecated
      */
+    @Deprecated
     ANG("Netherlands Antillean Guilder", 532, 2, CountryCode.CW, CountryCode.SX),
 
     /**
@@ -222,7 +227,12 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#BG BG}: BULGARIA
      * </ul>
+     *
+     * @see #EUR
+     *
+     * @deprecated
      */
+    @Deprecated
     BGN("Bulgarian Lev", 975, 2, CountryCode.BG),
 
     /**
@@ -472,7 +482,7 @@ public enum CurrencyCode
      * <li>{@link CountryCode#CL CL}: CHILE
      * </ul>
      */
-    CLF("Unidad de Fomento", 990, 0, CountryCode.CL)
+    CLF("Unidad de Fomento", 990, 4, CountryCode.CL)
     {
         @Override
         public boolean isFund()
@@ -551,7 +561,11 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#CU CU}: CUBA
      * </ul>
+     * @see #CUP
+     *
+     * @deprecated
      */
+    @Deprecated
     CUC("Peso Convertible", 931, 2, CountryCode.CU),
 
     /**
@@ -676,9 +690,11 @@ public enum CurrencyCode
      * <li>{@link CountryCode#AT AT}: AUSTRIA
      * <li>{@link CountryCode#AX AX}: &Aring;LAND ISLANDS
      * <li>{@link CountryCode#BE BE}: BELGIUM
+     * <li>{@link CountryCode#BG BG}: BULGARIA
      * <li>{@link CountryCode#BL BL}: SAINT BARTH&Eacute;LEMY
      * <li>{@link CountryCode#CY CY}: CYPRUS
      * <li>{@link CountryCode#DE DE}: GERMANY
+     * <li>{@link CountryCode#EA EA}: CUETA, MEILILLA
      * <li>{@link CountryCode#EE EE}: ESTONIA
      * <li>{@link CountryCode#ES ES}: SPAIN
      * <li>{@link CountryCode#EU EU}: EUROPEAN UNION
@@ -687,6 +703,8 @@ public enum CurrencyCode
      * <li>{@link CountryCode#GF GF}: FRENCH GUIANA
      * <li>{@link CountryCode#GP GP}: GUADELOUPE
      * <li>{@link CountryCode#GR GR}: GREECE
+     * <li>{@link CountryCode#HR HR}: CROATIA
+     * <li>{@link CountryCode#IC IC}: CANARY ISLANDS
      * <li>{@link CountryCode#IE IE}: IRELAND
      * <li>{@link CountryCode#IT IT}: ITALY
      * <li>{@link CountryCode#LT LT}: LITHUANIA
@@ -711,10 +729,10 @@ public enum CurrencyCode
      * </ul>
      */
     EUR("Euro", 978, 2,
-        CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE,
-        CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EE,
+        CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG,
+        CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EA, CountryCode.EE,
         CountryCode.ES, CountryCode.EU, CountryCode.FI, CountryCode.FR,
-        CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.IE,
+        CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IC, CountryCode.IE,
         CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV,
         CountryCode.MC, CountryCode.ME, CountryCode.MF, CountryCode.MQ,
         CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT,
@@ -756,7 +774,7 @@ public enum CurrencyCode
      * </ul>
      */
     GBP("Pound Sterling", 826, 2,
-        CountryCode.GB, CountryCode.GG, CountryCode.IM, CountryCode.JE),
+        CountryCode.GB, CountryCode.GG, CountryCode.IM, CountryCode.JE, CountryCode.SH),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Georgian_lari">Lari</a>
@@ -865,7 +883,12 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#HR HR}: CROATIA
      * </ul>
+     *
+     * @see #EUR
+     *
+     * @deprecated
      */
+    @Deprecated
     HRK("Croatian Kuna", 191, 2, CountryCode.HR),
 
     /**
@@ -1152,6 +1175,8 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#LT LT}: LITHUANIA
      * </ul>
+     *
+     * @see #EUR
      *
      * @deprecated
      */
@@ -1701,17 +1726,6 @@ public enum CurrencyCode
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Sierra_Leonean_leone">Leone</a>
-     * [numeric code = 694, minor unit = 2]
-     *
-     * <p>Used by:</p>
-     * <ul>
-     * <li>{@link CountryCode#SL SL}: SIERRA LEONE
-     * </ul>
-     */
-    SLL("Leone", 694, 2, CountryCode.SL),
-
-    /**
-     * <a href="http://en.wikipedia.org/wiki/Sierra_Leonean_leone">Leone</a>
      * [numeric code = 925, minor unit = 2]
      *
      * <p>Used by:</p>
@@ -1720,6 +1734,22 @@ public enum CurrencyCode
      * </ul>
      */
     SLE("Leone", 925, 2, CountryCode.SL),
+
+    /**
+     * <a href="http://en.wikipedia.org/wiki/Sierra_Leonean_leone">Leone</a>
+     * [numeric code = 694, minor unit = 2]
+     *
+     * <p>Used by:</p>
+     * <ul>
+     * <li>{@link CountryCode#SL SL}: SIERRA LEONE
+     * </ul>
+     *
+     * @see #SLE
+     *
+     * @deprecated
+     */
+    @Deprecated
+    SLL("Leone", 694, 2, CountryCode.SL),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Somali_shilling">Somali Shilling</a>
@@ -1973,8 +2003,8 @@ public enum CurrencyCode
      * <li>{@link CountryCode#EC EC}: ECUADOR
      * <li>{@link CountryCode#FM FM}: MICRONESIA, FEDERATED STATES OF
      * <li>{@link CountryCode#GU GU}: GUAM
-     * <li>{@link CountryCode#HT HT}: HAITI
      * <li>{@link CountryCode#IO IO}: BRITISH INDIAN OCEAN TERRITORY
+     * <li>{@link CountryCode#LR LR}: LIBERIA
      * <li>{@link CountryCode#MH MH}: MARSHALL ISLANDS
      * <li>{@link CountryCode#MP MP}: NORTHERN MARIANA ISLANDS
      * <li>{@link CountryCode#PA PA}: PANAMA
@@ -1991,7 +2021,7 @@ public enum CurrencyCode
      */
     USD("US Dollar", 840, 2,
         CountryCode.AS, CountryCode.BQ, CountryCode.EC, CountryCode.FM,
-        CountryCode.GU, CountryCode.HT, CountryCode.IO, CountryCode.MH,
+        CountryCode.GU, CountryCode.IO, CountryCode.LR, CountryCode.MH,
         CountryCode.MP, CountryCode.PA, CountryCode.PR, CountryCode.PW,
         CountryCode.SV, CountryCode.TC, CountryCode.TL, CountryCode.UM,
         CountryCode.US, CountryCode.VG, CountryCode.VI),
@@ -2022,7 +2052,10 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#US US}: UNITED STATES
      * </ul>
+     *
+     * @deprecated
      */
+    @Deprecated
     USS("US Dollar (Same day)", 998, 2, CountryCode.US)
     {
         @Override
@@ -2062,6 +2095,24 @@ public enum CurrencyCode
     UYU("Peso Uruguayo", 858, 2, CountryCode.UY),
 
     /**
+     * <a href="https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/dl_currency_iso_amendment_169.pdf">Unidad previsional</a>
+     * [numeric code = 858, minor unit = 2]
+     *
+     * <p>Used by:</p>
+     * <ul>
+     * <li>{@link CountryCode#UY UY}: URUGUAY
+     * </ul>
+     */
+    UYW("Peso Uruguayo", 927, 4, CountryCode.UY)
+    {
+        @Override
+        public boolean isFund()
+        {
+            return true;
+        }
+    },
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Uzbekistan_som">Uzbekistan Sum</a>
      * [numeric code = 860, minor unit = 2]
      *
@@ -2071,6 +2122,17 @@ public enum CurrencyCode
      * </ul>
      */
     UZS("Uzbekistan Sum", 860, 2, CountryCode.UZ),
+
+    /**
+     * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar#Digital_bol%C3%ADvar">Venezuelan digital bolívar</a>
+     * [numeric code = 937, minor unit = 2]
+     *
+     * <p>Used by:</p>
+     * <ul>
+     * <li>{@link CountryCode#VE VE}: VENEZUELA, BOLIVARIAN REPUBLIC OF
+     * </ul>
+     */
+    VED("Venezuelan digital bolívar", 926, 2, CountryCode.VE),
 
     /**
      * <a href="http://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar">Bolivar</a>
@@ -2228,6 +2290,18 @@ public enum CurrencyCode
         CountryCode.KN, CountryCode.LC, CountryCode.MS, CountryCode.VC),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Caribbean_guilder">Caribbean guilder</a>
+     * [numeric code = 960, minor unit = -1]     *
+     *
+     * <p>Used by:</p>
+     * <ul>
+     * <li>{@link CountryCode#CW CW}: CURA&Ccedil;AO
+     * <li>{@link CountryCode#SX SX}: SINT MAARTEN
+     * </ul>
+     */
+    XCG("Caribbean guilder", 532, 2, CountryCode.CW, CountryCode.SX),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Special_drawing_rights"
      * >SDR (Special Drawing Right)</a>
      * [numeric code = 960, minor unit = -1]
@@ -2354,6 +2428,17 @@ public enum CurrencyCode
     ZMW("Zambian Kwacha", 967, 2, CountryCode.ZM),
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Zimbabwe_Gold">Zimbabwe Gold</a>
+     * [numeric code = 967, minor unit = 2]
+     *
+     * <p>Used by:</p>
+     * <ul>
+     * <li>{@link CountryCode#ZW ZW}: ZIMBABWE
+     * </ul>
+     */
+    ZWG("Zimbabwe Gold", 967, 2, CountryCode.ZW),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Zimbabwe_dollar">Zimbabwe Dollar</a>
      * [numeric code = 932, minor unit = 2]
      *
@@ -2361,7 +2446,12 @@ public enum CurrencyCode
      * <ul>
      * <li>{@link CountryCode#ZW ZW}: ZIMBABWE
      * </ul>
+     *
+     * @see #ZWG
+     *
+     * @deprecated
      */
+    @Deprecated
     ZWL("Zimbabwe Dollar", 932, 2, CountryCode.ZW),
     ;
 
@@ -2763,7 +2853,7 @@ public enum CurrencyCode
 
         if (country == null)
         {
-            return list;
+            return Collections.emptyList();
         }
 
         for (CurrencyCode currency : values())
