@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+### 1.32 (2026-07-01)
+
+* Bring Country code up to latest ISO Standard
+* Bring in many of the outstanding PRs from the original repo.
+
+### 1.31/1.00 (2026-07-01)
+
+* An error in trying a different publishing plugin messed up the tags etc on this release.
+* Avoid using, either use 1.30 or skip to 1.32, or later.
+
 ### 1.30 (2026-06-24)
 
 * Forked repo to [Foundations Edge](https://github.com/foundationsedge/nv-i18n/)
