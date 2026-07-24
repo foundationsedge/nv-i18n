@@ -23,6 +23,7 @@ import org.junit.jupiter.api.Test;
 import static com.neovisionaries.i18n.ScriptCode.getByCode;
 import static com.neovisionaries.i18n.ScriptCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.ScriptCode.getByLocale;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -426,5 +427,20 @@ public class ScriptCodeTest
     public void test56()
     {
         assertSame(ScriptCode.Jpan.toLocale(), new Locale.Builder().setScript(ScriptCode.Jpan.name()).build());
+    }
+
+    @Test
+    void getNameValue() {
+      assertThat(ScriptCode.Latn.getName()).isEqualTo("Latin");
+    }
+
+    @Test
+    void getNumericValue() {
+      assertThat(ScriptCode.Latn.getNumeric()).isEqualTo(215);
+    }
+
+    @Test
+    void getNumericValueCyrillic() {
+      assertThat(ScriptCode.Cyrl.getNumeric()).isEqualTo(220);
     }
 }
