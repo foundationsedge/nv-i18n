@@ -7,14 +7,14 @@ Overview
 Package to support internationalization, containing ISO 3166-1 country code enum,
 ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 
-| Class                | Description                                                  |
-|:---------------------|:-------------------------------------------------------------|
-| `CountryCode`        | ISO 3166-1 country code.                                     |
-| `LanguageCode`       | ISO 639-1 language code.                                     |
-| `LanguageAlpha3Code` | ISO 639-2 language code.                                     |
-| `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. |
-| `ScriptCode`         | ISO 15924 script code.                                       |
-| `CurrencyCode`       | ISO 4217 currency code.                                      |
+| Class                | Description                                                  | Last Updated |
+|:---------------------|:-------------------------------------------------------------|--------------|
+| `CountryCode`        | ISO 3166-1 country code.                                     | 2026-06-24   |
+| `LanguageCode`       | ISO 639-1 language code.                                     | unknown      |
+| `LanguageAlpha3Code` | ISO 639-2 language code.                                     | unknown      |
+| `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | unknown      |
+| `ScriptCode`         | ISO 15924 script code.                                       | unknown      |
+| `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17   |
 
 
 License
