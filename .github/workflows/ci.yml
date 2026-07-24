@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macOS-latest ]
-        java: [ 25 ]
+        java: [ 17, 21, 25, 26 ]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK ${{ matrix.java }}, ${{ matrix.os }}
