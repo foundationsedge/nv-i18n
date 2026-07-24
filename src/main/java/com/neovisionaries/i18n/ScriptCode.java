@@ -55,6 +55,11 @@ public enum ScriptCode
     },
 
     /**
+     * Adlm [166]
+     */
+    Adlm(166, "Adlam"),
+
+    /**
      * Afaka [439]
      */
     Afak(439, "Afaka"),
@@ -71,6 +76,10 @@ public enum ScriptCode
      */
     Arab(160, "Arabic"),
 
+    /**
+     * Arabic (Nastaliq variant) [161]
+     */
+    Aran(161, "Arabic (Nastaliq variant)"),
 
     /**
      * Imperial Aramaic [124]
@@ -115,13 +124,22 @@ public enum ScriptCode
 
 
     /**
-     * Bengali [325]
+     * Bengali (Bangla) [325]
      */
-    Beng(325, "Bengali"),
-
+    Beng(325, "Bengali (Bangla)"),
 
     /**
-     * Blissymbols [550]
+     * Beria Erfe [258]
+     */
+    Berf(258, "Beria Erfe"),
+
+    /**
+     * Bhaiksuki [334]
+     */
+    Bhks(334, "Bhaiksuki"),
+
+    /**
+     * Bhaiksuki [550]
      */
     Blis(550, "Blissymbols"),
 
@@ -185,6 +203,15 @@ public enum ScriptCode
      */
     Cher(445, "Cherokee"),
 
+    /**
+     * Chisoi [298]
+     */
+    Chis(298, "Chisoi"),
+
+    /**
+     * Chisoi [Chorasmian]
+     */
+    Chrs(109, "Chorasmian"),
 
     /**
      * Cirth [291]
@@ -196,6 +223,11 @@ public enum ScriptCode
      * Coptic [204]
      */
     Copt(204, "Coptic"),
+
+    /**
+     * Cypro-Minoan [402]
+     */
+    Cpmn(402, "Cypro-Minoan"),
 
 
     /**
@@ -221,6 +253,16 @@ public enum ScriptCode
      */
     Deva(315, "Devanagari"),
 
+    /**
+     * Dives Akuru [342]
+     */
+    Diak(342, "Dives Akuru"),
+
+    /**
+     * Dogra [328]
+     */
+    Dogr(328, "Dogra"),
+
 
     /**
      * Deseret [250]
@@ -235,7 +277,7 @@ public enum ScriptCode
 
 
     /**
-     * Egyptian demotic [070]
+     * Egyptian demotic [70]
      */
     Egyd(70, "Egyptian demotic"),
 
@@ -257,11 +299,26 @@ public enum ScriptCode
      */
     Elba(226, "Elbasan"),
 
+    /**
+     * Elymaic [128]
+     */
+    Elym(128, "Elymaic"),
+
 
     /**
      * Ethiopic [430]
      */
     Ethi(430, "Ethiopic"),
+
+    /**
+     * Garay [164]
+     */
+    Gara(164, "Garay"),
+
+    /**
+     * Khutsuri (Asomtavruli and Nuskhuri) [241]
+     */
+    Geok(241, "Khutsuri (Asomtavruli and Nuskhuri)"),
 
 
     /**
@@ -271,15 +328,19 @@ public enum ScriptCode
 
 
     /**
-     * Khutsuri [241]
-     */
-    Geok(241, "Khutsuri"),
-
-
-    /**
      * Glagolitic [225]
      */
     Glag(225, "Glagolitic"),
+
+    /**
+     * Gunjala Gondi [312]
+     */
+    Gong(312, "Gunjala Gondi"),
+
+    /**
+     * Masaram Gondi [313]
+     */
+    Gonm(313, "Masaram Gondi"),
 
 
     /**
@@ -305,11 +366,21 @@ public enum ScriptCode
      */
     Gujr(320, "Gujarati"),
 
+    /**
+     * Gurung Khema [397]
+     */
+    Gukh(397, "Gurung Khema"),
+
 
     /**
      * Gurmukhi [310]
      */
     Guru(310, "Gurmukhi"),
+
+    /**
+     * Han with Bopomofo (alias for Han + Bopomofo) [503]
+     */
+    Hanb(503, "Han with Bopomofo (alias for Han + Bopomofo)"),
 
 
     /**
@@ -341,6 +412,11 @@ public enum ScriptCode
      */
     Hant(502, "Han"),
 
+    /**
+     * Hatran [127]
+     */
+    Hatr(127, "Hatran"),
+
 
     /**
      * Hebrew [125]
@@ -364,6 +440,16 @@ public enum ScriptCode
      * Pahawh Hmong [450]
      */
     Hmng(450, "Pahawh Hmong"),
+
+    /**
+     * Nyiakeng Puachue Hmong [451]
+     */
+    Hmnp(451, "Nyiakeng Puachue Hmong"),
+
+    /**
+     * Han (Traditional variant) with Latin (alias for Hant + Latn) [504]
+     */
+    Hntl(504, "Han (Traditional variant) with Latin (alias for Hant + Latn)"),
 
 
     /**
@@ -389,6 +475,10 @@ public enum ScriptCode
      */
     Ital(210, "Old Italic"),
 
+    /**
+     * Jamo (alias for Jamo subset of Hangul) [284]
+     */
+    Jamo(284, "Jamo (alias for Jamo subset of Hangul)"),
 
     /**
      * Javanese [361]
@@ -419,6 +509,11 @@ public enum ScriptCode
      */
     Kana(411, "Katakana"),
 
+    /**
+     * Kawi [368]
+     */
+    Kawi(368, "Kawi"),
+
 
     /**
      * Kharoshthi [305]
@@ -437,6 +532,16 @@ public enum ScriptCode
      */
     Khoj(322, "Khojki"),
 
+    /**
+     * Khitan large script [505]
+     */
+    Kitl(505, "Khitan large script"),
+
+    /**
+     * Khitan small script [288]
+     */
+    Kits(288, "Khitan small script"),
+
 
     /**
      * Kannada [345]
@@ -454,6 +559,11 @@ public enum ScriptCode
      * Kpelle [436]
      */
     Kpel(436, "Kpelle"),
+
+    /**
+     * Kirat Rai [396]
+     */
+    Krai(396, "Kirat Rai"),
 
 
     /**
@@ -490,6 +600,11 @@ public enum ScriptCode
      * Latin [215]
      */
     Latn(215, "Latin"),
+
+    /**
+     * Leke [364]
+     */
+    Leke(364, "Leke"),
 
 
     /**
@@ -545,6 +660,11 @@ public enum ScriptCode
      */
     Mahj(314, "Mahajani"),
 
+    /**
+     * Makasar [366]
+     */
+    Maka(366, "Makasar"),
+
 
     /**
      * Mandaic, Mandaean [140]
@@ -557,11 +677,21 @@ public enum ScriptCode
      */
     Mani(139, "Manichaean"),
 
+    /**
+     * Marchen [332]
+     */
+    Marc(332, "Marchen"),
+
 
     /**
      * Mayan hieroglyphs [090]
      */
     Maya(90, "Mayan hieroglyphs"),
+
+    /**
+     * Medefaidrin [265]
+     */
+    Medf(265, "Medefaidrin"),
 
 
     /**
@@ -587,17 +717,21 @@ public enum ScriptCode
      */
     Mlym(347, "Malayalam"),
 
-
     /**
-     * Moon [218]
+     * Modi [324]
      */
-    Moon(218, "Moon"),
-
+    Modi(324, "Modi"),
 
     /**
      * Mongolian [145]
      */
     Mong(145, "Mongolian"),
+
+
+    /**
+     * Moon [218]
+     */
+    Moon(218, "Moon"),
 
 
     /**
@@ -611,11 +745,26 @@ public enum ScriptCode
      */
     Mtei(337, "Meitei Mayek"),
 
+    /**
+     * Multani [323]
+     */
+    Mult(323, "Multani"),
+
 
     /**
      * Myanmar [350]
      */
     Mymr(350, "Myanmar"),
+
+    /**
+     * Nag Mundari [295]
+     */
+    Nagm(295, "Nag Mundari"),
+
+    /**
+     * Nandinagari [311]
+     */
+    Nand(311, "Nandinagari"),
 
 
     /**
@@ -629,6 +778,15 @@ public enum ScriptCode
      */
     Nbat(159, "Nabataean"),
 
+    /**
+     * Newa, Newar, Newari [333]
+     */
+    Newa(333, "Newa, Newar, Newari"),
+
+    /**
+     * Naxi Dongba [85]
+     */
+    Nkdb(85, "Naxi Dongba"),
 
     /**
      * Nakhi Geba [420]
@@ -659,6 +817,11 @@ public enum ScriptCode
      */
     Olck(261, "Ol Chiki"),
 
+    /**
+     * Ol Onal [296]
+     */
+    Onao(296, "Ol Onal"),
+
 
     /**
      * Old Turkic, Orkhon Runic [175]
@@ -671,17 +834,42 @@ public enum ScriptCode
      */
     Orya(327, "Oriya"),
 
+    /**
+     * Osage [219]
+     */
+    Osge(219, "Osage"),
+
 
     /**
      * Osmanya [260]
      */
     Osma(260, "Osmanya"),
 
+    /**
+     * Old Uyghur [143]
+     */
+    Ougr(143, "Old Uyghur"),
+
 
     /**
      * Palmyrene [126]
      */
     Palm(126, "Palmyrene"),
+
+    /**
+     * Pau Cin Hau [263]
+     */
+    Pauc(263, "Pau Cin Hau"),
+
+    /**
+     * Proto-Cuneiform [15]
+     */
+    Pcun(15, "Proto-Cuneiform"),
+
+    /**
+     * Proto-Elamite [16]
+     */
+    Pelm(16, "Proto-Elamite"),
 
 
     /**
@@ -719,6 +907,11 @@ public enum ScriptCode
      */
     Phnx(115, "Phoenician"),
 
+    /**
+     * Klingon (KLI pIqaD) [293]
+     */
+    Piqd(293, "Klingon (KLI pIqaD)"),
+
 
     /**
      * Miao [282]
@@ -731,23 +924,277 @@ public enum ScriptCode
      */
     Prti(130, "Inscriptional Parthian"),
 
+    /**
+     * Proto-Sinaitic [103]
+     */
+    Psin(103, "Proto-Sinaitic"),
+
 
     /**
      * Reserved for private use [900]
      */
     Qaaa(900, "Reserved for private use"),
 
+    /**
+     * Reserved for private use [901]
+     */
+    Qaab(901, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [902]
+     */
+    Qaac(902, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [903]
+     */
+    Qaad(903, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [904]
+     */
+    Qaae(904, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [905]
+     */
+    Qaaf(905, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [906]
+     */
+    Qaag(906, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [907]
+     */
+    Qaah(907, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [908]
+     */
+    Qaai(908, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [909]
+     */
+    Qaaj(909, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [910]
+     */
+    Qaak(910, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [911]
+     */
+    Qaal(911, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [912]
+     */
+    Qaam(912, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [913]
+     */
+    Qaan(913, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [914]
+     */
+    Qaao(914, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [915]
+     */
+    Qaap(915, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [916]
+     */
+    Qaaq(916, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [917]
+     */
+    Qaar(917, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [918]
+     */
+    Qaas(918, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [919]
+     */
+    Qaat(919, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [920]
+     */
+    Qaau(920, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [921]
+     */
+    Qaav(921, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [922]
+     */
+    Qaaw(922, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [923]
+     */
+    Qaax(923, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [924]
+     */
+    Qaay(924, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [925]
+     */
+    Qaaz(925, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [926]
+     */
+    Qaba(926, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [927]
+     */
+    Qabb(927, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [928]
+     */
+    Qabc(928, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [929]
+     */
+    Qabd(929, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [930]
+     */
+    Qabe(930, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [931]
+     */
+    Qabf(931, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [932]
+     */
+    Qabg(932, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [933]
+     */
+    Qabh(933, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [934]
+     */
+    Qabi(934, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [935]
+     */
+    Qabj(935, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [936]
+     */
+    Qabk(936, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [937]
+     */
+    Qabl(937, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [938]
+     */
+    Qabm(938, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [939]
+     */
+    Qabn(939, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [940]
+     */
+    Qabo(940, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [941]
+     */
+    Qabp(941, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [942]
+     */
+    Qabq(942, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [943]
+     */
+    Qabr(943, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [944]
+     */
+    Qabs(944, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [945]
+     */
+    Qabt(945, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [946]
+     */
+    Qabu(946, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [947]
+     */
+    Qabv(947, "Reserved for private use"),
+
+    /**
+     * Reserved for private use [948]
+     */
+    Qabw(948, "Reserved for private use"),
 
     /**
      * Reserved for private use [949]
      */
     Qabx(949, "Reserved for private use"),
 
+    /**
+     * Ranjana [303]
+     */
+    Ranj(303, "Ranjana"),
+
 
     /**
      * Rejang [363]
      */
     Rjng(363, "Rejang"),
+
+    /**
+     * Hanifi Rohingya [167]
+     */
+    Rohg(167, "Hanifi Rohingya"),
 
 
     /**
@@ -785,6 +1232,11 @@ public enum ScriptCode
      */
     Saur(344, "Saurashtra"),
 
+    /**
+     * (Small) Seal [590]
+     */
+    Seal(590, "(Small) Seal"),
+
 
     /**
      * SignWriting [095]
@@ -803,6 +1255,21 @@ public enum ScriptCode
      */
     Shrd(319, "Sharada"),
 
+    /**
+     * Shuishu [530]
+     */
+    Shui(530, "Shuishu"),
+
+    /**
+     * Siddham [302]
+     */
+    Sidd(302, "Siddham"),
+
+    /**
+     * Sidetic [180]
+     */
+    Sidt(180, "Sidetic"),
+
 
     /**
      * Khudawadi, Sindhi [318]
@@ -815,17 +1282,37 @@ public enum ScriptCode
      */
     Sinh(348, "Sinhala"),
 
+    /**
+     * Sogdian [141]
+     */
+    Sogd(141, "Sogdian"),
+
+    /**
+     * Old Sogdian [142]
+     */
+    Sogo(142, "Old Sogdian"),
+
 
     /**
      * Sora Sompeng [398]
      */
     Sora(398, "Sora Sompeng"),
 
+    /**
+     * Soyombo [329]
+     */
+    Soyo(329, "Soyombo"),
+
 
     /**
      * Sundanese [362]
      */
     Sund(362, "Sundanese"),
+
+    /**
+     * Sunuwar [274]
+     */
+    Sunu(274, "Sunuwar"),
 
 
     /**
@@ -899,6 +1386,11 @@ public enum ScriptCode
      */
     Tavt(359, "Tai Viet"),
 
+    /**
+     * Tai Yo [380]
+     */
+    Tayo(380, "Tai Yo"),
+
 
     /**
      * Telugu [340]
@@ -947,6 +1439,31 @@ public enum ScriptCode
      */
     Tirh(326, "Tirhuta"),
 
+    /**
+     * Tangsa [275]
+     */
+    Tnsa(275, "Tangsa"),
+
+    /**
+     * Todhri [229]
+     */
+    Todr(229, "Todhri"),
+
+    /**
+     * Tolong Siki [299]
+     */
+    Tols(299, "Tolong Siki"),
+
+    /**
+     * Toto [294]
+     */
+    Toto(294, "Toto"),
+
+    /**
+     * Tulu-Tigalari [341]
+     */
+    Tutg(341, "Tulu-Tigalari"),
+
 
     /**
      * Ugaritic [040]
@@ -965,11 +1482,21 @@ public enum ScriptCode
      */
     Visp(280, "Visible Speech"),
 
+    /**
+     * Vithkuqi [228]
+     */
+    Vith(228, "Vithkuqi"),
+
 
     /**
      * Warang Citi [262]
      */
     Wara(262, "Warang Citi"),
+
+    /**
+     * Wancho [283]
+     */
+    Wcho(283, "Wancho"),
 
 
     /**
@@ -989,11 +1516,21 @@ public enum ScriptCode
      */
     Xsux(20, "Cuneiform, Sumero-Akkadian"),
 
+    /**
+     * Yezidi [192]
+     */
+    Yezi(192, "Yezidi"),
+
 
     /**
      * Yi [460]
      */
     Yiii(460, "Yi"),
+
+    /**
+     * Zanabazar Square [339]
+     */
+    Zanb(339, "Zanabazar Square"),
 
 
     /**
@@ -1006,6 +1543,11 @@ public enum ScriptCode
      * Mathematical notation [995]
      */
     Zmth(995, "Mathematical notation"),
+
+    /**
+     * Symbols (emoji variant) [993]
+     */
+    Zsye(993, "Symbols (emoji variant)"),
 
 
     /**
