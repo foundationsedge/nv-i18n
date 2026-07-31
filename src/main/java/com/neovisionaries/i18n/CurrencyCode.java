@@ -2456,7 +2456,7 @@ public enum CurrencyCode
     ;
 
 
-    private static final Map<Integer, CurrencyCode> numericMap = new HashMap<Integer, CurrencyCode>();
+    private static final Map<Integer, CurrencyCode> numericMap = new HashMap<>();
 
 
     static
@@ -2474,7 +2474,7 @@ public enum CurrencyCode
     private final List<CountryCode> countryList;
 
 
-    private CurrencyCode(String name, int numeric, int minorUnit, CountryCode... countries)
+    CurrencyCode(String name, int numeric, int minorUnit, CountryCode... countries)
     {
         this.name        = name;
         this.numeric     = numeric;
@@ -2657,7 +2657,7 @@ public enum CurrencyCode
      *
      * @param code
      *         <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>
-     *         alpha-3 code. Or {@code "UNDEFINED"} (case insensitive).
+     *         alpha-3 code. Or {@code "UNDEFINED"} (case-insensitive).
      *
      * @return
      *         A {@code CurrencyCode} instance, or {@code null} if not found.
@@ -2739,7 +2739,7 @@ public enum CurrencyCode
 
     private static String canonicalize(String code, boolean caseSensitive)
     {
-        if (code == null || code.length() == 0)
+        if (code == null || code.isEmpty())
         {
             return null;
         }
@@ -2849,7 +2849,7 @@ public enum CurrencyCode
      */
     public static List<CurrencyCode> getByCountry(CountryCode country)
     {
-        List<CurrencyCode> list = new ArrayList<CurrencyCode>();
+        List<CurrencyCode> list = new ArrayList<>();
 
         if (country == null)
         {
@@ -2917,7 +2917,7 @@ public enum CurrencyCode
      * </p>
      *
      * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
-     * Pattern pattern = Pattern.compile(<span style="color: darkred;">".*Ruble"</span>);
+     * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*Ruble""</span>);
      * List&lt;CurrencyCode&gt; list = CurrencyCode.findByName(pattern);</pre>
      *
      * <p>
@@ -2950,7 +2950,7 @@ public enum CurrencyCode
             throw new IllegalArgumentException("pattern is null.");
         }
 
-        List<CurrencyCode> list = new ArrayList<CurrencyCode>();
+        List<CurrencyCode> list = new ArrayList<>();
 
         for (CurrencyCode entry : values())
         {

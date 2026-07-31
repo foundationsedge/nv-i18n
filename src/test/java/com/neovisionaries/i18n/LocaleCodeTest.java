@@ -76,7 +76,7 @@ public class LocaleCodeTest
     @Test
     public void test1()
     {
-        List<LocaleCode> expected = new ArrayList<LocaleCode>();
+        List<LocaleCode> expected = new ArrayList<>();
         expected.add(LocaleCode.ar);
         expected.add(LocaleCode.ar_AE);
         expected.add(LocaleCode.ar_BH);
@@ -105,7 +105,7 @@ public class LocaleCodeTest
     @Test
     public void test2()
     {
-        List<LocaleCode> expected = new ArrayList<LocaleCode>();
+        List<LocaleCode> expected = new ArrayList<>();
         List<LocaleCode> actual = getByLanguage((LanguageCode)null);
 
         assertListEquals(expected, actual);
@@ -115,7 +115,7 @@ public class LocaleCodeTest
     @Test
     public void test3()
     {
-        List<LocaleCode> expected = new ArrayList<LocaleCode>();
+        List<LocaleCode> expected = new ArrayList<>();
         expected.add(LocaleCode.de_CH);
         expected.add(LocaleCode.fr_CH);
         expected.add(LocaleCode.it_CH);
@@ -129,7 +129,7 @@ public class LocaleCodeTest
     @Test
     public void test4()
     {
-        List<LocaleCode> expected = new ArrayList<LocaleCode>();
+        List<LocaleCode> expected = new ArrayList<>();
         List<LocaleCode> actual = getByCountry((CountryCode)null);
 
         assertListEquals(expected, actual);
@@ -248,21 +248,21 @@ public class LocaleCodeTest
     @Test
     public void test19()
     {
-        assertSame(LocaleCode.undefined, getByCode("undefined", (String)null));
+        assertSame(LocaleCode.undefined, getByCode("undefined", null));
     }
 
 
     @Test
     public void test20()
     {
-        assertNull(LocaleCode.getByCode("UNDEFINED", (String)null));
+        assertNull(LocaleCode.getByCode("UNDEFINED", null));
     }
 
 
     @Test
     public void test21()
     {
-        assertSame(LocaleCode.undefined, getByCode("UNDEFINED", (String)null, false));
+        assertSame(LocaleCode.undefined, getByCode("UNDEFINED", null, false));
     }
 
 

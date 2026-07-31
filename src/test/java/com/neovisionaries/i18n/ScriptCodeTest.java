@@ -267,7 +267,7 @@ public class ScriptCodeTest
         // Egyh : Egyptian hieratic
         assertTrue(list.contains(ScriptCode.Egyh));
 
-        // Egyp : Egyptian hieroglyps
+        // Egyp : Egyptian hieroglyphs
         assertTrue(list.contains(ScriptCode.Egyp));
     }
 

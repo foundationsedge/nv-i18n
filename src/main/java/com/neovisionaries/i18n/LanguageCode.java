@@ -2529,7 +2529,7 @@ public enum LanguageCode
     ;
 
 
-    private LanguageCode()
+    LanguageCode()
     {
     }
 
@@ -2563,7 +2563,7 @@ public enum LanguageCode
      * </p>
      *
      * <table border="1" style="border-collapse: collapse; padding: 5px;">
-     * <caption>placeholder</caption>
+     * <caption>Table of Language codes</caption>
      * <tr style="background: #FF8C00">
      *   <th>LanguageCode</th>
      *   <th>Locale</th>
@@ -2639,7 +2639,7 @@ public enum LanguageCode
      * </p>
      *
      * <table border="1" style="border-collapse: collapse; padding: 5px;">
-     * <caption>placeholder</caption>
+     * <caption>Table of Language codes</caption>
      * <tr style="background: orange;">
      *   <th>ISO 639-1</th>
      *   <th>ISO 639-2/T</th>
@@ -2792,7 +2792,7 @@ public enum LanguageCode
      *         An <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
      *         code (2-letter lowercase code) or an
      *         <a href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
-     *         (3-letter lowercase code). Or "undefined" (case sensitive).
+     *         (3-letter lowercase code). Or "undefined" (case-sensitive).
      *         Note that if the given code is one of legacy language codes
      *         ("iw", "ji" and "in"), it is treated as its official counterpart
      *         ("he", "yi" and "id", respectively). For example, if "in" is given,
@@ -2822,7 +2822,7 @@ public enum LanguageCode
      *         An <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
      *         code (2-letter lowercase code) or an
      *         <a href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
-     *         (3-letter lowercase code). Or "undefined" (case insensitive).
+     *         (3-letter lowercase code). Or "undefined" (case-insensitive).
      *         Note that if the given code is one of legacy language codes
      *         ("iw", "ji" and "in"), it is treated as its official counterpart
      *         ("he", "yi" and "id", respectively). For example, if "in" is given,
@@ -2940,7 +2940,7 @@ public enum LanguageCode
         // Locale.getLanguage() returns a lowercase ISO 639 code.
         String language = locale.getLanguage();
 
-        if (language == null || language.length() == 0)
+        if (language.isEmpty())
         {
             return LanguageCode.undefined;
         }
@@ -2978,7 +2978,7 @@ public enum LanguageCode
      */
     static String canonicalize(String code, boolean caseSensitive)
     {
-        if (code == null || code.length() == 0)
+        if (code == null || code.isEmpty())
         {
             return null;
         }
@@ -3097,7 +3097,7 @@ public enum LanguageCode
             throw new IllegalArgumentException("pattern is null.");
         }
 
-        List<LanguageCode> list = new ArrayList<LanguageCode>();
+        List<LanguageCode> list = new ArrayList<>();
 
         for (LanguageCode entry : values())
         {

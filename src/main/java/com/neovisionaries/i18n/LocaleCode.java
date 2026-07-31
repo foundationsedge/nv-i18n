@@ -1022,7 +1022,7 @@ public enum LocaleCode
     private final String string;
 
 
-    private LocaleCode(LanguageCode language, CountryCode country)
+    LocaleCode(LanguageCode language, CountryCode country)
     {
         this.language = language;
         this.country = country;
@@ -1108,7 +1108,7 @@ public enum LocaleCode
      * </p>
      *
      * <table border="1" style="border-collapse: collapse; padding: 5px;">
-     * <caption>placeholder</caption>
+     * <caption>Table of Locale codes</caption>
      * <tr style="background: #FF8C00;">
      *   <th>LocaleCode</th>
      *   <th>Locale</th>
@@ -1307,14 +1307,14 @@ public enum LocaleCode
      *
      * @param language
      *         <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
-     *         language code. Or "undefined" (case sensitive). If the
+     *         language code. Or "undefined" (case-sensitive). If the
      *         given language code is one of legacy ones { "iw", "ji" and
      *         "in" }, it is regarded as its newer official counterpart { "he",
      *         "yi" and "id" }, respectively.
      *
      * @param country
      *         <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>
-     *         country code. Or "UNDEFINED" (case sensitive).
+     *         country code. Or "UNDEFINED" (case-sensitive).
      *
      * @return
      *         A {@code LocaleCode}, or {@code null} if not found.
@@ -1338,7 +1338,7 @@ public enum LocaleCode
      *
      * @param language
      *         <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
-     *         language code. Or "undefined" (case insensitive). If the given
+     *         language code. Or "undefined" (case-insensitive). If the given
      *         language code is one of legacy ones { "iw", "ji" and "in" },
      *         it is regarded as its newer counterpart { "he", "yi" and "id"
      *         }, respectively.
@@ -1346,7 +1346,7 @@ public enum LocaleCode
      * @param country
      *         <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
      *         >ISO 3166-1 alpha-2</a> country code. Or "UNDEFINED"
-     *         (case insensitive).
+     *         (case-insensitive).
      *
      * @return
      *         A {@code LocaleCode}, or {@code null} if not found.
@@ -1447,11 +1447,10 @@ public enum LocaleCode
         String language = locale.getLanguage();
 
         // Locale.getCountry() returns either an empty string or
-        // a upper-case ISO 3166-1 alphe-2 code.
+        // an upper-case ISO 3166-1 alpha-2 code.
         String country = locale.getCountry();
 
-        if ((language == null || language.length() == 0) &&
-            (country  == null || country.length()  == 0))
+        if (language.isEmpty() && country.isEmpty())
         {
             return LocaleCode.undefined;
         }
@@ -1596,7 +1595,7 @@ public enum LocaleCode
      */
     public static List<LocaleCode> getByLanguage(LanguageCode language)
     {
-        List<LocaleCode> list = new ArrayList<LocaleCode>();
+        List<LocaleCode> list = new ArrayList<>();
 
         if (language == null)
         {
@@ -1710,7 +1709,7 @@ public enum LocaleCode
      */
     public static List<LocaleCode> getByCountry(CountryCode country)
     {
-        List<LocaleCode> list = new ArrayList<LocaleCode>();
+        List<LocaleCode> list = new ArrayList<>();
 
         if (country == null)
         {

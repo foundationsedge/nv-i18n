@@ -1478,7 +1478,7 @@ public enum CountryCode
     /**
      * <a href="http://en.wikipedia.org/wiki/Mauritius">Mauritius</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#MU">MU</a>, MUS, 480,
-     * Officially assigned]]
+     * Officially assigned]
      */
     MU("Mauritius", "MUS", 480, Assignment.OFFICIALLY_ASSIGNED),
 
@@ -2030,7 +2030,7 @@ public enum CountryCode
     /**
      * <a href="http://en.wikipedia.org/wiki/Tristan_da_Cunha">Tristan da Cunha</a>
      * [<a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#TA">TA</a>, TAA, -1,
-     * Exceptionally reserved.
+     * Exceptionally reserved]
      */
     TA("Tristan da Cunha", "TAA", -1, Assignment.EXCEPTIONALLY_RESERVED),
 
@@ -2507,9 +2507,9 @@ public enum CountryCode
     }
 
 
-    private static final Map<String, CountryCode> alpha3Map = new HashMap<String, CountryCode>();
-    private static final Map<String, CountryCode> alpha4Map = new HashMap<String, CountryCode>();
-    private static final Map<Integer, CountryCode> numericMap = new HashMap<Integer, CountryCode>();
+    private static final Map<String, CountryCode> alpha3Map = new HashMap<>();
+    private static final Map<String, CountryCode> alpha4Map = new HashMap<>();
+    private static final Map<Integer, CountryCode> numericMap = new HashMap<>();
 
 
     static
@@ -2523,7 +2523,7 @@ public enum CountryCode
 
             if (cc.getNumeric() != -1)
             {
-                numericMap.put(Integer.valueOf(cc.getNumeric()), cc);
+                numericMap.put(cc.getNumeric(), cc);
             }
         }
 
@@ -2540,22 +2540,22 @@ public enum CountryCode
         alpha4Map.put("ZRCD", ZR);
 
         // BU and MM have the same numeric code 104. MM should be used.
-        numericMap.put(Integer.valueOf(104), MM);
+        numericMap.put(104, MM);
 
         // CD and ZR have the same numeric code 180. CD should be used.
-        numericMap.put(Integer.valueOf(180), CD);
+        numericMap.put(180, CD);
 
         // FI and SF have the same numeric code 246. FI should be used.
-        numericMap.put(Integer.valueOf(246), FI);
+        numericMap.put(246, FI);
 
         // GB and UK have the same numeric code 826. GB should be used.
-        numericMap.put(Integer.valueOf(826), GB);
+        numericMap.put(826, GB);
 
         // TL and TP have the same numeric code 626. TL should be used.
-        numericMap.put(Integer.valueOf(626), TL);
+        numericMap.put(626, TL);
 
         // County code 280 is also used for DE by the German banking industry.
-        numericMap.put(Integer.valueOf(280), DE);
+        numericMap.put(280, DE);
     }
 
 
@@ -2565,7 +2565,7 @@ public enum CountryCode
     private final Assignment assignment;
 
 
-    private CountryCode(String name, String alpha3, int numeric, Assignment assignment)
+    CountryCode(String name, String alpha3, int numeric, Assignment assignment)
     {
         this.name = name;
         this.alpha3 = alpha3;
@@ -2668,7 +2668,7 @@ public enum CountryCode
      * </p>
      *
      * <table border="1" style="border-collapse: collapse; padding: 5px">
-     * <caption>placeholder</caption>
+     * <caption>Table of Country codes</caption>
      * <tr style="background: #FF8C00;">
      *   <th>CountryCode</th>
      *   <th>Locale</th>
@@ -2826,7 +2826,7 @@ public enum CountryCode
      * @param code
      *         An ISO 3166-1 <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
      *         >alpha-2</a> or <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3"
-     *         >alpha-3</a> code. Or {@code "UNDEFINED"} (case insensitive).
+     *         >alpha-3</a> code. Or {@code "UNDEFINED"} (case-insensitive).
      *         In addition, for backward compatibility, some 4-letter <a href=
      *         "https://en.wikipedia.org/wiki/ISO_3166-3">ISO 3166-3</a> codes such
      *         as {@code "ANHH"} are accepted.
@@ -2930,7 +2930,7 @@ public enum CountryCode
         // Locale.getCountry() returns an uppercase ISO 3166 2-letter code.
         String country = locale.getCountry();
 
-        if (country == null || country.length() == 0)
+        if (country.isEmpty())
         {
             return CountryCode.UNDEFINED;
         }
@@ -2957,7 +2957,7 @@ public enum CountryCode
      */
     static String canonicalize(String code, boolean caseSensitive)
     {
-        if (code == null || code.length() == 0)
+        if (code == null || code.isEmpty())
         {
             return null;
         }
@@ -3028,7 +3028,7 @@ public enum CountryCode
      * <br>
      * <blockquote>
      * <table border="1" style="border-collapse: collapse; padding: 5px;">
-     * <caption>placeholder</caption>
+     * <caption>Table of country codes</caption>
      * <tr style="background: orange;">
      *   <th>Alpha-4 Code</th>
      *   <th><code>CountryCode</code></th>
@@ -3092,7 +3092,7 @@ public enum CountryCode
      * <br>
      * <blockquote>
      * <table border="1" style="border-collapse: collapse; padding: 5px">
-     * <caption>placeholder</caption>
+     * <caption>Table of country codes</caption>
      * <tr style="background: orange;">
      *   <th>Shared Numeric Code</th>
      *   <th colspan="2">Alpha-3 Codes</th>
@@ -3197,7 +3197,7 @@ public enum CountryCode
      * </p>
      *
      * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
-     * Pattern pattern = Pattern.compile(<span style="color: darkred;">".*United.*"</span>);
+     * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*United.*""</span>);
      * List&lt;CountryCode&gt; list = CountryCode.findByName(pattern);</pre>
      *
      * <p>
@@ -3232,7 +3232,7 @@ public enum CountryCode
             throw new IllegalArgumentException("pattern is null.");
         }
 
-        List<CountryCode> list = new ArrayList<CountryCode>();
+        List<CountryCode> list = new ArrayList<>();
 
         for (CountryCode entry : values())
         {

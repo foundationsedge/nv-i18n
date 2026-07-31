@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
  * </p>
  *
  * <table border="1" style="border-collapse: collapse; padding: 5px">
- * <caption>placeholder</caption>
+ * <caption>Table of Language Alpha 3 codes</caption>
  * <tr style="background: orange;">
  * <th>ISO 639-1</th>
  * <th>ISO 639-2/T</th>
@@ -6019,7 +6019,7 @@ public enum LanguageAlpha3Code
          * bibliographic applications.
          */
         COMMON
-    };
+    }
 
 
     /**
@@ -6028,7 +6028,7 @@ public enum LanguageAlpha3Code
     private final String name;
 
 
-    private LanguageAlpha3Code(String name)
+    LanguageAlpha3Code(String name)
     {
         this.name = name;
     }
@@ -6103,7 +6103,7 @@ public enum LanguageAlpha3Code
      *
      * <p>
      * Most languages have just one <a
-     * href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code and they
+     * href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code, and they
      * simply return <code>this</code> object. Only ISO 639-2/T codes
      * ("terminological" codes) return counterpart objects. For example,
      * {@link LanguageAlpha3Code#fra LanguageAlpha3Code.fra}{@code .getAlpha3B()}
@@ -6131,7 +6131,7 @@ public enum LanguageAlpha3Code
      *
      * <p>
      * Most languages have just one <a
-     * href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code and they
+     * href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code, and they
      * simply return <code>this</code> object. Only ISO 639-2/B codes
      * ("bibliographic" codes) return counterpart objects. For example,
      * {@link LanguageAlpha3Code#fre LanguageAlpha3Code.fre}{@code .getAlpha3T()}
@@ -6206,7 +6206,7 @@ public enum LanguageAlpha3Code
      *        An <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
      *        code (2-letter lowercase code) or an
      *        <a href="http://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
-     *        code (3-letter lowercase code). Or "undefined" (case insensitive).
+     *        code (3-letter lowercase code). Or "undefined" (case-insensitive).
      *        Note that if the given code is one of legacy language codes
      *        ("iw", "ji" and "in"), it is treated as its official counterpart
      *        ("he", "yi" and "id"), respectively. For example, if "in" is
@@ -6312,12 +6312,12 @@ public enum LanguageAlpha3Code
 
     private static String canonicalize(String code, boolean caseSensitive)
     {
-        if (code == null || code.length() == 0)
+        if (code == null || code.isEmpty())
         {
             return null;
         }
 
-        if (caseSensitive == false)
+        if (!caseSensitive)
         {
             code = code.toLowerCase();
         }
@@ -6413,7 +6413,7 @@ public enum LanguageAlpha3Code
             throw new IllegalArgumentException("pattern is null.");
         }
 
-        List<LanguageAlpha3Code> list = new ArrayList<LanguageAlpha3Code>();
+        List<LanguageAlpha3Code> list = new ArrayList<>();
 
         for (LanguageAlpha3Code entry : values())
         {

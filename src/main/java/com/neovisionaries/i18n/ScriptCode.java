@@ -237,19 +237,19 @@ public enum ScriptCode
     /**
      * Egyptian demotic [070]
      */
-    Egyd(070, "Egyptian demotic"),
+    Egyd(70, "Egyptian demotic"),
 
 
     /**
      * Egyptian hieratic [060]
      */
-    Egyh(060, "Egyptian hieratic"),
+    Egyh(60, "Egyptian hieratic"),
 
 
     /**
      * Egyptian hieroglyphs [050]
      */
-    Egyp(050, "Egyptian hieroglyphs"),
+    Egyp(50, "Egyptian hieroglyphs"),
 
 
     /**
@@ -951,7 +951,7 @@ public enum ScriptCode
     /**
      * Ugaritic [040]
      */
-    Ugar(040, "Ugaritic"),
+    Ugar(40, "Ugaritic"),
 
 
     /**
@@ -981,13 +981,13 @@ public enum ScriptCode
     /**
      * Old Persian [030]
      */
-    Xpeo(030, "Old Persian"),
+    Xpeo(30, "Old Persian"),
 
 
     /**
      * Cuneiform, Sumero-Akkadian [020]
      */
-    Xsux(020, "Cuneiform, Sumero-Akkadian"),
+    Xsux(20, "Cuneiform, Sumero-Akkadian"),
 
 
     /**
@@ -1036,7 +1036,7 @@ public enum ScriptCode
     /**
      * Map to look up ScriptCode by numeric code.
      */
-    private static final Map<Integer, ScriptCode> numericMap = new HashMap<Integer, ScriptCode>();
+    private static final Map<Integer, ScriptCode> numericMap = new HashMap<>();
 
 
     static
@@ -1066,7 +1066,7 @@ public enum ScriptCode
     /**
      * Constructor.
      */
-    private ScriptCode(int numeric, String name)
+    ScriptCode(int numeric, String name)
     {
         this.numeric = numeric;
         this.name = name;
@@ -1125,7 +1125,7 @@ public enum ScriptCode
      * </p>
      *
      * @param code
-     *         ISO 15924 alpha-4 code. Or "Undefined" (case sensitive).
+     *         ISO 15924 alpha-4 code. Or "Undefined" (case-sensitive).
      *
      * @return
      *         A {@code ScriptCode} instance, or {@code null} if not found.
@@ -1145,7 +1145,7 @@ public enum ScriptCode
      * </p>
      *
      * @param code
-     *         ISO 15924 alpha-4 code. Or "Undefined" (case insensitive).
+     *         ISO 15924 alpha-4 code. Or "Undefined" (case-insensitive).
      *
      * @return
      *         A {@code ScriptCode} instance, or {@code null} if not found.
@@ -1263,7 +1263,7 @@ public enum ScriptCode
 
     private static String canonicalize(String code, boolean caseSensitive)
     {
-        if (code == null || code.length() == 0)
+        if (code == null || code.isEmpty())
         {
             return null;
         }
@@ -1284,7 +1284,7 @@ public enum ScriptCode
             // The first letter.
             if (i == 0)
             {
-                if (Character.isUpperCase(ch) == false)
+                if (!Character.isUpperCase(ch))
                 {
                     // Modification is needed.
                     sb = new StringBuilder();
@@ -1296,13 +1296,13 @@ public enum ScriptCode
             {
                 if (sb == null)
                 {
-                    if (Character.isLowerCase(ch) == false)
+                    if (!Character.isLowerCase(ch))
                     {
                         // Modification is needed.
                         sb = new StringBuilder();
 
                         // Copy all the previous letters so far.
-                        sb.append(code.substring(0, i));
+                        sb.append(code, 0, i);
 
                         // Lower the current letter.
                         sb.append(Character.toLowerCase(ch));
@@ -1382,7 +1382,7 @@ public enum ScriptCode
      * <ol>
      * <li>{@link #Egyd} : Egyptian demotic
      * <li>{@link #Egyh} : Egyptian hieratic
-     * <li>{@link #Egyp} : Egyptian hieroglyps
+     * <li>{@link #Egyp} : Egyptian hieroglyphs
      * </ol>
      *
      * @param pattern
@@ -1404,7 +1404,7 @@ public enum ScriptCode
             throw new IllegalArgumentException("pattern is null.");
         }
 
-        List<ScriptCode> list = new ArrayList<ScriptCode>();
+        List<ScriptCode> list = new ArrayList<>();
 
         for (ScriptCode entry : values())
         {
