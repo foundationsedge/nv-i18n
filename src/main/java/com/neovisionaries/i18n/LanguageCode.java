@@ -283,6 +283,7 @@ public enum LanguageCode
      * <a href="http://en.wikipedia.org/wiki/Bihari_languages">Bihari</a>
      * ({@link LanguageAlpha3Code#bih bih}).
      */
+    @Deprecated
     bh()
     {
         @Override
