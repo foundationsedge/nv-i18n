@@ -10,7 +10,7 @@ ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 | Class                | Description                                                  | Last Updated |
 |:---------------------|:-------------------------------------------------------------|--------------|
 | `CountryCode`        | ISO 3166-1 country code.                                     | 2026-06-24   |
-| `LanguageCode`       | ISO 639-1 language code.                                     | unknown      |
+| `LanguageCode`       | ISO 639-1 language code.                                     | 2026-08-07   |
 | `LanguageAlpha3Code` | ISO 639-2 language code.                                     | unknown      |
 | `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | unknown      |
 | `ScriptCode`         | ISO 15924 script code.                                       | unknown      |

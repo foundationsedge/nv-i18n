@@ -21,7 +21,9 @@ import java.util.Locale;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.LanguageCode.getByCode;
+import static com.neovisionaries.i18n.LanguageCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.LanguageCode.getByLocale;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -891,5 +893,26 @@ public class LanguageCodeTest
     public void test121()
     {
         assertSame(LanguageCode.undefined, getByCode("UNDEFINED", false));
+    }
+
+    @Test
+    public void getByCodeIgnoreCaseUpperCase()
+    {
+      assertThat(getByCodeIgnoreCase("FR"))
+        .isEqualTo(LanguageCode.fr);
+    }
+
+    @Test
+    public void getByCodeIgnoreCaseMixedCase()
+    {
+      assertThat(getByCodeIgnoreCase("fR"))
+        .isEqualTo(LanguageCode.fr);
+    }
+
+    @Test
+    public void toLocaleForLanguageWithoutOverride()
+    {
+      assertThat(LanguageCode.cs.toLocale())
+        .isEqualTo(new Locale("cs"));
     }
 }

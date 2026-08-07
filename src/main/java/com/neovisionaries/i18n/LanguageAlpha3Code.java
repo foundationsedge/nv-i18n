@@ -3283,6 +3283,11 @@ public enum LanguageAlpha3Code
     },
 
     /**
+     * <a href="https://en.wikipedia.org/wiki/Lombard_language">Lombard</a>
+     */
+    lmo("Lombard"),
+
+    /**
      * <a href="http://en.wikipedia.org/wiki/Mongo_language">Mongo</a>
      *
      * @since 1.10
