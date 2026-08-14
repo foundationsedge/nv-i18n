@@ -1,6 +1,35 @@
 CHANGES
 =======
 
+### 1.33 (2026-08-14)
+
+Changes
+
+* Updated `CurrencyCode` to latest published standard
+* Updated `LanguageCode` to latest published standard
+* Updated `ScriptCode` to latest published standard
+* Increased mutation coverage of `CountryCode`
+* Use IDE to find general issues, typos, etc
+* Replace octal number with ints in some codes
+*
+
+Dependencies
+
+* Extracted version numbers for easy visibility
+* Added Pitest
+* Update dependencies to current
+
+Build
+
+* Building on 3 OSes and Java LTS since 17, and later than 25
+* Added Maven Wrapper
+
+Documentation
+
+* Add dates and datasource to class info table in readme
+* Add further info to changes covering previous releases
+*
+
 ### 1.32 (2026-07-01)
 
 * Bring Country code up to latest ISO Standard
@@ -14,6 +43,10 @@ CHANGES
 ### 1.30 (2026-06-24)
 
 * Forked repo to [Foundations Edge](https://github.com/foundationsedge/nv-i18n/)
+* Correct JavaDoc errors required for publication.
+
+Breaking Changes
+* Had to update to minimum JDK 8 from previous minimum of 5.
 
 ### 1.29 (2021-08-26)
 
