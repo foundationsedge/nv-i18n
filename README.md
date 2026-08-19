@@ -1,6 +1,20 @@
 nv-i18n
 =======
 
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/foundationsedge/nv-i18n/latest)
+![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
+![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/foundationsedge/nv-i18n/badge)](https://scorecard.dev/viewer/?uri=github.com/foundationsedge/nv-i18n)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/foundationsedge/nv-i18n)
+![GitHub License](https://img.shields.io/github/license/foundationsedge/nv-i18n)
+[![jdk badge](https://img.shields.io/badge/jdk-8-green.svg)](https://adoptium.net/en-GB/temurin/releases)
+[![MvnRepository](https://badges.mvnrepository.com/badge/uk.co.foundationsedge/nv-i18n/badge.svg)](https://mvnrepository.com/artifact/uk.co.foundationsedge/nv-i18n/)
+[![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=foundationsedge_nv-i18n&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=foundationsedge_nv-i18n)
+
+<!--![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/maven/uk.co.foundationsedge%3Anv-i18n)-->
+<!--![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/maven/uk.co.foundationsedge%3Anv-i18n)-->
+<!--![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/foundationsedge/nv-i18n)-->
+
 Overview
 --------
 
