@@ -172,6 +172,10 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <fork>true</fork>
+                    <compilerArgs>
+                        <arg>-Xlint:all,-options,-path</arg>
+                        <arg>-Werror</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>

@@ -2728,6 +2728,7 @@ public enum CountryCode
      * @return
      *         A {@code Locale} instance that matches this {@code CountryCode}.
      */
+    @SuppressWarnings("deprecation")
     public Locale toLocale()
     {
         return new Locale("", name());
@@ -2869,6 +2870,7 @@ public enum CountryCode
      * @return
      *         A {@code CountryCode} instance, or {@code null} if not found.
      */
+    @SuppressWarnings("fallthrough")
     public static CountryCode getByCode(String code, boolean caseSensitive)
     {
         if (code == null)

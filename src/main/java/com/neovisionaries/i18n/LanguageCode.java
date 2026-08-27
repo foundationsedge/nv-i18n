@@ -1654,6 +1654,7 @@ public enum LanguageCode
      *      >Red Hat Bugzilla – Bug 532487 Legacy Norwegian locale (no_NO)
      *      should be removed from language selection menu</a>
      */
+    @Deprecated
     no()
     {
         @Override
@@ -2602,6 +2603,7 @@ public enum LanguageCode
      * @return
      *         A {@code Locale} instance that matches this {@code LanguageCode}.
      */
+    @SuppressWarnings("deprecation")
     public Locale toLocale()
     {
         return new Locale(name());

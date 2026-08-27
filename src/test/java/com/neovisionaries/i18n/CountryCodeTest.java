@@ -197,6 +197,7 @@ class CountryCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test16()
     {
         assertSame(CountryCode.UNDEFINED, getByLocale(new Locale("", "")));

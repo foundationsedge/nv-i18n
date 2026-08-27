@@ -771,6 +771,7 @@ public enum LanguageAlpha3Code
     bih("Bihari languages")
     {
         @Override
+        @SuppressWarnings("deprecation")
         public LanguageCode getAlpha2()
         {
             return LanguageCode.bh;
@@ -4088,6 +4089,7 @@ public enum LanguageAlpha3Code
     nor("Norwegian")
     {
         @Override
+        @SuppressWarnings("deprecation")
         public LanguageCode getAlpha2()
         {
             return LanguageCode.no;

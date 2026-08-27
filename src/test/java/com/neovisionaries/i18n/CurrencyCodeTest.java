@@ -98,6 +98,7 @@ class CurrencyCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     void checkAllFunds() {
         assertThat(CurrencyCode.JPY.isFund()).isFalse();
 
@@ -146,6 +147,7 @@ class CurrencyCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test14()
     {
         List<CurrencyCode> list = CurrencyCode.findByName(".*Ruble");
@@ -187,6 +189,7 @@ class CurrencyCodeTest
     }
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test18()
     {
         List<CurrencyCode> deprecated = Arrays.stream(CurrencyCode.values()).filter(value -> {

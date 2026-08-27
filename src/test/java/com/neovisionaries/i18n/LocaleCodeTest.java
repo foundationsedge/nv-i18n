@@ -239,6 +239,7 @@ public class LocaleCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test18()
     {
         assertSame(LocaleCode.undefined, getByLocale(new Locale("", "")));

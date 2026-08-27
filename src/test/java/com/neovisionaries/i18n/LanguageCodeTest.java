@@ -215,6 +215,7 @@ public class LanguageCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test27()
     {
         assertSame(LanguageCode.undefined, getByLocale(new Locale("")));
@@ -292,6 +293,7 @@ public class LanguageCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test38()
     {
         assertSame(LanguageCode.ja, getByLocale(new Locale("ja")));
@@ -299,6 +301,7 @@ public class LanguageCodeTest
 
 
     @Test
+    @SuppressWarnings("deprecation")
     public void test39()
     {
         assertSame(LanguageCode.ja, getByLocale(new Locale("ja", "JP")));
@@ -910,6 +913,7 @@ public class LanguageCodeTest
     }
 
     @Test
+    @SuppressWarnings("deprecation")
     public void toLocaleForLanguageWithoutOverride()
     {
       assertThat(LanguageCode.cs.toLocale())
