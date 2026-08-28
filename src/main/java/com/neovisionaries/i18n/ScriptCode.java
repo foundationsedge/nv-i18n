@@ -309,9 +309,9 @@ public enum ScriptCode {
 
 
   /**
-   * Ethiopic (Geʻez) [430]
+   * Ethiopic [430]
    */
-  Ethi(430, "Ethiopic (Geʻez)"),
+  Ethi(430, "Ethiopic"),
 
   /**
    * Garay [164]
@@ -387,9 +387,9 @@ public enum ScriptCode {
 
 
   /**
-   * Hangul (Hangŭl, Hangeul) [286]
+   * Hangul [286]
    */
-  Hang(286, "Hangul (Hangŭl, Hangeul)"),
+  Hang(286, "Hangul"),
 
 
   /**
@@ -399,9 +399,9 @@ public enum ScriptCode {
 
 
   /**
-   * Hanunoo (Hanunóo) [371]
+   * Hanunoo [371]
    */
-  Hano(371, "Hanunoo (Hanunóo)"),
+  Hano(371, "Hanunoo"),
 
 
   /**
@@ -611,9 +611,9 @@ public enum ScriptCode {
 
 
   /**
-   * Lepcha (Róng) [335]
+   * Lepcha [335]
    */
-  Lepc(335, "Lepcha (Róng)"),
+  Lepc(335, "Lepcha"),
 
 
   /**
@@ -692,9 +692,9 @@ public enum ScriptCode {
   Maya(90, "Mayan hieroglyphs"),
 
   /**
-   * Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) [265]
+   * Medefaidrin [265]
    */
-  Medf(265, "Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ)"),
+  Medf(265, "Medefaidrin"),
 
 
   /**
@@ -721,9 +721,9 @@ public enum ScriptCode {
   Mlym(347, "Malayalam"),
 
   /**
-   * Modi, Moḍī [324]
+   * Modi [324]
    */
-  Modi(324, "Modi, Moḍī"),
+  Modi(324, "Modi"),
 
   /**
    * Mongolian [145]
@@ -782,19 +782,19 @@ public enum ScriptCode {
   Nbat(159, "Nabataean"),
 
   /**
-   * Newa, Newar, Newari, Nepāla lipi [333]
+   * Newa, Newar, Newari [333]
    */
-  Newa(333, "Newa, Newar, Newari, Nepāla lipi"),
+  Newa(333, "Newa, Newar, Newari"),
 
   /**
-   * Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba) [85]
+   * Naxi Dongba [85]
    */
-  Nkdb(85, "Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba)"),
+  Nkdb(85, "Naxi Dongba"),
 
   /**
-   * Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba) [420]
+   * Naxi Geba [420]
    */
-  Nkgb(420, "Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba)"),
+  Nkgb(420, "Naxi Geba"),
 
 
   /**
@@ -804,9 +804,9 @@ public enum ScriptCode {
 
 
   /**
-   * Nüshu [499]
+   * Nushu [499]
    */
-  Nshu(499, "Nüshu"),
+  Nshu(499, "Nushu"),
 
 
   /**
@@ -1254,9 +1254,9 @@ public enum ScriptCode {
 
 
   /**
-   * Sharada, Śāradā [319]
+   * Sharada [319]
    */
-  Shrd(319, "Sharada, Śāradā"),
+  Shrd(319, "Sharada"),
 
   /**
    * Shuishu [530]
@@ -1264,9 +1264,9 @@ public enum ScriptCode {
   Shui(530, "Shuishu"),
 
   /**
-   * Siddham, Siddhaṃ, Siddhamātṛkā [302]
+   * Siddham [302]
    */
-  Sidd(302, "Siddham, Siddhaṃ, Siddhamātṛkā"),
+  Sidd(302, "Siddham"),
 
   /**
    * Sidetic [180]
@@ -1355,9 +1355,9 @@ public enum ScriptCode {
 
 
   /**
-   * Takri, Ṭākrī, Ṭāṅkrī [321]
+   * Takri [321]
    */
-  Takr(321, "Takri, Ṭākrī, Ṭāṅkrī"),
+  Takr(321, "Takri"),
 
 
   /**
@@ -1531,9 +1531,9 @@ public enum ScriptCode {
   Yiii(460, "Yi"),
 
   /**
-   * Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script) [339]
+   * Zanabazar Square [339]
    */
-  Zanb(339, "Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script)"),
+  Zanb(339, "Zanabazar Square"),
 
 
   /**
