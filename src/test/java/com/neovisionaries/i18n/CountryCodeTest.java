@@ -35,485 +35,428 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class CountryCodeTest
-{
-    @Test
-    public void test1()
-    {
-        List<CountryCode> list = CountryCode.findByName(".*United.*");
+class CountryCodeTest {
+  @Test
+  public void test1() {
+    List<CountryCode> list = CountryCode.findByName(".*United.*");
 
-        assertEquals(8, list.size());
+    assertEquals(8, list.size());
 
-        // AE: United Arab Emirates
-        assertTrue(list.contains(CountryCode.AE));
+    // AE: United Arab Emirates
+    assertTrue(list.contains(CountryCode.AE));
 
-        // GB: United Kingdom
-        assertTrue(list.contains(CountryCode.GB));
+    // GB: United Kingdom
+    assertTrue(list.contains(CountryCode.GB));
 
-        // TZ: Tanzania, United Republic of
-        assertTrue(list.contains(CountryCode.TZ));
+    // TZ: Tanzania, United Republic of
+    assertTrue(list.contains(CountryCode.TZ));
 
-        // UK: United Kingdom
-        assertTrue(list.contains(CountryCode.UK));
+    // UK: United Kingdom
+    assertTrue(list.contains(CountryCode.UK));
 
-        // UM: United States Minor Outlying Islands
-        assertTrue(list.contains(CountryCode.UM));
+    // UM: United States Minor Outlying Islands
+    assertTrue(list.contains(CountryCode.UM));
 
-        // US: United States
-        assertTrue(list.contains(CountryCode.US));
+    // US: United States
+    assertTrue(list.contains(CountryCode.US));
 
-        // XU: United Kingdom (excluding Northern Ireland)
-        assertTrue(list.contains(CountryCode.XU));
+    // XU: United Kingdom (excluding Northern Ireland)
+    assertTrue(list.contains(CountryCode.XU));
 
-        // UN: United Nations
-        assertTrue(list.contains(CountryCode.UN));
+    // UN: United Nations
+    assertTrue(list.contains(CountryCode.UN));
+  }
+
+
+  @Test
+  public void test2() {
+    assertSame(Locale.CANADA, CountryCode.CA.toLocale());
+  }
+
+
+  @Test
+  public void test3() {
+    assertSame(Locale.CHINA, CountryCode.CN.toLocale());
+  }
+
+
+  @Test
+  public void test4() {
+    assertSame(Locale.GERMANY, CountryCode.DE.toLocale());
+  }
+
+
+  @Test
+  public void test5() {
+    assertSame(Locale.FRANCE, CountryCode.FR.toLocale());
+  }
+
+
+  @Test
+  public void test6() {
+    assertSame(Locale.UK, CountryCode.GB.toLocale());
+  }
+
+
+  @Test
+  public void test7() {
+    assertSame(Locale.ITALY, CountryCode.IT.toLocale());
+  }
+
+
+  @Test
+  public void test8() {
+    assertSame(Locale.JAPAN, CountryCode.JP.toLocale());
+  }
+
+
+  @Test
+  public void test9() {
+    assertSame(Locale.KOREA, CountryCode.KR.toLocale());
+  }
+
+
+  @Test
+  public void test10() {
+    assertSame(Locale.TAIWAN, CountryCode.TW.toLocale());
+  }
+
+
+  @Test
+  public void test11() {
+    assertSame(Locale.US, CountryCode.US.toLocale());
+  }
+
+
+  @Test
+  public void test12() {
+    Locale undefinedLocale = CountryCode.UNDEFINED.toLocale();
+
+    try {
+      Locale root = (Locale) Locale.class.getDeclaredField("ROOT").get(null);
+      assertSame(root, undefinedLocale);
+    } catch (Exception e) {
+      assertEquals("", undefinedLocale.getLanguage());
+      assertEquals("", undefinedLocale.getCountry());
     }
+  }
 
 
-    @Test
-    public void test2()
-    {
-        assertSame(Locale.CANADA, CountryCode.CA.toLocale());
+  @Test
+  public void test13() {
+    assertSame(CountryCode.UNDEFINED, getByCode("UNDEFINED"));
+  }
+
+
+  @Test
+  public void test14() {
+    assertNull(getByCode("undefined"));
+  }
+
+  @Test
+  void getByCodeWithAValueZeroReturnsNull() {
+    assertThat(getByCode(0)).isNull();
+  }
+
+  @Test
+  void getByCodeWithAValueBelowZeroReturnsNull() {
+    assertThat(getByCode(1)).isNull();
+  }
+
+  @Test
+  void getByCodeWithAValueAboveZeroDoesNotReturnNull() {
+    assertThat(getByCode(104)).isNotNull();
+  }
+
+  @Test
+  public void test15() {
+    assertSame(CountryCode.UNDEFINED, getByCodeIgnoreCase("undefined"));
+  }
+
+
+  @Test
+  @SuppressWarnings("deprecation")
+  public void test16() {
+    assertSame(CountryCode.UNDEFINED, getByLocale(new Locale("", "")));
+  }
+
+
+  @Test
+  public void test17() {
+    assertNull(getByCode(null));
+  }
+
+
+  @Test
+  public void test18() {
+    assertNull(getByCode(""));
+  }
+
+
+  @Test
+  public void test19() {
+    assertSame(CountryCode.AN, CountryCode.getByCode("ANT"));
+  }
+
+
+  @Test
+  public void test20() {
+    assertSame(CountryCode.AN, CountryCode.getByCode("ANHH"));
+  }
+
+
+  @Test
+  public void test21() {
+    assertSame(CountryCode.BU, CountryCode.getByCode("BUR"));
+  }
+
+
+  @Test
+  public void test22() {
+    assertSame(CountryCode.BU, CountryCode.getByCode("BUMM"));
+  }
+
+
+  @Test
+  public void test23() {
+    assertSame(CountryCode.CS, CountryCode.getByCode("SCG"));
+  }
+
+
+  @Test
+  public void test24() {
+    assertSame(CountryCode.CS, CountryCode.getByCode("CSXX"));
+  }
+
+
+  @Test
+  public void test25() {
+    assertSame(CountryCode.NT, CountryCode.getByCode("NTZ"));
+  }
+
+
+  @Test
+  public void test26() {
+    assertSame(CountryCode.NT, CountryCode.getByCode("NTHH"));
+  }
+
+
+  @Test
+  public void test27() {
+    assertSame(CountryCode.TP, CountryCode.getByCode("TMP"));
+  }
+
+
+  @Test
+  public void test28() {
+    assertSame(CountryCode.TP, CountryCode.getByCode("TPTL"));
+  }
+
+
+  @Test
+  public void test29() {
+    assertSame(CountryCode.YU, CountryCode.getByCode("YUG"));
+  }
+
+
+  @Test
+  public void test30() {
+    assertSame(CountryCode.YU, CountryCode.getByCode("YUCS"));
+  }
+
+
+  @Test
+  public void test31() {
+    assertSame(CountryCode.ZR, CountryCode.getByCode("ZAR"));
+  }
+
+
+  @Test
+  public void test32() {
+    assertSame(CountryCode.ZR, CountryCode.getByCode("ZRCD"));
+  }
+
+
+  @Test
+  void alpha2Lengths() {
+    for (CountryCode cc : CountryCode.values()) {
+      String alpha2 = cc.getAlpha2();
+
+      if (alpha2 == null) {
+        continue;
+      }
+
+      if (cc != CountryCode.UNDEFINED) {
+        assertThat(alpha2.length()).isEqualTo(2);
+      }
     }
+  }
 
+  @Test
+  void alpha3Lengths() {
+    for (CountryCode cc : CountryCode.values()) {
+      String alpha3 = cc.getAlpha3();
 
-    @Test
-    public void test3()
-    {
-        assertSame(Locale.CHINA, CountryCode.CN.toLocale());
+      if (alpha3 == null) {
+        continue;
+      }
+
+      assertThat(alpha3.length()).isEqualTo(3);
     }
+  }
+
+  @Test
+  public void test34() {
+    // FI and SF have the same alpha-3 code "FIN".
+    // FI should be returned for "FIN".
+    assertSame(CountryCode.FI, CountryCode.getByCode("FIN"));
+  }
+
+
+  @Test
+  public void test35() {
+    // BU and MM have the same numeric code 104. MM should be used.
+    assertSame(CountryCode.MM, CountryCode.getByCode(104));
+    assertSame(CountryCode.MM, CountryCode.getByCode(CountryCode.BU.getNumeric()));
+    assertSame(CountryCode.MM, CountryCode.getByCode(CountryCode.MM.getNumeric()));
+  }
+
+
+  @Test
+  public void test36() {
+    // CD and ZR have the same numeric code 180. CD should be used.
+    assertSame(CountryCode.CD, CountryCode.getByCode(180));
+    assertSame(CountryCode.CD, CountryCode.getByCode(CountryCode.CD.getNumeric()));
+    assertSame(CountryCode.CD, CountryCode.getByCode(CountryCode.ZR.getNumeric()));
+  }
+
+
+  @Test
+  public void test37() {
+    // FI and SF have the same numeric code 246. FI should be used.
+    assertSame(CountryCode.FI, CountryCode.getByCode(246));
+    assertSame(CountryCode.FI, CountryCode.getByCode(CountryCode.FI.getNumeric()));
+    assertSame(CountryCode.FI, CountryCode.getByCode(CountryCode.SF.getNumeric()));
+  }
+
+
+  @Test
+  public void test38() {
+    // GB and UK have the same numeric code 826. GB should be used.
+    assertSame(CountryCode.GB, CountryCode.getByCode(826));
+    assertSame(CountryCode.GB, CountryCode.getByCode(CountryCode.GB.getNumeric()));
+    assertSame(CountryCode.GB, CountryCode.getByCode(CountryCode.UK.getNumeric()));
+  }
+
+
+  @Test
+  public void test39() {
+    // TL and TP have the same numeric code 626. TL should be used.
+    assertSame(CountryCode.TL, CountryCode.getByCode(626));
+    assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TL.getNumeric()));
+    assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TP.getNumeric()));
+  }
+
+
+  @Test
+  public void test40() {
+    assertSame(CountryCode.JP, CountryCode.getByCode(392));
+  }
+
+
+  @Test
+  public void test41() {
+    // Checks changed made in version 1.17.
+    assertEquals(249, CountryCode.FX.getNumeric());
+    assertEquals(810, CountryCode.SU.getNumeric());
+    assertEquals(626, CountryCode.TP.getNumeric());
+    assertEquals(826, CountryCode.UK.getNumeric());
+    assertEquals(180, CountryCode.ZR.getNumeric());
+  }
+
+  @Test
+  public void test42() {
+    // Country code 280 should map to 278, due to legacy applications in payment industry.
+    assertEquals(CountryCode.DE, CountryCode.getByCode(280));
+  }
+
+  @Test
+  void officiallyAssigned() {
+    CountryCode[] things = CountryCode.values();
+
+    assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(OFFICIALLY_ASSIGNED))).hasSize(249);
+  }
+
+  @Test
+  void userAssigned() {
+    CountryCode[] things = CountryCode.values();
+
+    assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(USER_ASSIGNED)))
+      //.hasSize(43); // Assume these have not been added so that users _can_ define them - AA, QM->QZ, XA-XZ, ZZ
+      .hasSize(4);
+  }
+
+  @Test
+  void exceptionallyReserved() {
+    CountryCode[] things = CountryCode.values();
+
+    assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(EXCEPTIONALLY_RESERVED))).hasSize(13);
+  }
+
+  @Test
+  void indeterminatelyReserved() {
+    CountryCode[] things = CountryCode.values();
 
+    assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(INDETERMINATELY_RESERVED))).hasSize(30);
+  }
 
-    @Test
-    public void test4()
-    {
-        assertSame(Locale.GERMANY, CountryCode.DE.toLocale());
-    }
+  @Test
+  void transitionallyReserved() {
+    CountryCode[] things = CountryCode.values();
 
+    assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(TRANSITIONALLY_RESERVED))).hasSize(7);
+  }
 
-    @Test
-    public void test5()
-    {
-        assertSame(Locale.FRANCE, CountryCode.FR.toLocale());
-    }
+  @Test
+  void getAlpha2CheckingValue() {
+    CountryCode underTest = CountryCode.GB;
 
+    assertThat(underTest.getAlpha2()).isEqualTo(underTest.name());
+  }
 
-    @Test
-    public void test6()
-    {
-        assertSame(Locale.UK, CountryCode.GB.toLocale());
-    }
-
+  @Test
+  void toLocaleCheckingValue() {
+    CountryCode underTest = CountryCode.UK;
 
-    @Test
-    public void test7()
-    {
-        assertSame(Locale.ITALY, CountryCode.IT.toLocale());
-    }
+    assertThat(underTest.toLocale()).isEqualTo(Locale.UK);
+  }
 
+  @Test
+  void getCurrencyCheckingValue() {
+    CountryCode underTest = CountryCode.GB;
 
-    @Test
-    public void test8()
-    {
-        assertSame(Locale.JAPAN, CountryCode.JP.toLocale());
-    }
+    assertThat(underTest.getCurrency()).isEqualTo(Currency.getInstance(Locale.UK));
+  }
 
+  @Test
+  void getCurrencyForCountryWithoutOne() {
+    CountryCode underTest = CountryCode.AC;
 
-    @Test
-    public void test9()
-    {
-        assertSame(Locale.KOREA, CountryCode.KR.toLocale());
-    }
+    assertThat(underTest.getCurrency()).isNull();
+  }
 
+  @Test
+  void getByLocaleValidValue() {
+    assertThat(CountryCode.getByLocale(Locale.UK)).isEqualTo(CountryCode.GB);
+  }
 
-    @Test
-    public void test10()
-    {
-        assertSame(Locale.TAIWAN, CountryCode.TW.toLocale());
-    }
+  @Test
+  void getByLocaleUndefinedValue() {
+    assertThat(CountryCode.getByLocale(Locale.ROOT)).isEqualTo(CountryCode.UNDEFINED);
+  }
 
-
-    @Test
-    public void test11()
-    {
-        assertSame(Locale.US, CountryCode.US.toLocale());
-    }
-
-
-    @Test
-    public void test12()
-    {
-        Locale undefinedLocale = CountryCode.UNDEFINED.toLocale();
-
-        try
-        {
-            Locale root = (Locale)Locale.class.getDeclaredField("ROOT").get(null);
-            assertSame(root, undefinedLocale);
-        }
-        catch (Exception e)
-        {
-            assertEquals("", undefinedLocale.getLanguage());
-            assertEquals("", undefinedLocale.getCountry());
-        }
-    }
-
-
-    @Test
-    public void test13()
-    {
-        assertSame(CountryCode.UNDEFINED, getByCode("UNDEFINED"));
-    }
-
-
-    @Test
-    public void test14()
-    {
-        assertNull(getByCode("undefined"));
-    }
-
-    @Test
-    void getByCodeWithAValueZeroReturnsNull()
-    {
-        assertThat(getByCode(0)).isNull();
-    }
-
-    @Test
-    void getByCodeWithAValueBelowZeroReturnsNull()
-    {
-        assertThat(getByCode(1)).isNull();
-    }
-
-    @Test
-    void getByCodeWithAValueAboveZeroDoesNotReturnNull()
-    {
-        assertThat(getByCode(104)).isNotNull();
-    }
-
-    @Test
-    public void test15()
-    {
-        assertSame(CountryCode.UNDEFINED, getByCodeIgnoreCase("undefined"));
-    }
-
-
-    @Test
-    @SuppressWarnings("deprecation")
-    public void test16()
-    {
-        assertSame(CountryCode.UNDEFINED, getByLocale(new Locale("", "")));
-    }
-
-
-    @Test
-    public void test17()
-    {
-        assertNull(getByCode(null));
-    }
-
-
-    @Test
-    public void test18()
-    {
-        assertNull(getByCode(""));
-    }
-
-
-    @Test
-    public void test19()
-    {
-        assertSame(CountryCode.AN, CountryCode.getByCode("ANT"));
-    }
-
-
-    @Test
-    public void test20()
-    {
-        assertSame(CountryCode.AN, CountryCode.getByCode("ANHH"));
-    }
-
-
-    @Test
-    public void test21()
-    {
-        assertSame(CountryCode.BU, CountryCode.getByCode("BUR"));
-    }
-
-
-    @Test
-    public void test22()
-    {
-        assertSame(CountryCode.BU, CountryCode.getByCode("BUMM"));
-    }
-
-
-    @Test
-    public void test23()
-    {
-        assertSame(CountryCode.CS, CountryCode.getByCode("SCG"));
-    }
-
-
-    @Test
-    public void test24()
-    {
-        assertSame(CountryCode.CS, CountryCode.getByCode("CSXX"));
-    }
-
-
-    @Test
-    public void test25()
-    {
-        assertSame(CountryCode.NT, CountryCode.getByCode("NTZ"));
-    }
-
-
-    @Test
-    public void test26()
-    {
-        assertSame(CountryCode.NT, CountryCode.getByCode("NTHH"));
-    }
-
-
-    @Test
-    public void test27()
-    {
-        assertSame(CountryCode.TP, CountryCode.getByCode("TMP"));
-    }
-
-
-    @Test
-    public void test28()
-    {
-        assertSame(CountryCode.TP, CountryCode.getByCode("TPTL"));
-    }
-
-
-    @Test
-    public void test29()
-    {
-        assertSame(CountryCode.YU, CountryCode.getByCode("YUG"));
-    }
-
-
-    @Test
-    public void test30()
-    {
-        assertSame(CountryCode.YU, CountryCode.getByCode("YUCS"));
-    }
-
-
-    @Test
-    public void test31()
-    {
-        assertSame(CountryCode.ZR, CountryCode.getByCode("ZAR"));
-    }
-
-
-    @Test
-    public void test32()
-    {
-        assertSame(CountryCode.ZR, CountryCode.getByCode("ZRCD"));
-    }
-
-
-    @Test
-    void alpha2Lengths()
-    {
-        for (CountryCode cc : CountryCode.values())
-        {
-            String alpha2 = cc.getAlpha2();
-
-            if (alpha2 == null)
-            {
-                continue;
-            }
-
-            if (cc != CountryCode.UNDEFINED) {
-                assertThat(alpha2.length()).isEqualTo(2);
-            }
-        }
-    }
-
-    @Test
-    void alpha3Lengths()
-    {
-        for (CountryCode cc : CountryCode.values())
-        {
-            String alpha3 = cc.getAlpha3();
-
-            if (alpha3 == null)
-            {
-                continue;
-            }
-
-            assertThat(alpha3.length()).isEqualTo(3);
-        }
-    }
-
-    @Test
-    public void test34()
-    {
-        // FI and SF have the same alpha-3 code "FIN".
-        // FI should be returned for "FIN".
-        assertSame(CountryCode.FI, CountryCode.getByCode("FIN"));
-    }
-
-
-    @Test
-    public void test35()
-    {
-        // BU and MM have the same numeric code 104. MM should be used.
-        assertSame(CountryCode.MM, CountryCode.getByCode(104));
-        assertSame(CountryCode.MM, CountryCode.getByCode(CountryCode.BU.getNumeric()));
-        assertSame(CountryCode.MM, CountryCode.getByCode(CountryCode.MM.getNumeric()));
-    }
-
-
-    @Test
-    public void test36()
-    {
-        // CD and ZR have the same numeric code 180. CD should be used.
-        assertSame(CountryCode.CD, CountryCode.getByCode(180));
-        assertSame(CountryCode.CD, CountryCode.getByCode(CountryCode.CD.getNumeric()));
-        assertSame(CountryCode.CD, CountryCode.getByCode(CountryCode.ZR.getNumeric()));
-    }
-
-
-    @Test
-    public void test37()
-    {
-        // FI and SF have the same numeric code 246. FI should be used.
-        assertSame(CountryCode.FI, CountryCode.getByCode(246));
-        assertSame(CountryCode.FI, CountryCode.getByCode(CountryCode.FI.getNumeric()));
-        assertSame(CountryCode.FI, CountryCode.getByCode(CountryCode.SF.getNumeric()));
-    }
-
-
-    @Test
-    public void test38()
-    {
-        // GB and UK have the same numeric code 826. GB should be used.
-        assertSame(CountryCode.GB, CountryCode.getByCode(826));
-        assertSame(CountryCode.GB, CountryCode.getByCode(CountryCode.GB.getNumeric()));
-        assertSame(CountryCode.GB, CountryCode.getByCode(CountryCode.UK.getNumeric()));
-    }
-
-
-    @Test
-    public void test39()
-    {
-        // TL and TP have the same numeric code 626. TL should be used.
-        assertSame(CountryCode.TL, CountryCode.getByCode(626));
-        assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TL.getNumeric()));
-        assertSame(CountryCode.TL, CountryCode.getByCode(CountryCode.TP.getNumeric()));
-    }
-
-
-    @Test
-    public void test40()
-    {
-        assertSame(CountryCode.JP, CountryCode.getByCode(392));
-    }
-
-
-    @Test
-    public void test41()
-    {
-        // Checks changed made in version 1.17.
-        assertEquals(249, CountryCode.FX.getNumeric());
-        assertEquals(810, CountryCode.SU.getNumeric());
-        assertEquals(626, CountryCode.TP.getNumeric());
-        assertEquals(826, CountryCode.UK.getNumeric());
-        assertEquals(180, CountryCode.ZR.getNumeric());
-    }
-
-    @Test
-    public void test42() {
-        // Country code 280 should map to 278, due to legacy applications in payment industry.
-        assertEquals(CountryCode.DE, CountryCode.getByCode(280));
-    }
-
-    @Test
-    void officiallyAssigned() {
-        CountryCode[] things = CountryCode.values();
-
-        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(OFFICIALLY_ASSIGNED)))
-          .hasSize(249);
-    }
-
-    @Test
-    void userAssigned() {
-        CountryCode[] things = CountryCode.values();
-
-        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(USER_ASSIGNED)))
-          //.hasSize(43); // Assume these have not been added so that users _can_ define them - AA, QM->QZ, XA-XZ, ZZ
-          .hasSize(4);
-    }
-
-    @Test
-    void exceptionallyReserved() {
-        CountryCode[] things = CountryCode.values();
-
-        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(EXCEPTIONALLY_RESERVED)))
-          .hasSize(13);
-    }
-
-    @Test
-    void indeterminatelyReserved() {
-        CountryCode[] things = CountryCode.values();
-
-        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(INDETERMINATELY_RESERVED)))
-          .hasSize(30);
-    }
-
-    @Test
-    void transitionallyReserved() {
-        CountryCode[] things = CountryCode.values();
-
-        assertThat(Arrays.stream(things).filter(x -> x.getAssignment().equals(TRANSITIONALLY_RESERVED)))
-          .hasSize(7);
-    }
-
-    @Test
-    void getAlpha2CheckingValue() {
-        CountryCode underTest = CountryCode.GB;
-
-        assertThat(underTest.getAlpha2()).isEqualTo(underTest.name());
-    }
-
-    @Test
-    void toLocaleCheckingValue() {
-        CountryCode underTest = CountryCode.UK;
-
-        assertThat(underTest.toLocale()).isEqualTo(Locale.UK);
-    }
-
-    @Test
-    void getCurrencyCheckingValue() {
-        CountryCode underTest = CountryCode.GB;
-
-        assertThat(underTest.getCurrency()).isEqualTo(Currency.getInstance(Locale.UK));
-    }
-
-    @Test
-    void getCurrencyForCountryWithoutOne() {
-        CountryCode underTest = CountryCode.AC;
-
-        assertThat(underTest.getCurrency()).isNull();
-    }
-
-    @Test
-    void getByLocaleValidValue() {
-        assertThat(CountryCode.getByLocale(Locale.UK)).isEqualTo(CountryCode.GB);
-    }
-
-    @Test
-    void getByLocaleUndefinedValue() {
-        assertThat(CountryCode.getByLocale(Locale.ROOT)).isEqualTo(CountryCode.UNDEFINED);
-    }
-
-    @Test
-    void getByLocaleReturnsNullWhenPassedNUll() {
-        assertThat(CountryCode.getByLocale(null)).isNull();
-    }
+  @Test
+  void getByLocaleReturnsNullWhenPassedNUll() {
+    assertThat(CountryCode.getByLocale(null)).isNull();
+  }
 }

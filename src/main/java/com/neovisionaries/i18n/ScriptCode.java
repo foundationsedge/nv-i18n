@@ -27,1936 +27,1856 @@ import java.util.regex.Pattern;
 /**
  * <a href="http://en.wikipedia.org/wiki/ISO_15924">ISO 15924</a> script code.
  *
- * @since 1.2
  * @author Takahiko Kawasaki
+ * @since 1.2
  */
-public enum ScriptCode
-{
-
-    /**
-     * Undefined [-1]
-     *
-     * <p>
-     * This is not an official ISO 15924 code.
-     * </p>
-     *
-     * @since 1.14
-     * @see #Zxxx Zxxx: 997 Code for unwritten languages
-     * @see #Zyyy Zyyy: 998 Code for undetermined script
-     * @see #Zzzz Zzzz: 999 Code for uncoded script
-     */
-    Undefined(-1, "Undefined")
-    {
-        @Override
-        public Locale toLocale()
-        {
-            return LocaleCode.undefined.toLocale();
-        }
-    },
-
-    /**
-     * Adlm [166]
-     */
-    Adlm(166, "Adlam"),
+public enum ScriptCode {
+
+  /**
+   * Undefined [-1]
+   *
+   * <p>
+   * This is not an official ISO 15924 code.
+   * </p>
+   *
+   * @see #Zxxx Zxxx: 997 Code for unwritten languages
+   * @see #Zyyy Zyyy: 998 Code for undetermined script
+   * @see #Zzzz Zzzz: 999 Code for uncoded script
+   * @since 1.14
+   */
+  Undefined(-1, "Undefined") {
+    @Override
+    public Locale toLocale() {
+      return LocaleCode.undefined.toLocale();
+    }
+  },
 
-    /**
-     * Afaka [439]
-     */
-    Afak(439, "Afaka"),
+  /**
+   * Adlm [166]
+   */
+  Adlm(166, "Adlam"),
 
+  /**
+   * Afaka [439]
+   */
+  Afak(439, "Afaka"),
 
-    /**
-     * Caucasian Albanian [239]
-     */
-    Aghb(239, "Caucasian Albanian"),
 
+  /**
+   * Caucasian Albanian [239]
+   */
+  Aghb(239, "Caucasian Albanian"),
 
-    /**
-     * Arabic [160]
-     */
-    Arab(160, "Arabic"),
 
-    /**
-     * Arabic (Nastaliq variant) [161]
-     */
-    Aran(161, "Arabic (Nastaliq variant)"),
+  /**
+   * Arabic [160]
+   */
+  Arab(160, "Arabic"),
 
-    /**
-     * Imperial Aramaic [124]
-     */
-    Armi(124, "Imperial Aramaic"),
+  /**
+   * Arabic (Nastaliq variant) [161]
+   */
+  Aran(161, "Arabic (Nastaliq variant)"),
 
+  /**
+   * Imperial Aramaic [124]
+   */
+  Armi(124, "Imperial Aramaic"),
 
-    /**
-     * Armenian [230]
-     */
-    Armn(230, "Armenian"),
 
+  /**
+   * Armenian [230]
+   */
+  Armn(230, "Armenian"),
 
-    /**
-     * Avestan [134]
-     */
-    Avst(134, "Avestan"),
 
+  /**
+   * Avestan [134]
+   */
+  Avst(134, "Avestan"),
 
-    /**
-     * Balinese [360]
-     */
-    Bali(360, "Balinese"),
 
+  /**
+   * Balinese [360]
+   */
+  Bali(360, "Balinese"),
 
-    /**
-     * Bamum [435]
-     */
-    Bamu(435, "Bamum"),
 
+  /**
+   * Bamum [435]
+   */
+  Bamu(435, "Bamum"),
 
-    /**
-     * Bassa Vah [259]
-     */
-    Bass(259, "Bassa Vah"),
 
+  /**
+   * Bassa Vah [259]
+   */
+  Bass(259, "Bassa Vah"),
 
-    /**
-     * Batak [365]
-     */
-    Batk(365, "Batak"),
 
+  /**
+   * Batak [365]
+   */
+  Batk(365, "Batak"),
 
-    /**
-     * Bengali (Bangla) [325]
-     */
-    Beng(325, "Bengali (Bangla)"),
 
-    /**
-     * Beria Erfe [258]
-     */
-    Berf(258, "Beria Erfe"),
+  /**
+   * Bengali (Bangla) [325]
+   */
+  Beng(325, "Bengali (Bangla)"),
 
-    /**
-     * Bhaiksuki [334]
-     */
-    Bhks(334, "Bhaiksuki"),
+  /**
+   * Beria Erfe [258]
+   */
+  Berf(258, "Beria Erfe"),
 
-    /**
-     * Bhaiksuki [550]
-     */
-    Blis(550, "Blissymbols"),
+  /**
+   * Bhaiksuki [334]
+   */
+  Bhks(334, "Bhaiksuki"),
 
+  /**
+   * Bhaiksuki [550]
+   */
+  Blis(550, "Blissymbols"),
 
-    /**
-     * Bopomofo [285]
-     */
-    Bopo(285, "Bopomofo"),
 
+  /**
+   * Bopomofo [285]
+   */
+  Bopo(285, "Bopomofo"),
 
-    /**
-     * Brahmi [300]
-     */
-    Brah(300, "Brahmi"),
 
+  /**
+   * Brahmi [300]
+   */
+  Brah(300, "Brahmi"),
 
-    /**
-     * Braille [570]
-     */
-    Brai(570, "Braille"),
 
+  /**
+   * Braille [570]
+   */
+  Brai(570, "Braille"),
 
-    /**
-     * Buginese [367]
-     */
-    Bugi(367, "Buginese"),
 
+  /**
+   * Buginese [367]
+   */
+  Bugi(367, "Buginese"),
 
-    /**
-     * Buhid [372]
-     */
-    Buhd(372, "Buhid"),
 
+  /**
+   * Buhid [372]
+   */
+  Buhd(372, "Buhid"),
 
-    /**
-     * Chakma [349]
-     */
-    Cakm(349, "Chakma"),
 
+  /**
+   * Chakma [349]
+   */
+  Cakm(349, "Chakma"),
 
-    /**
-     * Unified Canadian Aboriginal Syllabics [440]
-     */
-    Cans(440, "Unified Canadian Aboriginal Syllabics"),
 
+  /**
+   * Unified Canadian Aboriginal Syllabics [440]
+   */
+  Cans(440, "Unified Canadian Aboriginal Syllabics"),
 
-    /**
-     * Carian [201]
-     */
-    Cari(201, "Carian"),
 
+  /**
+   * Carian [201]
+   */
+  Cari(201, "Carian"),
 
-    /**
-     * Cham [358]
-     */
-    Cham(358, "Cham"),
 
+  /**
+   * Cham [358]
+   */
+  Cham(358, "Cham"),
 
-    /**
-     * Cherokee [445]
-     */
-    Cher(445, "Cherokee"),
 
-    /**
-     * Chisoi [298]
-     */
-    Chis(298, "Chisoi"),
+  /**
+   * Cherokee [445]
+   */
+  Cher(445, "Cherokee"),
 
-    /**
-     * Chisoi [Chorasmian]
-     */
-    Chrs(109, "Chorasmian"),
+  /**
+   * Chisoi [298]
+   */
+  Chis(298, "Chisoi"),
 
-    /**
-     * Cirth [291]
-     */
-    Cirt(291, "Cirth"),
+  /**
+   * Chisoi [Chorasmian]
+   */
+  Chrs(109, "Chorasmian"),
 
+  /**
+   * Cirth [291]
+   */
+  Cirt(291, "Cirth"),
 
-    /**
-     * Coptic [204]
-     */
-    Copt(204, "Coptic"),
 
-    /**
-     * Cypro-Minoan [402]
-     */
-    Cpmn(402, "Cypro-Minoan"),
+  /**
+   * Coptic [204]
+   */
+  Copt(204, "Coptic"),
 
+  /**
+   * Cypro-Minoan [402]
+   */
+  Cpmn(402, "Cypro-Minoan"),
 
-    /**
-     * Cypriot [403]
-     */
-    Cprt(403, "Cypriot"),
 
+  /**
+   * Cypriot [403]
+   */
+  Cprt(403, "Cypriot"),
 
-    /**
-     * Cyrillic [220]
-     */
-    Cyrl(220, "Cyrillic"),
 
+  /**
+   * Cyrillic [220]
+   */
+  Cyrl(220, "Cyrillic"),
 
-    /**
-     * Cyrillic [221]
-     */
-    Cyrs(221, "Cyrillic"),
 
+  /**
+   * Cyrillic [221]
+   */
+  Cyrs(221, "Cyrillic"),
 
-    /**
-     * Devanagari [315]
-     */
-    Deva(315, "Devanagari"),
 
-    /**
-     * Dives Akuru [342]
-     */
-    Diak(342, "Dives Akuru"),
+  /**
+   * Devanagari [315]
+   */
+  Deva(315, "Devanagari"),
 
-    /**
-     * Dogra [328]
-     */
-    Dogr(328, "Dogra"),
+  /**
+   * Dives Akuru [342]
+   */
+  Diak(342, "Dives Akuru"),
 
+  /**
+   * Dogra [328]
+   */
+  Dogr(328, "Dogra"),
 
-    /**
-     * Deseret [250]
-     */
-    Dsrt(250, "Deseret"),
 
+  /**
+   * Deseret [250]
+   */
+  Dsrt(250, "Deseret"),
 
-    /**
-     * Duployan shorthand, Duployan stenography [755]
-     */
-    Dupl(755, "Duployan shorthand, Duployan stenography"),
 
+  /**
+   * Duployan shorthand, Duployan stenography [755]
+   */
+  Dupl(755, "Duployan shorthand, Duployan stenography"),
 
-    /**
-     * Egyptian demotic [70]
-     */
-    Egyd(70, "Egyptian demotic"),
 
+  /**
+   * Egyptian demotic [70]
+   */
+  Egyd(70, "Egyptian demotic"),
 
-    /**
-     * Egyptian hieratic [060]
-     */
-    Egyh(60, "Egyptian hieratic"),
 
+  /**
+   * Egyptian hieratic [060]
+   */
+  Egyh(60, "Egyptian hieratic"),
 
-    /**
-     * Egyptian hieroglyphs [050]
-     */
-    Egyp(50, "Egyptian hieroglyphs"),
 
+  /**
+   * Egyptian hieroglyphs [050]
+   */
+  Egyp(50, "Egyptian hieroglyphs"),
 
-    /**
-     * Elbasan [226]
-     */
-    Elba(226, "Elbasan"),
 
-    /**
-     * Elymaic [128]
-     */
-    Elym(128, "Elymaic"),
+  /**
+   * Elbasan [226]
+   */
+  Elba(226, "Elbasan"),
 
+  /**
+   * Elymaic [128]
+   */
+  Elym(128, "Elymaic"),
 
-    /**
-     * Ethiopic [430]
-     */
-    Ethi(430, "Ethiopic"),
 
-    /**
-     * Garay [164]
-     */
-    Gara(164, "Garay"),
+  /**
+   * Ethiopic [430]
+   */
+  Ethi(430, "Ethiopic"),
 
-    /**
-     * Khutsuri (Asomtavruli and Nuskhuri) [241]
-     */
-    Geok(241, "Khutsuri (Asomtavruli and Nuskhuri)"),
+  /**
+   * Garay [164]
+   */
+  Gara(164, "Garay"),
 
+  /**
+   * Khutsuri (Asomtavruli and Nuskhuri) [241]
+   */
+  Geok(241, "Khutsuri (Asomtavruli and Nuskhuri)"),
 
-    /**
-     * Georgian [240]
-     */
-    Geor(240, "Georgian"),
 
+  /**
+   * Georgian [240]
+   */
+  Geor(240, "Georgian"),
 
-    /**
-     * Glagolitic [225]
-     */
-    Glag(225, "Glagolitic"),
 
-    /**
-     * Gunjala Gondi [312]
-     */
-    Gong(312, "Gunjala Gondi"),
+  /**
+   * Glagolitic [225]
+   */
+  Glag(225, "Glagolitic"),
 
-    /**
-     * Masaram Gondi [313]
-     */
-    Gonm(313, "Masaram Gondi"),
+  /**
+   * Gunjala Gondi [312]
+   */
+  Gong(312, "Gunjala Gondi"),
 
+  /**
+   * Masaram Gondi [313]
+   */
+  Gonm(313, "Masaram Gondi"),
 
-    /**
-     * Gothic [206]
-     */
-    Goth(206, "Gothic"),
 
+  /**
+   * Gothic [206]
+   */
+  Goth(206, "Gothic"),
 
-    /**
-     * Grantha [343]
-     */
-    Gran(343, "Grantha"),
 
+  /**
+   * Grantha [343]
+   */
+  Gran(343, "Grantha"),
 
-    /**
-     * Greek [200]
-     */
-    Grek(200, "Greek"),
 
+  /**
+   * Greek [200]
+   */
+  Grek(200, "Greek"),
 
-    /**
-     * Gujarati [320]
-     */
-    Gujr(320, "Gujarati"),
 
-    /**
-     * Gurung Khema [397]
-     */
-    Gukh(397, "Gurung Khema"),
+  /**
+   * Gujarati [320]
+   */
+  Gujr(320, "Gujarati"),
 
+  /**
+   * Gurung Khema [397]
+   */
+  Gukh(397, "Gurung Khema"),
 
-    /**
-     * Gurmukhi [310]
-     */
-    Guru(310, "Gurmukhi"),
 
-    /**
-     * Han with Bopomofo (alias for Han + Bopomofo) [503]
-     */
-    Hanb(503, "Han with Bopomofo (alias for Han + Bopomofo)"),
+  /**
+   * Gurmukhi [310]
+   */
+  Guru(310, "Gurmukhi"),
 
+  /**
+   * Han with Bopomofo (alias for Han + Bopomofo) [503]
+   */
+  Hanb(503, "Han with Bopomofo (alias for Han + Bopomofo)"),
 
-    /**
-     * Hangul [286]
-     */
-    Hang(286, "Hangul"),
 
+  /**
+   * Hangul [286]
+   */
+  Hang(286, "Hangul"),
 
-    /**
-     * Han [500]
-     */
-    Hani(500, "Han"),
 
+  /**
+   * Han [500]
+   */
+  Hani(500, "Han"),
 
-    /**
-     * Hanunoo [371]
-     */
-    Hano(371, "Hanunoo"),
 
+  /**
+   * Hanunoo [371]
+   */
+  Hano(371, "Hanunoo"),
 
-    /**
-     * Han [501]
-     */
-    Hans(501, "Han"),
 
+  /**
+   * Han [501]
+   */
+  Hans(501, "Han"),
 
-    /**
-     * Han [502]
-     */
-    Hant(502, "Han"),
 
-    /**
-     * Hatran [127]
-     */
-    Hatr(127, "Hatran"),
+  /**
+   * Han [502]
+   */
+  Hant(502, "Han"),
 
+  /**
+   * Hatran [127]
+   */
+  Hatr(127, "Hatran"),
 
-    /**
-     * Hebrew [125]
-     */
-    Hebr(125, "Hebrew"),
 
+  /**
+   * Hebrew [125]
+   */
+  Hebr(125, "Hebrew"),
 
-    /**
-     * Hiragana [410]
-     */
-    Hira(410, "Hiragana"),
 
+  /**
+   * Hiragana [410]
+   */
+  Hira(410, "Hiragana"),
 
-    /**
-     * Anatolian Hieroglyphs [080]
-     */
-    Hluw(80, "Anatolian Hieroglyphs"),
 
+  /**
+   * Anatolian Hieroglyphs [080]
+   */
+  Hluw(80, "Anatolian Hieroglyphs"),
 
-    /**
-     * Pahawh Hmong [450]
-     */
-    Hmng(450, "Pahawh Hmong"),
 
-    /**
-     * Nyiakeng Puachue Hmong [451]
-     */
-    Hmnp(451, "Nyiakeng Puachue Hmong"),
+  /**
+   * Pahawh Hmong [450]
+   */
+  Hmng(450, "Pahawh Hmong"),
 
-    /**
-     * Han (Traditional variant) with Latin (alias for Hant + Latn) [504]
-     */
-    Hntl(504, "Han (Traditional variant) with Latin (alias for Hant + Latn)"),
+  /**
+   * Nyiakeng Puachue Hmong [451]
+   */
+  Hmnp(451, "Nyiakeng Puachue Hmong"),
 
+  /**
+   * Han (Traditional variant) with Latin (alias for Hant + Latn) [504]
+   */
+  Hntl(504, "Han (Traditional variant) with Latin (alias for Hant + Latn)"),
 
-    /**
-     * Japanese syllabaries [412]
-     */
-    Hrkt(412, "Japanese syllabaries"),
 
+  /**
+   * Japanese syllabaries [412]
+   */
+  Hrkt(412, "Japanese syllabaries"),
 
-    /**
-     * Old Hungarian [176]
-     */
-    Hung(176, "Old Hungarian"),
 
+  /**
+   * Old Hungarian [176]
+   */
+  Hung(176, "Old Hungarian"),
 
-    /**
-     * Indus [610]
-     */
-    Inds(610, "Indus"),
 
+  /**
+   * Indus [610]
+   */
+  Inds(610, "Indus"),
 
-    /**
-     * Old Italic [210]
-     */
-    Ital(210, "Old Italic"),
 
-    /**
-     * Jamo (alias for Jamo subset of Hangul) [284]
-     */
-    Jamo(284, "Jamo (alias for Jamo subset of Hangul)"),
+  /**
+   * Old Italic [210]
+   */
+  Ital(210, "Old Italic"),
 
-    /**
-     * Javanese [361]
-     */
-    Java(361, "Javanese"),
+  /**
+   * Jamo (alias for Jamo subset of Hangul) [284]
+   */
+  Jamo(284, "Jamo (alias for Jamo subset of Hangul)"),
 
+  /**
+   * Javanese [361]
+   */
+  Java(361, "Javanese"),
 
-    /**
-     * Japanese [413]
-     */
-    Jpan(413, "Japanese"),
 
+  /**
+   * Japanese [413]
+   */
+  Jpan(413, "Japanese"),
 
-    /**
-     * Jurchen [510]
-     */
-    Jurc(510, "Jurchen"),
 
+  /**
+   * Jurchen [510]
+   */
+  Jurc(510, "Jurchen"),
 
-    /**
-     * Kayah Li [357]
-     */
-    Kali(357, "Kayah Li"),
 
+  /**
+   * Kayah Li [357]
+   */
+  Kali(357, "Kayah Li"),
 
-    /**
-     * Katakana [411]
-     */
-    Kana(411, "Katakana"),
 
-    /**
-     * Kawi [368]
-     */
-    Kawi(368, "Kawi"),
+  /**
+   * Katakana [411]
+   */
+  Kana(411, "Katakana"),
 
+  /**
+   * Kawi [368]
+   */
+  Kawi(368, "Kawi"),
 
-    /**
-     * Kharoshthi [305]
-     */
-    Khar(305, "Kharoshthi"),
 
+  /**
+   * Kharoshthi [305]
+   */
+  Khar(305, "Kharoshthi"),
 
-    /**
-     * Khmer [355]
-     */
-    Khmr(355, "Khmer"),
 
+  /**
+   * Khmer [355]
+   */
+  Khmr(355, "Khmer"),
 
-    /**
-     * Khojki [322]
-     */
-    Khoj(322, "Khojki"),
 
-    /**
-     * Khitan large script [505]
-     */
-    Kitl(505, "Khitan large script"),
+  /**
+   * Khojki [322]
+   */
+  Khoj(322, "Khojki"),
 
-    /**
-     * Khitan small script [288]
-     */
-    Kits(288, "Khitan small script"),
+  /**
+   * Khitan large script [505]
+   */
+  Kitl(505, "Khitan large script"),
 
+  /**
+   * Khitan small script [288]
+   */
+  Kits(288, "Khitan small script"),
 
-    /**
-     * Kannada [345]
-     */
-    Knda(345, "Kannada"),
 
+  /**
+   * Kannada [345]
+   */
+  Knda(345, "Kannada"),
 
-    /**
-     * Korean [287]
-     */
-    Kore(287, "Korean"),
 
+  /**
+   * Korean [287]
+   */
+  Kore(287, "Korean"),
 
-    /**
-     * Kpelle [436]
-     */
-    Kpel(436, "Kpelle"),
 
-    /**
-     * Kirat Rai [396]
-     */
-    Krai(396, "Kirat Rai"),
+  /**
+   * Kpelle [436]
+   */
+  Kpel(436, "Kpelle"),
 
+  /**
+   * Kirat Rai [396]
+   */
+  Krai(396, "Kirat Rai"),
 
-    /**
-     * Kaithi [317]
-     */
-    Kthi(317, "Kaithi"),
 
+  /**
+   * Kaithi [317]
+   */
+  Kthi(317, "Kaithi"),
 
-    /**
-     * Tai Tham [351]
-     */
-    Lana(351, "Tai Tham"),
 
+  /**
+   * Tai Tham [351]
+   */
+  Lana(351, "Tai Tham"),
 
-    /**
-     * Lao [356]
-     */
-    Laoo(356, "Lao"),
 
+  /**
+   * Lao [356]
+   */
+  Laoo(356, "Lao"),
 
-    /**
-     * Latin [217]
-     */
-    Latf(217, "Latin"),
 
+  /**
+   * Latin [217]
+   */
+  Latf(217, "Latin"),
 
-    /**
-     * Latin [216]
-     */
-    Latg(216, "Latin"),
 
+  /**
+   * Latin [216]
+   */
+  Latg(216, "Latin"),
 
-    /**
-     * Latin [215]
-     */
-    Latn(215, "Latin"),
 
-    /**
-     * Leke [364]
-     */
-    Leke(364, "Leke"),
+  /**
+   * Latin [215]
+   */
+  Latn(215, "Latin"),
 
+  /**
+   * Leke [364]
+   */
+  Leke(364, "Leke"),
 
-    /**
-     * Lepcha [335]
-     */
-    Lepc(335, "Lepcha"),
 
+  /**
+   * Lepcha [335]
+   */
+  Lepc(335, "Lepcha"),
 
-    /**
-     * Limbu [336]
-     */
-    Limb(336, "Limbu"),
 
+  /**
+   * Limbu [336]
+   */
+  Limb(336, "Limbu"),
 
-    /**
-     * Linear A [400]
-     */
-    Lina(400, "Linear A"),
 
+  /**
+   * Linear A [400]
+   */
+  Lina(400, "Linear A"),
 
-    /**
-     * Linear B [401]
-     */
-    Linb(401, "Linear B"),
 
+  /**
+   * Linear B [401]
+   */
+  Linb(401, "Linear B"),
 
-    /**
-     * Lisu [399]
-     */
-    Lisu(399, "Lisu"),
 
+  /**
+   * Lisu [399]
+   */
+  Lisu(399, "Lisu"),
 
-    /**
-     * Loma [437]
-     */
-    Loma(437, "Loma"),
 
+  /**
+   * Loma [437]
+   */
+  Loma(437, "Loma"),
 
-    /**
-     * Lycian [202]
-     */
-    Lyci(202, "Lycian"),
 
+  /**
+   * Lycian [202]
+   */
+  Lyci(202, "Lycian"),
 
-    /**
-     * Lydian [116]
-     */
-    Lydi(116, "Lydian"),
 
+  /**
+   * Lydian [116]
+   */
+  Lydi(116, "Lydian"),
 
-    /**
-     * Mahajani [314]
-     */
-    Mahj(314, "Mahajani"),
 
-    /**
-     * Makasar [366]
-     */
-    Maka(366, "Makasar"),
+  /**
+   * Mahajani [314]
+   */
+  Mahj(314, "Mahajani"),
 
+  /**
+   * Makasar [366]
+   */
+  Maka(366, "Makasar"),
 
-    /**
-     * Mandaic, Mandaean [140]
-     */
-    Mand(140, "Mandaic, Mandaean"),
 
+  /**
+   * Mandaic, Mandaean [140]
+   */
+  Mand(140, "Mandaic, Mandaean"),
 
-    /**
-     * Manichaean [139]
-     */
-    Mani(139, "Manichaean"),
 
-    /**
-     * Marchen [332]
-     */
-    Marc(332, "Marchen"),
+  /**
+   * Manichaean [139]
+   */
+  Mani(139, "Manichaean"),
 
+  /**
+   * Marchen [332]
+   */
+  Marc(332, "Marchen"),
 
-    /**
-     * Mayan hieroglyphs [090]
-     */
-    Maya(90, "Mayan hieroglyphs"),
 
-    /**
-     * Medefaidrin [265]
-     */
-    Medf(265, "Medefaidrin"),
+  /**
+   * Mayan hieroglyphs [090]
+   */
+  Maya(90, "Mayan hieroglyphs"),
 
+  /**
+   * Medefaidrin [265]
+   */
+  Medf(265, "Medefaidrin"),
 
-    /**
-     * Mende [438]
-     */
-    Mend(438, "Mende"),
 
+  /**
+   * Mende [438]
+   */
+  Mend(438, "Mende"),
 
-    /**
-     * Meroitic Cursive [101]
-     */
-    Merc(101, "Meroitic Cursive"),
 
+  /**
+   * Meroitic Cursive [101]
+   */
+  Merc(101, "Meroitic Cursive"),
 
-    /**
-     * Meroitic Hieroglyphs [100]
-     */
-    Mero(100, "Meroitic Hieroglyphs"),
 
+  /**
+   * Meroitic Hieroglyphs [100]
+   */
+  Mero(100, "Meroitic Hieroglyphs"),
 
-    /**
-     * Malayalam [347]
-     */
-    Mlym(347, "Malayalam"),
 
-    /**
-     * Modi [324]
-     */
-    Modi(324, "Modi"),
+  /**
+   * Malayalam [347]
+   */
+  Mlym(347, "Malayalam"),
 
-    /**
-     * Mongolian [145]
-     */
-    Mong(145, "Mongolian"),
+  /**
+   * Modi [324]
+   */
+  Modi(324, "Modi"),
 
+  /**
+   * Mongolian [145]
+   */
+  Mong(145, "Mongolian"),
 
-    /**
-     * Moon [218]
-     */
-    Moon(218, "Moon"),
 
+  /**
+   * Moon [218]
+   */
+  Moon(218, "Moon"),
 
-    /**
-     * Mro, Mru [199]
-     */
-    Mroo(199, "Mro, Mru"),
 
+  /**
+   * Mro, Mru [199]
+   */
+  Mroo(199, "Mro, Mru"),
 
-    /**
-     * Meitei Mayek [337]
-     */
-    Mtei(337, "Meitei Mayek"),
 
-    /**
-     * Multani [323]
-     */
-    Mult(323, "Multani"),
+  /**
+   * Meitei Mayek [337]
+   */
+  Mtei(337, "Meitei Mayek"),
 
+  /**
+   * Multani [323]
+   */
+  Mult(323, "Multani"),
 
-    /**
-     * Myanmar [350]
-     */
-    Mymr(350, "Myanmar"),
 
-    /**
-     * Nag Mundari [295]
-     */
-    Nagm(295, "Nag Mundari"),
+  /**
+   * Myanmar [350]
+   */
+  Mymr(350, "Myanmar"),
 
-    /**
-     * Nandinagari [311]
-     */
-    Nand(311, "Nandinagari"),
+  /**
+   * Nag Mundari [295]
+   */
+  Nagm(295, "Nag Mundari"),
 
+  /**
+   * Nandinagari [311]
+   */
+  Nand(311, "Nandinagari"),
 
-    /**
-     * Old North Arabian [106]
-     */
-    Narb(106, "Old North Arabian"),
 
+  /**
+   * Old North Arabian [106]
+   */
+  Narb(106, "Old North Arabian"),
 
-    /**
-     * Nabataean [159]
-     */
-    Nbat(159, "Nabataean"),
 
-    /**
-     * Newa, Newar, Newari [333]
-     */
-    Newa(333, "Newa, Newar, Newari"),
+  /**
+   * Nabataean [159]
+   */
+  Nbat(159, "Nabataean"),
 
-    /**
-     * Naxi Dongba [85]
-     */
-    Nkdb(85, "Naxi Dongba"),
+  /**
+   * Newa, Newar, Newari [333]
+   */
+  Newa(333, "Newa, Newar, Newari"),
 
-    /**
-     * Nakhi Geba [420]
-     */
-    Nkgb(420, "Nakhi Geba"),
+  /**
+   * Naxi Dongba [85]
+   */
+  Nkdb(85, "Naxi Dongba"),
 
+  /**
+   * Nakhi Geba [420]
+   */
+  Nkgb(420, "Nakhi Geba"),
 
-    /**
-     * N’Ko [165]
-     */
-    Nkoo(165, "N’Ko"),
 
+  /**
+   * N’Ko [165]
+   */
+  Nkoo(165, "N’Ko"),
 
-    /**
-     * Nushu [499]
-     */
-    Nshu(499, "Nushu"),
 
+  /**
+   * Nushu [499]
+   */
+  Nshu(499, "Nushu"),
 
-    /**
-     * Ogham [212]
-     */
-    Ogam(212, "Ogham"),
 
+  /**
+   * Ogham [212]
+   */
+  Ogam(212, "Ogham"),
 
-    /**
-     * Ol Chiki [261]
-     */
-    Olck(261, "Ol Chiki"),
 
-    /**
-     * Ol Onal [296]
-     */
-    Onao(296, "Ol Onal"),
+  /**
+   * Ol Chiki [261]
+   */
+  Olck(261, "Ol Chiki"),
 
+  /**
+   * Ol Onal [296]
+   */
+  Onao(296, "Ol Onal"),
 
-    /**
-     * Old Turkic, Orkhon Runic [175]
-     */
-    Orkh(175, "Old Turkic, Orkhon Runic"),
 
+  /**
+   * Old Turkic, Orkhon Runic [175]
+   */
+  Orkh(175, "Old Turkic, Orkhon Runic"),
 
-    /**
-     * Oriya [327]
-     */
-    Orya(327, "Oriya"),
 
-    /**
-     * Osage [219]
-     */
-    Osge(219, "Osage"),
+  /**
+   * Oriya [327]
+   */
+  Orya(327, "Oriya"),
 
+  /**
+   * Osage [219]
+   */
+  Osge(219, "Osage"),
 
-    /**
-     * Osmanya [260]
-     */
-    Osma(260, "Osmanya"),
 
-    /**
-     * Old Uyghur [143]
-     */
-    Ougr(143, "Old Uyghur"),
+  /**
+   * Osmanya [260]
+   */
+  Osma(260, "Osmanya"),
 
+  /**
+   * Old Uyghur [143]
+   */
+  Ougr(143, "Old Uyghur"),
 
-    /**
-     * Palmyrene [126]
-     */
-    Palm(126, "Palmyrene"),
 
-    /**
-     * Pau Cin Hau [263]
-     */
-    Pauc(263, "Pau Cin Hau"),
+  /**
+   * Palmyrene [126]
+   */
+  Palm(126, "Palmyrene"),
 
-    /**
-     * Proto-Cuneiform [15]
-     */
-    Pcun(15, "Proto-Cuneiform"),
+  /**
+   * Pau Cin Hau [263]
+   */
+  Pauc(263, "Pau Cin Hau"),
 
-    /**
-     * Proto-Elamite [16]
-     */
-    Pelm(16, "Proto-Elamite"),
+  /**
+   * Proto-Cuneiform [15]
+   */
+  Pcun(15, "Proto-Cuneiform"),
 
+  /**
+   * Proto-Elamite [16]
+   */
+  Pelm(16, "Proto-Elamite"),
 
-    /**
-     * Old Permic [227]
-     */
-    Perm(227, "Old Permic"),
 
+  /**
+   * Old Permic [227]
+   */
+  Perm(227, "Old Permic"),
 
-    /**
-     * Phags-pa [331]
-     */
-    Phag(331, "Phags-pa"),
 
+  /**
+   * Phags-pa [331]
+   */
+  Phag(331, "Phags-pa"),
 
-    /**
-     * Inscriptional Pahlavi [131]
-     */
-    Phli(131, "Inscriptional Pahlavi"),
 
+  /**
+   * Inscriptional Pahlavi [131]
+   */
+  Phli(131, "Inscriptional Pahlavi"),
 
-    /**
-     * Psalter Pahlavi [132]
-     */
-    Phlp(132, "Psalter Pahlavi"),
 
+  /**
+   * Psalter Pahlavi [132]
+   */
+  Phlp(132, "Psalter Pahlavi"),
 
-    /**
-     * Book Pahlavi [133]
-     */
-    Phlv(133, "Book Pahlavi"),
 
+  /**
+   * Book Pahlavi [133]
+   */
+  Phlv(133, "Book Pahlavi"),
 
-    /**
-     * Phoenician [115]
-     */
-    Phnx(115, "Phoenician"),
 
-    /**
-     * Klingon (KLI pIqaD) [293]
-     */
-    Piqd(293, "Klingon (KLI pIqaD)"),
+  /**
+   * Phoenician [115]
+   */
+  Phnx(115, "Phoenician"),
 
+  /**
+   * Klingon (KLI pIqaD) [293]
+   */
+  Piqd(293, "Klingon (KLI pIqaD)"),
 
-    /**
-     * Miao [282]
-     */
-    Plrd(282, "Miao"),
 
+  /**
+   * Miao [282]
+   */
+  Plrd(282, "Miao"),
 
-    /**
-     * Inscriptional Parthian [130]
-     */
-    Prti(130, "Inscriptional Parthian"),
 
-    /**
-     * Proto-Sinaitic [103]
-     */
-    Psin(103, "Proto-Sinaitic"),
+  /**
+   * Inscriptional Parthian [130]
+   */
+  Prti(130, "Inscriptional Parthian"),
 
+  /**
+   * Proto-Sinaitic [103]
+   */
+  Psin(103, "Proto-Sinaitic"),
 
-    /**
-     * Reserved for private use [900]
-     */
-    Qaaa(900, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [901]
-     */
-    Qaab(901, "Reserved for private use"),
+  /**
+   * Reserved for private use [900]
+   */
+  Qaaa(900, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [902]
-     */
-    Qaac(902, "Reserved for private use"),
+  /**
+   * Reserved for private use [901]
+   */
+  Qaab(901, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [903]
-     */
-    Qaad(903, "Reserved for private use"),
+  /**
+   * Reserved for private use [902]
+   */
+  Qaac(902, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [904]
-     */
-    Qaae(904, "Reserved for private use"),
+  /**
+   * Reserved for private use [903]
+   */
+  Qaad(903, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [905]
-     */
-    Qaaf(905, "Reserved for private use"),
+  /**
+   * Reserved for private use [904]
+   */
+  Qaae(904, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [906]
-     */
-    Qaag(906, "Reserved for private use"),
+  /**
+   * Reserved for private use [905]
+   */
+  Qaaf(905, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [907]
-     */
-    Qaah(907, "Reserved for private use"),
+  /**
+   * Reserved for private use [906]
+   */
+  Qaag(906, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [908]
-     */
-    Qaai(908, "Reserved for private use"),
+  /**
+   * Reserved for private use [907]
+   */
+  Qaah(907, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [909]
-     */
-    Qaaj(909, "Reserved for private use"),
+  /**
+   * Reserved for private use [908]
+   */
+  Qaai(908, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [910]
-     */
-    Qaak(910, "Reserved for private use"),
+  /**
+   * Reserved for private use [909]
+   */
+  Qaaj(909, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [911]
-     */
-    Qaal(911, "Reserved for private use"),
+  /**
+   * Reserved for private use [910]
+   */
+  Qaak(910, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [912]
-     */
-    Qaam(912, "Reserved for private use"),
+  /**
+   * Reserved for private use [911]
+   */
+  Qaal(911, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [913]
-     */
-    Qaan(913, "Reserved for private use"),
+  /**
+   * Reserved for private use [912]
+   */
+  Qaam(912, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [914]
-     */
-    Qaao(914, "Reserved for private use"),
+  /**
+   * Reserved for private use [913]
+   */
+  Qaan(913, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [915]
-     */
-    Qaap(915, "Reserved for private use"),
+  /**
+   * Reserved for private use [914]
+   */
+  Qaao(914, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [916]
-     */
-    Qaaq(916, "Reserved for private use"),
+  /**
+   * Reserved for private use [915]
+   */
+  Qaap(915, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [917]
-     */
-    Qaar(917, "Reserved for private use"),
+  /**
+   * Reserved for private use [916]
+   */
+  Qaaq(916, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [918]
-     */
-    Qaas(918, "Reserved for private use"),
+  /**
+   * Reserved for private use [917]
+   */
+  Qaar(917, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [919]
-     */
-    Qaat(919, "Reserved for private use"),
+  /**
+   * Reserved for private use [918]
+   */
+  Qaas(918, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [920]
-     */
-    Qaau(920, "Reserved for private use"),
+  /**
+   * Reserved for private use [919]
+   */
+  Qaat(919, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [921]
-     */
-    Qaav(921, "Reserved for private use"),
+  /**
+   * Reserved for private use [920]
+   */
+  Qaau(920, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [922]
-     */
-    Qaaw(922, "Reserved for private use"),
+  /**
+   * Reserved for private use [921]
+   */
+  Qaav(921, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [923]
-     */
-    Qaax(923, "Reserved for private use"),
+  /**
+   * Reserved for private use [922]
+   */
+  Qaaw(922, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [924]
-     */
-    Qaay(924, "Reserved for private use"),
+  /**
+   * Reserved for private use [923]
+   */
+  Qaax(923, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [925]
-     */
-    Qaaz(925, "Reserved for private use"),
+  /**
+   * Reserved for private use [924]
+   */
+  Qaay(924, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [926]
-     */
-    Qaba(926, "Reserved for private use"),
+  /**
+   * Reserved for private use [925]
+   */
+  Qaaz(925, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [927]
-     */
-    Qabb(927, "Reserved for private use"),
+  /**
+   * Reserved for private use [926]
+   */
+  Qaba(926, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [928]
-     */
-    Qabc(928, "Reserved for private use"),
+  /**
+   * Reserved for private use [927]
+   */
+  Qabb(927, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [929]
-     */
-    Qabd(929, "Reserved for private use"),
+  /**
+   * Reserved for private use [928]
+   */
+  Qabc(928, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [930]
-     */
-    Qabe(930, "Reserved for private use"),
+  /**
+   * Reserved for private use [929]
+   */
+  Qabd(929, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [931]
-     */
-    Qabf(931, "Reserved for private use"),
+  /**
+   * Reserved for private use [930]
+   */
+  Qabe(930, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [932]
-     */
-    Qabg(932, "Reserved for private use"),
+  /**
+   * Reserved for private use [931]
+   */
+  Qabf(931, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [933]
-     */
-    Qabh(933, "Reserved for private use"),
+  /**
+   * Reserved for private use [932]
+   */
+  Qabg(932, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [934]
-     */
-    Qabi(934, "Reserved for private use"),
+  /**
+   * Reserved for private use [933]
+   */
+  Qabh(933, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [935]
-     */
-    Qabj(935, "Reserved for private use"),
+  /**
+   * Reserved for private use [934]
+   */
+  Qabi(934, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [936]
-     */
-    Qabk(936, "Reserved for private use"),
+  /**
+   * Reserved for private use [935]
+   */
+  Qabj(935, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [937]
-     */
-    Qabl(937, "Reserved for private use"),
+  /**
+   * Reserved for private use [936]
+   */
+  Qabk(936, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [938]
-     */
-    Qabm(938, "Reserved for private use"),
+  /**
+   * Reserved for private use [937]
+   */
+  Qabl(937, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [939]
-     */
-    Qabn(939, "Reserved for private use"),
+  /**
+   * Reserved for private use [938]
+   */
+  Qabm(938, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [940]
-     */
-    Qabo(940, "Reserved for private use"),
+  /**
+   * Reserved for private use [939]
+   */
+  Qabn(939, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [941]
-     */
-    Qabp(941, "Reserved for private use"),
+  /**
+   * Reserved for private use [940]
+   */
+  Qabo(940, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [942]
-     */
-    Qabq(942, "Reserved for private use"),
+  /**
+   * Reserved for private use [941]
+   */
+  Qabp(941, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [943]
-     */
-    Qabr(943, "Reserved for private use"),
+  /**
+   * Reserved for private use [942]
+   */
+  Qabq(942, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [944]
-     */
-    Qabs(944, "Reserved for private use"),
+  /**
+   * Reserved for private use [943]
+   */
+  Qabr(943, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [945]
-     */
-    Qabt(945, "Reserved for private use"),
+  /**
+   * Reserved for private use [944]
+   */
+  Qabs(944, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [946]
-     */
-    Qabu(946, "Reserved for private use"),
+  /**
+   * Reserved for private use [945]
+   */
+  Qabt(945, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [947]
-     */
-    Qabv(947, "Reserved for private use"),
+  /**
+   * Reserved for private use [946]
+   */
+  Qabu(946, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [948]
-     */
-    Qabw(948, "Reserved for private use"),
+  /**
+   * Reserved for private use [947]
+   */
+  Qabv(947, "Reserved for private use"),
 
-    /**
-     * Reserved for private use [949]
-     */
-    Qabx(949, "Reserved for private use"),
+  /**
+   * Reserved for private use [948]
+   */
+  Qabw(948, "Reserved for private use"),
 
-    /**
-     * Ranjana [303]
-     */
-    Ranj(303, "Ranjana"),
+  /**
+   * Reserved for private use [949]
+   */
+  Qabx(949, "Reserved for private use"),
 
+  /**
+   * Ranjana [303]
+   */
+  Ranj(303, "Ranjana"),
 
-    /**
-     * Rejang [363]
-     */
-    Rjng(363, "Rejang"),
 
-    /**
-     * Hanifi Rohingya [167]
-     */
-    Rohg(167, "Hanifi Rohingya"),
+  /**
+   * Rejang [363]
+   */
+  Rjng(363, "Rejang"),
 
+  /**
+   * Hanifi Rohingya [167]
+   */
+  Rohg(167, "Hanifi Rohingya"),
 
-    /**
-     * Rongorongo [620]
-     */
-    Roro(620, "Rongorongo"),
 
+  /**
+   * Rongorongo [620]
+   */
+  Roro(620, "Rongorongo"),
 
-    /**
-     * Runic [211]
-     */
-    Runr(211, "Runic"),
 
+  /**
+   * Runic [211]
+   */
+  Runr(211, "Runic"),
 
-    /**
-     * Samaritan [123]
-     */
-    Samr(123, "Samaritan"),
 
+  /**
+   * Samaritan [123]
+   */
+  Samr(123, "Samaritan"),
 
-    /**
-     * Sarati [292]
-     */
-    Sara(292, "Sarati"),
 
+  /**
+   * Sarati [292]
+   */
+  Sara(292, "Sarati"),
 
-    /**
-     * Old South Arabian [105]
-     */
-    Sarb(105, "Old South Arabian"),
 
+  /**
+   * Old South Arabian [105]
+   */
+  Sarb(105, "Old South Arabian"),
 
-    /**
-     * Saurashtra [344]
-     */
-    Saur(344, "Saurashtra"),
 
-    /**
-     * (Small) Seal [590]
-     */
-    Seal(590, "(Small) Seal"),
+  /**
+   * Saurashtra [344]
+   */
+  Saur(344, "Saurashtra"),
 
+  /**
+   * (Small) Seal [590]
+   */
+  Seal(590, "(Small) Seal"),
 
-    /**
-     * SignWriting [095]
-     */
-    Sgnw(95, "SignWriting"),
 
+  /**
+   * SignWriting [095]
+   */
+  Sgnw(95, "SignWriting"),
 
-    /**
-     * Shavian [281]
-     */
-    Shaw(281, "Shavian"),
 
+  /**
+   * Shavian [281]
+   */
+  Shaw(281, "Shavian"),
 
-    /**
-     * Sharada [319]
-     */
-    Shrd(319, "Sharada"),
 
-    /**
-     * Shuishu [530]
-     */
-    Shui(530, "Shuishu"),
+  /**
+   * Sharada [319]
+   */
+  Shrd(319, "Sharada"),
 
-    /**
-     * Siddham [302]
-     */
-    Sidd(302, "Siddham"),
+  /**
+   * Shuishu [530]
+   */
+  Shui(530, "Shuishu"),
 
-    /**
-     * Sidetic [180]
-     */
-    Sidt(180, "Sidetic"),
+  /**
+   * Siddham [302]
+   */
+  Sidd(302, "Siddham"),
 
+  /**
+   * Sidetic [180]
+   */
+  Sidt(180, "Sidetic"),
 
-    /**
-     * Khudawadi, Sindhi [318]
-     */
-    Sind(318, "Khudawadi, Sindhi"),
 
+  /**
+   * Khudawadi, Sindhi [318]
+   */
+  Sind(318, "Khudawadi, Sindhi"),
 
-    /**
-     * Sinhala [348]
-     */
-    Sinh(348, "Sinhala"),
 
-    /**
-     * Sogdian [141]
-     */
-    Sogd(141, "Sogdian"),
+  /**
+   * Sinhala [348]
+   */
+  Sinh(348, "Sinhala"),
 
-    /**
-     * Old Sogdian [142]
-     */
-    Sogo(142, "Old Sogdian"),
+  /**
+   * Sogdian [141]
+   */
+  Sogd(141, "Sogdian"),
 
+  /**
+   * Old Sogdian [142]
+   */
+  Sogo(142, "Old Sogdian"),
 
-    /**
-     * Sora Sompeng [398]
-     */
-    Sora(398, "Sora Sompeng"),
 
-    /**
-     * Soyombo [329]
-     */
-    Soyo(329, "Soyombo"),
+  /**
+   * Sora Sompeng [398]
+   */
+  Sora(398, "Sora Sompeng"),
 
+  /**
+   * Soyombo [329]
+   */
+  Soyo(329, "Soyombo"),
 
-    /**
-     * Sundanese [362]
-     */
-    Sund(362, "Sundanese"),
 
-    /**
-     * Sunuwar [274]
-     */
-    Sunu(274, "Sunuwar"),
+  /**
+   * Sundanese [362]
+   */
+  Sund(362, "Sundanese"),
 
+  /**
+   * Sunuwar [274]
+   */
+  Sunu(274, "Sunuwar"),
 
-    /**
-     * Syloti Nagri [316]
-     */
-    Sylo(316, "Syloti Nagri"),
 
+  /**
+   * Syloti Nagri [316]
+   */
+  Sylo(316, "Syloti Nagri"),
 
-    /**
-     * Syriac [135]
-     */
-    Syrc(135, "Syriac"),
 
+  /**
+   * Syriac [135]
+   */
+  Syrc(135, "Syriac"),
 
-    /**
-     * Syriac [138]
-     */
-    Syre(138, "Syriac"),
 
+  /**
+   * Syriac [138]
+   */
+  Syre(138, "Syriac"),
 
-    /**
-     * Syriac [137]
-     */
-    Syrj(137, "Syriac"),
 
+  /**
+   * Syriac [137]
+   */
+  Syrj(137, "Syriac"),
 
-    /**
-     * Syriac [136]
-     */
-    Syrn(136, "Syriac"),
 
+  /**
+   * Syriac [136]
+   */
+  Syrn(136, "Syriac"),
 
-    /**
-     * Tagbanwa [373]
-     */
-    Tagb(373, "Tagbanwa"),
 
+  /**
+   * Tagbanwa [373]
+   */
+  Tagb(373, "Tagbanwa"),
 
-    /**
-     * Takri [321]
-     */
-    Takr(321, "Takri"),
 
+  /**
+   * Takri [321]
+   */
+  Takr(321, "Takri"),
 
-    /**
-     * Tai Le [353]
-     */
-    Tale(353, "Tai Le"),
 
+  /**
+   * Tai Le [353]
+   */
+  Tale(353, "Tai Le"),
 
-    /**
-     * New Tai Lue [354]
-     */
-    Talu(354, "New Tai Lue"),
 
+  /**
+   * New Tai Lue [354]
+   */
+  Talu(354, "New Tai Lue"),
 
-    /**
-     * Tamil [346]
-     */
-    Taml(346, "Tamil"),
 
+  /**
+   * Tamil [346]
+   */
+  Taml(346, "Tamil"),
 
-    /**
-     * Tangut [520]
-     */
-    Tang(520, "Tangut"),
 
+  /**
+   * Tangut [520]
+   */
+  Tang(520, "Tangut"),
 
-    /**
-     * Tai Viet [359]
-     */
-    Tavt(359, "Tai Viet"),
 
-    /**
-     * Tai Yo [380]
-     */
-    Tayo(380, "Tai Yo"),
+  /**
+   * Tai Viet [359]
+   */
+  Tavt(359, "Tai Viet"),
 
+  /**
+   * Tai Yo [380]
+   */
+  Tayo(380, "Tai Yo"),
 
-    /**
-     * Telugu [340]
-     */
-    Telu(340, "Telugu"),
 
+  /**
+   * Telugu [340]
+   */
+  Telu(340, "Telugu"),
 
-    /**
-     * Tengwar [290]
-     */
-    Teng(290, "Tengwar"),
 
+  /**
+   * Tengwar [290]
+   */
+  Teng(290, "Tengwar"),
 
-    /**
-     * Tifinagh [120]
-     */
-    Tfng(120, "Tifinagh"),
 
+  /**
+   * Tifinagh [120]
+   */
+  Tfng(120, "Tifinagh"),
 
-    /**
-     * Tagalog [370]
-     */
-    Tglg(370, "Tagalog"),
 
+  /**
+   * Tagalog [370]
+   */
+  Tglg(370, "Tagalog"),
 
-    /**
-     * Thaana [170]
-     */
-    Thaa(170, "Thaana"),
 
+  /**
+   * Thaana [170]
+   */
+  Thaa(170, "Thaana"),
 
-    /**
-     * Thai [352]
-     */
-    Thai(352, "Thai"),
 
+  /**
+   * Thai [352]
+   */
+  Thai(352, "Thai"),
 
-    /**
-     * Tibetan [330]
-     */
-    Tibt(330, "Tibetan"),
 
+  /**
+   * Tibetan [330]
+   */
+  Tibt(330, "Tibetan"),
 
-    /**
-     * Tirhuta [326]
-     */
-    Tirh(326, "Tirhuta"),
 
-    /**
-     * Tangsa [275]
-     */
-    Tnsa(275, "Tangsa"),
+  /**
+   * Tirhuta [326]
+   */
+  Tirh(326, "Tirhuta"),
 
-    /**
-     * Todhri [229]
-     */
-    Todr(229, "Todhri"),
+  /**
+   * Tangsa [275]
+   */
+  Tnsa(275, "Tangsa"),
 
-    /**
-     * Tolong Siki [299]
-     */
-    Tols(299, "Tolong Siki"),
+  /**
+   * Todhri [229]
+   */
+  Todr(229, "Todhri"),
 
-    /**
-     * Toto [294]
-     */
-    Toto(294, "Toto"),
+  /**
+   * Tolong Siki [299]
+   */
+  Tols(299, "Tolong Siki"),
 
-    /**
-     * Tulu-Tigalari [341]
-     */
-    Tutg(341, "Tulu-Tigalari"),
+  /**
+   * Toto [294]
+   */
+  Toto(294, "Toto"),
 
+  /**
+   * Tulu-Tigalari [341]
+   */
+  Tutg(341, "Tulu-Tigalari"),
 
-    /**
-     * Ugaritic [040]
-     */
-    Ugar(40, "Ugaritic"),
 
+  /**
+   * Ugaritic [040]
+   */
+  Ugar(40, "Ugaritic"),
 
-    /**
-     * Vai [470]
-     */
-    Vaii(470, "Vai"),
 
+  /**
+   * Vai [470]
+   */
+  Vaii(470, "Vai"),
 
-    /**
-     * Visible Speech [280]
-     */
-    Visp(280, "Visible Speech"),
 
-    /**
-     * Vithkuqi [228]
-     */
-    Vith(228, "Vithkuqi"),
+  /**
+   * Visible Speech [280]
+   */
+  Visp(280, "Visible Speech"),
 
+  /**
+   * Vithkuqi [228]
+   */
+  Vith(228, "Vithkuqi"),
 
-    /**
-     * Warang Citi [262]
-     */
-    Wara(262, "Warang Citi"),
 
-    /**
-     * Wancho [283]
-     */
-    Wcho(283, "Wancho"),
+  /**
+   * Warang Citi [262]
+   */
+  Wara(262, "Warang Citi"),
 
+  /**
+   * Wancho [283]
+   */
+  Wcho(283, "Wancho"),
 
-    /**
-     * Woleai [480]
-     */
-    Wole(480, "Woleai"),
 
+  /**
+   * Woleai [480]
+   */
+  Wole(480, "Woleai"),
 
-    /**
-     * Old Persian [030]
-     */
-    Xpeo(30, "Old Persian"),
 
+  /**
+   * Old Persian [030]
+   */
+  Xpeo(30, "Old Persian"),
 
-    /**
-     * Cuneiform, Sumero-Akkadian [020]
-     */
-    Xsux(20, "Cuneiform, Sumero-Akkadian"),
 
-    /**
-     * Yezidi [192]
-     */
-    Yezi(192, "Yezidi"),
+  /**
+   * Cuneiform, Sumero-Akkadian [020]
+   */
+  Xsux(20, "Cuneiform, Sumero-Akkadian"),
 
+  /**
+   * Yezidi [192]
+   */
+  Yezi(192, "Yezidi"),
 
-    /**
-     * Yi [460]
-     */
-    Yiii(460, "Yi"),
 
-    /**
-     * Zanabazar Square [339]
-     */
-    Zanb(339, "Zanabazar Square"),
+  /**
+   * Yi [460]
+   */
+  Yiii(460, "Yi"),
 
+  /**
+   * Zanabazar Square [339]
+   */
+  Zanb(339, "Zanabazar Square"),
 
-    /**
-     * Code for inherited script [994]
-     */
-    Zinh(994, "Code for inherited script"),
 
+  /**
+   * Code for inherited script [994]
+   */
+  Zinh(994, "Code for inherited script"),
 
-    /**
-     * Mathematical notation [995]
-     */
-    Zmth(995, "Mathematical notation"),
 
-    /**
-     * Symbols (emoji variant) [993]
-     */
-    Zsye(993, "Symbols (emoji variant)"),
+  /**
+   * Mathematical notation [995]
+   */
+  Zmth(995, "Mathematical notation"),
 
+  /**
+   * Symbols (emoji variant) [993]
+   */
+  Zsye(993, "Symbols (emoji variant)"),
 
-    /**
-     * Symbols [996]
-     */
-    Zsym(996, "Symbols"),
 
+  /**
+   * Symbols [996]
+   */
+  Zsym(996, "Symbols"),
 
-    /**
-     * Code for unwritten documents [997]
-     */
-    Zxxx(997, "Code for unwritten documents"),
 
+  /**
+   * Code for unwritten documents [997]
+   */
+  Zxxx(997, "Code for unwritten documents"),
 
-    /**
-     * Code for undetermined script [998]
-     */
-    Zyyy(998, "Code for undetermined script"),
 
+  /**
+   * Code for undetermined script [998]
+   */
+  Zyyy(998, "Code for undetermined script"),
 
-    /**
-     * Code for uncoded script [999]
-     */
-    Zzzz(999, "Code for uncoded script")
-    ;
 
+  /**
+   * Code for uncoded script [999]
+   */
+  Zzzz(999, "Code for uncoded script");
 
-    /**
-     * Map to look up ScriptCode by numeric code.
-     */
-    private static final Map<Integer, ScriptCode> numericMap = new HashMap<>();
 
+  /**
+   * Map to look up ScriptCode by numeric code.
+   */
+  private static final Map<Integer, ScriptCode> numericMap = new HashMap<>();
 
-    static
-    {
-        for (ScriptCode sc : values())
-        {
-            if (sc.getNumeric() != -1)
-            {
-                numericMap.put(sc.getNumeric(), sc);
-            }
-        }
+
+  static {
+    for (ScriptCode sc : values()) {
+      if (sc.getNumeric() != -1) {
+        numericMap.put(sc.getNumeric(), sc);
+      }
+    }
+  }
+
+
+  /**
+   * The numeric code of this script code.
+   */
+  private final int numeric;
+
+
+  /**
+   * English name of this script code.
+   */
+  private final String name;
+
+
+  /**
+   * Constructor.
+   */
+  ScriptCode(int numeric, String name) {
+    this.numeric = numeric;
+    this.name = name;
+  }
+
+
+  /**
+   * Get the numeric code of this script code.
+   *
+   * @return Numeric code.
+   */
+  public int getNumeric() {
+    return numeric;
+  }
+
+
+  /**
+   * Get English name of this script code.
+   *
+   * @return English name.
+   */
+  public String getName() {
+    return name;
+  }
+
+
+  /**
+   * Convert this {@code ScriptCode} instance to a {@link Locale} instance.
+   *
+   * <p>
+   * This method creates a new {@code Locale} instance
+   * every time it is called.
+   * </p>
+   *
+   * @return A {@code Locale} instance that matches this {@code ScriptCode}.
+   * @since 1.30
+   */
+  public Locale toLocale() {
+    return new Locale.Builder().setScript(name()).build();
+  }
+
+  /**
+   * Get a {@code ScriptCode} instance that corresponds to the given
+   * ISO 15924 alpha-4 code.
+   *
+   * <p>
+   * This method calls {@link #getByCode(String, boolean) getByCode}{@code (code, true)}.
+   * Note that the behavior has changed since the version 1.13. In the older versions,
+   * this method was an alias of {@code getByCode(code, false)}.
+   * </p>
+   *
+   * @param code ISO 15924 alpha-4 code. Or "Undefined" (case-sensitive).
+   * @return A {@code ScriptCode} instance, or {@code null} if not found.
+   */
+  public static ScriptCode getByCode(String code) {
+    return getByCode(code, true);
+  }
+
+
+  /**
+   * Get a {@code ScriptCode} instance that corresponds to the given
+   * ISO 15924 alpha-4 code.
+   *
+   * <p>
+   * This method calls {@link #getByCode(String, boolean) getByCode}{@code (code, false)}.
+   * </p>
+   *
+   * @param code ISO 15924 alpha-4 code. Or "Undefined" (case-insensitive).
+   * @return A {@code ScriptCode} instance, or {@code null} if not found.
+   * @since 1.13
+   */
+  public static ScriptCode getByCodeIgnoreCase(String code) {
+    return getByCode(code, false);
+  }
+
+
+  /**
+   * Get a {@code ScriptCode} instance that corresponds to the given
+   * ISO 15924 alpha-4 code.
+   *
+   * @param code          ISO 15924 alpha-4 code. Or "Undefined" (its case sensitivity
+   *                      depends on the value of {@code caseSensitive}).
+   * @param caseSensitive If {@code true}, the first letter of the given code should be
+   *                      capital and the other letters should be small. If {@code false},
+   *                      whether letters are capital or small does not matter.
+   *                      For example, {@code getByCode("JPAN", true)} returns
+   *                      {@code null} but {@code getByCode("JPAN", false)} returns
+   *                      {@link #Jpan}.
+   * @return A {@code ScriptCode} instance, or {@code null} if not found.
+   */
+  public static ScriptCode getByCode(String code, boolean caseSensitive) {
+    if (code == null) {
+      return null;
     }
 
+    switch (code.length()) {
+      case 4:
+      case 9:
+        break;
 
-    /**
-     * The numeric code of this script code.
-     */
-    private final int numeric;
-
-
-    /**
-     * English name of this script code.
-     */
-    private final String name;
-
-
-    /**
-     * Constructor.
-     */
-    ScriptCode(int numeric, String name)
-    {
-        this.numeric = numeric;
-        this.name = name;
+      default:
+        return null;
     }
 
+    code = canonicalize(code, caseSensitive);
 
-    /**
-     * Get the numeric code of this script code.
-     *
-     * @return
-     *         Numeric code.
-     */
-    public int getNumeric()
-    {
-        return numeric;
+    try {
+      return Enum.valueOf(ScriptCode.class, code);
+    } catch (IllegalArgumentException e) {
+      return null;
+    }
+  }
+
+
+  /**
+   * Get a {@code ScriptCode} instance that corresponds to the given
+   * ISO 15924 numeric code.
+   *
+   * @param code ISO 15924 numeric code.
+   * @return A {@code ScriptCode} instance, or {@code null} if not found.
+   * If 0 or a negative value is given, {@code null} is returned.
+   */
+  public static ScriptCode getByCode(int code) {
+    if (code <= 0) {
+      return null;
     }
 
+    return numericMap.get(code);
+  }
 
-    /**
-     * Get English name of this script code.
-     *
-     * @return
-     *         English name.
-     */
-    public String getName()
-    {
-        return name;
+  /**
+   * Get a {@code ScriptCode} that corresponds to the script code of
+   * the given {@link Locale} instance.
+   *
+   * @param locale A {@code Locale} instance.
+   * @return A {@code ScriptCode} instance, or {@code null} if not found.
+   * When {@link Locale#getScript() getScript()} method of the
+   * given {@code Locale} instance returns {@code null} or an
+   * empty string, {@link #Undefined ScriptCode.Undefined} is
+   * returned.
+   * @see Locale#getScript()
+   */
+  public static ScriptCode getByLocale(Locale locale) {
+    if (locale == null) {
+      return null;
     }
 
+    String script = locale.getScript();
 
-    /**
-     * Convert this {@code ScriptCode} instance to a {@link Locale} instance.
-     *
-     * <p>
-     * This method creates a new {@code Locale} instance
-     * every time it is called.
-     * </p>
-     *
-     * @return
-     *         A {@code Locale} instance that matches this {@code ScriptCode}.
-     * @since 1.30
-     */
-    public Locale toLocale()
-    {
-        return new Locale.Builder().setScript(name()).build();
+    if (script.isEmpty()) {
+      return ScriptCode.Undefined;
     }
 
-    /**
-     * Get a {@code ScriptCode} instance that corresponds to the given
-     * ISO 15924 alpha-4 code.
-     *
-     * <p>
-     * This method calls {@link #getByCode(String, boolean) getByCode}{@code (code, true)}.
-     * Note that the behavior has changed since the version 1.13. In the older versions,
-     * this method was an alias of {@code getByCode(code, false)}.
-     * </p>
-     *
-     * @param code
-     *         ISO 15924 alpha-4 code. Or "Undefined" (case-sensitive).
-     *
-     * @return
-     *         A {@code ScriptCode} instance, or {@code null} if not found.
-     */
-    public static ScriptCode getByCode(String code)
-    {
-        return getByCode(code, true);
+    return ScriptCode.getByCode(script, true);
+  }
+
+  private static String canonicalize(String code, boolean caseSensitive) {
+    if (code == null || code.isEmpty()) {
+      return null;
     }
 
-
-    /**
-     * Get a {@code ScriptCode} instance that corresponds to the given
-     * ISO 15924 alpha-4 code.
-     *
-     * <p>
-     * This method calls {@link #getByCode(String, boolean) getByCode}{@code (code, false)}.
-     * </p>
-     *
-     * @param code
-     *         ISO 15924 alpha-4 code. Or "Undefined" (case-insensitive).
-     *
-     * @return
-     *         A {@code ScriptCode} instance, or {@code null} if not found.
-     *
-     * @since 1.13
-     */
-    public static ScriptCode getByCodeIgnoreCase(String code)
-    {
-        return getByCode(code, false);
+    if (caseSensitive) {
+      return code;
     }
 
+    // A new instance is assigned to this variable
+    // if modification is needed.
+    StringBuilder sb = null;
 
-    /**
-     * Get a {@code ScriptCode} instance that corresponds to the given
-     * ISO 15924 alpha-4 code.
-     *
-     * @param code
-     *         ISO 15924 alpha-4 code. Or "Undefined" (its case sensitivity
-     *         depends on the value of {@code caseSensitive}).
-     *
-     * @param caseSensitive
-     *         If {@code true}, the first letter of the given code should be
-     *         capital and the other letters should be small. If {@code false},
-     *         whether letters are capital or small does not matter.
-     *         For example, {@code getByCode("JPAN", true)} returns
-     *         {@code null} but {@code getByCode("JPAN", false)} returns
-     *         {@link #Jpan}.
-     *
-     * @return
-     *         A {@code ScriptCode} instance, or {@code null} if not found.
-     */
-    public static ScriptCode getByCode(String code, boolean caseSensitive)
-    {
-        if (code == null)
-        {
-            return null;
+    for (int i = 0; i < code.length(); ++i) {
+      char ch = code.charAt(i);
+
+      // The first letter.
+      if (i == 0) {
+        if (!Character.isUpperCase(ch)) {
+          // Modification is needed.
+          sb = new StringBuilder();
+          sb.append(Character.toUpperCase(ch));
         }
+      }
+      // The second and subsequent letters.
+      else {
+        if (sb == null) {
+          if (!Character.isLowerCase(ch)) {
+            // Modification is needed.
+            sb = new StringBuilder();
 
-        switch (code.length())
-        {
-            case 4:
-            case 9:
-                break;
+            // Copy all the previous letters so far.
+            sb.append(code, 0, i);
 
-            default:
-                return null;
+            // Lower the current letter.
+            sb.append(Character.toLowerCase(ch));
+          }
+        } else {
+          sb.append(Character.toLowerCase(ch));
         }
-
-        code = canonicalize(code, caseSensitive);
-
-        try
-        {
-            return Enum.valueOf(ScriptCode.class, code);
-        }
-        catch (IllegalArgumentException e)
-        {
-            return null;
-        }
+      }
     }
 
+    if (sb == null) {
+      return code;
+    } else {
+      return sb.toString();
+    }
+  }
 
-    /**
-     * Get a {@code ScriptCode} instance that corresponds to the given
-     * ISO 15924 numeric code.
-     *
-     * @param code
-     *         ISO 15924 numeric code.
-     *
-     * @return
-     *         A {@code ScriptCode} instance, or {@code null} if not found.
-     *         If 0 or a negative value is given, {@code null} is returned.
-     */
-    public static ScriptCode getByCode(int code)
-    {
-        if (code <= 0)
-        {
-            return null;
-        }
 
-        return numericMap.get(code);
+  /**
+   * Get a list of {@code ScriptCode} by a name regular expression.
+   *
+   * <p>
+   * This method is almost equivalent to {@link #findByName(Pattern)
+   * findByName}{@code (Pattern.compile(regex))}.
+   * </p>
+   *
+   * @param regex Regular expression for names.
+   * @return List of {@code ScriptCode}. If nothing has matched,
+   * an empty list is returned.
+   * @throws IllegalArgumentException               {@code regex} is {@code null}.
+   * @throws java.util.regex.PatternSyntaxException {@code regex} failed to be compiled.
+   * @since 1.11
+   */
+  public static List<ScriptCode> findByName(String regex) {
+    if (regex == null) {
+      throw new IllegalArgumentException("regex is null.");
     }
 
-    /**
-     * Get a {@code ScriptCode} that corresponds to the script code of
-     * the given {@link Locale} instance.
-     *
-     * @param locale
-     *         A {@code Locale} instance.
-     *
-     * @return
-     *         A {@code ScriptCode} instance, or {@code null} if not found.
-     *         When {@link Locale#getScript() getScript()} method of the
-     *         given {@code Locale} instance returns {@code null} or an
-     *         empty string, {@link #Undefined ScriptCode.Undefined} is
-     *         returned.
-     *
-     * @see Locale#getScript()
-     */
-    public static ScriptCode getByLocale(Locale locale)
-    {
-        if (locale == null)
-        {
-            return null;
-        }
+    // Compile the regular expression. This may throw
+    // java.util.regex.PatternSyntaxException.
+    Pattern pattern = Pattern.compile(regex);
 
-        String script = locale.getScript();
+    return findByName(pattern);
+  }
 
-        if (script.isEmpty())
-        {
-            return ScriptCode.Undefined;
-        }
 
-        return ScriptCode.getByCode(script, true);
+  /**
+   * Get a list of {@code ScriptCode} by a name pattern.
+   *
+   * <p>
+   * For example, the list obtained by the code snippet below:
+   * </p>
+   *
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * Pattern pattern = Pattern.compile(<span style="color: darkred;">"Egyptian.*"</span>);
+   * List&lt;ScriptCode&gt; list = ScriptCode.findByName(pattern);</pre>
+   *
+   * <p>
+   * contains 3 {@code ScriptCode}s as listed below.
+   * </p>
+   *
+   * <ol>
+   * <li>{@link #Egyd} : Egyptian demotic
+   * <li>{@link #Egyh} : Egyptian hieratic
+   * <li>{@link #Egyp} : Egyptian hieroglyphs
+   * </ol>
+   *
+   * @param pattern Pattern to match names.
+   * @return List of {@code ScriptCode}. If nothing has matched,
+   * an empty list is returned.
+   * @throws IllegalArgumentException {@code pattern} is {@code null}.
+   * @since 1.11
+   */
+  public static List<ScriptCode> findByName(Pattern pattern) {
+    if (pattern == null) {
+      throw new IllegalArgumentException("pattern is null.");
     }
 
-    private static String canonicalize(String code, boolean caseSensitive)
-    {
-        if (code == null || code.isEmpty())
-        {
-            return null;
-        }
+    List<ScriptCode> list = new ArrayList<>();
 
-        if (caseSensitive)
-        {
-            return code;
-        }
-
-        // A new instance is assigned to this variable
-        // if modification is needed.
-        StringBuilder sb = null;
-
-        for (int i = 0; i < code.length(); ++i)
-        {
-            char ch = code.charAt(i);
-
-            // The first letter.
-            if (i == 0)
-            {
-                if (!Character.isUpperCase(ch))
-                {
-                    // Modification is needed.
-                    sb = new StringBuilder();
-                    sb.append(Character.toUpperCase(ch));
-                }
-            }
-            // The second and subsequent letters.
-            else
-            {
-                if (sb == null)
-                {
-                    if (!Character.isLowerCase(ch))
-                    {
-                        // Modification is needed.
-                        sb = new StringBuilder();
-
-                        // Copy all the previous letters so far.
-                        sb.append(code, 0, i);
-
-                        // Lower the current letter.
-                        sb.append(Character.toLowerCase(ch));
-                    }
-                }
-                else
-                {
-                    sb.append(Character.toLowerCase(ch));
-                }
-            }
-        }
-
-        if (sb == null)
-        {
-            return code;
-        }
-        else
-        {
-            return sb.toString();
-        }
+    for (ScriptCode entry : values()) {
+      // If the name matches the given pattern.
+      if (pattern.matcher(entry.getName()).matches()) {
+        list.add(entry);
+      }
     }
 
-
-    /**
-     * Get a list of {@code ScriptCode} by a name regular expression.
-     *
-     * <p>
-     * This method is almost equivalent to {@link #findByName(Pattern)
-     * findByName}{@code (Pattern.compile(regex))}.
-     * </p>
-     *
-     * @param regex
-     *         Regular expression for names.
-     *
-     * @return
-     *         List of {@code ScriptCode}. If nothing has matched,
-     *         an empty list is returned.
-     *
-     * @throws IllegalArgumentException
-     *         {@code regex} is {@code null}.
-     *
-     * @throws java.util.regex.PatternSyntaxException
-     *         {@code regex} failed to be compiled.
-     *
-     * @since 1.11
-     */
-    public static List<ScriptCode> findByName(String regex)
-    {
-        if (regex == null)
-        {
-            throw new IllegalArgumentException("regex is null.");
-        }
-
-        // Compile the regular expression. This may throw
-        // java.util.regex.PatternSyntaxException.
-        Pattern pattern = Pattern.compile(regex);
-
-        return findByName(pattern);
-    }
-
-
-    /**
-     * Get a list of {@code ScriptCode} by a name pattern.
-     *
-     * <p>
-     * For example, the list obtained by the code snippet below:
-     * </p>
-     *
-     * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
-     * Pattern pattern = Pattern.compile(<span style="color: darkred;">"Egyptian.*"</span>);
-     * List&lt;ScriptCode&gt; list = ScriptCode.findByName(pattern);</pre>
-     *
-     * <p>
-     * contains 3 {@code ScriptCode}s as listed below.
-     * </p>
-     *
-     * <ol>
-     * <li>{@link #Egyd} : Egyptian demotic
-     * <li>{@link #Egyh} : Egyptian hieratic
-     * <li>{@link #Egyp} : Egyptian hieroglyphs
-     * </ol>
-     *
-     * @param pattern
-     *         Pattern to match names.
-     *
-     * @return
-     *         List of {@code ScriptCode}. If nothing has matched,
-     *         an empty list is returned.
-     *
-     * @throws IllegalArgumentException
-     *         {@code pattern} is {@code null}.
-     *
-     * @since 1.11
-     */
-    public static List<ScriptCode> findByName(Pattern pattern)
-    {
-        if (pattern == null)
-        {
-            throw new IllegalArgumentException("pattern is null.");
-        }
-
-        List<ScriptCode> list = new ArrayList<>();
-
-        for (ScriptCode entry : values())
-        {
-            // If the name matches the given pattern.
-            if (pattern.matcher(entry.getName()).matches())
-            {
-                list.add(entry);
-            }
-        }
-
-        return list;
-    }
+    return list;
+  }
 }
