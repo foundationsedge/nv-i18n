@@ -52,7 +52,7 @@ public enum ScriptCode {
   },
 
   /**
-   * Adlm [166]
+   * Adlam [166]
    */
   Adlm(166, "Adlam"),
 
@@ -66,6 +66,12 @@ public enum ScriptCode {
    * Caucasian Albanian [239]
    */
   Aghb(239, "Caucasian Albanian"),
+
+
+  /**
+   * Ahom, Tai Ahom [338]
+   */
+  Ahom(338, "Ahom, Tai Ahom"),
 
 
   /**
@@ -136,7 +142,7 @@ public enum ScriptCode {
   Bhks(334, "Bhaiksuki"),
 
   /**
-   * Bhaiksuki [550]
+   * Blissymbols [550]
    */
   Blis(550, "Blissymbols"),
 
@@ -206,7 +212,7 @@ public enum ScriptCode {
   Chis(298, "Chisoi"),
 
   /**
-   * Chisoi [Chorasmian]
+   * Chorasmian [109]
    */
   Chrs(109, "Chorasmian"),
 
@@ -228,9 +234,9 @@ public enum ScriptCode {
 
 
   /**
-   * Cypriot [403]
+   * Cypriot syllabary [403]
    */
-  Cprt(403, "Cypriot"),
+  Cprt(403, "Cypriot syllabary"),
 
 
   /**
@@ -240,15 +246,15 @@ public enum ScriptCode {
 
 
   /**
-   * Cyrillic [221]
+   * Cyrillic (Old Church Slavonic variant) [221]
    */
-  Cyrs(221, "Cyrillic"),
+  Cyrs(221, "Cyrillic (Old Church Slavonic variant)"),
 
 
   /**
-   * Devanagari [315]
+   * Devanagari (Nagari) [315]
    */
-  Deva(315, "Devanagari"),
+  Deva(315, "Devanagari (Nagari)"),
 
   /**
    * Dives Akuru [342]
@@ -262,9 +268,9 @@ public enum ScriptCode {
 
 
   /**
-   * Deseret [250]
+   * Deseret (Mormon) [250]
    */
-  Dsrt(250, "Deseret"),
+  Dsrt(250, "Deseret (Mormon)"),
 
 
   /**
@@ -303,9 +309,9 @@ public enum ScriptCode {
 
 
   /**
-   * Ethiopic [430]
+   * Ethiopic (Geʻez) [430]
    */
-  Ethi(430, "Ethiopic"),
+  Ethi(430, "Ethiopic (Geʻez)"),
 
   /**
    * Garay [164]
@@ -319,9 +325,9 @@ public enum ScriptCode {
 
 
   /**
-   * Georgian [240]
+   * Georgian (Mkhedruli and Mtavruli) [240]
    */
-  Geor(240, "Georgian"),
+  Geor(240, "Georgian (Mkhedruli and Mtavruli)"),
 
 
   /**
@@ -381,33 +387,33 @@ public enum ScriptCode {
 
 
   /**
-   * Hangul [286]
+   * Hangul (Hangŭl, Hangeul) [286]
    */
-  Hang(286, "Hangul"),
+  Hang(286, "Hangul (Hangŭl, Hangeul)"),
 
 
   /**
-   * Han [500]
+   * Han (Hanzi, Kanji, Hanja) [500]
    */
-  Hani(500, "Han"),
+  Hani(500, "Han (Hanzi, Kanji, Hanja)"),
 
 
   /**
-   * Hanunoo [371]
+   * Hanunoo (Hanunóo) [371]
    */
-  Hano(371, "Hanunoo"),
+  Hano(371, "Hanunoo (Hanunóo)"),
 
 
   /**
-   * Han [501]
+   * Han (Simplified variant) [501]
    */
-  Hans(501, "Han"),
+  Hans(501, "Han (Simplified variant)"),
 
 
   /**
-   * Han [502]
+   * Han (Traditional variant) [502]
    */
-  Hant(502, "Han"),
+  Hant(502, "Han (Traditional variant)"),
 
   /**
    * Hatran [127]
@@ -428,9 +434,9 @@ public enum ScriptCode {
 
 
   /**
-   * Anatolian Hieroglyphs [080]
+   * Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs) [080]
    */
-  Hluw(80, "Anatolian Hieroglyphs"),
+  Hluw(80, "Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)"),
 
 
   /**
@@ -450,27 +456,27 @@ public enum ScriptCode {
 
 
   /**
-   * Japanese syllabaries [412]
+   * Japanese syllabaries (alias for Hiragana + Katakana) [412]
    */
-  Hrkt(412, "Japanese syllabaries"),
+  Hrkt(412, "Japanese syllabaries (alias for Hiragana + Katakana)"),
 
 
   /**
-   * Old Hungarian [176]
+   * Old Hungarian (Hungarian Runic) [176]
    */
-  Hung(176, "Old Hungarian"),
+  Hung(176, "Old Hungarian (Hungarian Runic)"),
 
 
   /**
-   * Indus [610]
+   * Indus (Harappan) [610]
    */
-  Inds(610, "Indus"),
+  Inds(610, "Indus (Harappan)"),
 
 
   /**
-   * Old Italic [210]
+   * Old Italic (Etruscan, Oscan, etc.) [210]
    */
-  Ital(210, "Old Italic"),
+  Ital(210, "Old Italic (Etruscan, Oscan, etc.)"),
 
   /**
    * Jamo (alias for Jamo subset of Hangul) [284]
@@ -484,9 +490,9 @@ public enum ScriptCode {
 
 
   /**
-   * Japanese [413]
+   * Japanese (alias for Han + Hiragana + Katakana) [413]
    */
-  Jpan(413, "Japanese"),
+  Jpan(413, "Japanese (alias for Han + Hiragana + Katakana)"),
 
 
   /**
@@ -547,9 +553,9 @@ public enum ScriptCode {
 
 
   /**
-   * Korean [287]
+   * Korean (alias for Hangul + Han) [287]
    */
-  Kore(287, "Korean"),
+  Kore(287, "Korean (alias for Hangul + Han)"),
 
 
   /**
@@ -570,9 +576,9 @@ public enum ScriptCode {
 
 
   /**
-   * Tai Tham [351]
+   * Tai Tham (Lanna) [351]
    */
-  Lana(351, "Tai Tham"),
+  Lana(351, "Tai Tham (Lanna)"),
 
 
   /**
@@ -582,15 +588,15 @@ public enum ScriptCode {
 
 
   /**
-   * Latin [217]
+   * Latin (Fraktur variant) [217]
    */
-  Latf(217, "Latin"),
+  Latf(217, "Latin (Fraktur variant)"),
 
 
   /**
-   * Latin [216]
+   * Latin (Gaelic variant) [216]
    */
-  Latg(216, "Latin"),
+  Latg(216, "Latin (Gaelic variant)"),
 
 
   /**
@@ -605,9 +611,9 @@ public enum ScriptCode {
 
 
   /**
-   * Lepcha [335]
+   * Lepcha (Róng) [335]
    */
-  Lepc(335, "Lepcha"),
+  Lepc(335, "Lepcha (Róng)"),
 
 
   /**
@@ -629,9 +635,9 @@ public enum ScriptCode {
 
 
   /**
-   * Lisu [399]
+   * Lisu (Fraser) [399]
    */
-  Lisu(399, "Lisu"),
+  Lisu(399, "Lisu (Fraser)"),
 
 
   /**
@@ -686,15 +692,15 @@ public enum ScriptCode {
   Maya(90, "Mayan hieroglyphs"),
 
   /**
-   * Medefaidrin [265]
+   * Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) [265]
    */
-  Medf(265, "Medefaidrin"),
+  Medf(265, "Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ)"),
 
 
   /**
-   * Mende [438]
+   * Mende Kikakui [438]
    */
-  Mend(438, "Mende"),
+  Mend(438, "Mende Kikakui"),
 
 
   /**
@@ -715,9 +721,9 @@ public enum ScriptCode {
   Mlym(347, "Malayalam"),
 
   /**
-   * Modi [324]
+   * Modi, Moḍī [324]
    */
-  Modi(324, "Modi"),
+  Modi(324, "Modi, Moḍī"),
 
   /**
    * Mongolian [145]
@@ -726,21 +732,21 @@ public enum ScriptCode {
 
 
   /**
-   * Moon [218]
+   * Moon (Moon code, Moon script, Moon type) [218]
    */
-  Moon(218, "Moon"),
+  Moon(218, "Moon (Moon code, Moon script, Moon type)"),
 
 
   /**
-   * Mro, Mru [199]
+   * Mro, Mru [264]
    */
-  Mroo(199, "Mro, Mru"),
+  Mroo(264, "Mro, Mru"),
 
 
   /**
-   * Meitei Mayek [337]
+   * Meitei Mayek (Meithei, Meetei) [337]
    */
-  Mtei(337, "Meitei Mayek"),
+  Mtei(337, "Meitei Mayek (Meithei, Meetei)"),
 
   /**
    * Multani [323]
@@ -749,9 +755,9 @@ public enum ScriptCode {
 
 
   /**
-   * Myanmar [350]
+   * Myanmar (Burmese) [350]
    */
-  Mymr(350, "Myanmar"),
+  Mymr(350, "Myanmar (Burmese)"),
 
   /**
    * Nag Mundari [295]
@@ -765,9 +771,9 @@ public enum ScriptCode {
 
 
   /**
-   * Old North Arabian [106]
+   * Old North Arabian (Ancient North Arabian) [106]
    */
-  Narb(106, "Old North Arabian"),
+  Narb(106, "Old North Arabian (Ancient North Arabian)"),
 
 
   /**
@@ -776,19 +782,19 @@ public enum ScriptCode {
   Nbat(159, "Nabataean"),
 
   /**
-   * Newa, Newar, Newari [333]
+   * Newa, Newar, Newari, Nepāla lipi [333]
    */
-  Newa(333, "Newa, Newar, Newari"),
+  Newa(333, "Newa, Newar, Newari, Nepāla lipi"),
 
   /**
-   * Naxi Dongba [85]
+   * Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba) [85]
    */
-  Nkdb(85, "Naxi Dongba"),
+  Nkdb(85, "Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba)"),
 
   /**
-   * Nakhi Geba [420]
+   * Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba) [420]
    */
-  Nkgb(420, "Nakhi Geba"),
+  Nkgb(420, "Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba)"),
 
 
   /**
@@ -798,9 +804,9 @@ public enum ScriptCode {
 
 
   /**
-   * Nushu [499]
+   * Nüshu [499]
    */
-  Nshu(499, "Nushu"),
+  Nshu(499, "Nüshu"),
 
 
   /**
@@ -810,9 +816,9 @@ public enum ScriptCode {
 
 
   /**
-   * Ol Chiki [261]
+   * Ol Chiki (Ol Cemet’, Ol, Santali) [261]
    */
-  Olck(261, "Ol Chiki"),
+  Olck(261, "Ol Chiki (Ol Cemet’, Ol, Santali)"),
 
   /**
    * Ol Onal [296]
@@ -827,9 +833,9 @@ public enum ScriptCode {
 
 
   /**
-   * Oriya [327]
+   * Oriya (Odia) [327]
    */
-  Orya(327, "Oriya"),
+  Orya(327, "Oriya (Odia)"),
 
   /**
    * Osage [219]
@@ -911,9 +917,9 @@ public enum ScriptCode {
 
 
   /**
-   * Miao [282]
+   * Miao (Pollard) [282]
    */
-  Plrd(282, "Miao"),
+  Plrd(282, "Miao (Pollard)"),
 
 
   /**
@@ -1184,9 +1190,9 @@ public enum ScriptCode {
 
 
   /**
-   * Rejang [363]
+   * Rejang (Redjang, Kaganga) [363]
    */
-  Rjng(363, "Rejang"),
+  Rjng(363, "Rejang (Redjang, Kaganga)"),
 
   /**
    * Hanifi Rohingya [167]
@@ -1242,15 +1248,15 @@ public enum ScriptCode {
 
 
   /**
-   * Shavian [281]
+   * Shavian (Shaw) [281]
    */
-  Shaw(281, "Shavian"),
+  Shaw(281, "Shavian (Shaw)"),
 
 
   /**
-   * Sharada [319]
+   * Sharada, Śāradā [319]
    */
-  Shrd(319, "Sharada"),
+  Shrd(319, "Sharada, Śāradā"),
 
   /**
    * Shuishu [530]
@@ -1258,9 +1264,9 @@ public enum ScriptCode {
   Shui(530, "Shuishu"),
 
   /**
-   * Siddham [302]
+   * Siddham, Siddhaṃ, Siddhamātṛkā [302]
    */
-  Sidd(302, "Siddham"),
+  Sidd(302, "Siddham, Siddhaṃ, Siddhamātṛkā"),
 
   /**
    * Sidetic [180]
@@ -1325,21 +1331,21 @@ public enum ScriptCode {
 
 
   /**
-   * Syriac [138]
+   * Syriac (Estrangelo variant) [138]
    */
-  Syre(138, "Syriac"),
+  Syre(138, "Syriac (Estrangelo variant)"),
 
 
   /**
-   * Syriac [137]
+   * Syriac (Western variant) [137]
    */
-  Syrj(137, "Syriac"),
+  Syrj(137, "Syriac (Western variant)"),
 
 
   /**
-   * Syriac [136]
+   * Syriac (Eastern variant) [136]
    */
-  Syrn(136, "Syriac"),
+  Syrn(136, "Syriac (Eastern variant)"),
 
 
   /**
@@ -1349,9 +1355,9 @@ public enum ScriptCode {
 
 
   /**
-   * Takri [321]
+   * Takri, Ṭākrī, Ṭāṅkrī [321]
    */
-  Takr(321, "Takri"),
+  Takr(321, "Takri, Ṭākrī, Ṭāṅkrī"),
 
 
   /**
@@ -1402,15 +1408,15 @@ public enum ScriptCode {
 
 
   /**
-   * Tifinagh [120]
+   * Tifinagh (Berber) [120]
    */
-  Tfng(120, "Tifinagh"),
+  Tfng(120, "Tifinagh (Berber)"),
 
 
   /**
-   * Tagalog [370]
+   * Tagalog (Baybayin, Alibata) [370]
    */
-  Tglg(370, "Tagalog"),
+  Tglg(370, "Tagalog (Baybayin, Alibata)"),
 
 
   /**
@@ -1486,9 +1492,9 @@ public enum ScriptCode {
 
 
   /**
-   * Warang Citi [262]
+   * Warang Citi (Varang Kshiti) [262]
    */
-  Wara(262, "Warang Citi"),
+  Wara(262, "Warang Citi (Varang Kshiti)"),
 
   /**
    * Wancho [283]
@@ -1525,9 +1531,9 @@ public enum ScriptCode {
   Yiii(460, "Yi"),
 
   /**
-   * Zanabazar Square [339]
+   * Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script) [339]
    */
-  Zanb(339, "Zanabazar Square"),
+  Zanb(339, "Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script)"),
 
 
   /**

@@ -36,7 +36,7 @@ ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 | `LanguageCode`       | ISO 639-1 language code.                                     | 2026-08-07 (Wikipedia as source) |
 | `LanguageAlpha3Code` | ISO 639-2 language code.                                     | unknown                          |
 | `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | unknown                          |
-| `ScriptCode`         | ISO 15924 script code.                                       | 2026-07-24 (Wikipedia as source) |
+| `ScriptCode`         | ISO 15924 script code.                                       | 2026-08-28 (Wikipedia as source) |
 | `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17 (Wikipedia as source) |
 
 
