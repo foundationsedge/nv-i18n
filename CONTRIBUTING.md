@@ -49,6 +49,19 @@ We will then take care of the issue as soon as possible.
 A great place to start, is to look for outstanding issues marked [good first issue](https://github.com/foundationsedge/nv-i18n/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
 These should be small, isolated or less disruptive.
 
+#### Code style
+
+Follow the guidelines provided
+in [Java for small teams](https://ncredinburgh.com/files/ncr-code/javaforsmallteams/releases/download/v1.0/java_for_small_teams.pdf)
+
+- Make fields final by default
+- Prefer composition to inheritance
+- Use of final keyword for classes & methods is optional as assumption is classes are not designed for inheritance (see
+  point above)
+- Don't return or check for null unless necessary
+- Prefer immutable classes to mutable ones
+- Avoid checked exceptions
+
 ### Reporting Bugs
 
 <!-- omit in toc -->
