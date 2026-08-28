@@ -1,6 +1,30 @@
 CHANGES
 =======
 
+### 1.34 (2026-08-28)
+
+Changes
+
+* Add `XAD` `CurrencyCode`
+* Correct `NR` `CountryCode` name
+
+Dependencies
+
+* Enabled Dependabot for GitHub Actions
+* Bumped GitHub Actions
+
+Build
+
+* Followed some security best practices to harden builds including pinning action version numbers
+
+Documentation
+
+* Created `SECURITY.md`
+* Created `CODE_OF_CONDUCT.md`
+* Created `CONTRIBUTING.md`
+* Introduced code-style for contributors
+* Added some informative badges to `README.md`
+
 ### 1.33 (2026-08-14)
 
 Changes
