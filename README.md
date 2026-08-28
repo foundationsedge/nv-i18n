@@ -4,6 +4,15 @@ nv-i18n
 Overview
 --------
 
+nv-i18n solves the problem of handling international codes in Java applications: it
+provides ready-made, type-safe enums for country, language, script and currency codes
+so you do not have to build or maintain these lists yourself.
+
+To install it, add the Maven or Gradle dependency shown below. To use it, reference
+the enums directly (e.g. `CountryCode.JP.getName()`); no setup or configuration is
+required. The library is read-only reference data and processes no untrusted input,
+so secure use simply means keeping the dependency up to date.
+
 Package to support internationalization, containing ISO 3166-1 country code enum,
 ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 
