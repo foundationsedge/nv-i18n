@@ -23,7 +23,12 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macOS-latest ]
-        java: [ 17, 21, 25, 26 ]
+        java: [
+          17, # LTS 2027 10 31
+          # 21, # LTS 2029 12 31
+          25, # LTS 2031 09 30
+          # 26 # GA 2026 09 15
+        ]
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c # v2.21.0
