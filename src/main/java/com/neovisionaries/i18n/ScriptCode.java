@@ -1774,8 +1774,8 @@ public enum ScriptCode {
     for (int i = 0; i < code.length(); i++) {
       char original = code.charAt(i);
 
-      // ISO 15924 alpha-4 codes use title-case form:
-      // first character uppercase, remaining characters lowercase.
+      // Canonical form uses an uppercase first character
+// followed by lowercase characters.
       char canonical = (i == 0)
         ? Character.toUpperCase(original)
         : Character.toLowerCase(original);
