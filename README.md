@@ -4,7 +4,9 @@ nv-i18n
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/foundationsedge/nv-i18n/latest)
 ![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
 ![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14193/badge)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/foundationsedge/nv-i18n/badge)](https://scorecard.dev/viewer/?uri=github.com/foundationsedge/nv-i18n)
+![OSS Lifecycle](https://img.shields.io/osslifecycle?file_url=https%3A%2F%2Fraw.githubusercontent.com%2Ffoundationsedge%2Fnv-i18n%2Fmaster%2FOSSMETADATA)
 ![GitHub License](https://img.shields.io/github/license/foundationsedge/nv-i18n)
 [![jdk badge](https://img.shields.io/badge/jdk-8-green.svg)](https://adoptium.net/en-GB/temurin/releases)
 [![MvnRepository](https://badges.mvnrepository.com/badge/uk.co.foundationsedge/nv-i18n/badge.svg)](https://mvnrepository.com/artifact/uk.co.foundationsedge/nv-i18n/)
@@ -36,7 +38,7 @@ ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 | `LanguageCode`       | ISO 639-1 language code.                                     | 2026-08-07 (Wikipedia as source) |
 | `LanguageAlpha3Code` | ISO 639-2 language code.                                     | unknown                          |
 | `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | unknown                          |
-| `ScriptCode`         | ISO 15924 script code.                                       | 2026-07-24 (Wikipedia as source) |
+| `ScriptCode`         | ISO 15924 script code.                                       | 2026-08-28 (Wikipedia as source) |
 | `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17 (Wikipedia as source) |
 
 
