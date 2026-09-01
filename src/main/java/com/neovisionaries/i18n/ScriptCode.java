@@ -1766,45 +1766,35 @@ public enum ScriptCode {
       return code;
     }
 
-    // A new instance is assigned to this variable
-    // if modification is needed.
+    // Lazily allocate the builder only when a character actually needs
+    // canonicalization. This preserves the original String instance
+    // when the input is already in canonical form.
     StringBuilder sb = null;
 
-    for (int i = 0; i < code.length(); ++i) {
-      char ch = code.charAt(i);
+    for (int i = 0; i < code.length(); i++) {
+      char original = code.charAt(i);
 
-      // The first letter.
-      if (i == 0) {
-        if (!Character.isUpperCase(ch)) {
-          // Modification is needed.
-          sb = new StringBuilder();
-          sb.append(Character.toUpperCase(ch));
-        }
-      }
-      // The second and subsequent letters.
-      else {
-        if (sb == null) {
-          if (!Character.isLowerCase(ch)) {
-            // Modification is needed.
-            sb = new StringBuilder();
+      // ISO 15924 alpha-4 codes use title-case form:
+      // first character uppercase, remaining characters lowercase.
+      char canonical = (i == 0)
+        ? Character.toUpperCase(original)
+        : Character.toLowerCase(original);
 
-            // Copy all the previous letters so far.
-            sb.append(code, 0, i);
-
-            // Lower the current letter.
-            sb.append(Character.toLowerCase(ch));
-          }
-        } else {
-          sb.append(Character.toLowerCase(ch));
-        }
+      if (sb != null) {
+        // Once a modification has started, append all remaining
+        // characters in canonical form.
+        sb.append(canonical);
+      } else if (original != canonical) {
+        // Allocate only at the first required modification and copy
+        // the already validated prefix unchanged.
+        sb = new StringBuilder(code.length());
+        sb.append(code, 0, i);
+        sb.append(canonical);
       }
     }
 
-    if (sb == null) {
-      return code;
-    } else {
-      return sb.toString();
-    }
+    // Avoid creating a new String when no normalization was required.
+    return sb == null ? code : sb.toString();
   }
 
 
