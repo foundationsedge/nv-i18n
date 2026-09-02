@@ -1764,10 +1764,6 @@ public enum ScriptCode {
   }
 
   private static String canonicalize(String code, boolean caseSensitive) {
-    if (code == null || code.isEmpty()) {
-      return null;
-    }
-
     if (caseSensitive) {
       return code;
     }
