@@ -29,8 +29,10 @@ the enums directly (e.g. `CountryCode.JP.getName()`); no setup or configuration 
 required. The library is read-only reference data and processes no untrusted input,
 so secure use simply means keeping the dependency up to date.
 
-Package to support internationalization, containing ISO 3166-1 country code enum,
-ISO 639-1 language code enum, ISO 15924 script code enum, etc.
+Package to support internationalization, containing enums for
+* ISO 3166-1 Country
+* ISO 639-1 Language
+* ISO 15924 Script etc.
 
 | Class                | Description                                                  | Last Updated                     |
 |:---------------------|:-------------------------------------------------------------|----------------------------------|
@@ -41,12 +43,10 @@ ISO 639-1 language code enum, ISO 15924 script code enum, etc.
 | `ScriptCode`         | ISO 15924 script code.                                       | 2026-08-28 (Wikipedia as source) |
 | `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17 (Wikipedia as source) |
 
-
 License
 -------
 
-  Apache License, Version 2.0
-
+Apache License, Version 2.0
 
 Maven
 -----
@@ -59,8 +59,7 @@ Maven
 </dependency>
 ```
 
-For latest version look at [sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
-
+For the latest version-number look at [sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
 
 Gradle
 ------
@@ -71,19 +70,18 @@ dependencies {
 }
 ```
 
-
 OSGi
 ----
 
-    Bundle-SymbolicName: uk.co.foundationsedge
-    Export-Package: uk.co.foundationsedge;version="version-number"
-
+```
+Bundle-SymbolicName: uk.co.foundationsedge
+Export-Package: uk.co.foundationsedge;version="version-number"
+```
 
 Source Code
 -----------
 
-  <code>https://github.com/foundationsedge/nv-i18n.git</code>
-
+<code>https://github.com/foundationsedge/nv-i18n.git</code>
 
 Example
 -------
@@ -124,7 +122,6 @@ class Example {
 }
 ```
 
-
 See Also
 --------
 
@@ -138,20 +135,11 @@ See Also
 * Script Code [ISO 15924](http://en.wikipedia.org/wiki/ISO_15924)
 * Currency Code [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
 
-
-TODO
-----
-
-* To add missing entries to CountryCode.
-* To add international telephone dial number.
-
-
 Note
 ----
 
-This nv-i18n supersedes https://github.com/TakahikoKawasaki/nv-i18n/
-This nv-i18n supersedes https://github.com/TakahikoKawasaki/CountryCode
-
+* This nv-i18n supersedes https://github.com/TakahikoKawasaki/nv-i18n/
+* That nv-i18n superseded https://github.com/TakahikoKawasaki/CountryCode
 
 Original Author
 ------
