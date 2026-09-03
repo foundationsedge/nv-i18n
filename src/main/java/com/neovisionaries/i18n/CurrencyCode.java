@@ -2600,26 +2600,15 @@ public enum CurrencyCode {
    * If 0 or a negative value is given, {@code null} is returned.
    */
   public static CurrencyCode getByCode(int code) {
-    if (code <= 0) {
-      return null;
-    }
+    CurrencyCode currencyCode = numericMap.get(code);
 
-    return numericMap.get(code);
+    return currencyCode == UNDEFINED ? null : currencyCode;
   }
 
 
   private static String canonicalize(String code, boolean caseSensitive) {
-    if (code == null || code.isEmpty()) {
-      return null;
-    }
-
-    if (caseSensitive) {
-      return code;
-    } else {
-      return code.toUpperCase();
-    }
+    return code == null || caseSensitive ? code : code.toUpperCase();
   }
-
 
   /**
    * Get a list of {@code CurrencyCode} instances whose country
