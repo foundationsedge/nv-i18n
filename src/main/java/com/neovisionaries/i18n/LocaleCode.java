@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ * https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -743,7 +743,7 @@ public enum LocaleCode {
   /**
    * {@link LanguageCode#no Norwegian}
    *
-   * @see <a href="http://i18n.skolelinux.no/localekoder.txt"
+   * @see <a href="https://web.archive.org/web/20211017053710/http://i18n.skolelinux.no/localekoder.txt"
    * >Spr&aring;kkoder for POSIX locale i Norge</a>
    * @see <a href="https://bugzilla.redhat.com/show_bug.cgi?id=532487"
    * >Red Hat Bugzilla – Bug 532487 Legacy Norwegian locale (no_NO)
@@ -756,7 +756,7 @@ public enum LocaleCode {
   /**
    * {@link LanguageCode#no Norwegian}, {@link CountryCode#NO Norway}
    *
-   * @see <a href="http://i18n.skolelinux.no/localekoder.txt"
+   * @see <a href="https://web.archive.org/web/20211017053710/http://i18n.skolelinux.no/localekoder.txt"
    * >Spr&aring;kkoder for POSIX locale i Norge</a>
    * @see <a href="https://bugzilla.redhat.com/show_bug.cgi?id=532487"
    * >Red Hat Bugzilla – Bug 532487 Legacy Norwegian locale (no_NO)
@@ -1045,9 +1045,9 @@ public enum LocaleCode {
    *
    * <p>
    * where <i>language</i> is an <a
-   * href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
+   * href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * and <i>country</i> is an <a
-   * href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1
+   * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1
    * alpha-2</a> code.
    * </p>
    *
@@ -1195,9 +1195,9 @@ public enum LocaleCode {
    *
    * <p>
    * where <i>language</i> is an <a
-   * href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
+   * href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * and <i>country</i> is an <a
-   * href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1
+   * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1
    * alpha-2</a> code. The separator between <i>language</i> and
    * <i>country</i> should be a hyphen (<code>-</code>) or an underscore
    * (<code>_</code>).
@@ -1251,12 +1251,12 @@ public enum LocaleCode {
    * getByCode(language, country, false)}.
    * </p>
    *
-   * @param language <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
+   * @param language <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *                 language code. Or "undefined" (case-sensitive). If the
    *                 given language code is one of legacy ones { "iw", "ji" and
    *                 "in" }, it is regarded as its newer official counterpart { "he",
    *                 "yi" and "id" }, respectively.
-   * @param country  <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>
+   * @param country  <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>
    *                 country code. Or "UNDEFINED" (case-sensitive).
    * @return A {@code LocaleCode}, or {@code null} if not found.
    * @see #getByCode(String, String, boolean)
@@ -1275,12 +1275,12 @@ public enum LocaleCode {
    * getByCode}{@code (language, country, false)}.
    * </p>
    *
-   * @param language <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
+   * @param language <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *                 language code. Or "undefined" (case-insensitive). If the given
    *                 language code is one of legacy ones { "iw", "ji" and "in" },
    *                 it is regarded as its newer counterpart { "he", "yi" and "id"
    *                 }, respectively.
-   * @param country  <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+   * @param country  <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
    *                 >ISO 3166-1 alpha-2</a> country code. Or "UNDEFINED"
    *                 (case-insensitive).
    * @return A {@code LocaleCode}, or {@code null} if not found.
@@ -1301,12 +1301,12 @@ public enum LocaleCode {
    * or "UNDEFINED", {@link #undefined LocaleCode.undefined} is returned.
    * </p>
    *
-   * @param language      <a href="http://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
+   * @param language      <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *                      language code. Or "undefined". If the given language code
    *                      is one of legacy ones { "iw", "ji" and "in" }, it is regarded
    *                      as its newer official counterpart { "he", "yi" and "id" },
    *                      respectively.
-   * @param country       <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+   * @param country       <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
    *                      >ISO 3166-1 alpha-2</a> country code. Or "UNDEFINED".
    * @param caseSensitive If {@code true}, the given language code must be lower-case and
    *                      the given country code, if not {@code null}, must be upper-case.
