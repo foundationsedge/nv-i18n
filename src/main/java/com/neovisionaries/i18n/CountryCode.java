@@ -3033,10 +3033,6 @@ public enum CountryCode {
    * If 0 or a negative value is given, {@code null} is returned.
    */
   public static CountryCode getByCode(int code) {
-    if (code <= 0) {
-      return null;
-    }
-
     return numericMap.get(code);
   }
 
