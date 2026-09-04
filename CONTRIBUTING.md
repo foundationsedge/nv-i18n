@@ -49,6 +49,25 @@ We will then take care of the issue as soon as possible.
 A great place to start, is to look for outstanding issues marked [good first issue](https://github.com/foundationsedge/nv-i18n/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
 These should be small, isolated or less disruptive.
 
+#### Working with the project
+To clone the project locally use git
+```shell
+git@github.com:foundationsedge/nv-i18n.git
+```
+The project uses Maven as a build tool.
+Compile the project
+```shell
+mvn compile
+```
+Package for use as a library
+```shell
+mvn package
+```
+Run mutation testings
+```shell
+mvn :pitest:mutationCoverage
+```
+
 #### Code style
 
 Follow the guidelines provided
@@ -61,6 +80,8 @@ in [Java for small teams](https://ncredinburgh.com/files/ncr-code/javaforsmallte
 - Don't return or check for null unless necessary
 - Prefer immutable classes to mutable ones
 - Avoid checked exceptions
+- Prefer `AssertJ` assertions
+- This is a public library, so any breaking changes need to wait for a major version bump
 
 ### Reporting Bugs
 
