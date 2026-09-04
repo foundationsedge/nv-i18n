@@ -1730,11 +1730,9 @@ public enum ScriptCode {
    * If 0 or a negative value is given, {@code null} is returned.
    */
   public static ScriptCode getByCode(int code) {
-    if (code <= 0) {
-      return null;
-    }
+    ScriptCode scriptCode = numericMap.get(code);
 
-    return numericMap.get(code);
+    return scriptCode == Undefined ? null : scriptCode;
   }
 
   /**
