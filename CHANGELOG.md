@@ -25,6 +25,11 @@ Documentation
 * Introduced code-style for contributors
 * Added some informative badges to `README.md`
 
+### 1.34 (2026-08-28)
+
+This gave a time-out failure, so we made a change to version number and tried again.
+After a while it recorded a successful deployment. But best to just skip to `1.34.1`.
+
 ### 1.33 (2026-08-14)
 
 Changes
@@ -67,10 +72,10 @@ Documentation
 ### 1.30 (2026-06-24)
 
 * Forked repo to [Foundations Edge](https://github.com/foundationsedge/nv-i18n/)
-* Correct JavaDoc errors required for publication.
+* Correct Javadoc errors required for publication.
 
 Breaking Changes
-* Had to update to minimum JDK 8 from previous minimum of 5.
+* Had to update to minimum JDK 8 from previous minimum of JDK 5.
 
 ### 1.29 (2021-08-26)
 
@@ -180,8 +185,8 @@ Breaking Changes
 * Changed the numeric code of `CountryCode.TP` from  0 to 626.
 * Changed the numeric code of `CountryCode.UK` from -1 to 826.
 * Changed the numeric code of `CountryCode.ZR` from  0 to 180.
-* Changed the behavior of `CountryCode.getByCode(int)` for shared
-  numeric codes. See its JavaDoc for details.
+* Changed the behaviour of `CountryCode.getByCode(int)` for shared
+  numeric codes. See its Javadoc for details.
 
 
 ### 1.16 (2015-07-25)
@@ -237,20 +242,20 @@ Breaking Changes
 
   - Added `getByCodeIgnoreCase(String)`.
 
-  - Changed the behavior of `getByCode(String)`. In older versions,
+  - Changed the behaviour of `getByCode(String)`. In older versions,
     it was an alias of `getByCode(String, false)`, but now it is
     an alias of `getByCode(String, true)`.
 
 * Changes common to `CountryCode`, `CurrencyCode` and `ScriptCode`.
 
-  - Changed the behavior of `getByCode(int)`. It now returns null
+  - Changed the behaviour of `getByCode(int)`. It now returns null
     when 0 or a negative integer is given.
 
 * Changes common to `CurrencyCode` and `LocaleCode`.
 
   - Added `getByCountryIgnoreCase(String)`.
 
-  - Changed the behavior of `getByCountry(String)`. In older versions,
+  - Changed the behaviour of `getByCountry(String)`. In older versions,
     it was an alias of `getByCountry(String, false)`, but now it is
     an alias of `getByCountry(String, true)`.
 
@@ -258,12 +263,12 @@ Breaking Changes
 
   - Added `getByCodeIgnoreCase(String, String)`.
 
-  - Changed the behavior of `getByCode(String, String)`. In older
+  - Changed the behaviour of `getByCode(String, String)`. In older
     versions, it was an alias of `getByCode(String, String, false)`,
     but now it is an alias of `getByCode(String, String, true)`.
 
   - Added `getByLanguageIgnoreCase(String)`.
 
-  - Changed the behavior of `getByLanguage(String)`. In older versions,
+  - Changed the behaviour of `getByLanguage(String)`. In older versions,
     it was an alias of `getByLanguage(String, false)`, but now it is
     an alias of `getByLanguage(String, true)`.

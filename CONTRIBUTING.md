@@ -30,12 +30,12 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 > If you want to ask a question, we assume that you have read the available [Documentation](https://github.com/foundationsedge/nv-i18n/README.md).
 
-Before you ask a question, it is best to search for existing [Issues](/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue.
+Before you ask a question, it is best to search for existing [Issues](https://github.com/foundationsedge/nv-i18n/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue.
 It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](/issues/new).
+- Open an [Issue](https://github.com/foundationsedge/nv-i18n/issues/new).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions (jdk, os, etc), depending on what seems relevant.
 
@@ -43,8 +43,9 @@ We will then take care of the issue as soon as possible.
 
 ## I Want To Contribute
 
-> ### Legal Notice <!-- omit in toc -->
-> When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project licence.
+ ### Legal Notice <!-- omit in toc -->
+When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project licence.
+We have now added a [CLA document](https://cla-assistant.io/foundationsedge/nv-i18n) for contributors to sign
 
 A great place to start, is to look for outstanding issues marked [good first issue](https://github.com/foundationsedge/nv-i18n/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
 These should be small, isolated or less disruptive.
@@ -82,6 +83,8 @@ in [Java for small teams](https://ncredinburgh.com/files/ncr-code/javaforsmallte
 - Avoid checked exceptions
 - Prefer `AssertJ` assertions
 - This is a public library, so any breaking changes need to wait for a major version bump
+- Squash your changes down into 1 commit
+- All code changes must have tests covering the change and introduce no new mutants
 
 ### Reporting Bugs
 
@@ -93,8 +96,8 @@ Please complete the following steps in advance to help us fix any potential bug 
 
 - Make sure that you are using the latest version.
 - Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/foundationsedge/nv-i18n/README.md). If you are looking for support, you might want to check [this section](#i-have-a-question)).
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](/issues?q=label%3Abug).
-- Also make sure to search the internet (including Stack Overflow) to see if users outside of the GitHub community have discussed the issue.
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/foundationsedge/nv-i18n/issues?q=label%3Abug).
+- Also make sure to search the internet (including Stack Overflow) to see if users outside the GitHub community have discussed the issue.
 - Collect information about the bug:
 - Stack trace (Traceback)
 - OS, Platform and Version (Windows, Linux, macOS, x86, ARM)
@@ -110,7 +113,7 @@ Please complete the following steps in advance to help us fix any potential bug 
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
-- Open an [Issue](/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
+- Open an [Issue](https://github.com/foundationsedge/nv-i18n/issuess/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behaviour you would expect and the actual behaviour.
 - Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
 - Provide the information you collected in the previous section.
@@ -119,7 +122,7 @@ Once it's filed:
 
 - The project team will label the issue accordingly.
 - A team member will try to reproduce the issue with your provided steps. If there are no reproduction steps or no obvious way to reproduce the issue, the team will ask you for those steps and mark the issue as `needs-repro`. Bugs with the `needs-repro` tag will not be addressed until they are reproduced.
-- If the team is able to reproduce the issue, it will be marked `needs-fix`, as well as possibly other tags (such as `critical`), and the issue will be left to be [implemented by someone](#your-first-code-contribution).
+- If the team is able to reproduce the issue, it will be marked `needs-fix`, as well as possibly other tags (such as `critical`), and the issue will be left to be [implemented by someone](#i-want-to-contribute).
 
 <!-- You might want to create an issue template for bugs and errors that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
@@ -133,14 +136,14 @@ This section guides you through submitting an enhancement suggestion for nv-i18n
 
 - Make sure that you are using the latest version.
 - Read the [documentation](https://github.com/foundationsedge/nv-i18n/README.md) carefully and find out if the functionality is already covered, maybe by an individual configuration.
-- Perform a [search](/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+- Perform a [search](https://github.com/foundationsedge/nv-i18n/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
 - If it is a change to an ISO standard, please link to that change document.
 
 <!-- omit in toc -->
 #### How Do I Submit a Good Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitHub issues](/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/foundationsedge/nv-i18n/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
