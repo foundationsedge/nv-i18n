@@ -1,0 +1,48 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!--
+    Standalone sample project: intentionally NOT a module of nv-i18n-parent.
+    It has its own groupId, artifactId and version, and is never deployed.
+    It depends on the released nv-i18n artifact from Maven Central, exactly
+    the way a downstream consumer would.
+  -->
+  <groupId>uk.co.foundationsedge.samples</groupId>
+  <artifactId>nv-i18n-sample</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>nv-i18n Sample Project</name>
+  <description>Example showing how to use the nv-i18n standards library as a dependency</description>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- Bump this to the latest release of uk.co.foundationsedge:nv-i18n -->
+    <nv-i18n.version>1.34.1</nv-i18n.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>uk.co.foundationsedge</groupId>
+      <artifactId>nv-i18n</artifactId>
+      <version>${nv-i18n.version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.16.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.6.3</version>
+        <configuration>
+          <mainClass>uk.co.foundationsedge.samples.i18n.Example</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
