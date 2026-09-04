@@ -26,64 +26,59 @@ import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.CurrencyCode.getByCode;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CurrencyCodeTest {
   @Test
-  public void test1() {
-    assertSame(CurrencyCode.JPY, getByCode("JPY"));
+  public void getCurrencyReturnsSameInstanceAsJavaCurrency() {
+    assertThat(getByCode("JPY").getCurrency()).isSameAs(Currency.getInstance("JPY"));
   }
 
 
   @Test
-  public void test2() {
-    assertNull(getByCode("jpy"));
+  public void getByCodeLowerCaseReturnsNull() {
+    assertThat(getByCode("jpy")).isNull();
   }
 
 
   @Test
-  public void test3() {
-    assertSame(CurrencyCode.JPY, getByCode("JPY", true));
+  public void getByCodeCaseSensitiveUpperCaseReturnsCode() {
+    assertThat(getByCode("JPY", true)).isSameAs(CurrencyCode.JPY);
   }
 
 
   @Test
-  public void test4() {
-    assertNull(getByCode("jpy", true));
+  public void getByCodeCaseSensitiveLowerCaseReturnsNull() {
+    assertThat(getByCode("jpy", true)).isNull();
   }
 
 
   @Test
-  public void test5() {
-    assertSame(CurrencyCode.JPY, getByCode("JPY", false));
+  public void getByCodeCaseInsensitiveUpperCaseReturnsCode() {
+    assertThat(getByCode("JPY", false)).isSameAs(CurrencyCode.JPY);
   }
 
 
   @Test
-  public void test6() {
-    assertSame(CurrencyCode.JPY, getByCode("jpy", false));
+  public void getByCodeCaseInsensitiveLowerCaseReturnsCode() {
+    assertThat(getByCode("jpy", false)).isSameAs(CurrencyCode.JPY);
   }
 
 
   @Test
-  public void test7() {
-    assertNull(getByCode(null));
+  public void getByCodeNullReturnsNull() {
+    assertThat(getByCode(null)).isNull();
   }
 
 
   @Test
-  public void test8() {
-    assertNull(getByCode(""));
+  public void getByCodeEmptyStringReturnsNull() {
+    assertThat(getByCode("")).isNull();
   }
 
 
   @Test
-  public void test9() {
-    assertNull(getByCode("???"));
+  public void getByCodeUnknownCodeReturnsNull() {
+    assertThat(getByCode("???")).isNull();
   }
 
 
@@ -106,74 +101,74 @@ class CurrencyCodeTest {
 
 
   @Test
-  public void test11() {
-    assertFalse(CurrencyCode.JPY.isPreciousMetal());
+  public void checkAllPreciousMetals() {
+    assertThat(CurrencyCode.JPY.isPreciousMetal()).isFalse();
 
-    assertTrue(CurrencyCode.XAG.isPreciousMetal());
-    assertTrue(CurrencyCode.XAU.isPreciousMetal());
-    assertTrue(CurrencyCode.XPD.isPreciousMetal());
-    assertTrue(CurrencyCode.XPT.isPreciousMetal());
+    assertThat(CurrencyCode.XAG.isPreciousMetal()).isTrue();
+    assertThat(CurrencyCode.XAU.isPreciousMetal()).isTrue();
+    assertThat(CurrencyCode.XPD.isPreciousMetal()).isTrue();
+    assertThat(CurrencyCode.XPT.isPreciousMetal()).isTrue();
   }
 
 
   @Test
-  public void test12() {
+  public void getCountryListReturnsSingleCountryForJpy() {
     List<CountryCode> list = CurrencyCode.JPY.getCountryList();
 
-    assertTrue(list.size() == 1);
-    assertSame(CountryCode.JP, list.get(0));
+    assertThat(list.size()).isEqualTo(1);
+    assertThat(list.get(0)).isSameAs(CountryCode.JP);
   }
 
 
   @Test
-  public void test13() {
+  public void getCountryListIsEmptyForXxx() {
     List<CountryCode> list = CurrencyCode.XXX.getCountryList();
 
-    assertTrue(list.size() == 0);
+    assertThat(list.size()).isEqualTo(0);
   }
 
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test14() {
+  public void findByNameMatchesAllRubleCurrencies() {
     List<CurrencyCode> list = CurrencyCode.findByName(".*Ruble");
 
-    assertEquals(4, list.size());
+    assertThat(list.size()).isEqualTo(4);
 
     // BYN: Belarusian Ruble
-    assertTrue(list.contains(CurrencyCode.BYN));
+    assertThat(list).contains(CurrencyCode.BYN);
 
     // BYR: Belarusian Ruble
-    assertTrue(list.contains(CurrencyCode.BYR));
+    assertThat(list).contains(CurrencyCode.BYR);
 
     // RUB: Russian Ruble
-    assertTrue(list.contains(CurrencyCode.RUB));
+    assertThat(list).contains(CurrencyCode.RUB);
 
     // RUR: Russian Ruble before the 1998 denomination
-    assertTrue(list.contains(CurrencyCode.RUR));
+    assertThat(list).contains(CurrencyCode.RUR);
   }
 
 
   @Test
-  public void test15() {
-    assertSame(CurrencyCode.UNDEFINED, getByCode("UNDEFINED"));
+  public void getByCodeUndefinedReturnsUndefinedCode() {
+    assertThat(getByCode("UNDEFINED")).isSameAs(CurrencyCode.UNDEFINED);
   }
 
 
   @Test
-  public void test16() {
-    assertNull(getByCode("undefined"));
+  public void getByCodeLowerCaseUndefinedReturnsNull() {
+    assertThat(getByCode("undefined")).isNull();
   }
 
 
   @Test
-  public void test17() {
-    assertSame(CurrencyCode.UNDEFINED, getByCode("undefined", false));
+  public void getByCodeCaseInsensitiveLowerCaseUndefinedReturnsUndefinedCode() {
+    assertThat(getByCode("undefined", false)).isSameAs(CurrencyCode.UNDEFINED);
   }
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test18() {
+  public void deprecatedCurrenciesAreAnnotatedAsDeprecated() {
     List<CurrencyCode> deprecated = Arrays.stream(CurrencyCode.values()).filter(value -> {
       try {
         Field field = CurrencyCode.class.getField(value.name());
@@ -191,7 +186,7 @@ class CurrencyCodeTest {
     deprecatedCurrencies.add(CurrencyCode.LTL);
     deprecatedCurrencies.add(CurrencyCode.VEF);
 
-    assertTrue(deprecated.containsAll(deprecatedCurrencies));
+    assertThat(deprecated).containsAll(deprecatedCurrencies);
   }
 
   @Test
