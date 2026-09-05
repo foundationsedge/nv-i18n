@@ -5,6 +5,7 @@ nv-i18n
 ![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
 ![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14193/badge)](https://www.bestpractices.dev/projects/14193)
+[![OpenSSF Baseline](https://www.bestpractices.dev/projects/14193/baseline)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/foundationsedge/nv-i18n/badge)](https://scorecard.dev/viewer/?uri=github.com/foundationsedge/nv-i18n)
 ![OSS Lifecycle](https://img.shields.io/osslifecycle?file_url=https%3A%2F%2Fraw.githubusercontent.com%2Ffoundationsedge%2Fnv-i18n%2Fmaster%2FOSSMETADATA)
 ![GitHub License](https://img.shields.io/github/license/foundationsedge/nv-i18n)
