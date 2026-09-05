@@ -3,6 +3,7 @@ nv-i18n
 
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/foundationsedge/nv-i18n/latest)
 ![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
+[![CLA assistant](https://cla-assistant.io/readme/badge/foundationsedge/nv-i18n)](https://cla-assistant.io/foundationsedge/nv-i18n)
 ![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14193/badge)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/foundationsedge/nv-i18n/badge)](https://scorecard.dev/viewer/?uri=github.com/foundationsedge/nv-i18n)
@@ -29,7 +30,7 @@ the enums directly (e.g. `CountryCode.JP.getName()`); no setup or configuration 
 required. The library is read-only reference data and processes no untrusted input,
 so secure use simply means keeping the dependency up to date.
 
-Package to support internationalization, containing enums for
+Package to support internationalisation/internationalization/i18n, containing enums for
 * ISO 3166-1 Country
 * ISO 639-1 Language
 * ISO 15924 Script etc.
@@ -46,7 +47,7 @@ Package to support internationalization, containing enums for
 License
 -------
 
-Apache License, Version 2.0
+Apache Licence, Version 2.0
 
 Maven
 -----
@@ -59,7 +60,7 @@ Maven
 </dependency>
 ```
 
-For the latest version-number look at [sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
+For the latest version-number look at [Sonatype](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
 
 Gradle
 ------
@@ -150,7 +151,7 @@ Contributors
 ------
 
 <a href="https://github.com/foundationsedge/nv-i18n/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=foundationsedge/nv-i18n" />
+  <img alt="contributors avatars" src="https://contrib.rocks/image?repo=foundationsedge/nv-i18n" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
