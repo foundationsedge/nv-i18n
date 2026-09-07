@@ -1,0 +1,44 @@
+#
+# Part two of two stage process for updating PRs with pitest results when accepting PRs from untrusted forks.
+#
+# The version of this file that runs is the version in the main/master branch, NOT the version in the PR. It must therefore
+# be committed to main/master before the process can run for the first time.
+#
+# This workflow takes an artifact containing pitest results generated in part one, and updated the PR. It runs with
+# write access.
+#
+
+name: Comment on the pull request
+
+# read-write repo token
+# access to secrets
+on:
+  workflow_run:
+    workflows: ["Receive"]
+    types:
+      - completed
+
+jobs:
+  pitest-update-pr:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: debug
+        uses: hmarr/debug-action@cd1afbd7852b7ad7b1b7a9a1b03efebd3b0a1820 # v3.0.0
+      - name: Setup Java JDK
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c #v6.0.0
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@d63b86af1b34672e53c440b1b83979861906bad7 # v24
+        with:
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          name: pitest
+          path: target/pit-reports-ci
+          workflow_conclusion: success
+      - name: update pull request
+        # The updatePR maven goal is used here with an explicit version. This allows us to upload without checking out
+        # the code, but does mean the version here must be maintained. An alternative would be to checkout the code and use
+        # the github goal. This will work as long as the artifact is extracted to the maven target directory
+        run: mvn -DrepoToken=${{ secrets.GITHUB_TOKEN }} com.groupcdg:pitest-github-maven-plugin:1.3.1:updatePR

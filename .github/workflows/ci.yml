@@ -34,10 +34,10 @@ jobs:
           # 26 # GA 2026 09 15
         ]
     steps:
-      - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
-        with:
-          egress-policy: audit
+      #- name: Harden the runner (Audit all outbound calls)
+      #  uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+      #  with:
+      #    egress-policy: audit
 
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #7.0.1
       - name: Set up JDK ${{ matrix.java }}, ${{ matrix.os }}
@@ -48,3 +48,39 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+  pull-request-ci:
+    # Only run on PRs from the repo. PRs from forks will fail due to lack of permissions and
+    # must use the two stage process
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      #- name: Harden the runner (Audit all outbound calls)
+      #  uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+      #  with:
+      #    egress-policy: audit
+      - name: Checkout project
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #7.0.1
+        with:
+          # important to set a fetch depth of 2. By default the checkout action make no history available
+          fetch-depth: 2
+      - name: Cache local Maven repository
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven-
+      - name: Setup Java JDK
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c #v6.0.0
+        with:
+          distribution: 'temurin'
+          java-version: 17
+      - name: run pitest
+        # pitest has been bound to a profile called pitest for normal running
+        # we add config to analyse only changes made within a PR and treat surviving mutants as check errors
+        # failWhenNoMutations is unset in the pom, as otherwise PRs that do not affect java code would fail
+        run: mvn -e -B -Ppitest -Dfeatures="+GIT(from[HEAD~1]), +gitci" test
+      - name: update pull request
+        run: mvn -e -B -DrepoToken=${{ secrets.GITHUB_TOKEN }} pitest-github:github
+        env:
+          actions: write
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
