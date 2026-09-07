@@ -868,5 +868,14 @@ public class LanguageCodeTest {
   @Test
   void getNameForBasque() {
     assertThat(LanguageCode.eu.getName()).isEqualTo("Basque");
+  @Test
+  public void getNameNeverThrowsNullPointerException() {
+    // getName() must tolerate getAlpha3() returning null (avoids NPE).
+    for (LanguageCode code : LanguageCode.values()) {
+      code.getName();
+    }
+
+    assertThat(LanguageCode.ja.getName()).isEqualTo("Japanese");
+    assertThat(LanguageCode.undefined.getName()).isEqualTo("Undefined");
   }
 }
