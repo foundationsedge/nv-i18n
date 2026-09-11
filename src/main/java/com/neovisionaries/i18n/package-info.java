@@ -1,4 +1,8 @@
 /**
+ * Copyright (C) 2013-2026 The nv-i18n Contributors.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
  * Internationalization package.
  *
  * <p>
