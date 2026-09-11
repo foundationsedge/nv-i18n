@@ -2159,7 +2159,11 @@ public enum LanguageCode {
    * @return The language name.
    */
   public String getName() {
-    return getAlpha3().getName();
+    LanguageAlpha3Code alpha3 = getAlpha3();
+    if (alpha3 == null) {
+      return null;
+    }
+    return alpha3.getName();
   }
 
 
@@ -2649,8 +2653,15 @@ public enum LanguageCode {
     List<LanguageCode> list = new ArrayList<>();
 
     for (LanguageCode entry : values()) {
+      String name = entry.getName();
+
+      // Skip entries with no name (getAlpha3() returned null).
+      if (name == null) {
+        continue;
+      }
+
       // If the name matches the given pattern.
-      if (pattern.matcher(entry.getName()).matches()) {
+      if (pattern.matcher(name).matches()) {
         list.add(entry);
       }
     }

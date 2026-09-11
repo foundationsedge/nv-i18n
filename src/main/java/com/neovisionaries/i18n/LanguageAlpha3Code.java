@@ -1157,7 +1157,7 @@ public enum LanguageAlpha3Code {
    * <a href="https://en.wikipedia.org/wiki/Cornish_language">Cornish</a>
    * ({@link LanguageCode#kw kw}).
    */
-  cor("Comish") {
+  cor("Cornish") {
     @Override
     public LanguageCode getAlpha2() {
       return LanguageCode.kw;
@@ -1597,15 +1597,15 @@ public enum LanguageAlpha3Code {
    *
    * @since 1.10
    */
-  euq("Basque"),
+  euq("Basque (family)"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Basque_language">Basque</a> (family)
+   * <a href="https://en.wikipedia.org/wiki/Basque_language">Basque</a>
    * ({@link LanguageCode#eu eu}) for terminology applications.
    *
    * @see #baq
    */
-  eus("Basque (family)") {
+  eus("Basque") {
     @Override
     public LanguageCode getAlpha2() {
       return LanguageCode.eu;
