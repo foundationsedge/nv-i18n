@@ -1,6 +1,39 @@
 CHANGES
 =======
 
+### 1.35.0 (2026-09-11)
+
+Changes
+
+* Fix `NullPointerException` possibility in `LanguageCode.getName()`
+* Update `ScriptCode` data
+* Refactor `ScriptCode` canonicalization
+* Improve testing of `CurrencyCode` and `ScriptCode` to remove surviving mutants
+
+Dependencies
+
+* Bump GitHub Actions versions
+* Bump Plugin versions
+
+Build
+
+* Reduce build matrix to `ubuntu-latest` and `JDK 17` due to hitting build minutes limit
+
+Documentation
+
+* Correct URLs in Javadoc
+* Update `CONTRIBUTING` documentation:
+  * Introduce the requirement for contributors to sign a
+  [CLA document](https://cla-assistant.io/foundationsedge/nv-i18n)
+  * Document expectation on writing tests
+  * Document how to run the project locally
+* Add a `ROADMAP` document explaining many of the changes we have on our task list
+* Created a related [sample-project](https://github.com/foundationsedge/nv-i18n-client-sample)
+* Normalise text in documentation to `en-Latn-GB`
+* Add `OSSMETADATA` document
+* Add badges including for the two `OpenSSF` badges achieved
+* Ensure all `Java` files start with a copyright statement and a licence notice
+
 ### 1.34.1 (2026-08-28)
 
 Changes
