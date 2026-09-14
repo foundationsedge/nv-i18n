@@ -1506,7 +1506,7 @@ public enum LanguageCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/P%C4%81li_language">P&#257;li</a>
+   * <a href="https://en.wikipedia.org/wiki/Pali">Pali/a>
    * ({@link LanguageAlpha3Code#pli pli}).
    */
   pi() {
@@ -2372,7 +2372,8 @@ public enum LanguageCode {
    * </tr>
    * </table>
    *
-   * @return <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
+   * @return <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a>
    * language code.
    * @since 1.1
    */
@@ -2385,7 +2386,8 @@ public enum LanguageCode {
    * Get a {@code LanguageCode} that corresponds to a given
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
-   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * <p>
@@ -2396,7 +2398,8 @@ public enum LanguageCode {
    *
    * @param code An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *             code (2-letter lowercase code) or an
-   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or an
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    *             (3-letter lowercase code). Or "undefined" (case-sensitive).
    *             Note that if the given code is one of legacy language codes
    *             ("iw", "ji" and "in"), it is treated as its official counterpart
@@ -2413,7 +2416,8 @@ public enum LanguageCode {
    * Get a {@code LanguageCode} that corresponds to a given
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
-   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * <p>
@@ -2422,7 +2426,8 @@ public enum LanguageCode {
    *
    * @param code An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *             code (2-letter lowercase code) or an
-   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or an
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    *             (3-letter lowercase code). Or "undefined" (case-insensitive).
    *             Note that if the given code is one of legacy language codes
    *             ("iw", "ji" and "in"), it is treated as its official counterpart
@@ -2441,11 +2446,14 @@ public enum LanguageCode {
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
    * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * (3-letter lowercase code). or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * @param code          An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *                      code (2-letter lowercase code) or an
-   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> or an
+   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    *                      (3-letter lowercase code). Or "undefined" (its case sensitivity
    *                      depends on the value of {@code caseSensitive}).
    *                      Note that if the given code is one of legacy language codes

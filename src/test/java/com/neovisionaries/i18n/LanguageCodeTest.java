@@ -8,17 +8,18 @@ package com.neovisionaries.i18n;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.LanguageCode.getByCode;
 import static com.neovisionaries.i18n.LanguageCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.LanguageCode.getByLocale;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 
 public class LanguageCodeTest {
   @Test
@@ -868,5 +869,12 @@ public class LanguageCodeTest {
   @Test
   void getNameForBasque() {
     assertThat(LanguageCode.eu.getName()).isEqualTo("Basque");
+  }
+
+  @Test
+  public void findByNameThrowsExceptionWhenPassedNull() {
+    Pattern pattern = null;
+    assertThatThrownBy(() -> LanguageCode.findByName(pattern))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 }

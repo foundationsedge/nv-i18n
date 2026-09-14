@@ -41,7 +41,7 @@ Package to support internationalisation/internationalization/i18n, containing en
 |:---------------------|:-------------------------------------------------------------|----------------------------------|
 | `CountryCode`        | ISO 3166-1 country code.                                     | 2026-06-24 (Wikipedia as source) |
 | `LanguageCode`       | ISO 639-1 language code.                                     | 2026-08-07 (Wikipedia as source) |
-| `LanguageAlpha3Code` | ISO 639-2 language code.                                     | unknown                          |
+| `LanguageAlpha3Code` | ISO 639-2, 639-5 language code.                              | 2026-09-14 (Wikipedia as source) |
 | `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | unknown                          |
 | `ScriptCode`         | ISO 15924 script code.                                       | 2026-08-28 (Wikipedia as source) |
 | `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17 (Wikipedia as source) |
@@ -102,6 +102,7 @@ See Also
 * Country Code [ISO 3166-1 numeric](http://en.wikipedia.org/wiki/ISO_3166-1_numeric)
 * Language Code [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1)
 * Language Alpha3 Code [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2)
+* Language Alpha3 Code [ISO 639-5](http://en.wikipedia.org/wiki/ISO_639-5)
 * Script Code [ISO 15924](http://en.wikipedia.org/wiki/ISO_15924)
 * Currency Code [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
 
