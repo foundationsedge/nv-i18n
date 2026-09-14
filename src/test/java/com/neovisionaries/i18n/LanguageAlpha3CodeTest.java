@@ -5,19 +5,20 @@
  */
 package com.neovisionaries.i18n;
 
-
 import java.util.List;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.BIBLIOGRAPHY;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.COMMON;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.TERMINOLOGY;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.getByCode;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 
 public class LanguageAlpha3CodeTest {
   @Test
@@ -1138,5 +1139,38 @@ public class LanguageAlpha3CodeTest {
   @Test
   public void test183() {
     assertSame(LanguageAlpha3Code.undefined, getByCode("UNDEFINED", false));
+  }
+
+  @Test
+  public void chineseOverrides() {
+    assertThat(LanguageAlpha3Code.chi.getAlpha2()).isEqualTo(LanguageCode.zh);
+    assertThat(LanguageAlpha3Code.chi.getUsage()).isEqualTo(BIBLIOGRAPHY);
+    assertThat(LanguageAlpha3Code.chi.getSynonym()).isEqualTo(LanguageAlpha3Code.zho);
+
+    assertThat(LanguageAlpha3Code.zho.getAlpha2()).isEqualTo(LanguageCode.zh);
+    assertThat(LanguageAlpha3Code.zho.getUsage()).isEqualTo(TERMINOLOGY);
+    assertThat(LanguageAlpha3Code.zho.getSynonym()).isEqualTo(LanguageAlpha3Code.chi);
+  }
+
+  @Test
+  public void getByCodeIgnoreCaseWithValudValue() {
+    assertThat(LanguageAlpha3Code.getByCodeIgnoreCase("eng")).isEqualTo(LanguageAlpha3Code.eng);
+  }
+
+  @Test
+  public void canonicalizeReturnsNullWhenPassedNull() {
+    assertThat(LanguageAlpha3Code.getByCode(null, true)).isNull();
+  }
+
+  @Test
+  public void canonicalizeReturnsNullWhenPassedEmptyString() {
+    assertThat(LanguageAlpha3Code.getByCode("", true)).isNull();
+  }
+
+  @Test
+  public void findByNameThrowsExceptionWhenPassedNull() {
+    Pattern pattern = null;
+    assertThatThrownBy(() -> LanguageAlpha3Code.findByName(pattern))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 }
