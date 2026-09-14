@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  * <p>
  * Most languages have just one ISO 639-2 code, but there are some languages
  * that have 2 codes, ISO 639-2/T code ("terminological" code) and ISO 639-2/B
- * code ("bibliographic" code). The table below lists up langueses having two
+ * code ("bibliographic" code). The table below lists up languages having two
  * ISO 639-2 codes.
  * </p>
  *
@@ -155,6 +155,10 @@ import java.util.regex.Pattern;
  * because {@code new} is a special word for Java programming language.
  * </p>
  *
+ * <p>
+ * Some entries are for the <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO_639-5</a> standard.
+ * </p>
+ *
  * @author Takahiko Kawasaki
  * @since 1.1
  */
@@ -163,7 +167,7 @@ public enum LanguageAlpha3Code {
    * Undefined.
    *
    * <p>
-   * This is not an official ISO 639-2 code.
+   * This is not an official ISO 639-2 or 639-5 code.
    * </p>
    *
    * @see #und und: Undetermined
@@ -260,11 +264,11 @@ public enum LanguageAlpha3Code {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Ainu_language_(Japan)">Ainu (Japan)</a>
+   * <a href="https://en.wikipedia.org/wiki/Ainu_language">Ainu</a>
    *
    * @since 1.10
    */
-  ain("Ainu (Japan)"),
+  ain("Ainu"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Akan_language">Akan</a>
@@ -976,12 +980,10 @@ public enum LanguageAlpha3Code {
       return LanguageCode.cs;
     }
 
-
     @Override
     public Usage getUsage() {
       return Usage.TERMINOLOGY;
     }
-
 
     @Override
     public LanguageAlpha3Code getSynonym() {
@@ -1058,18 +1060,18 @@ public enum LanguageAlpha3Code {
   chk("Chuukese"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Mari_language_(Russia)">Mari (Russia)</a>
+   * <a href="https://en.wikipedia.org/wiki/Mari_language">Mari</a>
    *
    * @since 1.10
    */
-  chm("Mari (Russia)"),
+  chm("Mari"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Chinook_jargon_language">Chinook jargon</a>
+   * <a href="https://en.wikipedia.org/wiki/Chinook_Jargon">Chinook Jargon</a>
    *
    * @since 1.10
    */
-  chn("Chinook jargon"),
+  chn("Chinook Jargon"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Choctaw_language">Choctaw</a>
@@ -1166,9 +1168,9 @@ public enum LanguageAlpha3Code {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/English_based_Creoles"
-   * >English based Creoles</a> and
-   * <a href="https://en.wikipedia.org/wiki/English_based_pidgins"
+   * <a href="https://en.wikipedia.org/wiki/English-based_creole_languages"
+   * >English-based creole languages</a> and
+   * <a href="https://en.wikipedia.org/wiki/List_of_English-based_pidgins"
    * >pidgins</a>
    *
    * @since 1.10
@@ -1176,20 +1178,16 @@ public enum LanguageAlpha3Code {
   cpe("English based Creoles and pidgins"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/French-Based_Creoles"
-   * >French-Based Creoles</a> and
-   * <a href="https://en.wikipedia.org/wiki/French-Based_pidgins"
-   * >pidgins</a>
+   * <a href="https://en.wikipedia.org/wiki/French-based_creole_languages"
+   * >French-based creole languages</a> and pidgins
    *
    * @since 1.10
    */
   cpf("French-Based Creoles and pidgins"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Portuguese-Based_Creoles"
-   * >Portuguese-Based Creoles</a> and
-   * <a href="https://en.wikipedia.org/wiki/Portuguese-Based_pidgins"
-   * >pidgins</a>
+   * <a href="https://en.wikipedia.org/wiki/Portuguese-based_creole_languages"
+   * >Portuguese-Based Creole languages</a> and pidgins
    *
    * @since 1.10
    */
@@ -1855,11 +1853,11 @@ public enum LanguageAlpha3Code {
   gay("Gayo"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Gbaya_language_(Central_African_Republic)">Gbaya (Central African Republic)</a>
+   * <a href="https://en.wikipedia.org/wiki/Gbaya_languages">Gbaya languages/a>
    *
    * @since 1.10
    */
-  gba("Gbaya (Central African Republic)"),
+  gba("Gbaya"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Germanic_languages">Germanic languages</a>
@@ -2088,10 +2086,10 @@ public enum LanguageAlpha3Code {
   grk("Greek languages"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Guaran%C3%AD_language">Guaran&iacute;</a>
+   * <a href="https://en.wikipedia.org/wiki/Guarani_language">Guarani_language&iacute;</a>
    * ({@link LanguageCode#gn gn}).
    */
-  grn("Guaran\u00ED") {
+  grn("Guarani") {
     @Override
     public LanguageCode getAlpha2() {
       return LanguageCode.gn;
@@ -3267,12 +3265,12 @@ public enum LanguageAlpha3Code {
   mdr("Mandar"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Mende_language_(Sierra_Leone)"
-   * >Mende (Sierra Leone)</a>
+   * <a href="https://en.wikipedia.org/wiki/Mende_language"
+   * >Mende language</a>
    *
    * @since 1.10
    */
-  men("Mende (Sierra Leone)"),
+  men("Mende"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Middle_Irish_language">Middle Irish</a> (900-1200)
@@ -4015,10 +4013,10 @@ public enum LanguageAlpha3Code {
   plf("Central Malayo-Polynesian languages"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/P%C4%81li_language">P&#257;li</a>
+   * <a href="https://en.wikipedia.org/wiki/Pali">Pali</a>
    * ({@link LanguageCode#pi pi}).
    */
-  pli("P\u0101li") {
+  pli("Pali") {
     @Override
     public LanguageCode getAlpha2() {
       return LanguageCode.pi;
@@ -5233,11 +5231,11 @@ public enum LanguageAlpha3Code {
   wal("Wolaytta"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Waray_language_(Philippines)">Waray (Philippines)</a>
+   * <a href="https://en.wikipedia.org/wiki/Waray_language">Waray language</a>
    *
    * @since 1.10
    */
-  war("Waray (Philippines)"),
+  war("Waray"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Washo_language">Washo</a>
@@ -5395,6 +5393,12 @@ public enum LanguageAlpha3Code {
    * @since 1.10
    */
   zen("Zenaga"),
+
+  /**
+   * <a href="https://en.wikipedia.org/wiki/Standard_Moroccan_Amazigh">Standard Moroccan Tamazight</a>
+   *
+   */
+  zgh("Standard Moroccan Tamazight"),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Zhuang_languages">Zhuang</a>
@@ -5584,6 +5588,7 @@ public enum LanguageAlpha3Code {
    * </p>
    *
    * @return <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
+   * or <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a>
    * language code.
    */
   public LanguageAlpha3Code getSynonym() {
@@ -5624,7 +5629,6 @@ public enum LanguageAlpha3Code {
    * ("bibliographic" codes) return counterpart objects. For example,
    * {@link LanguageAlpha3Code#fre LanguageAlpha3Code.fre}{@code .getAlpha3T()}
    * returns {@link LanguageAlpha3Code#fra LanguageAlpha3Code.fra}.
-   *
    * </p>
    *
    * @return The terminological code of this language.
@@ -5643,17 +5647,20 @@ public enum LanguageAlpha3Code {
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
    * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * (3-letter lowercase code) or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * <p>
    * This method calls {@link #getByCode(String, boolean) getByCode}{@code (code, true)}.
-   * Note that the behavior has changed since the version 1.13. In the older versions,
+   * Note that the behaviour has changed since the version 1.13. In the older versions,
    * this method was an alias of {@code getByCode(code, false)}.
    * </p>
    *
    * @param code An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *             code (2-letter lowercase code) or an
-   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> or an
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a>
    *             code (3-letter lowercase code). Or "undefined".
    *             Note that if the given code is one of legacy language codes
    *             ("iw", "ji" and "in"), it is treated as its official counterpart
@@ -5674,7 +5681,8 @@ public enum LanguageAlpha3Code {
    * Get a {@code LanguageAlpha3Code} that corresponds to a given
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
-   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * <p>
@@ -5683,7 +5691,8 @@ public enum LanguageAlpha3Code {
    *
    * @param code An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *             code (2-letter lowercase code) or an
-   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> or an
+   *             <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a>
    *             code (3-letter lowercase code). Or "undefined" (case-insensitive).
    *             Note that if the given code is one of legacy language codes
    *             ("iw", "ji" and "in"), it is treated as its official counterpart
@@ -5705,12 +5714,14 @@ public enum LanguageAlpha3Code {
    * Get a {@code LanguageAlpha3Code} that corresponds to a given
    * <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code
    * (2-letter lowercase code) or
-   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> code or
+   * <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a> code
    * (3-letter lowercase code).
    *
    * @param code          An <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a>
    *                      code (2-letter lowercase code) or an
-   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a>
+   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-2">ISO 639-2</a> or an
+   *                      <a href="https://en.wikipedia.org/wiki/ISO_639-5">ISO 639-5</a>
    *                      code (3-letter lowercase code). Or "undefined" (its case
    *                      sensitivity depends on the value of {@code caseSensitive}).
    *                      Note that if the given code is one of legacy language codes
@@ -5734,10 +5745,6 @@ public enum LanguageAlpha3Code {
    */
   public static LanguageAlpha3Code getByCode(String code, boolean caseSensitive) {
     code = canonicalize(code, caseSensitive);
-
-    if (code == null) {
-      return null;
-    }
 
     switch (code.length()) {
       case 2:
@@ -5773,7 +5780,7 @@ public enum LanguageAlpha3Code {
 
   private static String canonicalize(String code, boolean caseSensitive) {
     if (code == null || code.isEmpty()) {
-      return null;
+      return "";
     }
 
     if (!caseSensitive) {
