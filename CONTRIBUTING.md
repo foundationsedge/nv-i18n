@@ -18,6 +18,8 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [I Want To Contribute](#i-want-to-contribute)
 - [Reporting Bugs](#reporting-bugs)
 - [Suggesting Enhancements](#suggesting-enhancements)
+- [Storing Secrets](#storing-secrets)
+- [Publishing Releases](#publishing-releases)
 <!--
 - [Your First Code Contribution](#your-first-code-contribution)
 - [Improving The Documentation](#improving-the-documentation)
@@ -85,6 +87,7 @@ in [Java for small teams](https://ncredinburgh.com/files/ncr-code/javaforsmallte
 - This is a public library, so any breaking changes need to wait for a major version bump
 - Squash your changes down into 1 commit
 - All code changes must have tests covering the change and introduce no new mutants
+- Prefer explicit imports, avoid wildcard imports, i.e. import `java.util.List;` instead of `java.util.*;`
 
 ### Reporting Bugs
 
@@ -150,6 +153,40 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/founda
 - **Describe the current behaviour** and **explain which behaviour you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
 - You may want to **include screenshots or screen recordings** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [LICEcap](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and the built-in [screen recorder in GNOME](https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en) or [SimpleScreenRecorder](https://github.com/MaartenBaert/ssr) on Linux. <!-- this should only be included if the project has a GUI -->
 - **Explain why this enhancement would be useful** to most nv-i18n users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
+
+## Storing Secrets
+
+All secrets are stored in secrets inside the project settings and are not stored in plaintext.
+
+We are working on PiTest integration, and the ArcMutate licence _does_ appear in plaintext in the repo.
+But this is [documented](https://docs.arcmutate.com/docs/licence-management.html#licence-locations) as the expected
+licence file location.
+
+As is standard in Github, secrets are stored but they can't be viewed/retrieved by anyone, but _can_ be overwritten
+i.e. if they expire.
+
+## Publishing Releases
+
+We tried an automated process, and it led to broken version numbers, so are currently doing a manual process
+while investigating how to automate and sign them.
+
+Publishing a release is limited to Maintainers
+
+If the current version is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSHOT` and we have no breaking changes, then:
+* Create a new tag of `1.1000.0-SNAPSHOT`
+* Generate a release selecting `Pre-release` label and using `generate release notes`
+* Once we are happy it works
+  * In the `pom.xml` change:
+    * The `1.1000.0-SNAPSHOT` version  to `1.1000.0`.
+    * The `HEAD` tag to `1.1000.0`
+  * Optional: run `mvn install` to locally publish the `jar` and use it in a project to confirm it works
+  * Submit this as a PR
+  * Confirm it has released on [maven central](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
+  * Create a new tag of `1.1000.0` and release as a full release
+  * Change:
+    * The pom version to `1.1001.0-SNAPSHOT` and tag back to `HEAD`
+    * Update [release notes](https://github.com/foundationsedge/nv-i18n/CHANGELOG.md) to include changes in `1.1000.0`
+    * Submit a PR
 
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 <!--
