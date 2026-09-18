@@ -77,11 +77,29 @@ public enum LocaleCode {
    * {@link LanguageCode#af Afrikaans}
    */
   af(LanguageCode.af, null),
+  /**
+   * {@link LanguageCode#af Afrikaans}, {@link CountryCode#NA Namibia}
+   */
   af_NA(LanguageCode.af, CountryCode.NA),
+  /**
+   * {@link LanguageCode#af Afrikaans}, {@link CountryCode#ZA South Africa}
+   */
   af_ZA(LanguageCode.af, CountryCode.ZA),
+  /**
+   * {@link LanguageCode#ak Akan}
+   */
   ak(LanguageCode.ak, null),
+  /**
+   * {@link LanguageCode#ak Akan}, {@link CountryCode#GH Ghana}
+   */
   ak_GH(LanguageCode.ak, CountryCode.GH),
+  /**
+   * {@link LanguageCode#am Amharic}
+   */
   am(LanguageCode.am, null),
+  /**
+   * {@link LanguageCode#am Amharic}, {@link CountryCode#ET Ethiopia}
+   */
   am_ET(LanguageCode.am, CountryCode.ET),
 
   /**
@@ -97,6 +115,9 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#BH Bahrain}
    */
   ar_BH(LanguageCode.ar, CountryCode.BH),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#DJ Djibouti}
+   */
   ar_DJ(LanguageCode.ar, CountryCode.DJ),
 
   /**
@@ -108,8 +129,17 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#EG Egypt}
    */
   ar_EG(LanguageCode.ar, CountryCode.EG),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#EH Western Sahara}
+   */
   ar_EH(LanguageCode.ar, CountryCode.EH),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#ER Eritrea}
+   */
   ar_ER(LanguageCode.ar, CountryCode.ER),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#IL Israel}
+   */
   ar_IL(LanguageCode.ar, CountryCode.IL),
 
   /**
@@ -121,6 +151,9 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#JO Jordan}
    */
   ar_JO(LanguageCode.ar, CountryCode.JO),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#KM Comoros}
+   */
   ar_KM(LanguageCode.ar, CountryCode.KM),
 
   /**
@@ -142,12 +175,18 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#MA Morocco}
    */
   ar_MA(LanguageCode.ar, CountryCode.MA),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#MR Mauritania}
+   */
   ar_MR(LanguageCode.ar, CountryCode.MR),
 
   /**
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#OM Oman}
    */
   ar_OM(LanguageCode.ar, CountryCode.OM),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#PS Palestine, State of}
+   */
   ar_PS(LanguageCode.ar, CountryCode.PS),
 
   /**
@@ -164,13 +203,22 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#SD Sudan}
    */
   ar_SD(LanguageCode.ar, CountryCode.SD),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#SO Somalia}
+   */
   ar_SO(LanguageCode.ar, CountryCode.SO),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#SS South Sudan}
+   */
   ar_SS(LanguageCode.ar, CountryCode.SS),
 
   /**
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#SY Syrian Arab Republic}
    */
   ar_SY(LanguageCode.ar, CountryCode.SY),
+  /**
+   * {@link LanguageCode#ar Arabic}, {@link CountryCode#TD Chad}
+   */
   ar_TD(LanguageCode.ar, CountryCode.TD),
 
   /**
@@ -182,11 +230,29 @@ public enum LocaleCode {
    * {@link LanguageCode#ar Arabic}, {@link CountryCode#YE Yemen}
    */
   ar_YE(LanguageCode.ar, CountryCode.YE),
+  /**
+   * {@link LanguageCode#as Assamese}
+   */
   as(LanguageCode.as, null),
+  /**
+   * {@link LanguageCode#as Assamese}, {@link CountryCode#IN India}
+   */
   as_IN(LanguageCode.as, CountryCode.IN),
+  /**
+   * {@link LanguageCode#az Azerbaijani}
+   */
   az(LanguageCode.az, null),
+  /**
+   * {@link LanguageCode#az Azerbaijani}, {@link CountryCode#AZ Azerbaijan}
+   */
   az_AZ(LanguageCode.az, CountryCode.AZ),
+  /**
+   * {@link LanguageCode#ba Bashkir}
+   */
   ba(LanguageCode.ba, null),
+  /**
+   * {@link LanguageCode#ba Bashkir}, {@link CountryCode#RU Russian Federation}
+   */
   ba_RU(LanguageCode.ba, CountryCode.RU),
 
   /**
@@ -208,16 +274,49 @@ public enum LocaleCode {
    * {@link LanguageCode#bg Bulgarian}, {@link CountryCode#BG Bulgaria}
    */
   bg_BG(LanguageCode.bg, CountryCode.BG),
+  /**
+   * {@link LanguageCode#bm Bambara}
+   */
   bm(LanguageCode.bm, null),
+  /**
+   * {@link LanguageCode#bm Bambara}, {@link CountryCode#ML Mali}
+   */
   bm_ML(LanguageCode.bm, CountryCode.ML),
+  /**
+   * {@link LanguageCode#bn Bengali}
+   */
   bn(LanguageCode.bn, null),
+  /**
+   * {@link LanguageCode#bn Bengali}, {@link CountryCode#BD Bangladesh}
+   */
   bn_BD(LanguageCode.bn, CountryCode.BD),
+  /**
+   * {@link LanguageCode#bn Bengali}, {@link CountryCode#IN India}
+   */
   bn_IN(LanguageCode.bn, CountryCode.IN),
+  /**
+   * {@link LanguageCode#bo Tibetan}
+   */
   bo(LanguageCode.bo, null),
+  /**
+   * {@link LanguageCode#bo Tibetan}, {@link CountryCode#CN China}
+   */
   bo_CN(LanguageCode.bo, CountryCode.CN),
+  /**
+   * {@link LanguageCode#bo Tibetan}, {@link CountryCode#IN India}
+   */
   bo_IN(LanguageCode.bo, CountryCode.IN),
+  /**
+   * {@link LanguageCode#br Breton}
+   */
   br(LanguageCode.br, null),
+  /**
+   * {@link LanguageCode#br Breton}, {@link CountryCode#FR France}
+   */
   br_FR(LanguageCode.br, CountryCode.FR),
+  /**
+   * {@link LanguageCode#bs Bosnian}
+   */
   bs(LanguageCode.bs, null),
 
   /**
@@ -229,15 +328,30 @@ public enum LocaleCode {
    * {@link LanguageCode#ca Catalan}
    */
   ca(LanguageCode.ca, null),
+  /**
+   * {@link LanguageCode#ca Catalan}, {@link CountryCode#AD Andorra}
+   */
   ca_AD(LanguageCode.ca, CountryCode.AD),
 
   /**
    * {@link LanguageCode#ca Catalan}, {@link CountryCode#ES Spain}
    */
   ca_ES(LanguageCode.ca, CountryCode.ES),
+  /**
+   * {@link LanguageCode#ca Catalan}, {@link CountryCode#FR France}
+   */
   ca_FR(LanguageCode.ca, CountryCode.FR),
+  /**
+   * {@link LanguageCode#ca Catalan}, {@link CountryCode#IT Italy}
+   */
   ca_IT(LanguageCode.ca, CountryCode.IT),
+  /**
+   * {@link LanguageCode#ce Chechen}
+   */
   ce(LanguageCode.ce, null),
+  /**
+   * {@link LanguageCode#ce Chechen}, {@link CountryCode#RU Russian Federation}
+   */
   ce_RU(LanguageCode.ce, CountryCode.RU),
 
   /**
@@ -249,9 +363,21 @@ public enum LocaleCode {
    * {@link LanguageCode#cs Czech}, {@link CountryCode#CZ Czech Republic}
    */
   cs_CZ(LanguageCode.cs, CountryCode.CZ),
+  /**
+   * {@link LanguageCode#cv Chuvash}
+   */
   cv(LanguageCode.cv, null),
+  /**
+   * {@link LanguageCode#cv Chuvash}, {@link CountryCode#RU Russian Federation}
+   */
   cv_RU(LanguageCode.cv, CountryCode.RU),
+  /**
+   * {@link LanguageCode#cy Welsh}
+   */
   cy(LanguageCode.cy, null),
+  /**
+   * {@link LanguageCode#cy Welsh}, {@link CountryCode#GB United Kingdom}
+   */
   cy_GB(LanguageCode.cy, CountryCode.GB),
 
   /**
@@ -263,6 +389,9 @@ public enum LocaleCode {
    * {@link LanguageCode#da Danish}, {@link CountryCode#DK Denmark}
    */
   da_DK(LanguageCode.da, CountryCode.DK),
+  /**
+   * {@link LanguageCode#da Danish}, {@link CountryCode#GL Greenland}
+   */
   da_GL(LanguageCode.da, CountryCode.GL),
 
   /**
@@ -279,6 +408,9 @@ public enum LocaleCode {
    * {@link LanguageCode#de German}, {@link CountryCode#AT Austria}
    */
   de_AT(LanguageCode.de, CountryCode.AT),
+  /**
+   * {@link LanguageCode#de German}, {@link CountryCode#BE Belgium}
+   */
   de_BE(LanguageCode.de, CountryCode.BE),
 
   /**
@@ -290,17 +422,38 @@ public enum LocaleCode {
    * {@link LanguageCode#de German}, {@link CountryCode#DE Germany}
    */
   de_DE(LanguageCode.de, CountryCode.DE),
+  /**
+   * {@link LanguageCode#de German}, {@link CountryCode#IT Italy}
+   */
   de_IT(LanguageCode.de, CountryCode.IT),
+  /**
+   * {@link LanguageCode#de German}, {@link CountryCode#LI Liechtenstein}
+   */
   de_LI(LanguageCode.de, CountryCode.LI),
 
   /**
    * {@link LanguageCode#de German}, {@link CountryCode#LU Luxembourg}
    */
   de_LU(LanguageCode.de, CountryCode.LU),
+  /**
+   * {@link LanguageCode#dz Dzongkha}
+   */
   dz(LanguageCode.dz, null),
+  /**
+   * {@link LanguageCode#dz Dzongkha}, {@link CountryCode#BT Bhutan}
+   */
   dz_BT(LanguageCode.dz, CountryCode.BT),
+  /**
+   * {@link LanguageCode#ee Ewe}
+   */
   ee(LanguageCode.ee, null),
+  /**
+   * {@link LanguageCode#ee Ewe}, {@link CountryCode#GH Ghana}
+   */
   ee_GH(LanguageCode.ee, CountryCode.GH),
+  /**
+   * {@link LanguageCode#ee Ewe}, {@link CountryCode#TG Togo}
+   */
   ee_TG(LanguageCode.ee, CountryCode.TG),
 
   /**
@@ -327,60 +480,180 @@ public enum LocaleCode {
       return Locale.ENGLISH;
     }
   },
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#AE United Arab Emirates}
+   */
   en_AE(LanguageCode.en, CountryCode.AE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#AG Antigua and Barbuda}
+   */
   en_AG(LanguageCode.en, CountryCode.AG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#AI Anguilla}
+   */
   en_AI(LanguageCode.en, CountryCode.AI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#AS American Samoa}
+   */
   en_AS(LanguageCode.en, CountryCode.AS),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#AT Austria}
+   */
   en_AT(LanguageCode.en, CountryCode.AT),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#AU Australia}
    */
   en_AU(LanguageCode.en, CountryCode.AU),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BB Barbados}
+   */
   en_BB(LanguageCode.en, CountryCode.BB),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BE Belgium}
+   */
   en_BE(LanguageCode.en, CountryCode.BE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BI Burundi}
+   */
   en_BI(LanguageCode.en, CountryCode.BI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BM Bermuda}
+   */
   en_BM(LanguageCode.en, CountryCode.BM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BS Bahamas}
+   */
   en_BS(LanguageCode.en, CountryCode.BS),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BW Botswana}
+   */
   en_BW(LanguageCode.en, CountryCode.BW),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#BZ Belize}
+   */
   en_BZ(LanguageCode.en, CountryCode.BZ),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#CA Canada}
    */
   en_CA(LanguageCode.en, CountryCode.CA),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CC Cocos (Keeling) Islands}
+   */
   en_CC(LanguageCode.en, CountryCode.CC),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CH Switzerland}
+   */
   en_CH(LanguageCode.en, CountryCode.CH),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CK Cook Islands}
+   */
   en_CK(LanguageCode.en, CountryCode.CK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CM Cameroon}
+   */
   en_CM(LanguageCode.en, CountryCode.CM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CX Christmas Island}
+   */
   en_CX(LanguageCode.en, CountryCode.CX),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CY Cyprus}
+   */
   en_CY(LanguageCode.en, CountryCode.CY),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#CZ Czech Republic}
+   */
   en_CZ(LanguageCode.en, CountryCode.CZ),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#DE Germany}
+   */
   en_DE(LanguageCode.en, CountryCode.DE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#DG Diego Garcia}
+   */
   en_DG(LanguageCode.en, CountryCode.DG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#DK Denmark}
+   */
   en_DK(LanguageCode.en, CountryCode.DK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#DM Dominica}
+   */
   en_DM(LanguageCode.en, CountryCode.DM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#EE Estonia}
+   */
   en_EE(LanguageCode.en, CountryCode.EE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#ER Eritrea}
+   */
   en_ER(LanguageCode.en, CountryCode.ER),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#ES Spain}
+   */
   en_ES(LanguageCode.en, CountryCode.ES),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#FI Finland}
+   */
   en_FI(LanguageCode.en, CountryCode.FI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#FJ Fiji}
+   */
   en_FJ(LanguageCode.en, CountryCode.FJ),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#FK Falkland Islands (Malvinas)}
+   */
   en_FK(LanguageCode.en, CountryCode.FK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#FM Micronesia, Federated States of}
+   */
   en_FM(LanguageCode.en, CountryCode.FM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#FR France}
+   */
   en_FR(LanguageCode.en, CountryCode.FR),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#GB United Kingdom}
    */
   en_GB(LanguageCode.en, CountryCode.GB),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GD Grenada}
+   */
   en_GD(LanguageCode.en, CountryCode.GD),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GE Georgia}
+   */
   en_GE(LanguageCode.en, CountryCode.GE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GG Guernsey}
+   */
   en_GG(LanguageCode.en, CountryCode.GG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GH Ghana}
+   */
   en_GH(LanguageCode.en, CountryCode.GH),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GI Gibraltar}
+   */
   en_GI(LanguageCode.en, CountryCode.GI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GM Gambia}
+   */
   en_GM(LanguageCode.en, CountryCode.GM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GS South Georgia and the South Sandwich Islands}
+   */
   en_GS(LanguageCode.en, CountryCode.GS),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GU Guam}
+   */
   en_GU(LanguageCode.en, CountryCode.GU),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#GY Guyana}
+   */
   en_GY(LanguageCode.en, CountryCode.GY),
 
   /**
@@ -389,116 +662,329 @@ public enum LocaleCode {
    * @since 1.22
    */
   en_HK(LanguageCode.en, CountryCode.HK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#HU Hungary}
+   */
   en_HU(LanguageCode.en, CountryCode.HU),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#ID Indonesia}
+   */
   en_ID(LanguageCode.en, CountryCode.ID),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#IE Ireland}
    */
   en_IE(LanguageCode.en, CountryCode.IE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#IL Israel}
+   */
   en_IL(LanguageCode.en, CountryCode.IL),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#IM Isle of Man}
+   */
   en_IM(LanguageCode.en, CountryCode.IM),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#IN India}
    */
   en_IN(LanguageCode.en, CountryCode.IN),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#IO British Indian Ocean Territory}
+   */
   en_IO(LanguageCode.en, CountryCode.IO),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#IT Italy}
+   */
   en_IT(LanguageCode.en, CountryCode.IT),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#JE Jersey}
+   */
   en_JE(LanguageCode.en, CountryCode.JE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#JM Jamaica}
+   */
   en_JM(LanguageCode.en, CountryCode.JM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#JP Japan}
+   */
   en_JP(LanguageCode.en, CountryCode.JP),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#KE Kenya}
+   */
   en_KE(LanguageCode.en, CountryCode.KE),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#KI Kiribati}
+   */
   en_KI(LanguageCode.en, CountryCode.KI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#KN Saint Kitts and Nevis}
+   */
   en_KN(LanguageCode.en, CountryCode.KN),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#KY Cayman Islands}
+   */
   en_KY(LanguageCode.en, CountryCode.KY),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#LC Saint Lucia}
+   */
   en_LC(LanguageCode.en, CountryCode.LC),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#LR Liberia}
+   */
   en_LR(LanguageCode.en, CountryCode.LR),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#LS Lesotho}
+   */
   en_LS(LanguageCode.en, CountryCode.LS),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#LT Lithuania}
+   */
   en_LT(LanguageCode.en, CountryCode.LT),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#LV Latvia}
+   */
   en_LV(LanguageCode.en, CountryCode.LV),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MG Madagascar}
+   */
   en_MG(LanguageCode.en, CountryCode.MG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MH Marshall Islands}
+   */
   en_MH(LanguageCode.en, CountryCode.MH),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MO Macao}
+   */
   en_MO(LanguageCode.en, CountryCode.MO),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MP Northern Mariana Islands}
+   */
   en_MP(LanguageCode.en, CountryCode.MP),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MS Montserrat}
+   */
   en_MS(LanguageCode.en, CountryCode.MS),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#MT Malta}
    */
   en_MT(LanguageCode.en, CountryCode.MT),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MU Mauritius}
+   */
   en_MU(LanguageCode.en, CountryCode.MU),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MV Maldives}
+   */
   en_MV(LanguageCode.en, CountryCode.MV),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MW Malawi}
+   */
   en_MW(LanguageCode.en, CountryCode.MW),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#MY Malaysia}
+   */
   en_MY(LanguageCode.en, CountryCode.MY),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NA Namibia}
+   */
   en_NA(LanguageCode.en, CountryCode.NA),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NF Norfolk Island}
+   */
   en_NF(LanguageCode.en, CountryCode.NF),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NG Nigeria}
+   */
   en_NG(LanguageCode.en, CountryCode.NG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NL Netherlands}
+   */
   en_NL(LanguageCode.en, CountryCode.NL),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NO Norway}
+   */
   en_NO(LanguageCode.en, CountryCode.NO),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NR Naoero}
+   */
   en_NR(LanguageCode.en, CountryCode.NR),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#NU Niue}
+   */
   en_NU(LanguageCode.en, CountryCode.NU),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#NZ New Zealand}
    */
   en_NZ(LanguageCode.en, CountryCode.NZ),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PG Papua New Guinea}
+   */
   en_PG(LanguageCode.en, CountryCode.PG),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#PH Philippines}
    */
   en_PH(LanguageCode.en, CountryCode.PH),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PK Pakistan}
+   */
   en_PK(LanguageCode.en, CountryCode.PK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PL Poland}
+   */
   en_PL(LanguageCode.en, CountryCode.PL),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PN Pitcairn}
+   */
   en_PN(LanguageCode.en, CountryCode.PN),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PR Puerto Rico}
+   */
   en_PR(LanguageCode.en, CountryCode.PR),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PT Portugal}
+   */
   en_PT(LanguageCode.en, CountryCode.PT),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#PW Palau}
+   */
   en_PW(LanguageCode.en, CountryCode.PW),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#RO Romania}
+   */
   en_RO(LanguageCode.en, CountryCode.RO),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#RW Rwanda}
+   */
   en_RW(LanguageCode.en, CountryCode.RW),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SB Solomon Islands}
+   */
   en_SB(LanguageCode.en, CountryCode.SB),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SC Seychelles}
+   */
   en_SC(LanguageCode.en, CountryCode.SC),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SD Sudan}
+   */
   en_SD(LanguageCode.en, CountryCode.SD),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SE Sweden}
+   */
   en_SE(LanguageCode.en, CountryCode.SE),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#SG Singapore}
    */
   en_SG(LanguageCode.en, CountryCode.SG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SH Saint Helena, Ascension and Tristan da Cunha}
+   */
   en_SH(LanguageCode.en, CountryCode.SH),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SI Slovenia}
+   */
   en_SI(LanguageCode.en, CountryCode.SI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SK Slovakia}
+   */
   en_SK(LanguageCode.en, CountryCode.SK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SL Sierra Leone}
+   */
   en_SL(LanguageCode.en, CountryCode.SL),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SS South Sudan}
+   */
   en_SS(LanguageCode.en, CountryCode.SS),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SX Sint Maarten (Dutch part)}
+   */
   en_SX(LanguageCode.en, CountryCode.SX),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#SZ Eswatini}
+   */
   en_SZ(LanguageCode.en, CountryCode.SZ),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TC Turks and Caicos Islands}
+   */
   en_TC(LanguageCode.en, CountryCode.TC),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TK Tokelau}
+   */
   en_TK(LanguageCode.en, CountryCode.TK),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TO Tonga}
+   */
   en_TO(LanguageCode.en, CountryCode.TO),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TT Trinidad and Tobago}
+   */
   en_TT(LanguageCode.en, CountryCode.TT),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TV Tuvalu}
+   */
   en_TV(LanguageCode.en, CountryCode.TV),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#TZ Tanzania, United Republic of}
+   */
   en_TZ(LanguageCode.en, CountryCode.TZ),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#UA Ukraine}
+   */
   en_UA(LanguageCode.en, CountryCode.UA),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#UG Uganda}
+   */
   en_UG(LanguageCode.en, CountryCode.UG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#UM United States Minor Outlying Islands}
+   */
   en_UM(LanguageCode.en, CountryCode.UM),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#US United States}
    */
   en_US(LanguageCode.en, CountryCode.US),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#VC Saint Vincent and the Grenadines}
+   */
   en_VC(LanguageCode.en, CountryCode.VC),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#VG Virgin Islands, British}
+   */
   en_VG(LanguageCode.en, CountryCode.VG),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#VI Virgin Islands, U.S.}
+   */
   en_VI(LanguageCode.en, CountryCode.VI),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#VU Vanuatu}
+   */
   en_VU(LanguageCode.en, CountryCode.VU),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#WS Samoa}
+   */
   en_WS(LanguageCode.en, CountryCode.WS),
 
   /**
    * {@link LanguageCode#en English}, {@link CountryCode#ZA South Africa}
    */
   en_ZA(LanguageCode.en, CountryCode.ZA),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#ZM Zambia}
+   */
   en_ZM(LanguageCode.en, CountryCode.ZM),
+  /**
+   * {@link LanguageCode#en English}, {@link CountryCode#ZW Zimbabwe}
+   */
   en_ZW(LanguageCode.en, CountryCode.ZW),
+  /**
+   * {@link LanguageCode#eo Esperanto}
+   */
   eo(LanguageCode.eo, null),
 
   /**
@@ -515,7 +1001,13 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#BO Bolivia, Plurinational State of}
    */
   es_BO(LanguageCode.es, CountryCode.BO),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#BR Brazil}
+   */
   es_BR(LanguageCode.es, CountryCode.BR),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#BZ Belize}
+   */
   es_BZ(LanguageCode.es, CountryCode.BZ),
 
   /**
@@ -532,6 +1024,9 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#CR Costa Rica}
    */
   es_CR(LanguageCode.es, CountryCode.CR),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#CU Cuba}
+   */
   es_CU(LanguageCode.es, CountryCode.CU),
 
   /**
@@ -543,6 +1038,9 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#EC Ecuador}
    */
   es_EC(LanguageCode.es, CountryCode.EC),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#EA Ceuta, Melilla}
+   */
   es_EA(LanguageCode.es, CountryCode.EA),
 
   /**
@@ -554,6 +1052,9 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#GT Guatemala}
    */
   es_GT(LanguageCode.es, CountryCode.GT),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#GQ Equatorial Guinea}
+   */
   es_GQ(LanguageCode.es, CountryCode.GQ),
 
   /**
@@ -565,6 +1066,9 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#MX Mexico}
    */
   es_MX(LanguageCode.es, CountryCode.MX),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#IC Canary Islands}
+   */
   es_IC(LanguageCode.es, CountryCode.IC),
 
   /**
@@ -581,6 +1085,9 @@ public enum LocaleCode {
    * {@link LanguageCode#es Spanish}, {@link CountryCode#PE Peru}
    */
   es_PE(LanguageCode.es, CountryCode.PE),
+  /**
+   * {@link LanguageCode#es Spanish}, {@link CountryCode#PH Philippines}
+   */
   es_PH(LanguageCode.es, CountryCode.PH),
 
   /**
@@ -622,7 +1129,13 @@ public enum LocaleCode {
    * {@link LanguageCode#et Estonian}, {@link CountryCode#EE Estonia}
    */
   et_EE(LanguageCode.et, CountryCode.EE),
+  /**
+   * {@link LanguageCode#eu Basque}
+   */
   eu(LanguageCode.eu, null),
+  /**
+   * {@link LanguageCode#eu Basque}, {@link CountryCode#ES Spain}
+   */
   eu_ES(LanguageCode.eu, CountryCode.ES),
 
   /**
@@ -631,6 +1144,9 @@ public enum LocaleCode {
    * @since 1.21
    */
   fa(LanguageCode.fa, null),
+  /**
+   * {@link LanguageCode#fa Persian}, {@link CountryCode#AF Afghanistan}
+   */
   fa_AF(LanguageCode.fa, CountryCode.AF),
 
   /**
@@ -639,8 +1155,17 @@ public enum LocaleCode {
    * @since 1.21
    */
   fa_IR(LanguageCode.fa, CountryCode.IR),
+  /**
+   * {@link LanguageCode#ff Fula}
+   */
   ff(LanguageCode.ff, null),
+  /**
+   * {@link LanguageCode#ff Fula}, {@link CountryCode#GN Guinea}
+   */
   ff_GN(LanguageCode.ff, CountryCode.GN),
+  /**
+   * {@link LanguageCode#ff Fula}, {@link CountryCode#SN Senegal}
+   */
   ff_SN(LanguageCode.ff, CountryCode.SN),
 
   /**
@@ -652,8 +1177,17 @@ public enum LocaleCode {
    * {@link LanguageCode#fi Finnish}, {@link CountryCode#FI Finland}
    */
   fi_FI(LanguageCode.fi, CountryCode.FI),
+  /**
+   * {@link LanguageCode#fo Faroese}
+   */
   fo(LanguageCode.fo, null),
+  /**
+   * {@link LanguageCode#fo Faroese}, {@link CountryCode#DK Denmark}
+   */
   fo_DK(LanguageCode.fo, CountryCode.DK),
+  /**
+   * {@link LanguageCode#fo Faroese}, {@link CountryCode#FO Faroe Islands}
+   */
   fo_FO(LanguageCode.fo, CountryCode.FO),
 
   /**
@@ -670,9 +1204,21 @@ public enum LocaleCode {
    * {@link LanguageCode#fr French}, {@link CountryCode#BE Belgium}
    */
   fr_BE(LanguageCode.fr, CountryCode.BE),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#BF Burkina Faso}
+   */
   fr_BF(LanguageCode.fr, CountryCode.BF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#BI Burundi}
+   */
   fr_BI(LanguageCode.fr, CountryCode.BI),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#BJ Benin}
+   */
   fr_BJ(LanguageCode.fr, CountryCode.BJ),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#BL Saint Barth\u00E9lemy}
+   */
   fr_BL(LanguageCode.fr, CountryCode.BL),
 
   /**
@@ -684,17 +1230,38 @@ public enum LocaleCode {
       return Locale.CANADA_FRENCH;
     }
   },
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#CD Congo, the Democratic Republic of the}
+   */
   fr_CD(LanguageCode.fr, CountryCode.CD),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#CF Central African Republic}
+   */
   fr_CF(LanguageCode.fr, CountryCode.CF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#CG Congo}
+   */
   fr_CG(LanguageCode.fr, CountryCode.CG),
 
   /**
    * {@link LanguageCode#fr French}, {@link CountryCode#CH Switzerland}
    */
   fr_CH(LanguageCode.fr, CountryCode.CH),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#CI C\u00F4te d'Ivoire}
+   */
   fr_CI(LanguageCode.fr, CountryCode.CI),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#CM Cameroon}
+   */
   fr_CM(LanguageCode.fr, CountryCode.CM),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#DJ Djibouti}
+   */
   fr_DJ(LanguageCode.fr, CountryCode.DJ),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#DZ Algeria}
+   */
   fr_DZ(LanguageCode.fr, CountryCode.DZ),
 
   /**
@@ -706,60 +1273,195 @@ public enum LocaleCode {
    * {@link LanguageCode#fr French}, {@link CountryCode#LU Luxembourg}
    */
   fr_LU(LanguageCode.fr, CountryCode.LU),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#GA Gabon}
+   */
   fr_GA(LanguageCode.fr, CountryCode.GA),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#GF French Guiana}
+   */
   fr_GF(LanguageCode.fr, CountryCode.GF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#GN Guinea}
+   */
   fr_GN(LanguageCode.fr, CountryCode.GN),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#GP Guadeloupe}
+   */
   fr_GP(LanguageCode.fr, CountryCode.GP),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#GQ Equatorial Guinea}
+   */
   fr_GQ(LanguageCode.fr, CountryCode.GQ),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#HT Haiti}
+   */
   fr_HT(LanguageCode.fr, CountryCode.HT),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#KM Comoros}
+   */
   fr_KM(LanguageCode.fr, CountryCode.KM),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MA Morocco}
+   */
   fr_MA(LanguageCode.fr, CountryCode.MA),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MC Monaco}
+   */
   fr_MC(LanguageCode.fr, CountryCode.MC),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MF Saint Martin (French part)}
+   */
   fr_MF(LanguageCode.fr, CountryCode.MF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MG Madagascar}
+   */
   fr_MG(LanguageCode.fr, CountryCode.MG),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#ML Mali}
+   */
   fr_ML(LanguageCode.fr, CountryCode.ML),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MQ Martinique}
+   */
   fr_MQ(LanguageCode.fr, CountryCode.MQ),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MR Mauritania}
+   */
   fr_MR(LanguageCode.fr, CountryCode.MR),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#MU Mauritius}
+   */
   fr_MU(LanguageCode.fr, CountryCode.MU),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#NC New Caledonia}
+   */
   fr_NC(LanguageCode.fr, CountryCode.NC),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#NE Niger}
+   */
   fr_NE(LanguageCode.fr, CountryCode.NE),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#PF French Polynesia}
+   */
   fr_PF(LanguageCode.fr, CountryCode.PF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#PM Saint Pierre and Miquelon}
+   */
   fr_PM(LanguageCode.fr, CountryCode.PM),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#RE R\u00E9union}
+   */
   fr_RE(LanguageCode.fr, CountryCode.RE),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#RW Rwanda}
+   */
   fr_RW(LanguageCode.fr, CountryCode.RW),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#SC Seychelles}
+   */
   fr_SC(LanguageCode.fr, CountryCode.SC),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#SN Senegal}
+   */
   fr_SN(LanguageCode.fr, CountryCode.SN),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#SY Syrian Arab Republic}
+   */
   fr_SY(LanguageCode.fr, CountryCode.SY),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#TD Chad}
+   */
   fr_TD(LanguageCode.fr, CountryCode.TD),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#TG Togo}
+   */
   fr_TG(LanguageCode.fr, CountryCode.TG),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#TN Tunisia}
+   */
   fr_TN(LanguageCode.fr, CountryCode.TN),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#VU Vanuatu}
+   */
   fr_VU(LanguageCode.fr, CountryCode.VU),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#WF Wallis and Futuna}
+   */
   fr_WF(LanguageCode.fr, CountryCode.WF),
+  /**
+   * {@link LanguageCode#fr French}, {@link CountryCode#YT Mayotte}
+   */
   fr_YT(LanguageCode.fr, CountryCode.YT),
+  /**
+   * {@link LanguageCode#fy West Frisian}
+   */
   fy(LanguageCode.fy, null),
+  /**
+   * {@link LanguageCode#fy West Frisian}, {@link CountryCode#NL Netherlands}
+   */
   fy_NL(LanguageCode.fy, CountryCode.NL),
 
   /**
    * {@link LanguageCode#ga Irish}
    */
   ga(LanguageCode.ga, null),
+  /**
+   * {@link LanguageCode#ga Irish}, {@link CountryCode#GB United Kingdom}
+   */
   ga_GB(LanguageCode.ga, CountryCode.GB),
 
   /**
    * {@link LanguageCode#ga Irish}, {@link CountryCode#IE Ireland}
    */
   ga_IE(LanguageCode.ga, CountryCode.IE),
+  /**
+   * {@link LanguageCode#gd Scottish Gaelic}
+   */
   gd(LanguageCode.gd, null),
+  /**
+   * {@link LanguageCode#gd Scottish Gaelic}, {@link CountryCode#GB United Kingdom}
+   */
   gd_GB(LanguageCode.gd, CountryCode.GB),
+  /**
+   * {@link LanguageCode#gl Galician}
+   */
   gl(LanguageCode.gl, null),
+  /**
+   * {@link LanguageCode#gl Galician}, {@link CountryCode#ES Spain}
+   */
   gl_ES(LanguageCode.gl, CountryCode.ES),
+  /**
+   * {@link LanguageCode#gu Gujarati}
+   */
   gu(LanguageCode.gu, null),
+  /**
+   * {@link LanguageCode#gu Gujarati}, {@link CountryCode#IN India}
+   */
   gu_IN(LanguageCode.gu, CountryCode.IN),
+  /**
+   * {@link LanguageCode#gv Manx}
+   */
   gv(LanguageCode.gv, null),
+  /**
+   * {@link LanguageCode#gv Manx}, {@link CountryCode#IM Isle of Man}
+   */
   gv_IM(LanguageCode.gv, CountryCode.IM),
+  /**
+   * {@link LanguageCode#ha Hausa}
+   */
   ha(LanguageCode.ha, null),
+  /**
+   * {@link LanguageCode#ha Hausa}, {@link CountryCode#GH Ghana}
+   */
   ha_GH(LanguageCode.ha, CountryCode.GH),
+  /**
+   * {@link LanguageCode#ha Hausa}, {@link CountryCode#NE Niger}
+   */
   ha_NE(LanguageCode.ha, CountryCode.NE),
+  /**
+   * {@link LanguageCode#ha Hausa}, {@link CountryCode#NG Nigeria}
+   */
   ha_NG(LanguageCode.ha, CountryCode.NG),
 
   /**
@@ -786,13 +1488,22 @@ public enum LocaleCode {
    * {@link LanguageCode#hr Croatian}
    */
   hr(LanguageCode.hr, null),
+  /**
+   * {@link LanguageCode#hr Croatian}, {@link CountryCode#BA Bosnia and Herzegovina}
+   */
   hr_BA(LanguageCode.hr, CountryCode.BA),
 
   /**
    * {@link LanguageCode#hr Croatian}, {@link CountryCode#HR Croatia}
    */
   hr_HR(LanguageCode.hr, CountryCode.HR),
+  /**
+   * {@link LanguageCode#ht Haitian}
+   */
   ht(LanguageCode.ht, null),
+  /**
+   * {@link LanguageCode#ht Haitian}, {@link CountryCode#HT Haiti}
+   */
   ht_HT(LanguageCode.ht, CountryCode.HT),
 
   /**
@@ -804,8 +1515,17 @@ public enum LocaleCode {
    * {@link LanguageCode#hu Hungarian}, {@link CountryCode#HU Hungary}
    */
   hu_HU(LanguageCode.hu, CountryCode.HU),
+  /**
+   * {@link LanguageCode#hy Armenian}
+   */
   hy(LanguageCode.hy, null),
+  /**
+   * {@link LanguageCode#hy Armenian}, {@link CountryCode#AM Armenia}
+   */
   hy_AM(LanguageCode.hy, CountryCode.AM),
+  /**
+   * {@link LanguageCode#ia Interlingua}
+   */
   ia(LanguageCode.ia, null),
 
   /**
@@ -827,11 +1547,29 @@ public enum LocaleCode {
    * {@link LanguageCode#is Icelandic}, {@link CountryCode#IS Iceland}
    */
   is_IS(LanguageCode.is, CountryCode.IS),
+  /**
+   * {@link LanguageCode#ie Interlingue}
+   */
   ie(LanguageCode.ie, null),
+  /**
+   * {@link LanguageCode#ie Interlingue}, {@link CountryCode#EE Estonia}
+   */
   ie_EE(LanguageCode.ie, CountryCode.EE),
+  /**
+   * {@link LanguageCode#ig Igbo}
+   */
   ig(LanguageCode.ig, null),
+  /**
+   * {@link LanguageCode#ig Igbo}, {@link CountryCode#NG Nigeria}
+   */
   ig_NG(LanguageCode.ig, CountryCode.NG),
+  /**
+   * {@link LanguageCode#ii Nuosu}
+   */
   ii(LanguageCode.ii, null),
+  /**
+   * {@link LanguageCode#ii Nuosu}, {@link CountryCode#CN China}
+   */
   ii_CN(LanguageCode.ii, CountryCode.CN),
 
   /**
@@ -853,7 +1591,13 @@ public enum LocaleCode {
    * {@link LanguageCode#it Italian}, {@link CountryCode#IT Italy}
    */
   it_IT(LanguageCode.it, CountryCode.IT),
+  /**
+   * {@link LanguageCode#it Italian}, {@link CountryCode#SM San Marino}
+   */
   it_SM(LanguageCode.it, CountryCode.SM),
+  /**
+   * {@link LanguageCode#it Italian}, {@link CountryCode#VA Holy See (Vatican City State)}
+   */
   it_VA(LanguageCode.it, CountryCode.VA),
 
   /**
@@ -870,13 +1614,37 @@ public enum LocaleCode {
    * {@link LanguageCode#ja Japanese}, {@link CountryCode#JP Japan}
    */
   ja_JP(LanguageCode.ja, CountryCode.JP),
+  /**
+   * {@link LanguageCode#jv Javanese}
+   */
   jv(LanguageCode.jv, null),
+  /**
+   * {@link LanguageCode#jv Javanese}, {@link CountryCode#ID Indonesia}
+   */
   jv_ID(LanguageCode.jv, CountryCode.ID),
+  /**
+   * {@link LanguageCode#ka Georgian}
+   */
   ka(LanguageCode.ka, null),
+  /**
+   * {@link LanguageCode#ka Georgian}, {@link CountryCode#GE Georgia}
+   */
   ka_GE(LanguageCode.ka, CountryCode.GE),
+  /**
+   * {@link LanguageCode#ki Kikuyu}
+   */
   ki(LanguageCode.ki, null),
+  /**
+   * {@link LanguageCode#ki Kikuyu}, {@link CountryCode#KE Kenya}
+   */
   ki_KE(LanguageCode.ki, CountryCode.KE),
+  /**
+   * {@link LanguageCode#kk Kazakh}
+   */
   kk(LanguageCode.kk, null),
+  /**
+   * {@link LanguageCode#kk Kazakh}, {@link CountryCode#CN China}
+   */
   kk_CN(LanguageCode.kk, CountryCode.CN),
 
   /**
@@ -885,11 +1653,29 @@ public enum LocaleCode {
    * @since 1.22
    */
   kk_KZ(LanguageCode.kk, CountryCode.KZ),
+  /**
+   * {@link LanguageCode#kl Kalaallisut}
+   */
   kl(LanguageCode.kl, null),
+  /**
+   * {@link LanguageCode#kl Kalaallisut}, {@link CountryCode#GL Greenland}
+   */
   kl_GL(LanguageCode.kl, CountryCode.GL),
+  /**
+   * {@link LanguageCode#km Khmer}
+   */
   km(LanguageCode.km, null),
+  /**
+   * {@link LanguageCode#km Khmer}, {@link CountryCode#KH Cambodia}
+   */
   km_KH(LanguageCode.km, CountryCode.KH),
+  /**
+   * {@link LanguageCode#kn Kannada}
+   */
   kn(LanguageCode.kn, null),
+  /**
+   * {@link LanguageCode#kn Kannada}, {@link CountryCode#IN India}
+   */
   kn_IN(LanguageCode.kn, CountryCode.IN),
 
   /**
@@ -901,31 +1687,94 @@ public enum LocaleCode {
       return Locale.KOREAN;
     }
   },
+  /**
+   * {@link LanguageCode#ko Korean}, {@link CountryCode#CN China}
+   */
   ko_CN(LanguageCode.ko, CountryCode.CN),
+  /**
+   * {@link LanguageCode#ko Korean}, {@link CountryCode#KP Korea, Democratic People's Republic of}
+   */
   ko_KP(LanguageCode.ko, CountryCode.KP),
 
   /**
    * {@link LanguageCode#ko Korean}, {@link CountryCode#KR Korea, Republic of}
    */
   ko_KR(LanguageCode.ko, CountryCode.KR),
+  /**
+   * {@link LanguageCode#ks Kashmiri}
+   */
   ks(LanguageCode.ks, null),
+  /**
+   * {@link LanguageCode#ks Kashmiri}, {@link CountryCode#IN India}
+   */
   ks_IN(LanguageCode.ks, CountryCode.IN),
+  /**
+   * {@link LanguageCode#ku Kurdish}
+   */
   ku(LanguageCode.ku, null),
+  /**
+   * {@link LanguageCode#ku Kurdish}, {@link CountryCode#TR T\u00FCrkiye}
+   */
   ku_TR(LanguageCode.ku, CountryCode.TR),
+  /**
+   * {@link LanguageCode#kw Cornish}
+   */
   kw(LanguageCode.kw, null),
+  /**
+   * {@link LanguageCode#kw Cornish}, {@link CountryCode#GB United Kingdom}
+   */
   kw_GB(LanguageCode.kw, CountryCode.GB),
+  /**
+   * {@link LanguageCode#ky Kyrgyz}
+   */
   ky(LanguageCode.ky, null),
+  /**
+   * {@link LanguageCode#ky Kyrgyz}, {@link CountryCode#KG Kyrgyzstan}
+   */
   ky_KG(LanguageCode.ky, CountryCode.KG),
+  /**
+   * {@link LanguageCode#lb Luxembourgish}
+   */
   lb(LanguageCode.lb, null),
+  /**
+   * {@link LanguageCode#lb Luxembourgish}, {@link CountryCode#LU Luxembourg}
+   */
   lb_LU(LanguageCode.lb, CountryCode.LU),
+  /**
+   * {@link LanguageCode#lg Ganda}
+   */
   lg(LanguageCode.lg, null),
+  /**
+   * {@link LanguageCode#lg Ganda}, {@link CountryCode#UG Uganda}
+   */
   lg_UG(LanguageCode.lg, CountryCode.UG),
+  /**
+   * {@link LanguageCode#ln Lingala}
+   */
   ln(LanguageCode.ln, null),
+  /**
+   * {@link LanguageCode#ln Lingala}, {@link CountryCode#AO Angola}
+   */
   ln_AO(LanguageCode.ln, CountryCode.AO),
+  /**
+   * {@link LanguageCode#ln Lingala}, {@link CountryCode#CD Congo, the Democratic Republic of the}
+   */
   ln_CD(LanguageCode.ln, CountryCode.CD),
+  /**
+   * {@link LanguageCode#ln Lingala}, {@link CountryCode#CF Central African Republic}
+   */
   ln_CF(LanguageCode.ln, CountryCode.CF),
+  /**
+   * {@link LanguageCode#ln Lingala}, {@link CountryCode#CG Congo}
+   */
   ln_CG(LanguageCode.ln, CountryCode.CG),
+  /**
+   * {@link LanguageCode#lo Lao}
+   */
   lo(LanguageCode.lo, null),
+  /**
+   * {@link LanguageCode#lo Lao}, {@link CountryCode#LA Lao People's Democratic Republic}
+   */
   lo_LA(LanguageCode.lo, CountryCode.LA),
 
   /**
@@ -937,7 +1786,13 @@ public enum LocaleCode {
    * {@link LanguageCode#lt Lithuanian}, {@link CountryCode#LT Lithuania}
    */
   lt_LT(LanguageCode.lt, CountryCode.LT),
+  /**
+   * {@link LanguageCode#lu Luba-Katanga}
+   */
   lu(LanguageCode.lu, null),
+  /**
+   * {@link LanguageCode#lu Luba-Katanga}, {@link CountryCode#CD Congo, the Democratic Republic of the}
+   */
   lu_CD(LanguageCode.lu, CountryCode.CD),
 
   /**
@@ -949,9 +1804,21 @@ public enum LocaleCode {
    * {@link LanguageCode#lv Latvian}, {@link CountryCode#LV Latvia}
    */
   lv_LV(LanguageCode.lv, CountryCode.LV),
+  /**
+   * {@link LanguageCode#mg Malagasy}
+   */
   mg(LanguageCode.mg, null),
+  /**
+   * {@link LanguageCode#mg Malagasy}, {@link CountryCode#MG Madagascar}
+   */
   mg_MG(LanguageCode.mg, CountryCode.MG),
+  /**
+   * {@link LanguageCode#mi M&#257;ori}
+   */
   mi(LanguageCode.mi, null),
+  /**
+   * {@link LanguageCode#mi M&#257;ori}, {@link CountryCode#NZ New Zealand}
+   */
   mi_NZ(LanguageCode.mi, CountryCode.NZ),
 
   /**
@@ -963,24 +1830,51 @@ public enum LocaleCode {
    * {@link LanguageCode#mk Macedonian}, {@link CountryCode#MK Macedonia, the former Yugoslav Republic of}
    */
   mk_MK(LanguageCode.mk, CountryCode.MK),
+  /**
+   * {@link LanguageCode#ml Malayalam}
+   */
   ml(LanguageCode.ml, null),
+  /**
+   * {@link LanguageCode#ml Malayalam}, {@link CountryCode#IN India}
+   */
   ml_IN(LanguageCode.ml, CountryCode.IN),
+  /**
+   * {@link LanguageCode#mn Mongolian}
+   */
   mn(LanguageCode.mn, null),
+  /**
+   * {@link LanguageCode#mn Mongolian}, {@link CountryCode#MN Mongolia}
+   */
   mn_MN(LanguageCode.mn, CountryCode.MN),
+  /**
+   * {@link LanguageCode#mr Marathi}
+   */
   mr(LanguageCode.mr, null),
+  /**
+   * {@link LanguageCode#mr Marathi}, {@link CountryCode#IN India}
+   */
   mr_IN(LanguageCode.mr, CountryCode.IN),
 
   /**
    * {@link LanguageCode#ms Malay}
    */
   ms(LanguageCode.ms, null),
+  /**
+   * {@link LanguageCode#ms Malay}, {@link CountryCode#BN Brunei Darussalam}
+   */
   ms_BN(LanguageCode.ms, CountryCode.BN),
+  /**
+   * {@link LanguageCode#ms Malay}, {@link CountryCode#ID Indonesia}
+   */
   ms_ID(LanguageCode.ms, CountryCode.ID),
 
   /**
    * {@link LanguageCode#ms Malay}, {@link CountryCode#MY Malaysia}
    */
   ms_MY(LanguageCode.ms, CountryCode.MY),
+  /**
+   * {@link LanguageCode#ms Malay}, {@link CountryCode#SG Singapore}
+   */
   ms_SG(LanguageCode.ms, CountryCode.SG),
 
   /**
@@ -992,7 +1886,13 @@ public enum LocaleCode {
    * {@link LanguageCode#mt Maltese}, {@link CountryCode#MT Malta}
    */
   mt_MT(LanguageCode.mt, CountryCode.MT),
+  /**
+   * {@link LanguageCode#my Burmese}
+   */
   my(LanguageCode.my, null),
+  /**
+   * {@link LanguageCode#my Burmese}, {@link CountryCode#MM Myanmar}
+   */
   my_MM(LanguageCode.my, CountryCode.MM),
 
   /**
@@ -1008,24 +1908,51 @@ public enum LocaleCode {
    * @since 1.8
    */
   nb_NO(LanguageCode.nb, CountryCode.NO),
+  /**
+   * {@link LanguageCode#nb Norwegian Bokm&aring;l}, {@link CountryCode#SJ Svalbard and Jan Mayen}
+   */
   nb_SJ(LanguageCode.nb, CountryCode.SJ),
+  /**
+   * {@link LanguageCode#nd Northern Ndebele}
+   */
   nd(LanguageCode.nd, null),
+  /**
+   * {@link LanguageCode#nd Northern Ndebele}, {@link CountryCode#ZW Zimbabwe}
+   */
   nd_ZW(LanguageCode.nd, CountryCode.ZW),
+  /**
+   * {@link LanguageCode#ne Nepali}
+   */
   ne(LanguageCode.ne, null),
+  /**
+   * {@link LanguageCode#ne Nepali}, {@link CountryCode#IN India}
+   */
   ne_IN(LanguageCode.ne, CountryCode.IN),
+  /**
+   * {@link LanguageCode#ne Nepali}, {@link CountryCode#NP Nepal}
+   */
   ne_NP(LanguageCode.ne, CountryCode.NP),
 
   /**
    * {@link LanguageCode#nl Dutch}
    */
   nl(LanguageCode.nl, null),
+  /**
+   * {@link LanguageCode#nl Dutch}, {@link CountryCode#AW Aruba}
+   */
   nl_AW(LanguageCode.nl, CountryCode.AW),
 
   /**
    * {@link LanguageCode#nl Dutch}, {@link CountryCode#BE Belgium}
    */
   nl_BE(LanguageCode.nl, CountryCode.BE),
+  /**
+   * {@link LanguageCode#nl Dutch}, {@link CountryCode#BQ Bonaire, Sint Eustatius and Saba}
+   */
   nl_BQ(LanguageCode.nl, CountryCode.BQ),
+  /**
+   * {@link LanguageCode#nl Dutch}, {@link CountryCode#CW Cura\u00E7ao}
+   */
   nl_CW(LanguageCode.nl, CountryCode.CW),
 
   /**
@@ -1037,8 +1964,17 @@ public enum LocaleCode {
    * {@link LanguageCode#nn Norwegian Nynorsk}, {@link CountryCode#NO Norway}
    */
   nn_NO(LanguageCode.nn, CountryCode.NO),
+  /**
+   * {@link LanguageCode#nl Dutch}, {@link CountryCode#SR Suriname}
+   */
   nl_SR(LanguageCode.nl, CountryCode.SR),
+  /**
+   * {@link LanguageCode#nl Dutch}, {@link CountryCode#SX Sint Maarten (Dutch part)}
+   */
   nl_SX(LanguageCode.nl, CountryCode.SX),
+  /**
+   * {@link LanguageCode#nn Norwegian Nynorsk}
+   */
   nn(LanguageCode.nn, null),
 
   /**
@@ -1066,19 +2002,61 @@ public enum LocaleCode {
    */
   @Deprecated
   no_NO(LanguageCode.no, CountryCode.NO),
+  /**
+   * {@link LanguageCode#oc Occitan}
+   */
   oc(LanguageCode.oc, null),
+  /**
+   * {@link LanguageCode#oc Occitan}, {@link CountryCode#ES Spain}
+   */
   oc_ES(LanguageCode.oc, CountryCode.ES),
+  /**
+   * {@link LanguageCode#oc Occitan}, {@link CountryCode#FR France}
+   */
   oc_FR(LanguageCode.oc, CountryCode.FR),
+  /**
+   * {@link LanguageCode#om Oromo}
+   */
   om(LanguageCode.om, null),
+  /**
+   * {@link LanguageCode#om Oromo}, {@link CountryCode#ET Ethiopia}
+   */
   om_ET(LanguageCode.om, CountryCode.ET),
+  /**
+   * {@link LanguageCode#om Oromo}, {@link CountryCode#KE Kenya}
+   */
   om_KE(LanguageCode.om, CountryCode.KE),
+  /**
+   * {@link LanguageCode#or Oriya}
+   */
   or(LanguageCode.or, null),
+  /**
+   * {@link LanguageCode#or Oriya}, {@link CountryCode#IN India}
+   */
   or_IN(LanguageCode.or, CountryCode.IN),
+  /**
+   * {@link LanguageCode#os Ossetian}
+   */
   os(LanguageCode.os, null),
+  /**
+   * {@link LanguageCode#os Ossetian}, {@link CountryCode#GE Georgia}
+   */
   os_GE(LanguageCode.os, CountryCode.GE),
+  /**
+   * {@link LanguageCode#os Ossetian}, {@link CountryCode#RU Russian Federation}
+   */
   os_RU(LanguageCode.os, CountryCode.RU),
+  /**
+   * {@link LanguageCode#pa Punjabi}
+   */
   pa(LanguageCode.pa, null),
+  /**
+   * {@link LanguageCode#pa Punjabi}, {@link CountryCode#IN India}
+   */
   pa_IN(LanguageCode.pa, CountryCode.IN),
+  /**
+   * {@link LanguageCode#pa Punjabi}, {@link CountryCode#PK Pakistan}
+   */
   pa_PK(LanguageCode.pa, CountryCode.PK),
 
   /**
@@ -1090,41 +2068,104 @@ public enum LocaleCode {
    * {@link LanguageCode#pl Polish}, {@link CountryCode#PL Poland}
    */
   pl_PL(LanguageCode.pl, CountryCode.PL),
+  /**
+   * {@link LanguageCode#ps Pashto}
+   */
   ps(LanguageCode.ps, null),
+  /**
+   * {@link LanguageCode#ps Pashto}, {@link CountryCode#AF Afghanistan}
+   */
   ps_AF(LanguageCode.ps, CountryCode.AF),
+  /**
+   * {@link LanguageCode#ps Pashto}, {@link CountryCode#PK Pakistan}
+   */
   ps_PK(LanguageCode.ps, CountryCode.PK),
 
   /**
    * {@link LanguageCode#pt Portuguese}
    */
   pt(LanguageCode.pt, null),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#AO Angola}
+   */
   pt_AO(LanguageCode.pt, CountryCode.AO),
 
   /**
    * {@link LanguageCode#pt Portuguese}, {@link CountryCode#BR Brazil}
    */
   pt_BR(LanguageCode.pt, CountryCode.BR),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#CH Switzerland}
+   */
   pt_CH(LanguageCode.pt, CountryCode.CH),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#CV Cape Verde}
+   */
   pt_CV(LanguageCode.pt, CountryCode.CV),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#GQ Equatorial Guinea}
+   */
   pt_GQ(LanguageCode.pt, CountryCode.GQ),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#GW Guinea-Bissau}
+   */
   pt_GW(LanguageCode.pt, CountryCode.GW),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#LU Luxembourg}
+   */
   pt_LU(LanguageCode.pt, CountryCode.LU),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#MO Macao}
+   */
   pt_MO(LanguageCode.pt, CountryCode.MO),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#MZ Mozambique}
+   */
   pt_MZ(LanguageCode.pt, CountryCode.MZ),
 
   /**
    * {@link LanguageCode#pt Portuguese}, {@link CountryCode#PT Portugal}
    */
   pt_PT(LanguageCode.pt, CountryCode.PT),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#ST Sao Tome and Principe}
+   */
   pt_ST(LanguageCode.pt, CountryCode.ST),
+  /**
+   * {@link LanguageCode#pt Portuguese}, {@link CountryCode#TL Timor-Leste}
+   */
   pt_TL(LanguageCode.pt, CountryCode.TL),
+  /**
+   * {@link LanguageCode#qu Quechua}
+   */
   qu(LanguageCode.qu, null),
+  /**
+   * {@link LanguageCode#qu Quechua}, {@link CountryCode#BO Bolivia, Plurinational State of}
+   */
   qu_BO(LanguageCode.qu, CountryCode.BO),
+  /**
+   * {@link LanguageCode#qu Quechua}, {@link CountryCode#EC Ecuador}
+   */
   qu_EC(LanguageCode.qu, CountryCode.EC),
+  /**
+   * {@link LanguageCode#qu Quechua}, {@link CountryCode#PE Peru}
+   */
   qu_PE(LanguageCode.qu, CountryCode.PE),
+  /**
+   * {@link LanguageCode#rm Romansh}
+   */
   rm(LanguageCode.rm, null),
+  /**
+   * {@link LanguageCode#rm Romansh}, {@link CountryCode#CH Switzerland}
+   */
   rm_CH(LanguageCode.rm, CountryCode.CH),
+  /**
+   * {@link LanguageCode#rn Kirundi}
+   */
   rn(LanguageCode.rn, null),
+  /**
+   * {@link LanguageCode#rn Kirundi}, {@link CountryCode#BI Burundi}
+   */
   rn_BI(LanguageCode.rn, CountryCode.BI),
 
   /**
@@ -1146,7 +2187,13 @@ public enum LocaleCode {
    * {@link LanguageCode#ru Russian}
    */
   ru(LanguageCode.ru, null),
+  /**
+   * {@link LanguageCode#ru Russian}, {@link CountryCode#BY Belarus}
+   */
   ru_BY(LanguageCode.ru, CountryCode.BY),
+  /**
+   * {@link LanguageCode#ru Russian}, {@link CountryCode#KG Kyrgyzstan}
+   */
   ru_KG(LanguageCode.ru, CountryCode.KG),
 
   /**
@@ -1155,21 +2202,54 @@ public enum LocaleCode {
    * @since 1.22
    */
   ru_KZ(LanguageCode.ru, CountryCode.KZ),
+  /**
+   * {@link LanguageCode#ru Russian}, {@link CountryCode#MD Moldova, Republic of}
+   */
   ru_MD(LanguageCode.ru, CountryCode.MD),
 
   /**
    * {@link LanguageCode#ru Russian}, {@link CountryCode#RU Russian Federation}
    */
   ru_RU(LanguageCode.ru, CountryCode.RU),
+  /**
+   * {@link LanguageCode#ru Russian}, {@link CountryCode#UA Ukraine}
+   */
   ru_UA(LanguageCode.ru, CountryCode.UA),
+  /**
+   * {@link LanguageCode#rw Kinyarwanda}
+   */
   rw(LanguageCode.rw, null),
+  /**
+   * {@link LanguageCode#rw Kinyarwanda}, {@link CountryCode#RW Rwanda}
+   */
   rw_RW(LanguageCode.rw, CountryCode.RW),
+  /**
+   * {@link LanguageCode#sa Sanskrit}
+   */
   sa(LanguageCode.sa, null),
+  /**
+   * {@link LanguageCode#sa Sanskrit}, {@link CountryCode#IN India}
+   */
   sa_IN(LanguageCode.sa, CountryCode.IN),
+  /**
+   * {@link LanguageCode#sc Sardinian}
+   */
   sc(LanguageCode.sc, null),
+  /**
+   * {@link LanguageCode#sc Sardinian}, {@link CountryCode#IT Italy}
+   */
   sc_IT(LanguageCode.sc, CountryCode.IT),
+  /**
+   * {@link LanguageCode#sd Sindhi}
+   */
   sd(LanguageCode.sd, null),
+  /**
+   * {@link LanguageCode#sd Sindhi}, {@link CountryCode#IN India}
+   */
   sd_IN(LanguageCode.sd, CountryCode.IN),
+  /**
+   * {@link LanguageCode#sd Sindhi}, {@link CountryCode#PK Pakistan}
+   */
   sd_PK(LanguageCode.sd, CountryCode.PK),
 
   /**
@@ -1178,6 +2258,9 @@ public enum LocaleCode {
    * @since 1.8
    */
   se(LanguageCode.se, null),
+  /**
+   * {@link LanguageCode#se Northern Sami}, {@link CountryCode#FI Finland}
+   */
   se_FI(LanguageCode.se, CountryCode.FI),
 
   /**
@@ -1186,10 +2269,25 @@ public enum LocaleCode {
    * @since 1.8
    */
   se_NO(LanguageCode.se, CountryCode.NO),
+  /**
+   * {@link LanguageCode#se Northern Sami}, {@link CountryCode#SE Sweden}
+   */
   se_SE(LanguageCode.se, CountryCode.SE),
+  /**
+   * {@link LanguageCode#sg Sango}
+   */
   sg(LanguageCode.sg, null),
+  /**
+   * {@link LanguageCode#sg Sango}, {@link CountryCode#CF Central African Republic}
+   */
   sg_CF(LanguageCode.sg, CountryCode.CF),
+  /**
+   * {@link LanguageCode#si Sinhala}
+   */
   si(LanguageCode.si, null),
+  /**
+   * {@link LanguageCode#si Sinhala}, {@link CountryCode#LK Sri Lanka}
+   */
   si_LK(LanguageCode.si, CountryCode.LK),
 
   /**
@@ -1211,12 +2309,33 @@ public enum LocaleCode {
    * {@link LanguageCode#sl Slovene}, {@link CountryCode#SI Slovenia}
    */
   sl_SI(LanguageCode.sl, CountryCode.SI),
+  /**
+   * {@link LanguageCode#sn Shona}
+   */
   sn(LanguageCode.sn, null),
+  /**
+   * {@link LanguageCode#sn Shona}, {@link CountryCode#ZW Zimbabwe}
+   */
   sn_ZW(LanguageCode.sn, CountryCode.ZW),
+  /**
+   * {@link LanguageCode#so Somali}
+   */
   so(LanguageCode.so, null),
+  /**
+   * {@link LanguageCode#so Somali}, {@link CountryCode#DJ Djibouti}
+   */
   so_DJ(LanguageCode.so, CountryCode.DJ),
+  /**
+   * {@link LanguageCode#so Somali}, {@link CountryCode#ET Ethiopia}
+   */
   so_ET(LanguageCode.so, CountryCode.ET),
+  /**
+   * {@link LanguageCode#so Somali}, {@link CountryCode#KE Kenya}
+   */
   so_KE(LanguageCode.so, CountryCode.KE),
+  /**
+   * {@link LanguageCode#so Somali}, {@link CountryCode#SO Somalia}
+   */
   so_SO(LanguageCode.so, CountryCode.SO),
 
   /**
@@ -1228,7 +2347,13 @@ public enum LocaleCode {
    * {@link LanguageCode#sq Albanian}, {@link CountryCode#AL Albania}
    */
   sq_MK(LanguageCode.sq, CountryCode.MK),
+  /**
+   * {@link LanguageCode#sq Albanian}, {@link CountryCode#XK Kosovo, Republic of}
+   */
   sq_XK(LanguageCode.sq, CountryCode.XK),
+  /**
+   * {@link LanguageCode#sq Albanian}, {@link CountryCode#AL Albania}
+   */
   sq_AL(LanguageCode.sq, CountryCode.AL),
 
   /**
@@ -1255,36 +2380,99 @@ public enum LocaleCode {
    * {@link LanguageCode#sr Serbian}, {@link CountryCode#RS Serbia}
    */
   sr_RS(LanguageCode.sr, CountryCode.RS),
+  /**
+   * {@link LanguageCode#st Southern Sotho}
+   */
   st(LanguageCode.st, null),
+  /**
+   * {@link LanguageCode#st Southern Sotho}, {@link CountryCode#LS Lesotho}
+   */
   st_LS(LanguageCode.st, CountryCode.LS),
+  /**
+   * {@link LanguageCode#st Southern Sotho}, {@link CountryCode#ZA South Africa}
+   */
   st_ZA(LanguageCode.st, CountryCode.ZA),
+  /**
+   * {@link LanguageCode#su Sundanese}
+   */
   su(LanguageCode.su, null),
+  /**
+   * {@link LanguageCode#su Sundanese}, {@link CountryCode#ID Indonesia}
+   */
   su_ID(LanguageCode.su, CountryCode.ID),
 
   /**
    * {@link LanguageCode#sv Swedish}
    */
   sv(LanguageCode.sv, null),
+  /**
+   * {@link LanguageCode#sv Swedish}, {@link CountryCode#AX \u00C5land Islands}
+   */
   sv_AX(LanguageCode.sv, CountryCode.AX),
+  /**
+   * {@link LanguageCode#sv Swedish}, {@link CountryCode#FI Finland}
+   */
   sv_FI(LanguageCode.sv, CountryCode.FI),
 
   /**
    * {@link LanguageCode#sv Swedish}, {@link CountryCode#SE Sweden}
    */
   sv_SE(LanguageCode.sv, CountryCode.SE),
+  /**
+   * {@link LanguageCode#sw Swahili}
+   */
   sw(LanguageCode.sw, null),
+  /**
+   * {@link LanguageCode#sw Swahili}, {@link CountryCode#CD Congo, the Democratic Republic of the}
+   */
   sw_CD(LanguageCode.sw, CountryCode.CD),
+  /**
+   * {@link LanguageCode#sw Swahili}, {@link CountryCode#KE Kenya}
+   */
   sw_KE(LanguageCode.sw, CountryCode.KE),
+  /**
+   * {@link LanguageCode#sw Swahili}, {@link CountryCode#TZ Tanzania, United Republic of}
+   */
   sw_TZ(LanguageCode.sw, CountryCode.TZ),
+  /**
+   * {@link LanguageCode#sw Swahili}, {@link CountryCode#UG Uganda}
+   */
   sw_UG(LanguageCode.sw, CountryCode.UG),
+  /**
+   * {@link LanguageCode#ta Tamil}
+   */
   ta(LanguageCode.ta, null),
+  /**
+   * {@link LanguageCode#ta Tamil}, {@link CountryCode#IN India}
+   */
   ta_IN(LanguageCode.ta, CountryCode.IN),
+  /**
+   * {@link LanguageCode#ta Tamil}, {@link CountryCode#LK Sri Lanka}
+   */
   ta_LK(LanguageCode.ta, CountryCode.LK),
+  /**
+   * {@link LanguageCode#ta Tamil}, {@link CountryCode#MY Malaysia}
+   */
   ta_MY(LanguageCode.ta, CountryCode.MY),
+  /**
+   * {@link LanguageCode#ta Tamil}, {@link CountryCode#SG Singapore}
+   */
   ta_SG(LanguageCode.ta, CountryCode.SG),
+  /**
+   * {@link LanguageCode#te Telugu}
+   */
   te(LanguageCode.te, null),
+  /**
+   * {@link LanguageCode#te Telugu}, {@link CountryCode#IN India}
+   */
   te_IN(LanguageCode.te, CountryCode.IN),
+  /**
+   * {@link LanguageCode#tg Tajik}
+   */
   tg(LanguageCode.tg, null),
+  /**
+   * {@link LanguageCode#tg Tajik}, {@link CountryCode#TJ Tajikistan}
+   */
   tg_TJ(LanguageCode.tg, CountryCode.TJ),
 
   /**
@@ -1296,30 +2484,75 @@ public enum LocaleCode {
    * {@link LanguageCode#th Thai}, {@link CountryCode#TH Thailand}
    */
   th_TH(LanguageCode.th, CountryCode.TH),
+  /**
+   * {@link LanguageCode#ti Tigrinya}
+   */
   ti(LanguageCode.ti, null),
+  /**
+   * {@link LanguageCode#ti Tigrinya}, {@link CountryCode#ER Eritrea}
+   */
   ti_ER(LanguageCode.ti, CountryCode.ER),
+  /**
+   * {@link LanguageCode#ti Tigrinya}, {@link CountryCode#ET Ethiopia}
+   */
   ti_ET(LanguageCode.ti, CountryCode.ET),
+  /**
+   * {@link LanguageCode#tk Turkmen}
+   */
   tk(LanguageCode.tk, null),
+  /**
+   * {@link LanguageCode#tk Turkmen}, {@link CountryCode#TM Turkmenistan}
+   */
   tk_TM(LanguageCode.tk, CountryCode.TM),
+  /**
+   * {@link LanguageCode#tn Tswana}
+   */
   tn(LanguageCode.tn, null),
+  /**
+   * {@link LanguageCode#tn Tswana}, {@link CountryCode#BW Botswana}
+   */
   tn_BW(LanguageCode.tn, CountryCode.BW),
+  /**
+   * {@link LanguageCode#tn Tswana}, {@link CountryCode#ZA South Africa}
+   */
   tn_ZA(LanguageCode.tn, CountryCode.ZA),
+  /**
+   * {@link LanguageCode#to Tongan}
+   */
   to(LanguageCode.to, null),
+  /**
+   * {@link LanguageCode#to Tongan}, {@link CountryCode#TO Tonga}
+   */
   to_TO(LanguageCode.to, CountryCode.TO),
 
   /**
    * {@link LanguageCode#tr Turkish}
    */
   tr(LanguageCode.tr, null),
+  /**
+   * {@link LanguageCode#tr Turkish}, {@link CountryCode#CY Cyprus}
+   */
   tr_CY(LanguageCode.tr, CountryCode.CY),
 
   /**
    * {@link LanguageCode#tr Turkish}, {@link CountryCode#TR Turkey}
    */
   tr_TR(LanguageCode.tr, CountryCode.TR),
+  /**
+   * {@link LanguageCode#tt Tatar}
+   */
   tt(LanguageCode.tt, null),
+  /**
+   * {@link LanguageCode#tt Tatar}, {@link CountryCode#RU Russian Federation}
+   */
   tt_RU(LanguageCode.tt, CountryCode.RU),
+  /**
+   * {@link LanguageCode#ug Uighur}
+   */
   ug(LanguageCode.ug, null),
+  /**
+   * {@link LanguageCode#ug Uighur}, {@link CountryCode#CN China}
+   */
   ug_CN(LanguageCode.ug, CountryCode.CN),
 
   /**
@@ -1331,15 +2564,30 @@ public enum LocaleCode {
    * {@link LanguageCode#uk Ukrainian}, {@link CountryCode#UA Ukraine}
    */
   uk_UA(LanguageCode.uk, CountryCode.UA),
+  /**
+   * {@link LanguageCode#ur Urdu}
+   */
   ur(LanguageCode.ur, null),
+  /**
+   * {@link LanguageCode#ur Urdu}, {@link CountryCode#IN India}
+   */
   ur_IN(LanguageCode.ur, CountryCode.IN),
 
   /**
    * {@link LanguageCode#ur Urdu}, {@link CountryCode#PK Pakistan}
    */
   ur_PK(LanguageCode.ur, CountryCode.PK),
+  /**
+   * {@link LanguageCode#uz Uzbek}
+   */
   uz(LanguageCode.uz, null),
+  /**
+   * {@link LanguageCode#uz Uzbek}, {@link CountryCode#AF Afghanistan}
+   */
   uz_AF(LanguageCode.uz, CountryCode.AF),
+  /**
+   * {@link LanguageCode#uz Uzbek}, {@link CountryCode#UZ Uzbekistan}
+   */
   uz_UZ(LanguageCode.uz, CountryCode.UZ),
 
   /**
@@ -1351,16 +2599,49 @@ public enum LocaleCode {
    * {@link LanguageCode#vi Vietnamese}, {@link CountryCode#VN Viet Nam}
    */
   vi_VN(LanguageCode.vi, CountryCode.VN),
+  /**
+   * {@link LanguageCode#wo Wolof}
+   */
   wo(LanguageCode.wo, null),
+  /**
+   * {@link LanguageCode#wo Wolof}, {@link CountryCode#SN Senegal}
+   */
   wo_SN(LanguageCode.wo, CountryCode.SN),
+  /**
+   * {@link LanguageCode#xh Xhosa}
+   */
   xh(LanguageCode.xh, null),
+  /**
+   * {@link LanguageCode#xh Xhosa}, {@link CountryCode#ZA South Africa}
+   */
   xh_ZA(LanguageCode.xh, CountryCode.ZA),
+  /**
+   * {@link LanguageCode#yi Yiddish}
+   */
   yi(LanguageCode.yi, null),
+  /**
+   * {@link LanguageCode#yi Yiddish}, {@link CountryCode#UA Ukraine}
+   */
   yi_UA(LanguageCode.yi, CountryCode.UA),
+  /**
+   * {@link LanguageCode#yo Yoruba}
+   */
   yo(LanguageCode.yo, null),
+  /**
+   * {@link LanguageCode#yo Yoruba}, {@link CountryCode#BJ Benin}
+   */
   yo_BJ(LanguageCode.yo, CountryCode.BJ),
+  /**
+   * {@link LanguageCode#yo Yoruba}, {@link CountryCode#NG Nigeria}
+   */
   yo_NG(LanguageCode.yo, CountryCode.NG),
+  /**
+   * {@link LanguageCode#za Zhuang}
+   */
   za(LanguageCode.za, null),
+  /**
+   * {@link LanguageCode#za Zhuang}, {@link CountryCode#CN China}
+   */
   za_CN(LanguageCode.za, CountryCode.CN),
 
   /**
@@ -1387,6 +2668,9 @@ public enum LocaleCode {
    * {@link LanguageCode#zh Chinese}, {@link CountryCode#HK Hong Kong}
    */
   zh_HK(LanguageCode.zh, CountryCode.HK),
+  /**
+   * {@link LanguageCode#zh Chinese}, {@link CountryCode#MO Macao}
+   */
   zh_MO(LanguageCode.zh, CountryCode.MO),
 
   /**
@@ -1408,6 +2692,9 @@ public enum LocaleCode {
    * {@link LanguageCode#zu Zulu}
    */
   zu(LanguageCode.zu, null),
+  /**
+   * {@link LanguageCode#zu Zulu}, {@link CountryCode#ZA South Africa}
+   */
   zu_ZA(LanguageCode.zu, CountryCode.ZA),
   ;
 
