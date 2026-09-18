@@ -239,7 +239,7 @@ public enum CountryCode {
   AW("Aruba", "ABW", 533, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/%C3%85land_Islands">&Aring;land Islands</a>
+   * <a href="https://en.wikipedia.org/wiki/%C3%85land">&Aring;land Islands</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#AX">AX</a>, ALA, 248,
    * Officially assigned]
    *
@@ -377,7 +377,7 @@ public enum CountryCode {
   BT("Bhutan", "BTN", 64, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Burma">Burma</a>
+   * <a href="https://en.wikipedia.org/wiki/Myanmar">Burma</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#BU">BU</a>, BUMM, 104,
    * Officially assigned]
    *
@@ -475,7 +475,7 @@ public enum CountryCode {
   CH("Switzerland", "CHE", 756, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/C%C3%B4te_d%27Ivoire">C&ocirc;te d'Ivoire</a>
+   * <a href="https://en.wikipedia.org/wiki/Ivory_Coast">C&ocirc;te d'Ivoire</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#CI">CI</a>, CIV, 384,
    * Officially assigned]
    */
@@ -1551,14 +1551,14 @@ public enum CountryCode {
   NP("Nepal", "NPL", 524, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Naoero">Naoero</a>
+   * <a href="https://en.wikipedia.org/wiki/Nauru">Naoero</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#NR">NR</a>, NRU, 520,
    * Officially assigned]
    */
   NR("Naoero", "NRU", 520, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Saudi%E2%80%93Iraqi_neutral_zone">Neutral Zone</a>
+   * <a href="https://en.wikipedia.org/wiki/Saudi_Arabian%E2%80%93Iraqi_neutral_zone">Neutral Zone</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#NT">NT</a>, NTZ, 536,
    * Traditionally reserved]
    *
@@ -1677,7 +1677,7 @@ public enum CountryCode {
   PR("Puerto Rico", "PRI", 630, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Palestinian_territories">Palestine, State of</a>
+   * <a href="https://en.wikipedia.org/wiki/Palestine">Palestine, State of</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#PS">PS</a>, PSE, 275,
    * Officially assigned]
    */
@@ -1814,7 +1814,7 @@ public enum CountryCode {
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#RS">RS</a>, SRB, 688,
    * Officially assigned]
    */
-  RS("Republic of Serbia", "SRB", 688, Assignment.OFFICIALLY_ASSIGNED),
+  RS("Serbia", "SRB", 688, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Russia">Russian Federation</a>
@@ -2054,7 +2054,7 @@ public enum CountryCode {
   TK("Tokelau", "TKL", 772, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/East_Timor">Timor-Leste</a>
+   * <a href="https://en.wikipedia.org/wiki/Timor-Leste">Timor-Leste</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#TL">TL</a>, TLS, 626,
    * Officially assigned]
    *
@@ -2084,7 +2084,7 @@ public enum CountryCode {
   TO("Tonga", "TON", 776, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/East_Timor">East Timor</a>
+   * <a href="https://en.wikipedia.org/wiki/Timor-Leste">East Timor</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#TP">TP</a>, TMP, 626,
    * Traditionally reserved]
    *
