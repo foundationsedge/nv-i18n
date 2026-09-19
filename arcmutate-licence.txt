@@ -1,0 +1,7 @@
+#Licence file for arcmutate mutation testing https://www.arcmutate.com
+#Tue Aug 25 12:16:38 BST 2026
+expires=25/08/2028
+keyVersion=1
+packages=com.neovisionaries.i18n.*
+signature=jPqVRhL1delMRRE4Dcqjv9AIn6ktWI4qVfP4D0ViQNFfTvjih6PD9HahmuDScsN/ic2H9xBWOKqPPQVXtTTyq59+hKIEvqa3dfkDvzFiNWPLoHAYcwIOCPFpnDAwsWN5NR6xJ8x5dfDdej+3e2WZrtUwvS84vmCbv4GND9vYKh8\=
+type=OSSS
