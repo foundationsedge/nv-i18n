@@ -868,7 +868,14 @@ class LanguageCodeTest {
   }
 
   @Test
-  public void findByNameThrowsExceptionWhenPassedNull() {
+  public void findByNameThrowsExceptionWhenPassedNullString() {
+    String regex = null;
+    assertThatThrownBy(() -> LanguageCode.findByName(regex))
+      .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  public void findByNameThrowsExceptionWhenPassedNullPattern() {
     Pattern pattern = null;
     assertThatThrownBy(() -> LanguageCode.findByName(pattern))
       .isInstanceOf(IllegalArgumentException.class);

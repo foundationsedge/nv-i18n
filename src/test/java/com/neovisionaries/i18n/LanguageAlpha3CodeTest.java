@@ -1165,7 +1165,14 @@ public class LanguageAlpha3CodeTest {
   }
 
   @Test
-  public void findByNameThrowsExceptionWhenPassedNull() {
+  public void findByNameThrowsExceptionWhenPassedNullString() {
+    String regex = null;
+    assertThatThrownBy(() -> LanguageAlpha3Code.findByName(regex))
+      .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  public void findByNameThrowsExceptionWhenPassedNullPattern() {
     Pattern pattern = null;
     assertThatThrownBy(() -> LanguageAlpha3Code.findByName(pattern))
       .isInstanceOf(IllegalArgumentException.class);

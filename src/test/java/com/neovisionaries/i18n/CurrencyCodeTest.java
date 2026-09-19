@@ -9,10 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Currency;
 import java.util.List;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.CurrencyCode.getByCode;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class CurrencyCodeTest {
   @Test
@@ -233,5 +235,19 @@ class CurrencyCodeTest {
     codes.add(CurrencyCode.GBP);
 
     assertThat(CurrencyCode.getByCountryIgnoreCase("gb")).isEqualTo(codes);
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullString() {
+    String regex = null;
+    assertThatThrownBy(() -> CurrencyCode.findByName(regex))
+      .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullPattern() {
+    Pattern pattern = null;
+    assertThatThrownBy(() -> CurrencyCode.findByName(pattern))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 }

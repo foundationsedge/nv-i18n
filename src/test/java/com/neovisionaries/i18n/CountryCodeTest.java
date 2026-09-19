@@ -9,12 +9,14 @@ import java.util.Arrays;
 import java.util.Currency;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 import static com.neovisionaries.i18n.CountryCode.getByCode;
 import static com.neovisionaries.i18n.CountryCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.CountryCode.getByLocale;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class CountryCodeTest {
   @Test
@@ -384,5 +386,19 @@ class CountryCodeTest {
   @Test
   void getByLocaleReturnsNullWhenPassedNull() {
     assertThat(CountryCode.getByLocale(null)).isNull();
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullString() {
+    String regex = null;
+    assertThatThrownBy(() -> CountryCode.findByName(regex))
+      .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullPattern() {
+    Pattern pattern = null;
+    assertThatThrownBy(() -> CountryCode.findByName(pattern))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 }
