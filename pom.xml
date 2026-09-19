@@ -27,7 +27,7 @@
     <scm>
         <connection>scm:git:git@github.com:foundationsedge/nv-i18n.git</connection>
         <developerConnection>scm:git:https://github.com/foundationsedge/nv-i18n.git</developerConnection>
-        <url>git@github.com:foundationsedge/nv-i18n.git</url>
+        <url>https://github.com/foundationsedge/nv-i18n</url>
         <tag>HEAD</tag>
     </scm>
     <properties>
