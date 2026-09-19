@@ -127,7 +127,7 @@ Once it's filed:
 - A team member will try to reproduce the issue with your provided steps. If there are no reproduction steps or no obvious way to reproduce the issue, the team will ask you for those steps and mark the issue as `needs-repro`. Bugs with the `needs-repro` tag will not be addressed until they are reproduced.
 - If the team is able to reproduce the issue, it will be marked `needs-fix`, as well as possibly other tags (such as `critical`), and the issue will be left to be [implemented by someone](#i-want-to-contribute).
 
-<!-- You might want to create an issue template for bugs and errors that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
+See the [bug report template](https://github.com/foundationsedge/nv-i18n/blob/master/.github/ISSUE_TEMPLATE/bug_report.md), which is used automatically when opening a new issue and defines the structure of the information to include.
 
 
 ### Suggesting Enhancements
@@ -188,7 +188,7 @@ If the current version is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSH
     * Update [release notes](https://github.com/foundationsedge/nv-i18n/CHANGELOG.md) to include changes in `1.1000.0`
     * Submit a PR
 
-<!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
+See the [feature request template](https://github.com/foundationsedge/nv-i18n/blob/master/.github/ISSUE_TEMPLATE/feature_request.md), which is used automatically when opening a new issue and defines the structure of the information to include.
 <!--
 ### Your First Code Contribution
  TODO
