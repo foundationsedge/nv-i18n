@@ -1,0 +1,213 @@
+name: Release
+
+# Manually-triggered release automation. Run via the Actions tab ("Run workflow")
+# or `gh workflow run release.yml -f dry_run=false`.
+#
+# What it does, in one run:
+#   1. Reads the current `-SNAPSHOT` version from pom.xml (never re-typed by a human,
+#      which is what caused the "v1" incident on Maven Central).
+#   2. Sets the release version and commits it on a new `release/<version>` branch,
+#      then builds and GPG-signs the jar/sources/javadoc artifacts and generates a
+#      CycloneDX SBOM (addresses issue #167 / the SBOM Baseline criterion).
+#   3. Creates a GPG-signed git tag for that commit (addresses the version_tags_signed
+#      criterion) and a GitHub Release from the tag, with the signed artifacts and the
+#      SBOM attached directly to the release (this is what the OpenSSF Scorecard
+#      Signed-Releases check and the signed_releases criterion actually look for;
+#      Maven Central requiring GPG-signed uploads does not by itself satisfy either).
+#   4. Creating that release also triggers the existing maven-publish.yml workflow,
+#      which separately builds, signs, and publishes to Maven Central as it does today.
+#   5. Bumps pom.xml to the next -SNAPSHOT version on the same branch and opens a
+#      single PR back into master for review/merge (replacing the previous two
+#      separate version-bump PRs).
+#
+# Requires a repo secret RELEASE_PAT: a Personal Access Token (classic, with just the
+# public_repo scope, since this is a public repo, or fine-grained with Contents: Read
+# and write + Pull requests: Read and write on this repo). The default GITHUB_TOKEN
+# deliberately can't be used here:
+# GitHub Actions does not let events caused by GITHUB_TOKEN (a pushed tag, a created
+# release, an opened PR) trigger other workflows, which would silently skip both the
+# Maven Central publish and CI/CodeQL on the release PR.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: compute and print versions only, make no changes"
+        type: boolean
+        default: true
+      next_version:
+        description: "Override the next development version (e.g. 1.37.0-SNAPSHOT). Leave blank to auto-increment the last version segment."
+        type: string
+        required: false
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ secrets.RELEASE_PAT }}
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #7.0.1
+        with:
+          token: ${{ secrets.RELEASE_PAT }}
+          fetch-depth: 0
+
+      - name: Set up JDK
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 #v6.0.1
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: maven
+          gpg-private-key: ${{ secrets.OSSRH_GPG_PRIVATE_KEY }}
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Compute versions
+        id: versions
+        run: |
+          set -euo pipefail
+          CURRENT_VERSION=$(mvn -q -DforceStdout help:evaluate -Dexpression=project.version)
+          if [[ "$CURRENT_VERSION" != *-SNAPSHOT ]]; then
+            echo "::error::pom.xml version '$CURRENT_VERSION' is not a -SNAPSHOT version. Nothing to release."
+            exit 1
+          fi
+          RELEASE_VERSION="${CURRENT_VERSION%-SNAPSHOT}"
+
+          if [[ -n "${{ inputs.next_version }}" ]]; then
+            NEXT_VERSION="${{ inputs.next_version }}"
+          else
+            # Default: bump the last dot-separated numeric segment and re-append -SNAPSHOT.
+            NEXT_VERSION=$(awk -F. -v OFS=. '{ $NF = $NF + 1; print }' <<< "$RELEASE_VERSION")-SNAPSHOT
+          fi
+
+          echo "current=$CURRENT_VERSION" >> "$GITHUB_OUTPUT"
+          echo "release=$RELEASE_VERSION" >> "$GITHUB_OUTPUT"
+          echo "next=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
+          echo "branch=release/$RELEASE_VERSION" >> "$GITHUB_OUTPUT"
+
+          echo "Current version:      $CURRENT_VERSION"
+          echo "Will release version: $RELEASE_VERSION"
+          echo "Next dev version:     $NEXT_VERSION"
+
+      - name: Set release version
+        run: mvn -q versions:set -DnewVersion=${{ steps.versions.outputs.release }} -DgenerateBackupPoms=false
+
+      - name: Create release branch and commit
+        run: |
+          git checkout -b ${{ steps.versions.outputs.branch }}
+          git commit -am "Release ${{ steps.versions.outputs.release }}"
+
+      - name: Build and sign release artifacts
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: mvn -q verify -PsonatypeDeploy
+
+      - name: Generate SBOM
+        run: mvn -q org.cyclonedx:cyclonedx-maven-plugin:makeBom
+
+      - name: Configure GPG for tag signing
+        id: gpgsetup
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          set -euo pipefail
+          KEY_ID=$(gpg --list-secret-keys --with-colons | awk -F: '/^sec/ { print $5; exit }')
+          echo "key-id=$KEY_ID" >> "$GITHUB_OUTPUT"
+
+          # Passphrase goes in a file rather than a command-line argument, so it
+          # doesn't show up in this runner's process list (e.g. `ps aux`).
+          PASSPHRASE_FILE="$RUNNER_TEMP/gpg-passphrase"
+          printf '%s' "$MAVEN_GPG_PASSPHRASE" > "$PASSPHRASE_FILE"
+          chmod 600 "$PASSPHRASE_FILE"
+
+          WRAPPER="$RUNNER_TEMP/gpg-wrapper.sh"
+          cat > "$WRAPPER" <<EOF
+          #!/usr/bin/env bash
+          exec gpg --batch --pinentry-mode loopback --passphrase-file "$PASSPHRASE_FILE" "\$@"
+          EOF
+          chmod 700 "$WRAPPER"
+
+          git config gpg.program "$WRAPPER"
+          git config user.signingkey "$KEY_ID"
+
+      - name: Create and verify signed tag
+        run: |
+          git tag -s -u ${{ steps.gpgsetup.outputs.key-id }} \
+            -m "Release ${{ steps.versions.outputs.release }}" \
+            ${{ steps.versions.outputs.release }}
+          git tag -v ${{ steps.versions.outputs.release }}
+
+      - name: Dry run summary
+        if: ${{ inputs.dry_run }}
+        run: |
+          echo "Dry run only - no branch, tag, release, or PR was pushed/created."
+          echo "Would have released ${{ steps.versions.outputs.release }} from a new branch"
+          echo "${{ steps.versions.outputs.branch }}, then bumped to ${{ steps.versions.outputs.next }}"
+          echo "and opened a PR back into master."
+          echo "Built, signed, and tagged (locally only, not pushed) these artifacts:"
+          ls -la target/*.jar target/*.jar.asc target/bom.json target/bom.xml
+          git diff HEAD~1 -- pom.xml
+
+      - name: Push release branch
+        if: ${{ !inputs.dry_run }}
+        run: git push origin ${{ steps.versions.outputs.branch }}
+
+      - name: Push tag and create release
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git push origin ${{ steps.versions.outputs.release }}
+          gh release create ${{ steps.versions.outputs.release }} \
+            --target ${{ steps.versions.outputs.branch }} \
+            --title ${{ steps.versions.outputs.release }} \
+            --generate-notes
+
+      - name: Attach signed artifacts and SBOM to the release
+        if: ${{ !inputs.dry_run }}
+        run: |
+          VERSION=${{ steps.versions.outputs.release }}
+          gh release upload ${{ steps.versions.outputs.release }} \
+            "target/nv-i18n-$VERSION.jar" \
+            "target/nv-i18n-$VERSION.jar.asc" \
+            "target/nv-i18n-$VERSION-sources.jar" \
+            "target/nv-i18n-$VERSION-sources.jar.asc" \
+            "target/nv-i18n-$VERSION-javadoc.jar" \
+            "target/nv-i18n-$VERSION-javadoc.jar.asc" \
+            "target/bom.json" \
+            "target/bom.xml"
+
+      - name: Set next development version
+        if: ${{ !inputs.dry_run }}
+        run: mvn -q versions:set -DnewVersion=${{ steps.versions.outputs.next }} -DgenerateBackupPoms=false
+
+      - name: Commit and push next development version
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git commit -am "Prepare for next development iteration: ${{ steps.versions.outputs.next }}"
+          git push origin ${{ steps.versions.outputs.branch }}
+
+      - name: Open release PR
+        if: ${{ !inputs.dry_run }}
+        run: |
+          gh pr create \
+            --base master \
+            --head ${{ steps.versions.outputs.branch }} \
+            --title "Release ${{ steps.versions.outputs.release }}" \
+            --body "Automated release PR: publishes ${{ steps.versions.outputs.release }} (see the [release](https://github.com/${{ github.repository }}/releases/tag/${{ steps.versions.outputs.release }})) and bumps pom.xml to ${{ steps.versions.outputs.next }}."

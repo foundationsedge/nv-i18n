@@ -167,12 +167,49 @@ i.e. if they expire.
 
 ## Publishing Releases
 
-We tried an automated process, and it led to broken version numbers, so are currently doing a manual process
-while investigating how to automate and sign them.
+We previously tried automating this with `maven-release-plugin` and it published a broken version number (`1` instead of
+`1.31`) to Maven Central, because the release version was a value typed by a human (or a script argument) independently
+of the tag and the next development version, so nothing caught the mismatch before it was built and published. We did a
+manual process while investigating a safer way to automate it.
 
-Publishing a release is limited to Maintainers
+Publishing a release is limited to Maintainers.
 
-If the current version is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSHOT` and we have no breaking changes, then:
+### Automated release (preferred)
+
+The [Release workflow](https://github.com/foundationsedge/nv-i18n/actions/workflows/release.yml) does the whole thing in
+one manually-triggered run: it reads the current `-SNAPSHOT` version straight out of `pom.xml` (never re-typed by hand,
+which is what caused the `1` incident), sets that as the release version, builds and GPG-signs the jar/sources/javadoc
+artifacts, creates a GPG-signed git tag, and creates the GitHub Release with those signed artifacts attached to it
+directly (addressing the `signed_releases` and `version_tags_signed` criteria, and the OpenSSF Scorecard Signed-Releases
+check). Creating the release also triggers `maven-publish.yml` to build, sign, and publish to Maven Central exactly as
+before. It then bumps `pom.xml` to the next `-SNAPSHOT` version and opens a single PR back into `master` for that
+version bump to be reviewed and merged.
+
+To run it:
+* Go to [Actions → Release](https://github.com/foundationsedge/nv-i18n/actions/workflows/release.yml) → **Run workflow**,
+  or run `gh workflow run release.yml -f dry_run=false` locally.
+* Leave `dry_run` set to `true` first: it still builds, signs, and locally tags the release artifacts so you can confirm
+  signing works, but doesn't push the branch/tag or create anything on GitHub or Maven Central. Run again with
+  `dry_run: false` to actually cut the release.
+* Leave `next_version` blank to auto-increment the last version segment (e.g. `1.36.0` → `1.36.1-SNAPSHOT`), or set it
+  explicitly for a minor/major bump (e.g. `1.37.0-SNAPSHOT`).
+* Once the run finishes, confirm it published on Maven Central
+  (<https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n>), then review and merge the PR it opened.
+
+#### One-time setup: the `RELEASE_PAT` secret
+
+The workflow needs a repo secret named `RELEASE_PAT`: a Personal Access Token (classic, with just the `public_repo`
+scope ticked, since this is a public repository and the full `repo` scope also grants unneeded access to private repos,
+deployments, invites, and security events; or fine-grained with `Contents: Read and write` and `Pull requests: Read and
+write` on this repository). This is deliberately **not** the default `GITHUB_TOKEN`: GitHub Actions does not let events
+caused by `GITHUB_TOKEN` (a pushed tag, a created release, an opened PR) trigger other workflows, which would silently
+skip both the Maven Central publish and CI/CodeQL on the release PR. Add it under Settings → Secrets and variables →
+Actions before the first real (non-dry-run) release.
+
+### Manual release (fallback)
+
+If the automated workflow can't be used for some reason, the previous manual process still works. If the current version
+is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSHOT` and we have no breaking changes, then:
 * Create a new tag of `1.1000.0-SNAPSHOT`
 * Generate a release selecting `Pre-release` label and using `generate release notes`
 * Once we are happy it works

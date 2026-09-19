@@ -1853,7 +1853,7 @@ public enum LanguageAlpha3Code {
   gay("Gayo"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Gbaya_languages">Gbaya languages/a>
+   * <a href="https://en.wikipedia.org/wiki/Gbaya_languages">Gbaya languages</a>
    *
    * @since 1.10
    */
