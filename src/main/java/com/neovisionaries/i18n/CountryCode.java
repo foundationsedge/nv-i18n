@@ -2665,11 +2665,8 @@ public enum CountryCode {
    * <p>
    * In addition, {@code toLocale()} of {@link CountryCode#UNDEFINED
    * CountryCode.UNDEFINED} behaves a bit differently. It returns
-   * {@link Locale#ROOT Locale.ROOT} when it is available (i.e. when
-   * the version of Java SE is 1.6 or higher). Otherwise, it returns
-   * a {@code Locale} instance whose language and country are empty
-   * strings. Even in the latter case, the same instance is returned
-   * on every call.
+   * {@link Locale#ROOT Locale.ROOT}, and the same instance is
+   * returned on every call.
    * </p>
    *
    * @return A {@code Locale} instance that matches this {@code CountryCode}.
