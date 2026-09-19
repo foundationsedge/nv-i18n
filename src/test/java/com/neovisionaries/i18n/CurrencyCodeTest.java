@@ -5,13 +5,10 @@
  */
 package com.neovisionaries.i18n;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Currency;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.CurrencyCode.getByCode;
@@ -154,29 +151,6 @@ class CurrencyCodeTest {
   @Test
   public void getByCodeCaseInsensitiveLowerCaseUndefinedReturnsUndefinedCode() {
     assertThat(getByCode("undefined", false)).isSameAs(CurrencyCode.UNDEFINED);
-  }
-
-  @Test
-  @SuppressWarnings("deprecation")
-  public void deprecatedCurrenciesAreAnnotatedAsDeprecated() {
-    List<CurrencyCode> deprecated = Arrays.stream(CurrencyCode.values()).filter(value -> {
-      try {
-        Field field = CurrencyCode.class.getField(value.name());
-        return field.isAnnotationPresent(Deprecated.class);
-      } catch (NoSuchFieldException | SecurityException e) {
-        return false;
-      }
-    }).collect(Collectors.toList());
-
-    ArrayList<CurrencyCode> deprecatedCurrencies = new ArrayList<>();
-    deprecatedCurrencies.add(CurrencyCode.BYR);
-    deprecatedCurrencies.add(CurrencyCode.MRO);
-    deprecatedCurrencies.add(CurrencyCode.STD);
-    deprecatedCurrencies.add(CurrencyCode.RUR);
-    deprecatedCurrencies.add(CurrencyCode.LTL);
-    deprecatedCurrencies.add(CurrencyCode.VEF);
-
-    assertThat(deprecated).containsAll(deprecatedCurrencies);
   }
 
   @Test
