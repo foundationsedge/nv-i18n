@@ -157,7 +157,7 @@ public enum CurrencyCode {
   AWG("Aruban Florin", 533, 2, CountryCode.AW),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Azerbaijani_manat">Azerbaijanian Manat</a>
+   * <a href="https://en.wikipedia.org/wiki/Azerbaijani_manat">Azerbaijan Manat</a>
    * [numeric code = 944, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -165,7 +165,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#AZ AZ}: AZERBAIJAN
    * </ul>
    */
-  AZN("Azerbaijanian Manat", 944, 2, CountryCode.AZ),
+  AZN("Azerbaijan Manat", 944, 2, CountryCode.AZ),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_convertible_mark"
@@ -180,7 +180,7 @@ public enum CurrencyCode {
   BAM("Convertible Mark", 977, 2, CountryCode.BA),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Barbados_dollar">Barbados Dollar</a>
+   * <a href="https://en.wikipedia.org/wiki/Barbadian_dollar">Barbados Dollar</a>
    * [numeric code = 52, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -260,7 +260,7 @@ public enum CurrencyCode {
   BND("Brunei Dollar", 96, 2, CountryCode.BN),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Boliviano">Boliviano</a>
+   * <a href="https://en.wikipedia.org/wiki/Bolivian_boliviano">Boliviano</a>
    * [numeric code = 68, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -445,7 +445,7 @@ public enum CurrencyCode {
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Unidad_de_Fomento">Unidad de Fomento</a>
-   * [numeric code = 990, minor unit = 0, fund]
+   * [numeric code = 990, minor unit = 4, fund]
    *
    * <p>Used by:</p>
    * <ul>
@@ -493,7 +493,7 @@ public enum CurrencyCode {
   COP("Colombian Peso", 170, 2, CountryCode.CO),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Unidad_de_Valor_Real">Unidad de Valor Real</a>
+   * <a href="https://en.wikipedia.org/wiki/Colombian_peso">Unidad de Valor Real</a>
    * [numeric code = 970, minor unit = 2, fund]
    *
    * <p>Used by:</p>
@@ -509,7 +509,7 @@ public enum CurrencyCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Costa_Rican_colon">Costa Rican Colon</a>
+   * <a href="https://en.wikipedia.org/wiki/Costa_Rican_col%C3%B3n">Costa Rican Colon</a>
    * [numeric code = 188, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -545,7 +545,7 @@ public enum CurrencyCode {
   CUP("Cuban Peso", 192, 2, CountryCode.CU),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Cape_Verde_escudo">Cape Verde Escudo</a>
+   * <a href="https://en.wikipedia.org/wiki/Cape_Verdean_escudo">Cabo Verde Escudo</a>
    * [numeric code = 132, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -553,7 +553,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#CV CV}: CAPE VERDE
    * </ul>
    */
-  CVE("Cape Verde Escudo", 132, 2, CountryCode.CV),
+  CVE("Cabo Verde Escudo", 132, 2, CountryCode.CV),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Czech_koruna">Czech Koruna</a>
@@ -696,7 +696,7 @@ public enum CurrencyCode {
   EUR("Euro", 978, 2, CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG, CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EA, CountryCode.EE, CountryCode.ES, CountryCode.EU, CountryCode.FI, CountryCode.FR, CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IC, CountryCode.IE, CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV, CountryCode.MC, CountryCode.ME, CountryCode.MF, CountryCode.MQ, CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT, CountryCode.RE, CountryCode.SI, CountryCode.SK, CountryCode.SM, CountryCode.TF, CountryCode.VA, CountryCode.XK, CountryCode.YT),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Fiji_dollar">Fiji Dollar</a>
+   * <a href="https://en.wikipedia.org/wiki/Fijian_dollar">Fiji Dollar</a>
    * [numeric code = 242, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -776,7 +776,7 @@ public enum CurrencyCode {
   GMD("Dalasi", 270, 2, CountryCode.GM),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Guinean_franc">Guinea Franc</a>
+   * <a href="https://en.wikipedia.org/wiki/Guinean_franc">Guinean Franc</a>
    * [numeric code = 324, minor unit = 0]
    *
    * <p>Used by:</p>
@@ -784,7 +784,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#GN GN}: GUINEA
    * </ul>
    */
-  GNF("Guinea Franc", 324, 0, CountryCode.GN),
+  GNF("Guinean Franc", 324, 0, CountryCode.GN),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Guatemalan_quetzal">Quetzal</a>
@@ -978,7 +978,7 @@ public enum CurrencyCode {
   KES("Kenyan Shilling", 404, 2, CountryCode.KE),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Kyrgyzstani_som">Som</a>
+   * <a href="https://en.wikipedia.org/wiki/Kyrgyz_som">Som</a>
    * [numeric code = 417, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1000,7 +1000,7 @@ public enum CurrencyCode {
   KHR("Riel", 116, 2, CountryCode.KH),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Comoro_franc">Comoro Franc</a>
+   * <a href="https://en.wikipedia.org/wiki/Comorian_franc">Comorian Franc</a>
    * [numeric code = 174, minor unit = 0]
    *
    * <p>Used by:</p>
@@ -1008,7 +1008,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#KM KM}: COMOROS
    * </ul>
    */
-  KMF("Comoro Franc", 174, 0, CountryCode.KM),
+  KMF("Comorian Franc", 174, 0, CountryCode.KM),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/North_Korean_won">North Korean Won</a>
@@ -1066,7 +1066,7 @@ public enum CurrencyCode {
   KZT("Tenge", 398, 2, CountryCode.KZ),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Lao_kip">Kip</a>
+   * <a href="https://en.wikipedia.org/wiki/Lao_kip">Lao Kip</a>
    * [numeric code = 418, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1074,7 +1074,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#LA LA}: LAO PEOPLE'S DEMOCRATIC REPUBLIC
    * </ul>
    */
-  LAK("Kip", 418, 2, CountryCode.LA),
+  LAK("Lao Kip", 418, 2, CountryCode.LA),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Lebanese_pound">Lebanese Pound</a>
@@ -1191,7 +1191,7 @@ public enum CurrencyCode {
   MKD("Denar", 807, 2, CountryCode.MK),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Myanma_kyat">Kyat</a>
+   * <a href="https://en.wikipedia.org/wiki/Myanmar_kyat">Kyat</a>
    * [numeric code = 104, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1294,7 +1294,7 @@ public enum CurrencyCode {
   MVR("Rufiyaa", 462, 2, CountryCode.MV),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Malawian_kwacha">Kwacha</a>
+   * <a href="https://en.wikipedia.org/wiki/Malawian_kwacha">Malawi Kwacha</a>
    * [numeric code = 454, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1302,7 +1302,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#MW MW}: MALAWI
    * </ul>
    */
-  MWK("Kwacha", 454, 2, CountryCode.MW),
+  MWK("Malawi Kwacha", 454, 2, CountryCode.MW),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Mexican_peso">Mexican Peso</a>
@@ -1316,7 +1316,7 @@ public enum CurrencyCode {
   MXN("Mexican Peso", 484, 2, CountryCode.MX),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Mexican_Unidad_de_Inversion"
+   * <a href="https://en.wikipedia.org/wiki/Mexican_unidad_de_inversi%C3%B3n"
    * >Mexican Unidad de Inversion (UDI)</a>
    * [numeric code = 979, minor unit = 2, fund]
    *
@@ -1449,7 +1449,7 @@ public enum CurrencyCode {
   PAB("Balboa", 590, 2, CountryCode.PA),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Peruvian_nuevo_sol">Nuevo Sol</a>
+   * <a href="https://en.wikipedia.org/wiki/Peruvian_sol">Sol</a>
    * [numeric code = 604, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1457,7 +1457,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#PE PE}: PERU
    * </ul>
    */
-  PEN("Nuevo Sol", 604, 2, CountryCode.PE),
+  PEN("Sol", 604, 2, CountryCode.PE),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Papua_New_Guinean_kina">Kina</a>
@@ -1526,7 +1526,7 @@ public enum CurrencyCode {
   QAR("Qatari Rial", 634, 2, CountryCode.QA),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Romanian_Leu">New Romanian Leu</a>
+   * <a href="https://en.wikipedia.org/wiki/Romanian_leu">Romanian Leu</a>
    * [numeric code = 946, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1534,7 +1534,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#RO RO}: ROMANIA
    * </ul>
    */
-  RON("New Romanian Leu", 946, 2, CountryCode.RO),
+  RON("Romanian Leu", 946, 2, CountryCode.RO),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Serbian_dinar">Serbian Dinar</a>
@@ -1610,7 +1610,7 @@ public enum CurrencyCode {
   SBD("Solomon Islands Dollar", 90, 2, CountryCode.SB),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Seychelles_rupee">Seychelles Rupee</a>
+   * <a href="https://en.wikipedia.org/wiki/Seychellois_rupee">Seychelles Rupee</a>
    * [numeric code = 690, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1827,7 +1827,7 @@ public enum CurrencyCode {
   TJS("Somoni", 972, 2, CountryCode.TJ),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Turkmenistani_manat">Turkmenistan New Manat</a>
+   * <a href="https://en.wikipedia.org/wiki/Turkmen_manat">Turkmenistan New Manat</a>
    * [numeric code = 934, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1849,7 +1849,7 @@ public enum CurrencyCode {
   TND("Tunisian Dinar", 788, 3, CountryCode.TN),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Tongan_pa%CA%BBanga">Pa&#x2bb;anga</a>
+   * <a href="https://en.wikipedia.org/wiki/Tongan_pa%CA%BBanga">Pa&#8217;anga</a>
    * [numeric code = 776, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -1857,7 +1857,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#TO TO}: TONGA
    * </ul>
    */
-  TOP("Pa\u02BBanga", 776, 2, CountryCode.TO),
+  TOP("Pa\u2019anga", 776, 2, CountryCode.TO),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Turkish_lira">Turkish Lira</a>
@@ -1990,7 +1990,7 @@ public enum CurrencyCode {
   },
 
   /**
-   * Uruguay Peso en Unidades Indexadas (URUIURUI)
+   * Uruguay Peso en Unidades Indexadas (UI)
    * [numeric code = 940, minor unit = 0, fund]
    *
    * <p>Used by:</p>
@@ -1998,7 +1998,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#UY UY}: URUGUAY
    * </ul>
    */
-  UYI("Uruguay Peso en Unidades Indexadas (URUIURUI)", 940, 0, CountryCode.UY) {
+  UYI("Uruguay Peso en Unidades Indexadas (UI)", 940, 0, CountryCode.UY) {
     @Override
     public boolean isFund() {
       return true;
@@ -2018,14 +2018,14 @@ public enum CurrencyCode {
 
   /**
    * <a href="https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/dl_currency_iso_amendment_169.pdf">Unidad previsional</a>
-   * [numeric code = 858, minor unit = 2]
+   * [numeric code = 927, minor unit = 4]
    *
    * <p>Used by:</p>
    * <ul>
    * <li>{@link CountryCode#UY UY}: URUGUAY
    * </ul>
    */
-  UYW("Peso Uruguayo", 927, 4, CountryCode.UY) {
+  UYW("Unidad Previsional", 927, 4, CountryCode.UY) {
     @Override
     public boolean isFund() {
       return true;
@@ -2033,7 +2033,7 @@ public enum CurrencyCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Uzbekistan_som">Uzbekistan Sum</a>
+   * <a href="https://en.wikipedia.org/wiki/Uzbekistani_sum">Uzbekistan Sum</a>
    * [numeric code = 860, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -2045,7 +2045,7 @@ public enum CurrencyCode {
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar#Digital_bol%C3%ADvar">Venezuelan digital bolívar</a>
-   * [numeric code = 937, minor unit = 2]
+   * [numeric code = 926, minor unit = 2]
    *
    * <p>Used by:</p>
    * <ul>
@@ -2055,7 +2055,7 @@ public enum CurrencyCode {
   VED("Venezuelan digital bolívar", 926, 2, CountryCode.VE),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar">Bolivar</a>
+   * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar">Bol&iacute;var</a>
    * [numeric code = 937, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -2066,10 +2066,10 @@ public enum CurrencyCode {
    * @see #VES
    * @deprecated
    */
-  @Deprecated VEF("Bolivar", 937, 2, CountryCode.VE),
+  @Deprecated VEF("Bolívar", 937, 2, CountryCode.VE),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar">Bolivar</a>
+   * <a href="https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar">Bol&iacute;var Soberano</a>
    * [numeric code = 928, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -2079,10 +2079,10 @@ public enum CurrencyCode {
    *
    * @see #VEF
    */
-  VES("Bolivar Soberano", 928, 2, CountryCode.VE),
+  VES("Bol\u00EDvar Soberano", 928, 2, CountryCode.VE),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Vietnamese_dong">Dong</a>
+   * <a href="https://en.wikipedia.org/wiki/Vietnamese_%C4%91%E1%BB%93ng">Dong</a>
    * [numeric code = 704, minor unit = 0]
    *
    * <p>Used by:</p>
@@ -2104,7 +2104,7 @@ public enum CurrencyCode {
   VUV("Vatu", 548, 0, CountryCode.VU),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Samoan_tala">Tala</a>
+   * <a href="https://en.wikipedia.org/wiki/Samoan_t%C4%81l%C4%81">Tala</a>
    * [numeric code = 882, minor unit = 2]
    *
    * <p>Used by:</p>
@@ -2159,35 +2159,35 @@ public enum CurrencyCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/European_Composite_Unit"
+   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account"
    * >Bond Markets Unit European Composite Unit (EURCO)</a>
    * [numeric code = 955, minor unit = -1]
    */
   XBA("Bond Markets Unit European Composite Unit (EURCO)", 955, -1),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/European_Monetary_Unit"
+   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account"
    * >Bond Markets Unit European Monetary Unit (E.M.U.-6)</a>
    * [numeric code = 956, minor unit = -1]
    */
   XBB("Bond Markets Unit European Monetary Unit (E.M.U.-6)", 956, -1),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account_9"
+   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account"
    * >Bond Markets Unit European Unit of Account 9 (E.U.A.-9)</a>
    * [numeric code = 957, minor unit = -1]
    */
   XBC("Bond Markets Unit European Unit of Account 9 (E.U.A.-9)", 957, -1),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account_17"
+   * <a href="https://en.wikipedia.org/wiki/European_Unit_of_Account"
    * >Bond Markets Unit European Unit of Account 17 (E.U.A.-17)</a>
    * [numeric code = 958, minor unit = -1]
    */
   XBD("Bond Markets Unit European Unit of Account 17 (E.U.A.-17)", 958, -1),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/East_Caribbean_dollar"
+   * <a href="https://en.wikipedia.org/wiki/Eastern_Caribbean_dollar"
    * >East Caribbean Dollar</a>
    * [numeric code = 951, minor unit = 2]
    *
@@ -2206,8 +2206,8 @@ public enum CurrencyCode {
   XCD("East Caribbean Dollar", 951, 2, CountryCode.AG, CountryCode.AI, CountryCode.DM, CountryCode.GD, CountryCode.KN, CountryCode.LC, CountryCode.MS, CountryCode.VC),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Caribbean_guilder">Caribbean guilder</a>
-   * [numeric code = 960, minor unit = -1]     *
+   * <a href="https://en.wikipedia.org/wiki/Caribbean_guilder">Caribbean Guilder</a>
+   * [numeric code = 532, minor unit = 2]
    *
    * <p>Used by:</p>
    * <ul>
@@ -2215,7 +2215,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#SX SX}: SINT MAARTEN
    * </ul>
    */
-  XCG("Caribbean guilder", 532, 2, CountryCode.CW, CountryCode.SX),
+  XCG("Caribbean Guilder", 532, 2, CountryCode.CW, CountryCode.SX),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Special_drawing_rights"
@@ -2339,17 +2339,17 @@ public enum CurrencyCode {
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Zimbabwe_Gold">Zimbabwe Gold</a>
-   * [numeric code = 967, minor unit = 2]
+   * [numeric code = 924, minor unit = 2]
    *
    * <p>Used by:</p>
    * <ul>
    * <li>{@link CountryCode#ZW ZW}: ZIMBABWE
    * </ul>
    */
-  ZWG("Zimbabwe Gold", 967, 2, CountryCode.ZW),
+  ZWG("Zimbabwe Gold", 924, 2, CountryCode.ZW),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Zimbabwe_dollar">Zimbabwe Dollar</a>
+   * <a href="https://en.wikipedia.org/wiki/Zimbabwean_dollar">Zimbabwe Dollar</a>
    * [numeric code = 932, minor unit = 2]
    *
    * <p>Used by:</p>
