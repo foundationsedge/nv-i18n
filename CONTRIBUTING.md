@@ -74,6 +74,12 @@ mvn :pitest:mutationCoverage
 `mvn compile` also runs Checkstyle, which the CI will execute, so like running `pitest`, this will help catch errors
 before CI runs.
 
+SpotBugs runs automatically as part of `mvn package`, and will fail the build on any findings.
+To run it on its own, without a full package build
+```shell
+mvn spotbugs:check
+```
+
 #### Code style
 
 Follow the guidelines provided

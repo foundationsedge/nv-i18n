@@ -99,8 +99,8 @@ class CurrencyCodeTest {
     assertThat(CurrencyCode.XPT.isPreciousMetal()).isTrue();
   }
 
-
   @Test
+  @SuppressWarnings("deprecation")
   public void getCountryListReturnsSingleCountryForJpy() {
     List<CountryCode> list = CurrencyCode.JPY.getCountryList();
 
@@ -108,12 +108,27 @@ class CurrencyCodeTest {
     assertThat(list.get(0)).isSameAs(CountryCode.JP);
   }
 
-
   @Test
+  @SuppressWarnings("deprecation")
   public void getCountryListIsEmptyForXxx() {
     List<CountryCode> list = CurrencyCode.XXX.getCountryList();
 
     assertThat(list.size()).isEqualTo(0);
+  }
+
+  @Test
+  public void getCountriesIsEmptyForXxx() {
+    List<CountryCode> list = CurrencyCode.XXX.getCountries();
+
+    assertThat(list.size()).isEqualTo(0);
+  }
+
+  @Test
+  public void getCountriesReturnsSingleCountryForJpy() {
+    List<CountryCode> list = CurrencyCode.JPY.getCountries();
+
+    assertThat(list.size()).isEqualTo(1);
+    assertThat(list.get(0)).isSameAs(CountryCode.JP);
   }
 
 

@@ -2423,10 +2423,39 @@ public enum CurrencyCode {
   /**
    * Get the list of countries using this currency.
    *
+   * <p>
+   * The returned list is already unmodifiable, but it is still the same
+   * instance held internally by this enum constant, not a copy. Prefer
+   * {@link #getCountries()} unless you specifically need to avoid the
+   * allocation of a new list on every call.
+   * </p>
+   *
    * @return The list of countries using this currency.
+   *
+   * @see #getCountries()
+   * @deprecated since=1.37.0-SNAPSHOT forRemoval=true
    */
+  @Deprecated
   public List<CountryCode> getCountryList() {
-    return countryList;
+    return getCountries();
+  }
+
+
+  /**
+   * Get the list of countries using this currency.
+   *
+   * <p>
+   * Unlike {@link #getCountryList()}, this method returns a new copy of
+   * the list on every call, so the instance it returns is independent of
+   * the one held internally by this enum constant.
+   * </p>
+   *
+   * @return The list of countries using this currency.
+   *
+   * @since 1.36
+   */
+  public List<CountryCode> getCountries() {
+    return new ArrayList<>(countryList);
   }
 
 

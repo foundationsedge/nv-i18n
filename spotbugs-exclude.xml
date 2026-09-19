@@ -1,0 +1,12 @@
+<FindBugsFilter>
+  <!--
+    CurrencyCode.getCountryList() has returned the same internal list instance
+    since this method was first added, without copying it. Changing that now
+    would be a behavioural break for any existing caller relying on it.
+  -->
+  <Match>
+    <Class name="com.neovisionaries.i18n.CurrencyCode"/>
+    <Method name="getCountryList"/>
+    <Bug pattern="EI_EXPOSE_REP"/>
+  </Match>
+</FindBugsFilter>
