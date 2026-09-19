@@ -1506,7 +1506,7 @@ public enum LanguageCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Pali">Pali/a>
+   * <a href="https://en.wikipedia.org/wiki/Pali">Pali</a>
    * ({@link LanguageAlpha3Code#pli pli}).
    */
   pi() {
