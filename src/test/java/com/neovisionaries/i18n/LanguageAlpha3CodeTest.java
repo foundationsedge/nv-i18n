@@ -15,45 +15,43 @@ import static com.neovisionaries.i18n.LanguageAlpha3Code.Usage.TERMINOLOGY;
 import static com.neovisionaries.i18n.LanguageAlpha3Code.getByCode;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LanguageAlpha3CodeTest {
   @Test
   public void test1() {
-    assertNull(getByCode(null));
+    assertThat(getByCode(null)).isNull();
   }
 
 
   @Test
   public void test2() {
-    assertNull(getByCode(""));
+    assertThat(getByCode("")).isNull();
   }
 
 
   @Test
   public void test3() {
-    assertNull(getByCode("?"));
+    assertThat(getByCode("?")).isNull();
   }
 
 
   @Test
   public void test4() {
-    assertNull(getByCode("??"));
+    assertThat(getByCode("??")).isNull();
   }
 
 
   @Test
   public void test5() {
-    assertNull(getByCode("???"));
+    assertThat(getByCode("???")).isNull();
   }
 
 
   @Test
   public void test6() {
-    assertNull(getByCode("????"));
+    assertThat(getByCode("????")).isNull();
   }
 
 
@@ -65,7 +63,7 @@ public class LanguageAlpha3CodeTest {
 
   @Test
   public void test8() {
-    assertNull(getByCode("JPN"));
+    assertThat(getByCode("JPN")).isNull();
   }
 
 
@@ -77,7 +75,7 @@ public class LanguageAlpha3CodeTest {
 
   @Test
   public void test10() {
-    assertNull(getByCode("JPN", true));
+    assertThat(getByCode("JPN", true)).isNull();
   }
 
 
@@ -1085,27 +1083,26 @@ public class LanguageAlpha3CodeTest {
 
   @Test
   public void test178() {
-    assertNull(getByCode("NEW", true));
+    assertThat(getByCode("NEW", true)).isNull();
   }
 
 
   @Test
   public void test179() {
-    assertEquals("new", LanguageAlpha3Code.New.toString());
+    assertThat(LanguageAlpha3Code.New.toString()).isEqualTo("new");
   }
 
 
   @Test
   public void test180() {
     List<LanguageAlpha3Code> list = LanguageAlpha3Code.findByName("Old.*");
-
-    assertEquals(7, list.size());
+    assertThat(list).hasSize(7);
 
     // ang : Old English
-    assertTrue(list.contains(LanguageAlpha3Code.ang));
+    assertThat(list).contains(LanguageAlpha3Code.ang);
 
     // fro : Old French
-    assertTrue(list.contains(LanguageAlpha3Code.fro));
+    assertThat(list).contains(LanguageAlpha3Code.fro);
 
     // goh : Old High German
     assertTrue(list.contains(LanguageAlpha3Code.goh));
@@ -1132,7 +1129,7 @@ public class LanguageAlpha3CodeTest {
 
   @Test
   public void test182() {
-    assertNull(getByCode("UNDEFINED"));
+    assertThat(getByCode("UNDEFINED")).isNull();
   }
 
 
@@ -1153,7 +1150,7 @@ public class LanguageAlpha3CodeTest {
   }
 
   @Test
-  public void getByCodeIgnoreCaseWithValudValue() {
+  public void getByCodeIgnoreCaseWithValidValue() {
     assertThat(LanguageAlpha3Code.getByCodeIgnoreCase("eng")).isEqualTo(LanguageAlpha3Code.eng);
   }
 
