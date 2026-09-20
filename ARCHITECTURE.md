@@ -24,4 +24,4 @@ Guidance, which includes a section to
 
 The current package for classes is `com.neovisionaries.*` bases on the project we forked from.
 Changing this would be a breaking change so we may consider it in future, but it is not on our most immediate
-[Roadmap](https://github.com/foundationsedge/nv-i18n/ROADMAP.md)
+[Roadmap](https://github.com/foundationsedge/nv-i18n/blob/master/ROADMAP.md)
