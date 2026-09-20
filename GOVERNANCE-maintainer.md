@@ -1,6 +1,6 @@
 # nv-i18n Project Governance
 
-[Instructions](https://contribute.cncf.io/maintainers/github/templates/required/governance-maintainer/)
+[Instructions](https://github.com/cncf/project-template/blob/main/GOVERNANCE-maintainer.md)
 
 The nv-i18n project is dedicated to providing a library of classes to allow access to up-to-date Standards
 related to internationalisation in Java.
@@ -52,7 +52,7 @@ The nv-i18n and its leadership embrace the following values:
 
 ## Maintainers
 
-nv-i18n Maintainers have write access to the project GitHub repository].
+nv-i18n Maintainers have write access to the project GitHub repository.
 They can merge patches from others. Maintainers collectively manage the project's
 resources and contributors.
 
@@ -140,7 +140,7 @@ contributors to handle it. The Maintainers will review who is assigned to this
 at least once a year.
 
 The Security Response Team is responsible for handling all reports of security
-holes and breaches according to the [security policy](https://github.com/foundationsedge/nv-i18n/SECURITY.md).
+holes and breaches according to the [security policy](https://github.com/foundationsedge/nv-i18n/blob/master/SECURITY.md).
 
 ## Voting
 

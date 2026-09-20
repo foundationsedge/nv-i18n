@@ -24,8 +24,7 @@ expand that here:
   - [ ] compare to the ISO publication
 - [x] update `LanguageCode` to latest ISO standard
   - [ ] compare to the ISO publication
-- [ ] update `LocaleCode` to JDK8 List of 1 and 2 part Locales.
-  - [ ] update `LocaleCode` to JDK25 List of 1 and 2 part Locales?
+- [x] update `LocaleCode` to JDK 27 List of 1 and 2 part Locales.
   - [ ] consider 3 part locales?
 - [X] update `ScriptCode` to latest ISO standard (to merge)
   - [ ] compare to the ISO publication
