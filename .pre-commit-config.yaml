@@ -1,8 +1,8 @@
 repos:
-- repo: https://github.com/gherynos/pre-commit-java
+- repo: https://codeberg.org/gherynos/pre-commit-java
   rev: v0.6.37
   hooks:
-  - id: Checkstyle
+  - id: checkstyle
 - repo: https://github.com/gitleaks/gitleaks
   rev: v8.30.1
   hooks:

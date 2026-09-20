@@ -1,0 +1,63 @@
+# This workflow uses actions that are not certified by GitHub. They are provided
+# by a third-party and are governed by separate terms of service, privacy
+# policy, and support documentation.
+
+# Keeps .mvn/wrapper/maven-wrapper.properties current, since Dependabot's maven
+# ecosystem only reads pom.xml and never touches the wrapper's own plugin
+# version or the Apache Maven distribution version it downloads. Runs
+# `mvnw wrapper:wrapper` against the latest published Maven release on a
+# schedule and opens a pull request when it finds a newer version.
+name: Maven Wrapper autoupdate
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  autoupdate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up JDK
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Determine latest Apache Maven release
+        id: latest-maven
+        run: |
+          LATEST=$(curl -fsSL https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/maven-metadata.xml | grep -oPm1 "(?<=<release>)[^<]+")
+          if [ -z "$LATEST" ]; then
+            echo "Could not determine latest Maven release" >&2
+            exit 1
+          fi
+          echo "version=$LATEST" >> "$GITHUB_OUTPUT"
+
+      - name: Update Maven Wrapper
+        run: sh ./mvnw -N wrapper:wrapper -Dmaven=${{ steps.latest-maven.outputs.version }}
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.AUTOMATION_PAT }}
+          commit-message: "chore: update Maven Wrapper to ${{ steps.latest-maven.outputs.version }}"
+          title: "chore: update Maven Wrapper to ${{ steps.latest-maven.outputs.version }}"
+          body: Automated update of the Maven Wrapper (`.mvn/wrapper/maven-wrapper.properties`, `mvnw`, `mvnw.cmd`) to Apache Maven `${{ steps.latest-maven.outputs.version }}` via `mvnw wrapper:wrapper`.
+          branch: maven-wrapper-autoupdate
+          delete-branch: true
