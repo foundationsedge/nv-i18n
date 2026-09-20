@@ -19,712 +19,712 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class LanguageCodeTest {
   @Test
-  public void test1() {
+  public void getByCodeWithJaReturnsJa() {
     assertThat(getByCode("ja")).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test2() {
+  public void getByCodeWithJaInUpperCaseReturnsNull() {
     assertThat(getByCode("JA")).isNull();
   }
 
 
   @Test
-  public void test3() {
+  public void getByCodeWithJaAndCaseSensitiveTrueReturnsJa() {
     assertThat(getByCode("ja", true)).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test4() {
+  public void getByCodeWithJaInUpperCaseAndCaseSensitiveTrueReturnsNull() {
     assertThat(getByCode("JA", true)).isNull();
   }
 
 
   @Test
-  public void test5() {
+  public void getByCodeWithJaAndCaseSensitiveFalseReturnsJa() {
     assertThat(getByCode("ja", false)).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test6() {
+  public void getByCodeWithJaInUpperCaseAndCaseSensitiveFalseReturnsJa() {
     assertThat(getByCode("JA", false)).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test7() {
+  public void getByCodeWithNullReturnsNull() {
     assertThat(getByCode(null)).isNull();
   }
 
 
   @Test
-  public void test8() {
+  public void getByCodeWithEmptyStringReturnsNull() {
     assertThat(getByCode("")).isNull();
   }
 
 
   @Test
-  public void test9() {
+  public void getByCodeWithOneQuestionMarkReturnsNull() {
     assertThat(getByCode("?")).isNull();
   }
 
 
   @Test
-  public void test10() {
+  public void getByCodeWithTwoQuestionMarksReturnsNull() {
     assertThat(getByCode("??")).isNull();
   }
 
 
   @Test
-  public void test11() {
+  public void getByCodeWithThreeQuestionMarksReturnsNull() {
     assertThat(getByCode("???")).isNull();
   }
 
 
   @Test
-  public void test12() {
+  public void getByCodeWithFourQuestionMarksReturnsNull() {
     assertThat(getByCode("????")).isNull();
   }
 
 
   @Test
-  public void test13() {
+  public void getByCodeWithHeReturnsHe() {
     assertThat(getByCode("he")).isSameAs(LanguageCode.he);
   }
 
 
   @Test
-  public void test14() {
+  public void getByCodeWithWithdrawnIwAliasReturnsHe() {
     assertThat(getByCode("iw")).isSameAs(LanguageCode.he);
   }
 
 
   @Test
-  public void test15() {
+  public void getByCodeWithYiReturnsYi() {
     assertThat(getByCode("yi")).isSameAs(LanguageCode.yi);
   }
 
 
   @Test
-  public void test16() {
+  public void getByCodeWithWithdrawnJiAliasReturnsYi() {
     assertThat(getByCode("ji")).isSameAs(LanguageCode.yi);
   }
 
 
   @Test
-  public void test17() {
+  public void getByCodeWithIdReturnsId() {
     assertThat(getByCode("id")).isSameAs(LanguageCode.id);
   }
 
 
   @Test
-  public void test18() {
+  public void getByCodeWithWithdrawnInAliasReturnsId() {
     assertThat(getByCode("in")).isSameAs(LanguageCode.id);
   }
 
 
   @Test
-  public void test19() {
+  public void toLocaleWithDeReturnsLocaleGerman() {
     assertThat(LanguageCode.de.toLocale()).isSameAs(Locale.GERMAN);
   }
 
 
   @Test
-  public void test20() {
+  public void toLocaleWithEnReturnsLocaleEnglish() {
     assertThat(LanguageCode.en.toLocale()).isSameAs(Locale.ENGLISH);
   }
 
 
   @Test
-  public void test21() {
+  public void toLocaleWithFrReturnsLocaleFrench() {
     assertThat(LanguageCode.fr.toLocale()).isSameAs(Locale.FRENCH);
   }
 
 
   @Test
-  public void test22() {
+  public void toLocaleWithItReturnsLocaleItalian() {
     assertThat(LanguageCode.it.toLocale()).isSameAs(Locale.ITALIAN);
   }
 
 
   @Test
-  public void test23() {
+  public void toLocaleWithJaReturnsLocaleJapanese() {
     assertThat(LanguageCode.ja.toLocale()).isSameAs(Locale.JAPANESE);
   }
 
 
   @Test
-  public void test24() {
+  public void toLocaleWithKoReturnsLocaleKorean() {
     assertThat(LanguageCode.ko.toLocale()).isSameAs(Locale.KOREAN);
   }
 
 
   @Test
-  public void test25() {
+  public void toLocaleWithZhReturnsLocaleChinese() {
     assertThat(LanguageCode.zh.toLocale()).isSameAs(Locale.CHINESE);
   }
 
 
   @Test
-  public void test26() {
+  public void getByLocaleWithNullReturnsNull() {
     assertThat(getByLocale(null)).isNull();
   }
 
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test27() {
+  public void getByLocaleWithEmptyLocaleReturnsUndefined() {
     assertThat(getByLocale(new Locale(""))).isSameAs(LanguageCode.undefined);
   }
 
 
   @Test
-  public void test28() {
+  public void getByLocaleWithCanadaFrenchReturnsFr() {
     assertThat(getByLocale(Locale.CANADA_FRENCH)).isSameAs(LanguageCode.fr);
   }
 
 
   @Test
-  public void test29() {
+  public void getByLocaleWithChineseReturnsZh() {
     assertThat(getByLocale(Locale.CHINESE)).isSameAs(LanguageCode.zh);
   }
 
 
   @Test
-  public void test30() {
+  public void getByLocaleWithEnglishReturnsEn() {
     assertThat(getByLocale(Locale.ENGLISH)).isSameAs(LanguageCode.en);
   }
 
 
   @Test
-  public void test31() {
+  public void getByLocaleWithFrenchReturnsFr() {
     assertThat(getByLocale(Locale.FRENCH)).isSameAs(LanguageCode.fr);
   }
 
 
   @Test
-  public void test32() {
+  public void getByLocaleWithGermanReturnsDe() {
     assertThat(getByLocale(Locale.GERMAN)).isSameAs(LanguageCode.de);
   }
 
 
   @Test
-  public void test33() {
+  public void getByLocaleWithItalianReturnsIt() {
     assertThat(getByLocale(Locale.ITALIAN)).isSameAs(LanguageCode.it);
   }
 
 
   @Test
-  public void test34() {
+  public void getByLocaleWithJapaneseReturnsJa() {
     assertThat(getByLocale(Locale.JAPANESE)).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test35() {
+  public void getByLocaleWithKoreanReturnsKo() {
     assertThat(getByLocale(Locale.KOREAN)).isSameAs(LanguageCode.ko);
   }
 
 
   @Test
-  public void test36() {
+  public void getByLocaleWithSimplifiedChineseReturnsZh() {
     assertThat(getByLocale(Locale.SIMPLIFIED_CHINESE)).isSameAs(LanguageCode.zh);
   }
 
 
   @Test
-  public void test37() {
+  public void getByLocaleWithTraditionalChineseReturnsZh() {
     assertThat(getByLocale(Locale.TRADITIONAL_CHINESE)).isSameAs(LanguageCode.zh);
   }
 
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test38() {
+  public void getByLocaleWithLanguageOnlyLocaleReturnsJa() {
     assertThat(getByLocale(new Locale("ja"))).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test39() {
+  public void getByLocaleWithLanguageAndCountryLocaleReturnsJa() {
     assertThat(getByLocale(new Locale("ja", "JP"))).isSameAs(LanguageCode.ja);
   }
 
 
   @Test
-  public void test40() {
+  public void getByCodeWithAlpha2BoReturnsBo() {
     assertThat(getByCode("bo")).isSameAs(LanguageCode.bo);
   }
 
 
   @Test
-  public void test41() {
+  public void getByCodeWithTerminologyBodReturnsBo() {
     assertThat(getByCode("bod")).isSameAs(LanguageCode.bo);
   }
 
 
   @Test
-  public void test42() {
+  public void getByCodeWithBibliographicTibReturnsBo() {
     assertThat(getByCode("tib")).isSameAs(LanguageCode.bo);
   }
 
 
   @Test
-  public void test43() {
+  public void getByCodeWithAlpha2EuReturnsEu() {
     assertThat(getByCode("eu")).isSameAs(LanguageCode.eu);
   }
 
 
   @Test
-  public void test44() {
+  public void getByCodeWithTerminologyEusReturnsEu() {
     assertThat(getByCode("eus")).isSameAs(LanguageCode.eu);
   }
 
 
   @Test
-  public void test45() {
+  public void getByCodeWithBibliographicBaqReturnsEu() {
     assertThat(getByCode("baq")).isSameAs(LanguageCode.eu);
   }
 
 
   @Test
-  public void test46() {
+  public void getByCodeWithAlpha2CsReturnsCs() {
     assertThat(getByCode("cs")).isSameAs(LanguageCode.cs);
   }
 
 
   @Test
-  public void test47() {
+  public void getByCodeWithTerminologyCesReturnsCs() {
     assertThat(getByCode("ces")).isSameAs(LanguageCode.cs);
   }
 
 
   @Test
-  public void test48() {
+  public void getByCodeWithBibliographicCzeReturnsCs() {
     assertThat(getByCode("cze")).isSameAs(LanguageCode.cs);
   }
 
 
   @Test
-  public void test49() {
+  public void getByCodeWithAlpha2CyReturnsCy() {
     assertThat(getByCode("cy")).isSameAs(LanguageCode.cy);
   }
 
 
   @Test
-  public void test50() {
+  public void getByCodeWithTerminologyCymReturnsCy() {
     assertThat(getByCode("cym")).isSameAs(LanguageCode.cy);
   }
 
 
   @Test
-  public void test51() {
+  public void getByCodeWithBibliographicWelReturnsCy() {
     assertThat(getByCode("wel")).isSameAs(LanguageCode.cy);
   }
 
 
   @Test
-  public void test52() {
+  public void getByCodeWithAlpha2DeReturnsDe() {
     assertThat(getByCode("de")).isSameAs(LanguageCode.de);
   }
 
 
   @Test
-  public void test53() {
+  public void getByCodeWithTerminologyDeuReturnsDe() {
     assertThat(getByCode("deu")).isSameAs(LanguageCode.de);
   }
 
 
   @Test
-  public void test54() {
+  public void getByCodeWithBibliographicGerReturnsDe() {
     assertThat(getByCode("ger")).isSameAs(LanguageCode.de);
   }
 
 
   @Test
-  public void test55() {
+  public void getByCodeWithAlpha2ElReturnsEl() {
     assertThat(getByCode("el")).isSameAs(LanguageCode.el);
   }
 
 
   @Test
-  public void test56() {
+  public void getByCodeWithTerminologyEllReturnsEl() {
     assertThat(getByCode("ell")).isSameAs(LanguageCode.el);
   }
 
 
   @Test
-  public void test57() {
+  public void getByCodeWithBibliographicGreReturnsEl() {
     assertThat(getByCode("gre")).isSameAs(LanguageCode.el);
   }
 
 
   @Test
-  public void test58() {
+  public void getByCodeWithAlpha2FaReturnsFa() {
     assertThat(getByCode("fa")).isSameAs(LanguageCode.fa);
   }
 
 
   @Test
-  public void test59() {
+  public void getByCodeWithBibliographicPerReturnsFa() {
     assertThat(getByCode("per")).isSameAs(LanguageCode.fa);
   }
 
 
   @Test
-  public void test60() {
+  public void getByCodeWithTerminologyFasReturnsFa() {
     assertThat(getByCode("fas")).isSameAs(LanguageCode.fa);
   }
 
 
   @Test
-  public void test61() {
+  public void getByCodeWithAlpha2FrReturnsFr() {
     assertThat(getByCode("fr")).isSameAs(LanguageCode.fr);
   }
 
 
   @Test
-  public void test62() {
+  public void getByCodeWithTerminologyFraReturnsFr() {
     assertThat(getByCode("fra")).isSameAs(LanguageCode.fr);
   }
 
 
   @Test
-  public void test63() {
+  public void getByCodeWithBibliographicFreReturnsFr() {
     assertThat(getByCode("fre")).isSameAs(LanguageCode.fr);
   }
 
 
   @Test
-  public void test64() {
+  public void getByCodeWithAlpha2HyReturnsHy() {
     assertThat(getByCode("hy")).isSameAs(LanguageCode.hy);
   }
 
 
   @Test
-  public void test65() {
+  public void getByCodeWithTerminologyHyeReturnsHy() {
     assertThat(getByCode("hye")).isSameAs(LanguageCode.hy);
   }
 
 
   @Test
-  public void test66() {
+  public void getByCodeWithBibliographicArmReturnsHy() {
     assertThat(getByCode("arm")).isSameAs(LanguageCode.hy);
   }
 
 
   @Test
-  public void test67() {
+  public void getByCodeWithAlpha2IsReturnsIs() {
     assertThat(getByCode("is")).isSameAs(LanguageCode.is);
   }
 
 
   @Test
-  public void test68() {
+  public void getByCodeWithTerminologyIslReturnsIs() {
     assertThat(getByCode("isl")).isSameAs(LanguageCode.is);
   }
 
 
   @Test
-  public void test69() {
+  public void getByCodeWithBibliographicIceReturnsIs() {
     assertThat(getByCode("ice")).isSameAs(LanguageCode.is);
   }
 
 
   @Test
-  public void test70() {
+  public void getByCodeWithAlpha2KaReturnsKa() {
     assertThat(getByCode("ka")).isSameAs(LanguageCode.ka);
   }
 
 
   @Test
-  public void test71() {
+  public void getByCodeWithTerminologyKatReturnsKa() {
     assertThat(getByCode("kat")).isSameAs(LanguageCode.ka);
   }
 
 
   @Test
-  public void test72() {
+  public void getByCodeWithBibliographicGeoReturnsKa() {
     assertThat(getByCode("geo")).isSameAs(LanguageCode.ka);
   }
 
 
   @Test
-  public void test73() {
+  public void getByCodeWithAlpha2MiReturnsMi() {
     assertThat(getByCode("mi")).isSameAs(LanguageCode.mi);
   }
 
 
   @Test
-  public void test74() {
+  public void getByCodeWithTerminologyMriReturnsMi() {
     assertThat(getByCode("mri")).isSameAs(LanguageCode.mi);
   }
 
 
   @Test
-  public void test75() {
+  public void getByCodeWithBibliographicMaoReturnsMi() {
     assertThat(getByCode("mao")).isSameAs(LanguageCode.mi);
   }
 
 
   @Test
-  public void test76() {
+  public void getByCodeWithAlpha2MkReturnsMk() {
     assertThat(getByCode("mk")).isSameAs(LanguageCode.mk);
   }
 
 
   @Test
-  public void test77() {
+  public void getByCodeWithTerminologyMkdReturnsMk() {
     assertThat(getByCode("mkd")).isSameAs(LanguageCode.mk);
   }
 
 
   @Test
-  public void test78() {
+  public void getByCodeWithBibliographicMacReturnsMk() {
     assertThat(getByCode("mac")).isSameAs(LanguageCode.mk);
   }
 
 
   @Test
-  public void test79() {
+  public void getByCodeWithAlpha2MsReturnsMs() {
     assertThat(getByCode("ms")).isSameAs(LanguageCode.ms);
   }
 
 
   @Test
-  public void test80() {
+  public void getByCodeWithTerminologyMsaReturnsMs() {
     assertThat(getByCode("msa")).isSameAs(LanguageCode.ms);
   }
 
 
   @Test
-  public void test81() {
+  public void getByCodeWithBibliographicMayReturnsMs() {
     assertThat(getByCode("may")).isSameAs(LanguageCode.ms);
   }
 
 
   @Test
-  public void test82() {
+  public void getByCodeWithAlpha2MyReturnsMy() {
     assertThat(getByCode("my")).isSameAs(LanguageCode.my);
   }
 
 
   @Test
-  public void test83() {
+  public void getByCodeWithTerminologyMyaReturnsMy() {
     assertThat(getByCode("mya")).isSameAs(LanguageCode.my);
   }
 
 
   @Test
-  public void test84() {
+  public void getByCodeWithBibliographicBurReturnsMy() {
     assertThat(getByCode("bur")).isSameAs(LanguageCode.my);
   }
 
 
   @Test
-  public void test85() {
+  public void getByCodeWithAlpha2NlReturnsNl() {
     assertThat(getByCode("nl")).isSameAs(LanguageCode.nl);
   }
 
 
   @Test
-  public void test86() {
+  public void getByCodeWithTerminologyNldReturnsNl() {
     assertThat(getByCode("nld")).isSameAs(LanguageCode.nl);
   }
 
 
   @Test
-  public void test87() {
+  public void getByCodeWithBibliographicDutReturnsNl() {
     assertThat(getByCode("dut")).isSameAs(LanguageCode.nl);
   }
 
 
   @Test
-  public void test88() {
+  public void getByCodeWithAlpha2RoReturnsRo() {
     assertThat(getByCode("ro")).isSameAs(LanguageCode.ro);
   }
 
 
   @Test
-  public void test89() {
+  public void getByCodeWithTerminologyRonReturnsRo() {
     assertThat(getByCode("ron")).isSameAs(LanguageCode.ro);
   }
 
 
   @Test
-  public void test90() {
+  public void getByCodeWithBibliographicRumReturnsRo() {
     assertThat(getByCode("rum")).isSameAs(LanguageCode.ro);
   }
 
 
   @Test
-  public void test91() {
+  public void getByCodeWithAlpha2SkReturnsSk() {
     assertThat(getByCode("sk")).isSameAs(LanguageCode.sk);
   }
 
 
   @Test
-  public void test92() {
+  public void getByCodeWithTerminologySlkReturnsSk() {
     assertThat(getByCode("slk")).isSameAs(LanguageCode.sk);
   }
 
 
   @Test
-  public void test93() {
+  public void getByCodeWithBibliographicSloReturnsSk() {
     assertThat(getByCode("slo")).isSameAs(LanguageCode.sk);
   }
 
 
   @Test
-  public void test94() {
+  public void getByCodeWithAlpha2SqReturnsSq() {
     assertThat(getByCode("sq")).isSameAs(LanguageCode.sq);
   }
 
 
   @Test
-  public void test95() {
+  public void getByCodeWithTerminologySqiReturnsSq() {
     assertThat(getByCode("sqi")).isSameAs(LanguageCode.sq);
   }
 
 
   @Test
-  public void test96() {
+  public void getByCodeWithBibliographicAlbReturnsSq() {
     assertThat(getByCode("alb")).isSameAs(LanguageCode.sq);
   }
 
 
   @Test
-  public void test97() {
+  public void getAlpha3ForBoReturnsBod() {
     assertThat(LanguageCode.bo.getAlpha3()).isSameAs(LanguageAlpha3Code.bod);
   }
 
 
   @Test
-  public void test98() {
+  public void getAlpha3ForEuReturnsEus() {
     assertThat(LanguageCode.eu.getAlpha3()).isSameAs(LanguageAlpha3Code.eus);
   }
 
 
   @Test
-  public void test99() {
+  public void getAlpha3ForCsReturnsCes() {
     assertThat(LanguageCode.cs.getAlpha3()).isSameAs(LanguageAlpha3Code.ces);
   }
 
 
   @Test
-  public void test100() {
+  public void getAlpha3ForCyReturnsCym() {
     assertThat(LanguageCode.cy.getAlpha3()).isSameAs(LanguageAlpha3Code.cym);
   }
 
 
   @Test
-  public void test101() {
+  public void getAlpha3ForDeReturnsDeu() {
     assertThat(LanguageCode.de.getAlpha3()).isSameAs(LanguageAlpha3Code.deu);
   }
 
 
   @Test
-  public void test102() {
+  public void getAlpha3ForElReturnsEll() {
     assertThat(LanguageCode.el.getAlpha3()).isSameAs(LanguageAlpha3Code.ell);
   }
 
 
   @Test
-  public void test103() {
+  public void getAlpha3ForFaReturnsFas() {
     assertThat(LanguageCode.fa.getAlpha3()).isSameAs(LanguageAlpha3Code.fas);
   }
 
 
   @Test
-  public void test104() {
+  public void getAlpha3ForFrReturnsFra() {
     assertThat(LanguageCode.fr.getAlpha3()).isSameAs(LanguageAlpha3Code.fra);
   }
 
 
   @Test
-  public void test105() {
+  public void getAlpha3ForHyReturnsHye() {
     assertThat(LanguageCode.hy.getAlpha3()).isSameAs(LanguageAlpha3Code.hye);
   }
 
 
   @Test
-  public void test106() {
+  public void getAlpha3ForIsReturnsIsl() {
     assertThat(LanguageCode.is.getAlpha3()).isSameAs(LanguageAlpha3Code.isl);
   }
 
 
   @Test
-  public void test107() {
+  public void getAlpha3ForKaReturnsKat() {
     assertThat(LanguageCode.ka.getAlpha3()).isSameAs(LanguageAlpha3Code.kat);
   }
 
 
   @Test
-  public void test108() {
+  public void getAlpha3ForMiReturnsMri() {
     assertThat(LanguageCode.mi.getAlpha3()).isSameAs(LanguageAlpha3Code.mri);
   }
 
 
   @Test
-  public void test109() {
+  public void getAlpha3ForMkReturnsMkd() {
     assertThat(LanguageCode.mk.getAlpha3()).isSameAs(LanguageAlpha3Code.mkd);
   }
 
 
   @Test
-  public void test110() {
+  public void getAlpha3ForMsReturnsMsa() {
     assertThat(LanguageCode.ms.getAlpha3()).isSameAs(LanguageAlpha3Code.msa);
   }
 
 
   @Test
-  public void test111() {
+  public void getAlpha3ForMyReturnsMya() {
     assertThat(LanguageCode.my.getAlpha3()).isSameAs(LanguageAlpha3Code.mya);
   }
 
 
   @Test
-  public void test112() {
+  public void getAlpha3ForNlReturnsNld() {
     assertThat(LanguageCode.nl.getAlpha3()).isSameAs(LanguageAlpha3Code.nld);
   }
 
 
   @Test
-  public void test113() {
+  public void getAlpha3ForRoReturnsRon() {
     assertThat(LanguageCode.ro.getAlpha3()).isSameAs(LanguageAlpha3Code.ron);
   }
 
 
   @Test
-  public void test114() {
+  public void getAlpha3ForSkReturnsSlk() {
     assertThat(LanguageCode.sk.getAlpha3()).isSameAs(LanguageAlpha3Code.slk);
   }
 
 
   @Test
-  public void test115() {
+  public void getAlpha3ForSqReturnsSqi() {
     assertThat(LanguageCode.sq.getAlpha3()).isSameAs(LanguageAlpha3Code.sqi);
   }
 
 
   @Test
-  public void test116() {
+  public void getAlpha3ForJaReturnsJpn() {
     assertThat(LanguageCode.ja.getAlpha3()).isSameAs(LanguageAlpha3Code.jpn);
   }
 
 
   @Test
-  public void test117() {
+  public void getNameForJaReturnsJapanese() {
     assertThat(LanguageCode.ja.getName()).isSameAs("Japanese");
   }
 
 
   @Test
-  public void test118() {
+  public void findByNameWithNeseSuffixReturnsMatchingLanguageCodes() {
     List<LanguageCode> list = LanguageCode.findByName(".*nese");
 
     assertThat(list).hasSize(5);
@@ -747,19 +747,19 @@ class LanguageCodeTest {
 
 
   @Test
-  public void test119() {
+  public void getByCodeWithUndefinedReturnsUndefined() {
     assertThat(getByCode("undefined")).isSameAs(LanguageCode.undefined);
   }
 
 
   @Test
-  public void test120() {
+  public void getByCodeWithUndefinedInUpperCaseReturnsNull() {
     assertThat(getByCode("UNDEFINED")).isNull();
   }
 
 
   @Test
-  public void test121() {
+  public void getByCodeWithUndefinedInUpperCaseAndCaseSensitiveFalseReturnsUndefined() {
     assertThat(getByCode("UNDEFINED", false)).isSameAs(LanguageCode.undefined);
   }
 
