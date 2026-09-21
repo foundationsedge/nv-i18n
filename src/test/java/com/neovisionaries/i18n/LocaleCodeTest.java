@@ -322,7 +322,7 @@ class LocaleCodeTest {
   }
 
   @Test
-  public void test15() {
+  public void toLocaleForUndefinedMatchesTheRootLocale() {
     Locale undefinedLocale = LocaleCode.undefined.toLocale();
 
     try {
@@ -336,200 +336,200 @@ class LocaleCodeTest {
 
 
   @Test
-  public void test16() {
+  public void getByLocaleWithJapaneseReturnsJa() {
     assertThat(getByLocale(Locale.JAPANESE)).isSameAs(LocaleCode.ja);
   }
 
 
   @Test
-  public void test17() {
+  public void getByLocaleWithJapanReturnsJaJp() {
     assertThat(getByLocale(Locale.JAPAN)).isSameAs(LocaleCode.ja_JP);
   }
 
 
   @Test
   @SuppressWarnings("deprecation")
-  public void test18() {
+  public void getByLocaleWithEmptyLocaleReturnsUndefined() {
     assertThat(getByLocale(new Locale("", ""))).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test19() {
+  public void getByCodeWithUndefinedLanguageAndNullCountryReturnsUndefined() {
     assertThat(getByCode("undefined", null)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test20() {
+  public void getByCodeWithUndefinedLanguageInUpperCaseAndNullCountryReturnsNull() {
     assertThat(getByCode("UNDEFINED", null)).isNull();
   }
 
 
   @Test
-  public void test21() {
+  public void getByCodeWithUndefinedLanguageAndNullCountryIgnoringCaseReturnsUndefined() {
     assertThat(getByCode("UNDEFINED", null, false)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test22() {
+  public void getByCodeWithUndefinedLanguageAndUndefinedCountryInUpperCaseReturnsUndefined() {
     assertThat(getByCode("undefined", "UNDEFINED")).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test23() {
+  public void getByCodeWithUndefinedLanguageAndUndefinedCountryInLowerCaseReturnsNull() {
     assertThat(getByCode("undefined", "undefined")).isNull();
   }
 
 
   @Test
-  public void test24() {
+  public void getByCodeWithUndefinedLanguageAndUndefinedCountryInLowerCaseIgnoringCaseReturnsUndefined() {
     assertThat(getByCode("undefined", "undefined", false)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test25() {
+  public void getByCodeWithUndefinedReturnsUndefined() {
     assertThat(getByCode("undefined")).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test26() {
+  public void getByCodeWithUndefinedInUpperCaseReturnsNull() {
     assertThat(getByCode("UNDEFINED")).isNull();
   }
 
 
   @Test
-  public void test27() {
+  public void getByCodeWithUndefinedInUpperCaseIgnoringCaseReturnsUndefined() {
     assertThat(getByCode("UNDEFINED", false)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test28() {
+  public void getByCodeWithUndefinedDashUndefinedInUpperCaseReturnsUndefined() {
     assertThat(getByCode("undefined-UNDEFINED")).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test29() {
+  public void getByCodeWithUndefinedDashUndefinedInLowerCaseReturnsNull() {
     assertThat(getByCode("undefined-undefined")).isNull();
   }
 
 
   @Test
-  public void test30() {
+  public void getByCodeWithUndefinedDashUndefinedInLowerCaseIgnoringCaseReturnsUndefined() {
     assertThat(getByCode("undefined-undefined", false)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test31() {
+  public void getByCodeWithUndefinedUnderscoreUndefinedInUpperCaseReturnsUndefined() {
     assertThat(getByCode("undefined_UNDEFINED")).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test32() {
+  public void getByCodeWithUndefinedUnderscoreUndefinedInLowerCaseReturnsNull() {
     assertThat(getByCode("undefined_undefined")).isNull();
   }
 
 
   @Test
-  public void test33() {
+  public void getByCodeWithUndefinedUnderscoreUndefinedInLowerCaseIgnoringCaseReturnsUndefined() {
     assertThat(getByCode("undefined_undefined", false)).isSameAs(LocaleCode.undefined);
   }
 
 
   @Test
-  public void test34() {
+  public void getByCodeWithJaReturnsJa() {
     assertThat(getByCode("ja")).isSameAs(LocaleCode.ja);
   }
 
 
   @Test
-  public void test35() {
+  public void getByCodeWithJaInUpperCaseReturnsNull() {
     assertThat(getByCode("JA")).isNull();
   }
 
 
   @Test
-  public void test36() {
+  public void getByCodeWithJaInUpperCaseIgnoringCaseReturnsJa() {
     assertThat(getByCode("JA", false)).isSameAs(LocaleCode.ja);
   }
 
 
   @Test
-  public void test37() {
+  public void getByCodeWithJaDashJpReturnsJaJp() {
     assertThat(getByCode("ja-JP")).isSameAs(LocaleCode.ja_JP);
   }
 
 
   @Test
-  public void test38() {
+  public void getByCodeWithJaDashJpInLowerCaseReturnsNull() {
     assertThat(getByCode("ja-jp")).isNull();
   }
 
 
   @Test
-  public void test39() {
+  public void getByCodeWithJaDashJpInLowerCaseIgnoringCaseReturnsJaJp() {
     assertThat(getByCode("ja-jp", false)).isSameAs(LocaleCode.ja_JP);
   }
 
 
   @Test
-  public void test40() {
+  public void getByCodeWithJaUnderscoreJpReturnsJaJp() {
     assertThat(getByCode("ja_JP")).isSameAs(LocaleCode.ja_JP);
   }
 
 
   @Test
-  public void test41() {
+  public void getByCodeWithJaUnderscoreJpInLowerCaseReturnsNull() {
     assertThat(getByCode("ja_jp")).isNull();
   }
 
 
   @Test
-  public void test42() {
+  public void getByCodeWithJaUnderscoreJpInLowerCaseIgnoringCaseReturnsJaJp() {
     assertThat(getByCode("ja_jp", false)).isSameAs(LocaleCode.ja_JP);
   }
 
 
   @Test
-  public void test43() {
+  public void getByCodeWithJaPlusJpReturnsNull() {
     assertThat(getByCode("ja+JP")).isNull();
   }
 
 
   @Test
-  public void test44() {
+  public void getByCodeWithNullReturnsNull() {
     assertThat(getByCode(null)).isNull();
   }
 
 
   @Test
-  public void test45() {
+  public void getByCodeWithEmptyStringReturnsNull() {
     assertThat(getByCode("")).isNull();
   }
 
 
   @Test
-  public void test46() {
+  public void getByCodeWithRoMdIgnoringCaseReturnsRoMd() {
     assertThat(getByCode("ro_MD", false)).isSameAs(LocaleCode.ro_MD);
   }
 
 
   @Test
-  public void test47() {
+  public void getByCodeWithUrPkIgnoringCaseReturnsUrPk() {
     assertThat(getByCode("ur_PK", false)).isSameAs(LocaleCode.ur_PK);
   }
 
 
   @Test
-  public void test48() {
+  public void getByCodeWithBsBaIgnoringCaseReturnsBsBa() {
     assertThat(getByCode("bs_BA", false)).isSameAs(LocaleCode.bs_BA);
   }
 
