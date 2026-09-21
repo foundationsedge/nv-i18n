@@ -2832,11 +2832,7 @@ public enum LocaleCode {
    * <p>
    * In addition, {@code toLocale()} of {@link LocaleCode#undefined
    * LocaleCode.undefined} behaves a bit differently. It returns
-   * {@link Locale#ROOT Locale.ROOT} when it is available (i.e. when
-   * the version of Java SE is 1.6 or higher). Otherwise, it returns
-   * a {@code Locale} instance whose language and country are empty
-   * strings. Even in the latter case, the same instance is returned
-   * on every call.
+   * {@link Locale#ROOT Locale.ROOT}.
    * </p>
    *
    * @return A {@code Locale} instance that matches this {@code LocaleCode}.
@@ -3288,13 +3284,9 @@ public enum LocaleCode {
   @SuppressWarnings("deprecation")
   private static Locale getUndefinedLocale() {
     try {
-      // Try to get Locale.ROOT which is available since Java SE 1.6.
       Field root = Locale.class.getDeclaredField("ROOT");
-
-      // Return Locale.ROOT.
       return (Locale) root.get(null);
     } catch (Exception e) {
-      // Simulate Locale.ROOT.
       return new Locale("", "");
     }
   }
