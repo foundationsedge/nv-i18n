@@ -70,6 +70,11 @@ Run mutation testings
 ```shell
 mvn :pitest:mutationCoverage
 ```
+SpotBugs runs automatically as part of `mvn package`, and will fail the build on any findings.
+To run it on its own, without a full package build
+```shell
+mvn spotbugs:check
+```
 
 #### Code style
 

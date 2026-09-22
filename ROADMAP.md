@@ -34,7 +34,7 @@ expand that here:
 - [ ] refactor tests to have meaningful names
 - [x] give meaningful captions to Javadoc tables (to get things working we just dropped in "placeholder")
 - [ ] clean up outstanding mutants identified from Pitest
-- [ ] consider adding SpotBugs
+- [x] consider adding SpotBugs
 - [ ] consider adding ArchUnit (very unlikely)
 - [ ] consider wiring up PiTest to build pipeline
 - [x] gain passing badge at [OSSF Badge](https://www.bestpractices.dev)
