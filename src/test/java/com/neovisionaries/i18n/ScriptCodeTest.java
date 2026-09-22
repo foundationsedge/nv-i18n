@@ -8,12 +8,14 @@ package com.neovisionaries.i18n;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 import org.junit.jupiter.api.Test;
 
 import static com.neovisionaries.i18n.ScriptCode.getByCode;
 import static com.neovisionaries.i18n.ScriptCode.getByCodeIgnoreCase;
 import static com.neovisionaries.i18n.ScriptCode.getByLocale;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ScriptCodeTest {
 
@@ -146,5 +148,19 @@ class ScriptCodeTest {
   @Test
   void getNumericReturnsMatchingNumericValueCyrillic() {
     assertThat(ScriptCode.Cyrl.getNumeric()).isEqualTo(220);
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullString() {
+    String regex = null;
+    assertThatThrownBy(() -> ScriptCode.findByName(regex))
+      .isInstanceOf(IllegalArgumentException.class);
+  }
+
+  @Test
+  void findByNameThrowsExceptionWhenPassedNullPattern() {
+    Pattern pattern = null;
+    assertThatThrownBy(() -> ScriptCode.findByName(pattern))
+      .isInstanceOf(IllegalArgumentException.class);
   }
 }
