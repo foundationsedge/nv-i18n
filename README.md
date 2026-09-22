@@ -1,24 +1,22 @@
 nv-i18n
 =======
 
+[![Build](https://img.shields.io/github/actions/workflow/status/foundationsedge/nv-i18n/ci.yml?branch=master)](https://github.com/foundationsedge/nv-i18n/actions/workflows/ci.yml)
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/foundationsedge/nv-i18n/latest)
 ![GitHub contributors](https://img.shields.io/github/contributors/foundationsedge/nv-i18n)
 [![CLA assistant](https://cla-assistant.io/readme/badge/foundationsedge/nv-i18n)](https://cla-assistant.io/foundationsedge/nv-i18n)
+![Maven Central Version](https://img.shields.io/maven-central/v/uk.co.foundationsedge/nv-i18n)
+[![MvnRepository](https://badges.mvnrepository.com/badge/uk.co.foundationsedge/nv-i18n/badge.svg)](https://mvnrepository.com/artifact/uk.co.foundationsedge/nv-i18n/)
 ![Maven Central Last Update](https://img.shields.io/maven-central/last-update/uk.co.foundationsedge/nv-i18n)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14193/badge)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Baseline](https://www.bestpractices.dev/projects/14193/baseline)](https://www.bestpractices.dev/projects/14193)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/foundationsedge/nv-i18n/badge)](https://scorecard.dev/viewer/?uri=github.com/foundationsedge/nv-i18n)
 ![OSS Lifecycle](https://img.shields.io/osslifecycle?file_url=https%3A%2F%2Fraw.githubusercontent.com%2Ffoundationsedge%2Fnv-i18n%2Fmaster%2FOSSMETADATA)
 ![GitHub License](https://img.shields.io/github/license/foundationsedge/nv-i18n)
-[![jdk badge](https://img.shields.io/badge/jdk-8-green.svg)](https://adoptium.net/en-GB/temurin/releases)
-[![MvnRepository](https://badges.mvnrepository.com/badge/uk.co.foundationsedge/nv-i18n/badge.svg)](https://mvnrepository.com/artifact/uk.co.foundationsedge/nv-i18n/)
+[![jdk badge](https://img.shields.io/badge/dynamic/xml?url=https://raw.githubusercontent.com/foundationsedge/nv-i18n/master/pom.xml&query=//*%5Blocal-name()=%27source%27%5D&label=jdk)](https://adoptium.net/en-GB/temurin/releases)
+[![javadoc](https://javadoc.io/badge2/uk.co.foundationsedge/nv-i18n/javadoc.svg)](https://javadoc.io/doc/uk.co.foundationsedge/nv-i18n)
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=foundationsedge_nv-i18n&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=foundationsedge_nv-i18n)
-[![OSSTRL level 6](https://raw.githubusercontent.com/adulau/osstrl/main/badges/osstrl-6.svg)](https://github.com/adulau/osstrl)
-
-<!--![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/foundationsedge/nv-i18n)-->
-<!--![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/maven/uk.co.foundationsedge%3Anv-i18n)-->
-<!--![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/maven/uk.co.foundationsedge%3Anv-i18n)-->
-<!--![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/foundationsedge/nv-i18n)-->
+<a href="https://github.com/adulau/osstrl"><img src="https://raw.githubusercontent.com/adulau/osstrl/main/badges/osstrl-6.svg" alt="OSSTRL level 6" height="20"></a>
 
 Overview
 --------
@@ -69,7 +67,7 @@ Gradle
 
 ```gradle
 dependencies {
-    compile 'uk.co.foundationsedge:nv-i18n:version-number'
+    implementation 'uk.co.foundationsedge:nv-i18n:version-number'
 }
 ```
 
@@ -84,7 +82,7 @@ Export-Package: uk.co.foundationsedge;version="version-number"
 Source Code
 -----------
 
-<code>https://github.com/foundationsedge/nv-i18n.git</code>
+[`https://github.com/foundationsedge/nv-i18n.git`](https://github.com/foundationsedge/nv-i18n.git)
 
 Example
 -------
@@ -96,21 +94,21 @@ See Also
 --------
 
 * [nv-i18n @ GitHub](https://github.com/TakahikoKawasaki/nv-i18n)
-* Country Code [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1)
-* Country Code [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
-* Country Code [ISO 3166-1 alpha-3](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
-* Country Code [ISO 3166-1 numeric](http://en.wikipedia.org/wiki/ISO_3166-1_numeric)
-* Language Code [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1)
-* Language Alpha3 Code [ISO 639-2](http://en.wikipedia.org/wiki/ISO_639-2)
-* Language Alpha3 Code [ISO 639-5](http://en.wikipedia.org/wiki/ISO_639-5)
-* Script Code [ISO 15924](http://en.wikipedia.org/wiki/ISO_15924)
-* Currency Code [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
+* Country Code [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)
+* Country Code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+* Country Code [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+* Country Code [ISO 3166-1 numeric](https://en.wikipedia.org/wiki/ISO_3166-1_numeric)
+* Language Code [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+* Language Alpha3 Code [ISO 639-2](https://en.wikipedia.org/wiki/ISO_639-2)
+* Language Alpha3 Code [ISO 639-5](https://en.wikipedia.org/wiki/ISO_639-5)
+* Script Code [ISO 15924](https://en.wikipedia.org/wiki/ISO_15924)
+* Currency Code [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)
 
 Note
 ----
 
-* This nv-i18n supersedes https://github.com/TakahikoKawasaki/nv-i18n/
-* That nv-i18n superseded https://github.com/TakahikoKawasaki/CountryCode
+* This nv-i18n supersedes [TakahikoKawasaki/nv-i18n](https://github.com/TakahikoKawasaki/nv-i18n/)
+* That nv-i18n superseded [TakahikoKawasaki/CountryCode](https://github.com/TakahikoKawasaki/CountryCode)
 
 Original Author
 ------
