@@ -19,11 +19,13 @@ No dependencies
 
 We have plugins for PiTest, and ones required to build and publish the library.
 
-These can be seen in [pom.xml](https://github.com/foundationsedge/nv-i18n/pom.xml) and change too frequently to list here.
+These can be seen in [pom.xml](https://github.com/foundationsedge/nv-i18n/blob/master/pom.xml) and change too
+frequently to list here.
 
 ## GitHub Actions
 
-Our GitHub Actions are public and can be seen under `https://github.com/foundationsedge/nv-i18n/.github`.
+Our GitHub Actions are public and can be seen under
+[`.github`](https://github.com/foundationsedge/nv-i18n/tree/master/.github).
 We have updated these to use hashes rather than version numbers.
 
 ## JDK
