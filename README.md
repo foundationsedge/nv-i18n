@@ -44,7 +44,7 @@ Package to support internationalisation/internationalization/i18n, containing en
 | `LanguageAlpha3Code` | ISO 639-2, 639-5 language code.                              | 2026-09-14 (Wikipedia as source) |
 | `LocaleCode`         | Available locales whose format match either 'xx' or 'xx-XX'. | 2026-09-16 (JDK 27 as source)    |
 | `ScriptCode`         | ISO 15924 script code.                                       | 2026-08-28 (Wikipedia as source) |
-| `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-07-17 (Wikipedia as source) |
+| `CurrencyCode`       | ISO 4217 currency code.                                      | 2026-09-19 (ISO as source)       |
 
 License
 -------
