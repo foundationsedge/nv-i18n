@@ -70,6 +70,8 @@ Run mutation testings
 ```shell
 mvn :pitest:mutationCoverage
 ```
+`mvn compile` also runs Checkstyle, which the CI will execute, so like running `pitest`, this will help catch errors
+before CI runs.
 
 #### Code style
 
@@ -162,7 +164,7 @@ We are working on PiTest integration, and the ArcMutate licence _does_ appear in
 But this is [documented](https://docs.arcmutate.com/docs/licence-management.html#licence-locations) as the expected
 licence file location.
 
-As is standard in Github, secrets are stored but they can't be viewed/retrieved by anyone, but _can_ be overwritten
+As is standard in GitHub, secrets are stored, but they can't be viewed/retrieved by anyone, but _can_ be overwritten
 i.e. if they expire.
 
 ## Publishing Releases
