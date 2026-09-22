@@ -1,0 +1,48 @@
+# This workflow uses actions that are not certified by GitHub. They are provided
+# by a third-party and are governed by separate terms of service, privacy
+# policy, and support documentation.
+
+# Keeps the hook revisions pinned in .pre-commit-config.yaml current, since
+# Dependabot has no ecosystem for pre-commit hooks. Runs `pre-commit autoupdate`
+# on a schedule and opens a pull request when it finds newer hook revisions.
+name: Pre-commit autoupdate
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  autoupdate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit autoupdate
+        run: pre-commit autoupdate
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.AUTOMATION_PAT }}
+          commit-message: "chore: update pre-commit hook revisions"
+          title: "chore: update pre-commit hook revisions"
+          body: Automated update of hook revisions in `.pre-commit-config.yaml` via `pre-commit autoupdate`.
+          branch: pre-commit-autoupdate
+          delete-branch: true
