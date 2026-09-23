@@ -6,7 +6,6 @@
 package com.neovisionaries.i18n;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import org.junit.jupiter.api.Test;

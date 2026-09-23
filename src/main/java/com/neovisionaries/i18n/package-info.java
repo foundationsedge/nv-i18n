@@ -22,4 +22,3 @@
  * --></pre>
  */
 package com.neovisionaries.i18n;
-

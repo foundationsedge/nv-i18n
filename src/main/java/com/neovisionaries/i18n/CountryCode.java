@@ -32,7 +32,8 @@ import java.util.regex.Pattern;
  * {@link #getByCode(int)}).
  * </p>
  *
- * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+ * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+ * solid black; padding: 0.5em;">
  * <span style="color: darkgreen;">// List all the country codes.</span>
  * for (CountryCode code : CountryCode.values()) {
  *     <span style="color: darkgreen;">// For example, "[US] United States" is printed.</span>
@@ -54,7 +55,8 @@ import java.util.regex.Pattern;
  * System.out.println(<span style="color: darkred;">"ISO 3166-1 alpha-2 code = "</span> + code.{@link #getAlpha2()});
  * System.out.println(<span style="color: darkred;">"ISO 3166-1 alpha-3 code = "</span> + code.{@link #getAlpha3()});
  * System.out.println(<span style="color: darkred;">"ISO 3166-1 numeric code = "</span> + code.{@link #getNumeric()});
- * System.out.println(<span style="color: darkred;">"Assignment state        = "</span> + code.{@link #getAssignment()});
+ * System.out.println(<span style="color: darkred;">"Assignment state        = "</span>
+ *     + code.{@link #getAssignment()});
  *
  * <span style="color: darkgreen;">// Convert to a Locale instance.</span>
  * {@link Locale} locale = code.{@link #toLocale()};
@@ -76,7 +78,8 @@ import java.util.regex.Pattern;
  * //     CountryCode.UM : United States Minor Outlying Islands
  * //     CountryCode.US : United States
  * //</span>
- * List&lt;CountryCode&gt; list = CountryCode.{@link #findByName(String) findByName}(<span style="color: darkred;">".*United.*"</span>);
+ * List&lt;CountryCode&gt; list = CountryCode.{@link #findByName(String) findByName}(
+ *     <span style="color: darkred;">".*United.*"</span>);
  *
  * <span style="color: darkgreen;">
  * // For backward compatibility for older versions than 1.16, some
@@ -190,7 +193,8 @@ public enum CountryCode {
   AO("Angola", "AGO", 24, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization">African Regional Intellectual Property Organization</a>
+   * <a href="https://en.wikipedia.org/wiki/African_Regional_Intellectual_Property_Organization">
+   *   African Regional Intellectual Property Organization</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#AP">AP</a>, null, -1,
    * indeterminately reserved]
    */
@@ -405,7 +409,8 @@ public enum CountryCode {
   BW("Botswana", "BWA", 72, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Benelux_Office_for_Intellectual_Property">Benelux Trademarks and Designs Office</a>
+   * <a href="https://en.wikipedia.org/wiki/Benelux_Office_for_Intellectual_Property">
+   *   Benelux Trademarks and Designs Office</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#BX">BX</a>, null, -1,
    * Indeterminately reserved]
    */
@@ -682,11 +687,13 @@ public enum CountryCode {
   EE("Estonia", "EST", 233, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Unitary_patent#1970s_and_1980s:_proposed_Community_Patent_Convention">Union of Countries under the European Community Patent Convention</a>
+   * <a href="https://en.wikipedia.org/wiki/Unitary_patent#1970s_and_1980s:_proposed_Community_Patent_Convention">
+   *   Union of Countries under the European Community Patent Convention</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#EF">EF</a>, null, -1,
    * Indeterminately reserved]
    */
-  EF("Union of Countries under the European Community Patent Convention", null, -1, Assignment.INDETERMINATELY_RESERVED),
+  EF("Union of Countries under the European Community Patent Convention", null, -1,
+      Assignment.INDETERMINATELY_RESERVED),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Egypt">Egypt</a>
@@ -860,11 +867,13 @@ public enum CountryCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/GCC_Patent_Office">Patent Office of the Cooperation Council for the Arab States of the Gulf</a>
+   * <a href="https://en.wikipedia.org/wiki/GCC_Patent_Office">
+   *   Patent Office of the Cooperation Council for the Arab States of the Gulf</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#GC">GC</a>, null, -1,
    * Indeterminately reserved]
    */
-  GC("Patent Office of the Cooperation Council for the Arab States of the Gulf", null, -1, Assignment.INDETERMINATELY_RESERVED),
+  GC("Patent Office of the Cooperation Council for the Arab States of the Gulf", null, -1,
+      Assignment.INDETERMINATELY_RESERVED),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Grenada">Grenada</a>
@@ -951,7 +960,8 @@ public enum CountryCode {
   GR("Greece", "GRC", 300, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands">South Georgia and the South Sandwich Islands</a>
+   * <a href="https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands">
+   *   South Georgia and the South Sandwich Islands</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#GS">GS</a>, SGS, 239,
    * Officially assigned]
    */
@@ -1584,7 +1594,8 @@ public enum CountryCode {
   NZ("New Zealand", "NZL", 554, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Organisation_Africaine_de_la_Propri%C3%A9t%C3%A9_Intellectuelle">African Intellectual Property Organization</a>
+   * <a href="https://en.wikipedia.org/wiki/Organisation_Africaine_de_la_Propri%C3%A9t%C3%A9_Intellectuelle">
+   *   African Intellectual Property Organization</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#OA">OA</a>, null, -1,
    * Indeterminately reserved]
    */
@@ -1882,7 +1893,8 @@ public enum CountryCode {
   SG("Singapore", "SGP", 702, Assignment.OFFICIALLY_ASSIGNED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha">Saint Helena, Ascension and Tristan da Cunha</a>
+   * <a href="https://en.wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha">
+   *   Saint Helena, Ascension and Tristan da Cunha</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#SH">SH</a>, SHN, 654,
    * Officially assigned]
    */
@@ -2174,7 +2186,8 @@ public enum CountryCode {
   },
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands">United States Minor Outlying Islands</a>
+   * <a href="https://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands">
+   *   United States Minor Outlying Islands</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#UM">UM</a>, UMI, 581,
    * Officially assigned]
    */
@@ -2288,7 +2301,8 @@ public enum CountryCode {
   WL("Saint Lucia", null, -1, Assignment.INDETERMINATELY_RESERVED),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization">World Intellectual Property Organization</a>
+   * <a href="https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization">
+   *   World Intellectual Property Organization</a>
    * [<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#WO">WO</a>, null, -1,
    * Indeterminately reserved]
    */
@@ -2321,7 +2335,8 @@ public enum CountryCode {
 
   /**
    * <a href="https://en.wikipedia.org/wiki/United_Kingdom">United Kingdom (excluding Northern Ireland)</a>
-   * [<a href="https://ec.europa.eu/taxation_customs/sites/taxation/files/use_of_gb_and_xi_codes_guidance.pdf">XU</a>, XXU, -1,
+   * [<a href="https://ec.europa.eu/taxation_customs/sites/taxation/files/use_of_gb_and_xi_codes_guidance.pdf">
+   *   XU</a>, XXU, -1,
    * User assigned]
    *
    * @since 1.29
@@ -2816,7 +2831,7 @@ public enum CountryCode {
         if ("UNDEFINED".equals(code)) {
           return CountryCode.UNDEFINED;
         }
-        // FALLTHROUGH
+        // fallthrough
 
       default:
         return null;
@@ -3062,7 +3077,8 @@ public enum CountryCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+   * solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*United.*""</span>);
    * List&lt;CountryCode&gt; list = CountryCode.findByName(pattern);</pre>
    *
