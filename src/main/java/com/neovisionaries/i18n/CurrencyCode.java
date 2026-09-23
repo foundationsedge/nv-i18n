@@ -143,7 +143,8 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#TV TV}: TUVALU
    * </ul>
    */
-  AUD("Australian Dollar", 36, 2, CountryCode.AU, CountryCode.CC, CountryCode.CX, CountryCode.HM, CountryCode.KI, CountryCode.NF, CountryCode.NR, CountryCode.TV),
+  AUD("Australian Dollar", 36, 2, CountryCode.AU, CountryCode.CC, CountryCode.CX, CountryCode.HM, CountryCode.KI,
+      CountryCode.NF, CountryCode.NR, CountryCode.TV),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Aruban_florin">Aruban Florin</a>
@@ -693,7 +694,12 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#YT YT}: MAYOTTE
    * </ul>
    */
-  EUR("Euro", 978, 2, CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG, CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EA, CountryCode.EE, CountryCode.ES, CountryCode.EU, CountryCode.FI, CountryCode.FR, CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IC, CountryCode.IE, CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV, CountryCode.MC, CountryCode.ME, CountryCode.MF, CountryCode.MQ, CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT, CountryCode.RE, CountryCode.SI, CountryCode.SK, CountryCode.SM, CountryCode.TF, CountryCode.VA, CountryCode.XK, CountryCode.YT),
+  EUR("Euro", 978, 2, CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG, CountryCode.BL,
+      CountryCode.CY, CountryCode.DE, CountryCode.EA, CountryCode.EE, CountryCode.ES, CountryCode.EU, CountryCode.FI,
+      CountryCode.FR, CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IC, CountryCode.IE,
+      CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV, CountryCode.MC, CountryCode.ME, CountryCode.MF,
+      CountryCode.MQ, CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT, CountryCode.RE, CountryCode.SI,
+      CountryCode.SK, CountryCode.SM, CountryCode.TF, CountryCode.VA, CountryCode.XK, CountryCode.YT),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Fiji_dollar">Fiji Dollar</a>
@@ -1953,7 +1959,9 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#VI VI}: VIRGIN ISLANDS (US)
    * </ul>
    */
-  USD("US Dollar", 840, 2, CountryCode.AS, CountryCode.BQ, CountryCode.EC, CountryCode.FM, CountryCode.GU, CountryCode.IO, CountryCode.LR, CountryCode.MH, CountryCode.MP, CountryCode.PA, CountryCode.PR, CountryCode.PW, CountryCode.SV, CountryCode.TC, CountryCode.TL, CountryCode.UM, CountryCode.US, CountryCode.VG, CountryCode.VI),
+  USD("US Dollar", 840, 2, CountryCode.AS, CountryCode.BQ, CountryCode.EC, CountryCode.FM, CountryCode.GU,
+      CountryCode.IO, CountryCode.LR, CountryCode.MH, CountryCode.MP, CountryCode.PA, CountryCode.PR, CountryCode.PW,
+      CountryCode.SV, CountryCode.TC, CountryCode.TL, CountryCode.UM, CountryCode.US, CountryCode.VG, CountryCode.VI),
 
   /**
    * US Dollar (Next day)
@@ -2017,8 +2025,9 @@ public enum CurrencyCode {
   UYU("Peso Uruguayo", 858, 2, CountryCode.UY),
 
   /**
-   * <a href="https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/dl_currency_iso_amendment_169.pdf">Unidad previsional</a>
-   * [numeric code = 858, minor unit = 2]
+   * <a href="https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/dl_currency_iso_amendment_169.pdf">
+   *   Unidad previsional</a>
+   * [numeric code = 927, minor unit = 4]
    *
    * <p>Used by:</p>
    * <ul>
@@ -2134,7 +2143,8 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#TD TD}: CHAD
    * </ul>
    */
-  XAF("CFA Franc BEAC", 950, 0, CountryCode.CF, CountryCode.CG, CountryCode.CM, CountryCode.GA, CountryCode.GQ, CountryCode.TD),
+  XAF("CFA Franc BEAC", 950, 0, CountryCode.CF, CountryCode.CG, CountryCode.CM, CountryCode.GA, CountryCode.GQ,
+      CountryCode.TD),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Silver">Silver</a>
@@ -2203,7 +2213,8 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#VC VC}: SAINT VINCENT AND THE GRENADINES
    * </ul>
    */
-  XCD("East Caribbean Dollar", 951, 2, CountryCode.AG, CountryCode.AI, CountryCode.DM, CountryCode.GD, CountryCode.KN, CountryCode.LC, CountryCode.MS, CountryCode.VC),
+  XCD("East Caribbean Dollar", 951, 2, CountryCode.AG, CountryCode.AI, CountryCode.DM, CountryCode.GD, CountryCode.KN,
+      CountryCode.LC, CountryCode.MS, CountryCode.VC),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Caribbean_guilder">Caribbean guilder</a>
@@ -2241,7 +2252,8 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#TG TG}: TOGO
    * </ul>
    */
-  XOF("CFA Franc BCEAO", 952, 0, CountryCode.BF, CountryCode.BJ, CountryCode.CI, CountryCode.GW, CountryCode.ML, CountryCode.NE, CountryCode.SN, CountryCode.TG),
+  XOF("CFA Franc BCEAO", 952, 0, CountryCode.BF, CountryCode.BJ, CountryCode.CI, CountryCode.GW, CountryCode.ML,
+      CountryCode.NE, CountryCode.SN, CountryCode.TG),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Palladium">Palladium</a>
@@ -2728,7 +2740,8 @@ public enum CurrencyCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+   * solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*Ruble""</span>);
    * List&lt;CurrencyCode&gt; list = CurrencyCode.findByName(pattern);</pre>
    *

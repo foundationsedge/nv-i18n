@@ -37,8 +37,10 @@ import static java.util.Collections.emptyList;
  * <span style="color: darkgreen;">// Get a LocaleCode instance in various ways.</span>
  * LocaleCode code;
  * code = LocaleCode.{@link #getByCode(String) getByCode}(<span style="color: darkred;">"en-GB"</span>);
- * code = LocaleCode.{@link #getByCode(String, String) getByCode}(<span style="color: darkred;">"es"</span>, <span style="color: darkred;">"ES"</span>);
- * code = LocaleCode.{@link #getByLocale(Locale) getByLocale}(new Locale(<span style="color: darkred;">"pt"</span>, <span style="color: darkred;">"BR"</span>));
+ * code = LocaleCode.{@link #getByCode(String, String) getByCode}(
+ *     <span style="color: darkred;">"es"</span>, <span style="color: darkred;">"ES"</span>);
+ * code = LocaleCode.{@link #getByLocale(Locale) getByLocale}(new Locale(
+ *     <span style="color: darkred;">"pt"</span>, <span style="color: darkred;">"BR"</span>));
  *
  * <span style="color: darkgreen;">// Convert to a Locale instance.</span>
  * Locale locale = LocaleCode.{@link #en}.{@link #toLocale()};

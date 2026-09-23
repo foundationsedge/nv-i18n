@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<!--
+  Test sources aren't public API, so we don't require Javadoc completeness (including a
+  package-info.java) on them the way we do for src/main, and test method names are allowed
+  to use underscores for readability (e.g. embedding a standard identifier like "639-1").
+  Everything else in checkstyle.xml (line length, whitespace, other naming checks, etc.)
+  still applies to tests.
+-->
+<suppressions>
+  <suppress checks="MissingJavadocMethod|JavadocVariable|JavadocPackage|MethodName"
+            files="[\\/]src[\\/]test[\\/]"/>
+
+  <!--
+    The SIX Group amendment PDF URL for CurrencyCode.UYW ("Unidad previsional") is 146 chars
+    on its own, longer than our 120-char limit; there's no word boundary to break it on
+    without corrupting the link, so this one line is suppressed rather than wrapped.
+  -->
+  <suppress checks="LineLength" files="CurrencyCode\.java" lines="2028"/>
+</suppressions>
