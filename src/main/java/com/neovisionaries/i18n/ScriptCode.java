@@ -1596,6 +1596,12 @@ public enum ScriptCode {
 
   /**
    * Constructor.
+   *
+   * @param numeric
+   *         The numeric code of this script code.
+   *
+   * @param name
+   *         The English name of this script code.
    */
   ScriptCode(int numeric, String name) {
     this.numeric = numeric;
@@ -1823,7 +1829,8 @@ public enum ScriptCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+   * solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"Egyptian.*"</span>);
    * List&lt;ScriptCode&gt; list = ScriptCode.findByName(pattern);</pre>
    *

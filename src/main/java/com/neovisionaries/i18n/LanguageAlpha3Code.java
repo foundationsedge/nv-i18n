@@ -4060,7 +4060,8 @@ public enum LanguageAlpha3Code {
   poz("Malayo-Polynesian languages"),
 
   /**
-   * <a href="https://en.wikipedia.org/wiki/Central%E2%80%93Eastern_Malayo-Polynesian_languages">Eastern Malayo-Polynesian languages</a>
+   * <a href="https://en.wikipedia.org/wiki/Central%E2%80%93Eastern_Malayo-Polynesian_languages">
+   *   Eastern Malayo-Polynesian languages</a>
    *
    * @since 1.10
    */
@@ -5831,7 +5832,8 @@ public enum LanguageAlpha3Code {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+   * solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"Old.*"</span>);
    * List&lt;LanguageAlpha3Code&gt; list = LanguageAlpha3Code.findByName(pattern);</pre>
    *

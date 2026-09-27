@@ -22,7 +22,8 @@ import java.util.regex.Pattern;
  * (2-letter lower-case alphabets).
  * </p>
  *
- * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+ * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+ * solid black; padding: 0.5em;">
  * <span style="color: darkgreen;">// List all the language codes.</span>
  * for (LanguageCode code : LanguageCode.values()) {
  *     <span style="color: darkgreen;">// For example, "[ar] Arabic" is printed.</span>
@@ -48,7 +49,8 @@ import java.util.regex.Pattern;
  * //     LanguageCode.su : Sundanese
  * //     LanguageCode.zh : Chinese
  * //</span>
- * List&lt;LanguageCode&gt; list = LanguageCode.{@link #findByName(String) findByName}(<span style="color: darkred;">".*nese"</span>);
+ * List&lt;LanguageCode&gt; list = LanguageCode.{@link #findByName(String) findByName}(
+ *     <span style="color: darkred;">".*nese"</span>);
  * </pre>
  *
  * @author Takahiko Kawasaki
@@ -2621,7 +2623,8 @@ public enum LanguageCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px
+   * solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">".*nese"</span>);
    * List&lt;LanguageCode&gt; list = LanguageCode.findByName(pattern);</pre>
    *
