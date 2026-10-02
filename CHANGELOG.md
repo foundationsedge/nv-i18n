@@ -1,6 +1,32 @@
 CHANGES
 =======
 
+### 1.36.0 (2026-10-02)
+
+Changes
+
+* Updated 3-char language codes
+* Update currency code against ISO published documents
+* Updated locale code to JDK 27 versions
+* Convert more tests to use AssertJ
+* Give more meaningful names to more tests
+* Remove logic for detecting JDK lower than 6, now our minimum is 8
+* Remove reflection in codebase
+* Test to check we defend against many types of input from untrusted sources
+
+Dependencies
+
+* Bump plugin versions to latest
+* Bump GitHub Actions versions to latest
+
+Documentation
+
+* Improve Documentation
+* Correct project url published to maven central
+* Add issue templates
+* Fix URLs
+* Add badge with OSSTRL score
+
 ### 1.35.0 (2026-09-11)
 
 Changes
