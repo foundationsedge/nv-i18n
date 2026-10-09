@@ -2154,11 +2154,11 @@ public enum LanguageCode {
    * @return The language name.
    */
   public String getName() {
-    LanguageAlpha3Code alphaName3 = getAlpha3();
-    if (alphaName3 == null) {
+    LanguageAlpha3Code alpha3 = getAlpha3();
+    if (alpha3 == null) {
       return null;
     }
-    return alphaName3.getName();
+    return alpha3.getName();
   }
 
 
@@ -2653,7 +2653,7 @@ public enum LanguageCode {
       throw new IllegalArgumentException("pattern is null.");
     }
 
-    List<LanguageCode> list = new ArrayList<>();
+    List<LanguageCode> list = new ArrayList<LanguageCode>();
 
     for (LanguageCode entry : values()) {
       String name = entry.getName();
