@@ -46,6 +46,7 @@ jobs:
           name: pitest
           path: target/pit-reports-ci
           workflow_conclusion: success
+          allow_forks: true
       - name: update pull request
         # The updatePR maven goal is used here with an explicit version. This allows us to upload without checking out
         # the code, but does mean the version here must be maintained. An alternative would be to checkout the code and use
