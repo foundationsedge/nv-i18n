@@ -2154,11 +2154,11 @@ public enum LanguageCode {
    * @return The language name.
    */
   public String getName() {
-    LanguageAlpha3Code alpha3 = getAlpha3();
-    if (alpha3 == null) {
+    LanguageAlpha3Code alphaName3 = getAlpha3();
+    if (alphaName3 == null) {
       return null;
     }
-    return alpha3.getName();
+    return alphaName3.getName();
   }
 
 
