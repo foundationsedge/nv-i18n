@@ -2757,7 +2757,7 @@ public enum CurrencyCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*Ruble""</span>);
    * List&lt;CurrencyCode&gt; list = CurrencyCode.findByName(pattern);</pre>
    *

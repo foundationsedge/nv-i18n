@@ -21,7 +21,7 @@ import static java.util.Collections.emptyList;
  * format do not match either 'xx' or 'xx-XX' were excluded.
  * </p>
  *
- * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black;">
+ * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black;">
  * <span style="color: darkgreen;">// List all the locale codes.</span>
  * for (LocaleCode code : LocaleCode.values()) {
  *     String language = code.{@link #getLanguage()}.{@link LanguageCode#getName() getName()};
@@ -3212,7 +3212,7 @@ public enum LocaleCode {
    *
    * <table border="1" style="border-collapse: collapse; padding: 5px;">
    * <caption>Table of Locale codes</caption>
-   * <tr style="background: #FF8C00;">
+   * <tr style="background: orange;">
    *   <th>LocaleCode</th>
    *   <th>Locale</th>
    * </tr>
