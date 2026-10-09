@@ -19,18 +19,17 @@ on:
       - completed
 
 permissions:
-  # actions:read is required to download the artefact uploaded by a different workflow run
-  # (Receive); checks/issues/pull-requests write are required by the updatePR goal.
-  # See https://docs.arcmutate.com/docs/github/github-maven-plugin.html
-  actions: read
-  checks: write
-  issues: write
-  pull-requests: write
+  contents: read
 
 jobs:
   pitest-update-pr:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      checks: write
+      issues: write
+      pull-requests: write
     steps:
       - name: debug
         uses: hmarr/debug-action@cd1afbd7852b7ad7b1b7a9a1b03efebd3b0a1820 # v3.0.0
@@ -47,6 +46,7 @@ jobs:
           path: target/pit-reports-ci
           workflow_conclusion: success
           allow_forks: true
+          run_id: ${{ github.event.workflow_run.id }}
       - name: update pull request
         # The updatePR maven goal is used here with an explicit version. This allows us to upload without checking out
         # the code, but does mean the version here must be maintained. An alternative would be to checkout the code and use
