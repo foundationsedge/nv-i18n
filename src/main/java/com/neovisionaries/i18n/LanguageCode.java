@@ -439,7 +439,7 @@ public enum LanguageCode {
 
     @Override
     public Locale toLocale() {
-      return Locale.GERMAN;
+      return java.util.Locale.GERMAN;
     }
   },
 
