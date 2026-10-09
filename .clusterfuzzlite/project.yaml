@@ -1,0 +1,10 @@
+homepage: "https://github.com/foundationsedge/nv-i18n"
+disabled: false
+language: jvm
+primary_contact: "i18n@foundationsedge.co.uk"
+fuzzing_engines:
+  - libfuzzer
+main_repo: "https://github.com/foundationsedge/nv-i18n"
+sanitizers:
+  - address
+  - undefined
