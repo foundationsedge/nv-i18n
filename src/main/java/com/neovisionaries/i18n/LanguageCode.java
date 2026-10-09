@@ -2653,7 +2653,7 @@ public enum LanguageCode {
       throw new IllegalArgumentException("pattern is null.");
     }
 
-    List<LanguageCode> list = new ArrayList<>();
+    List<LanguageCode> list = new ArrayList<LanguageCode>();
 
     for (LanguageCode entry : values()) {
       String name = entry.getName();
