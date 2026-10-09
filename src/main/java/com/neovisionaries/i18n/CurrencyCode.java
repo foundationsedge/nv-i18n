@@ -2363,9 +2363,7 @@ public enum CurrencyCode {
   @Deprecated ZWL("Zimbabwe Dollar", 932, 2, CountryCode.ZW),
   ;
 
-
   private static final Map<Integer, CurrencyCode> numericMap = new HashMap<>();
-
 
   static {
     for (CurrencyCode cc : values()) {
@@ -2373,15 +2371,13 @@ public enum CurrencyCode {
     }
   }
 
-
-  private final String name;
+  private final String myName;
   private final int numeric;
   private final int minorUnit;
   private final List<CountryCode> countryList;
 
-
   CurrencyCode(String name, int numeric, int minorUnit, CountryCode... countries) {
-    this.name = name;
+    this.myName = name;
     this.numeric = numeric;
     this.minorUnit = minorUnit;
     this.countryList = Collections.unmodifiableList(Arrays.asList(countries));
@@ -2394,7 +2390,7 @@ public enum CurrencyCode {
    * @return The currency name.
    */
   public String getName() {
-    return name;
+    return myName;
   }
 
 
