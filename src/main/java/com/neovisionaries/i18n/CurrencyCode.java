@@ -2440,6 +2440,15 @@ public enum CurrencyCode {
     return getCountries();
   }
 
+  /**
+   * @param a
+   * @param b
+   * @return
+   */
+  public double division(int a, int b) {
+    return a / b;
+  }
+
 
   /**
    * Get the list of countries using this currency.
