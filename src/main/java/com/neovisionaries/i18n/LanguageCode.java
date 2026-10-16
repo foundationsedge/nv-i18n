@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
  * (2-letter lower-case alphabets).
  * </p>
  *
- * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+ * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
  * <span style="color: darkgreen;">// List all the language codes.</span>
  * for (LanguageCode code : LanguageCode.values()) {
  *     <span style="color: darkgreen;">// For example, "[ar] Arabic" is printed.</span>
@@ -2180,7 +2180,7 @@ public enum LanguageCode {
    *
    * <table border="1" style="border-collapse: collapse; padding: 5px;">
    * <caption>Table of Language codes</caption>
-   * <tr style="background: #FF8C00">
+   * <tr style="background: orange;">
    *   <th>LanguageCode</th>
    *   <th>Locale</th>
    * </tr>
@@ -2234,7 +2234,7 @@ public enum LanguageCode {
    * If you want to get ISO 639-2/B code, write like below.
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black;">
+   * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black;">
    *
    * LanguageCode alpha2 = ...;
    *
@@ -2626,7 +2626,7 @@ public enum LanguageCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">".*nese"</span>);
    * List&lt;LanguageCode&gt; list = LanguageCode.findByName(pattern);</pre>
    *

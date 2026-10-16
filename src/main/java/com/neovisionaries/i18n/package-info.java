@@ -13,7 +13,7 @@
  * <p>
  * For Maven:
  * </p>
- * <pre style="margin: 1em; padding: 0.5em; border: solid 1px black;">
+ * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; margin: 1em; padding: 0.5em; border: solid 1px black;">
  * <span class="tag">&lt;dependency&gt;
  *     &lt;groupId&gt;</span>uk.co.foundationsedge<span class="tag">&lt;/groupId&gt;
  *     &lt;artifactId&gt;</span>nv-i18n<span class="tag">&lt;/artifactId&gt;

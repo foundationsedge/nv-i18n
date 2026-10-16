@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
  * {@link #getByCode(int)}).
  * </p>
  *
- * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+ * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
  * <span style="color: darkgreen;">// List all the country codes.</span>
  * for (CountryCode code : CountryCode.values()) {
  *     <span style="color: darkgreen;">// For example, "[US] United States" is printed.</span>
@@ -2616,7 +2616,7 @@ public enum CountryCode {
    *
    * <table border="1" style="border-collapse: collapse; padding: 5px">
    * <caption>Table of Country codes</caption>
-   * <tr style="background: #FF8C00;">
+   * <tr style="background: orange;">
    *   <th>CountryCode</th>
    *   <th>Locale</th>
    * </tr>
@@ -3059,7 +3059,7 @@ public enum CountryCode {
    * For example, the list obtained by the code snippet below:
    * </p>
    *
-   * <pre style="background-color: #EEEEEE; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
+   * <pre style="white-space: pre-wrap; overflow-wrap: anywhere; background-color: #F5F5F5; margin-left: 2em; margin-right: 2em; border: 1px solid black; padding: 0.5em;">
    * Pattern pattern = Pattern.compile(<span style="color: darkred;">"".*United.*""</span>);
    * List&lt;CountryCode&gt; list = CountryCode.findByName(pattern);</pre>
    *
