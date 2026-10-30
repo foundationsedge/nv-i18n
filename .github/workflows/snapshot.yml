@@ -1,0 +1,84 @@
+name: Snapshot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    environment: release-staging
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad #v6.1.0
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+          gpg-private-key: ${{ secrets.OSSRH_GPG_PRIVATE_KEY }}
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+
+      - name: Check the pom version is a snapshot
+        id: version
+        run: |
+          set -euo pipefail
+          version=$(./mvnw -B -q help:evaluate -Dexpression=project.version -DforceStdout | tail -n 1)
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+-SNAPSHOT$ ]]; then
+            echo "::error::pom version '$version' is not X.Y.Z-SNAPSHOT"
+            exit 1
+          fi
+          if [[ "$GITHUB_REF" != "refs/heads/master" ]]; then
+            echo "::error::Snapshots must be built from master, not $GITHUB_REF"
+            exit 1
+          fi
+          base="${version%-SNAPSHOT}"
+          previous=$(git ls-remote --tags --refs "https://github.com/$GH_REPO.git" | sed 's#.*refs/tags/##' \
+            | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | { cat; echo "$base"; } | sort -Vu | grep -x -B1 "$base" | head -n 1)
+          if [[ "$previous" == "$base" ]]; then previous=""; fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "previous_version=$previous" >> "$GITHUB_OUTPUT"
+
+      - name: Build and sign
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: ./mvnw -B verify -PsonatypeDeploy
+
+      - name: Replace the GitHub pre-release
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          PREVIOUS_VERSION: ${{ steps.version.outputs.previous_version }}
+        run: |
+          set -euo pipefail
+          mkdir snapshot-assets
+          cp "target/nv-i18n-$VERSION"*.jar "target/nv-i18n-$VERSION.pom" "target/nv-i18n-$VERSION"*.asc snapshot-assets/
+          for ext in json xml; do
+            cp "target/bom.$ext" "snapshot-assets/nv-i18n-$VERSION-cyclonedx.$ext"
+            cp "target/bom.$ext.asc" "snapshot-assets/nv-i18n-$VERSION-cyclonedx.$ext.asc"
+          done
+          notes=(--generate-notes)
+          if [[ -n "$PREVIOUS_VERSION" ]]; then notes+=(--notes-start-tag "$PREVIOUS_VERSION"); fi
+          if gh release view "$VERSION" > /dev/null 2>&1; then
+            gh release delete "$VERSION" --cleanup-tag --yes
+          fi
+          gh release create "$VERSION" --prerelease --target "$GITHUB_SHA" --title "$VERSION" "${notes[@]}" \
+            snapshot-assets/*
