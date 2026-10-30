@@ -181,27 +181,42 @@ i.e. if they expire.
 
 ## Publishing Releases
 
-We tried an automated process, and it led to broken version numbers, so are currently doing a manual process
-while investigating how to automate and sign them.
+Publishing a release is limited to Maintainers. Releases are made by the `Release` GitHub Actions workflow, which signs
+the artefacts and publishes them to [Maven Central](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n).
+The release version is taken from the `-SNAPSHOT` version in `pom.xml` on `master`, so it is never typed in by hand.
+Before publishing, the workflow checks that the version is `X.Y.Z-SNAPSHOT`, that the tag does not exist and that the
+version is not already on Maven Central.
 
-Publishing a release is limited to Maintainers
+The workflow uses two GitHub environments:
+* `release-staging` is used to build and sign, including dry runs and SNAPSHOT pre-releases.
+* `release` holds the GitHub App key and is used for everything that changes state.
 
-If the current version is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSHOT` and we have no breaking changes, then:
-* Create a new tag of `1.1000.0-SNAPSHOT`
-* Generate a release selecting `Pre-release` label and using `generate release notes`
-* Once we are happy it works
-  * In the `pom.xml` change:
-    * The `1.1000.0-SNAPSHOT` version  to `1.1000.0`.
-    * The `HEAD` tag to `1.1000.0`
-  * Optional: run `mvn install` to locally publish the `jar` and use it in a project to confirm it works
-  * Submit this as a PR
-  * Confirm it has released on [maven central](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
-  * Create a new tag of `1.1000.0` and release as a full release
-  * Change:
-    * The pom version to `1.1001.0-SNAPSHOT` and tag back to `HEAD`
-    * Update [release notes](https://github.com/foundationsedge/nv-i18n/blob/master/CHANGELOG.md) to include changes
-    in `1.1000.0`
-    * Submit a PR
+Both are restricted to `master`.
+
+To make a release:
+* Update [CHANGELOG.md](https://github.com/foundationsedge/nv-i18n/blob/master/CHANGELOG.md) for the release and merge it
+* Run the `Release` workflow on `master` with `dry_run` left ticked. A dry run needs no approval and changes nothing.
+  It does every other step, including a signed build, the Central bundle and SLSA provenance, and keeps the results as
+  workflow artefacts. The job summary shows the next development version and the `pom.xml` changes.
+* Run it again with `dry_run` unticked. Optionally set `next_version` to override
+  the default of the next patch version
+* The workflow pushes a signed tag, uploads the bundle built in the first step to Maven Central, creates a GitHub
+  Release with the signed artefacts and an SBOM, and attaches SLSA provenance
+* Merge the pull request it opens to set the next `-SNAPSHOT` version
+
+The GitHub Release notes are generated from merged pull requests, grouped by label as set in
+[`.github/release.yml`](https://github.com/foundationsedge/nv-i18n/blob/master/.github/release.yml).
+`CHANGELOG.md` is still maintained by hand.
+
+Run the `Snapshot` workflow to publish the current `-SNAPSHOT` as a GitHub pre-release. It replaces any earlier
+pre-release of the same version and is never published to Maven Central.
+
+If the upload to Central fails, nothing has been published. Delete the pushed tag and re-run the workflow.
+
+To verify a release, check the `.asc` signatures with `gpg --verify` and the provenance with
+[slsa-verifier](https://github.com/slsa-framework/slsa-verifier) using the `multiple.intoto.jsonl` asset:
+`slsa-verifier verify-artifact --provenance-path multiple.intoto.jsonl --source-uri github.com/foundationsedge/nv-i18n
+--source-tag <version> <artefact>`.
 
 See the [feature request template](https://github.com/foundationsedge/nv-i18n/blob/master/.github/ISSUE_TEMPLATE/feature_request.md), which is used automatically when opening a new issue and defines the structure of the information to include.
 <!--

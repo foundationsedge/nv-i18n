@@ -1,0 +1,18 @@
+changelog:
+  categories:
+    - title: Dependencies
+      labels:
+        - dependencies
+    - title: Documentation
+      labels:
+        - documentation
+    - title: Build and CI
+      labels:
+        - CI
+        - release
+    - title: Testing
+      labels:
+        - qa
+    - title: Other changes
+      labels:
+        - "*"
