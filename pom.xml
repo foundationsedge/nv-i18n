@@ -39,6 +39,8 @@
         <arcmutate.git.version>2.4.0</arcmutate.git.version>
         <central-publishing-maven-plugin.version>0.12.0</central-publishing-maven-plugin.version>
         <findsecbugs-plugin.version>1.14.0</findsecbugs-plugin.version>
+        <cyclonedx-maven-plugin.version>2.9.3</cyclonedx-maven-plugin.version>
+        <cyclonedx-maven-plugin-schema.version>1.6</cyclonedx-maven-plugin-schema.version>
         <maven-bundle-plugin.version>6.2.0</maven-bundle-plugin.version>
         <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
         <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
@@ -187,7 +189,7 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
+                    <releaseProfiles>sonatypeDeploy</releaseProfiles>
                     <goals>deploy</goals>
                 </configuration>
             </plugin>
@@ -355,6 +357,29 @@
                     </execution>
                 </executions>
             </plugin>
+
+          <plugin>
+            <groupId>org.cyclonedx</groupId>
+            <artifactId>cyclonedx-maven-plugin</artifactId>
+            <version>${cyclonedx-maven-plugin.version}</version>
+            <configuration>
+              <projectType>library</projectType>
+              <schemaVersion>${cyclonedx-maven-plugin-schema.version}</schemaVersion>
+              <includeBomSerialNumber>true</includeBomSerialNumber>
+              <includeCompileScope>true</includeCompileScope>
+              <includeProvidedScope>true</includeProvidedScope>
+              <includeRuntimeScope>true</includeRuntimeScope>
+              <includeSystemScope>true</includeSystemScope>
+              <includeTestScope>false</includeTestScope>
+              <includeLicenseText>false</includeLicenseText>
+              <outputReactorProjects>true</outputReactorProjects>
+              <outputFormat>all</outputFormat>
+              <outputName>bom</outputName>
+              <!-- usually target, if not redefined in pom.xml -->
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <verbose>false</verbose>
+            </configuration>
+          </plugin>
         </plugins>
     </build>
 </project>
