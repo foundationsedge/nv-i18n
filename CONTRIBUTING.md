@@ -182,26 +182,34 @@ i.e. if they expire.
 ## Publishing Releases
 
 We tried an automated process, and it led to broken version numbers, so are currently doing a manual process
-while investigating how to automate and sign them.
+while investigating how to automate them.
 
 Publishing a release is limited to Maintainers
 
 If the current version is `1.999.0` and our `pom.xml` refers to `1.1000.0-SNAPSHOT` and we have no breaking changes, then:
-* Create a new tag of `1.1000.0-SNAPSHOT`
-* Generate a release selecting `Pre-release` label and using `generate release notes`
+* Run the `Publish to Maven Central` workflow on `master`. It publishes to Maven Central and creates a
+  `1.1000.0-SNAPSHOT` tag and `Pre-release` on GitHub, with the signed artefacts attached
 * Once we are happy it works
   * In the `pom.xml` change:
     * The `1.1000.0-SNAPSHOT` version  to `1.1000.0`.
     * The `HEAD` tag to `1.1000.0`
   * Optional: run `mvn install` to locally publish the `jar` and use it in a project to confirm it works
   * Submit this as a PR
+  * Run the `Publish to Maven Central` workflow on `master`, which creates a `1.1000.0` tag and full release on GitHub
   * Confirm it has released on [maven central](https://central.sonatype.com/artifact/uk.co.foundationsedge/nv-i18n)
-  * Create a new tag of `1.1000.0` and release as a full release
   * Change:
     * The pom version to `1.1001.0-SNAPSHOT` and tag back to `HEAD`
     * Update [release notes](https://github.com/foundationsedge/nv-i18n/blob/master/CHANGELOG.md) to include changes
     in `1.1000.0`
     * Submit a PR
+
+The workflow takes the version from `pom.xml`, refuses to run if the tag already exists, and signs every `jar` and the
+`pom` with GPG. Releases on this repository are immutable, so the signed artefacts are attached at the point the GitHub
+Release is created and cannot be added afterwards. A `-SNAPSHOT` version can therefore only be published once.
+
+To verify a release, download an artefact and its `.asc` signature from the GitHub Release (or from Maven Central) and
+run `gpg --verify nv-i18n-<version>.jar.asc nv-i18n-<version>.jar`, with the maintainers' public key imported from a
+public keyserver.
 
 See the [feature request template](https://github.com/foundationsedge/nv-i18n/blob/master/.github/ISSUE_TEMPLATE/feature_request.md), which is used automatically when opening a new issue and defines the structure of the information to include.
 <!--
