@@ -110,7 +110,7 @@ public enum CountryCode {
   UNDEFINED("Undefined", null, -1, Assignment.USER_ASSIGNED) {
     @Override
     public Locale toLocale() {
-      return LocaleCode.undefined.toLocale();
+      return Locale.ROOT;
     }
   },
 
