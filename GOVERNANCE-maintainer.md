@@ -14,6 +14,7 @@ This governance explains how the project is run.
 - [Security Response Team](#security-response-team)
 - [Voting](#voting)
 - [Modifications](#modifying-this-charter)
+- [Notes](#notes)
 
 Note: This template refers to 2/3 support for changes as a baseline.
 So this just gives an outline on the kind of thing we will/won't do.
@@ -85,13 +86,13 @@ To become a Maintainer you need to demonstrate the following:
 * understanding of the project's code base and coding and documentation style.
 
 A new Maintainer must be proposed by an existing maintainer by sending a message to the
-[developer mailing list](https://nv-i18n.discourse.group/). A simple majority vote of existing Maintainers
+[developer mailing list]~~(nv-i18n.discourse.group/).~~ A simple majority vote of existing Maintainers
 approves the application. Maintainer nominations will be evaluated without prejudice
 to employer or demographics and should consider the organisational diversity of the
 maintainer group.
 
 Maintainers who are selected will be granted the necessary GitHub rights,
-and invited to the [private maintainer mailing list](https://nv-i18n-maintainers.discourse.group/)
+and invited to the [private maintainer mailing list]~~(nv-i18n-maintainers.discourse.group/)~~
 
 ### Removing a Maintainer
 
@@ -146,8 +147,8 @@ holes and breaches according to the [security policy](https://github.com/foundat
 
 While most business in nv-i18n is conducted by "[lazy consensus](https://community.apache.org/committers/lazyConsensus.html)",
 periodically the Maintainers may need to vote on specific actions or changes.
-A vote can be taken on the [developer mailing list](https://nv-i18n.discourse.group/) or
-the [private maintainer mailing list](https://nv-i18n-maintainers.discourse.group/) for security or conduct matters.
+A vote can be taken on the [developer mailing list]~~(nv-i18n.discourse.group/)~~ or
+the [private maintainer mailing list]~~(nv-i18n-maintainers.discourse.group/)~~ for security or conduct matters.
 Votes may also be taken at the developer meeting. Any Maintainer may
 demand a vote be taken.
 
@@ -170,3 +171,9 @@ These transitions are a sign of project growth, not governance failure.
 
 Changes to this Governance and its supporting documents may be approved by
 a 2/3 vote of the Maintainers.
+
+## Notes
+
+We set up some Discourse mailing lists for development and maintainers. Unfortunately they did not see
+much use and were moved into read-only mode before we could send a heartbeat email to keep them alive.
+We need to investigate some other mailing list provider, but it is a low priority.
