@@ -2703,10 +2703,6 @@ public enum CurrencyCode {
   public static List<CurrencyCode> getByCountry(CountryCode country) {
     List<CurrencyCode> list = new ArrayList<>();
 
-    if (country == null) {
-      return Collections.emptyList();
-    }
-
     for (CurrencyCode currency : values()) {
       for (CountryCode cc : currency.countryList) {
         if (cc == country) {
