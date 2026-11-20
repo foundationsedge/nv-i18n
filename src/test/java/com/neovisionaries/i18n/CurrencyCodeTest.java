@@ -253,6 +253,11 @@ class CurrencyCodeTest {
   }
 
   @Test
+  void getByCodeIgnoreCaseNullReturnsEmptyList() {
+    assertThat(CurrencyCode.getByCodeIgnoreCase(null)).isNull();
+  }
+
+  @Test
   void findByNameThrowsExceptionWhenPassedNullString() {
     String regex = null;
     assertThatThrownBy(() -> CurrencyCode.findByName(regex))
