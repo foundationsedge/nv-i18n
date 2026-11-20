@@ -267,6 +267,14 @@ class LocaleCodeTest {
   }
 
   @Test
+  public void toLocaleLanguageAndCountryCodeWhichDoesNotHaveAnEnumKeepsLanguageAndCountry() {
+    Locale actual = LocaleCode.fr_CD.toLocale();
+
+    assertThat(actual.getLanguage()).isEqualTo("fr");
+    assertThat(actual.getCountry()).isEqualTo("CD");
+  }
+
+  @Test
   public void toLocaleUndefined() {
     assertThat(LocaleCode.undefined.toLocale())
       .isEqualTo(Locale.ROOT);
@@ -351,6 +359,18 @@ class LocaleCodeTest {
   @SuppressWarnings("deprecation")
   public void getByLocaleWithEmptyLocaleReturnsUndefined() {
     assertThat(getByLocale(new Locale("", ""))).isSameAs(LocaleCode.undefined);
+  }
+
+
+  @Test
+  public void getByLocaleWithNullReturnsNull() {
+    assertThat(getByLocale(null)).isNull();
+  }
+
+
+  @Test
+  public void getByLocaleWithCountryOnlyReturnsNull() {
+    assertThat(getByLocale(new Locale.Builder().setRegion("US").build())).isNull();
   }
 
 
@@ -459,6 +479,12 @@ class LocaleCodeTest {
   @Test
   public void getByCodeWithJaInUpperCaseIgnoringCaseReturnsJa() {
     assertThat(getByCode("JA", false)).isSameAs(LocaleCode.ja);
+  }
+
+
+  @Test
+  public void getByCodeWithWithdrawnIwAliasAndUnderscoreReturnsNull() {
+    assertThat(getByCode("iw_IL")).isNull();
   }
 
 

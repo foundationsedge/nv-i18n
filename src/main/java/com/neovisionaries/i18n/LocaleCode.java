@@ -3609,10 +3609,6 @@ public enum LocaleCode {
   public static List<LocaleCode> getByLanguage(LanguageCode language) {
     List<LocaleCode> list = new ArrayList<>();
 
-    if (language == null) {
-      return emptyList();
-    }
-
     for (LocaleCode code : values()) {
       if (code.getLanguage() == language) {
         list.add(code);

@@ -79,6 +79,11 @@ class ScriptCodeTest {
   }
 
   @Test
+  void getByCodeWithNegativeNumericCodeReturnsNull() {
+    assertThat(getByCode(-1)).isNull();
+  }
+
+  @Test
   void getByCodeWithValidNumericCodeReturnsMatchingScriptCode() {
     assertThat(getByCode(413)).isSameAs(ScriptCode.Jpan);
   }
@@ -121,6 +126,11 @@ class ScriptCodeTest {
     assertThat(getByCode("Undefined")).isSameAs(ScriptCode.Undefined);
     assertThat(getByCode("UNDEFINED")).isNull();
     assertThat(getByCodeIgnoreCase("UNDEFINED")).isSameAs(ScriptCode.Undefined);
+  }
+
+  @Test
+  void getByLocaleWithNullReturnsNull() {
+    assertThat(getByLocale(null)).isNull();
   }
 
   @Test

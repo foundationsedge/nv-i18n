@@ -5779,7 +5779,7 @@ public enum LanguageAlpha3Code {
 
 
   private static String canonicalize(String code, boolean caseSensitive) {
-    if (code == null || code.isEmpty()) {
+    if (code == null) {
       return "";
     }
 
