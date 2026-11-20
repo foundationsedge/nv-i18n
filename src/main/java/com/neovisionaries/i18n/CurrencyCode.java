@@ -659,7 +659,6 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#BL BL}: SAINT BARTH&Eacute;LEMY
    * <li>{@link CountryCode#CY CY}: CYPRUS
    * <li>{@link CountryCode#DE DE}: GERMANY
-   * <li>{@link CountryCode#EA EA}: CUETA, MEILILLA
    * <li>{@link CountryCode#EE EE}: ESTONIA
    * <li>{@link CountryCode#ES ES}: SPAIN
    * <li>{@link CountryCode#EU EU}: EUROPEAN UNION
@@ -669,7 +668,6 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#GP GP}: GUADELOUPE
    * <li>{@link CountryCode#GR GR}: GREECE
    * <li>{@link CountryCode#HR HR}: CROATIA
-   * <li>{@link CountryCode#IC IC}: CANARY ISLANDS
    * <li>{@link CountryCode#IE IE}: IRELAND
    * <li>{@link CountryCode#IT IT}: ITALY
    * <li>{@link CountryCode#LT LT}: LITHUANIA
@@ -689,11 +687,10 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#SM SM}: SAN MARINO
    * <li>{@link CountryCode#TF TF}: FRENCH SOUTHERN TERRITORIES
    * <li>{@link CountryCode#VA VA}: HOLY SEE (VATICAN CITY STATE)
-   * <li>{@link CountryCode#XK XK}: KOSOVO, REPUBLIC OF
    * <li>{@link CountryCode#YT YT}: MAYOTTE
    * </ul>
    */
-  EUR("Euro", 978, 2, CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG, CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EA, CountryCode.EE, CountryCode.ES, CountryCode.EU, CountryCode.FI, CountryCode.FR, CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IC, CountryCode.IE, CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV, CountryCode.MC, CountryCode.ME, CountryCode.MF, CountryCode.MQ, CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT, CountryCode.RE, CountryCode.SI, CountryCode.SK, CountryCode.SM, CountryCode.TF, CountryCode.VA, CountryCode.XK, CountryCode.YT),
+  EUR("Euro", 978, 2, CountryCode.AD, CountryCode.AT, CountryCode.AX, CountryCode.BE, CountryCode.BG, CountryCode.BL, CountryCode.CY, CountryCode.DE, CountryCode.EE, CountryCode.ES, CountryCode.EU, CountryCode.FI, CountryCode.FR, CountryCode.GF, CountryCode.GP, CountryCode.GR, CountryCode.HR, CountryCode.IE, CountryCode.IT, CountryCode.LT, CountryCode.LU, CountryCode.LV, CountryCode.MC, CountryCode.ME, CountryCode.MF, CountryCode.MQ, CountryCode.MT, CountryCode.NL, CountryCode.PM, CountryCode.PT, CountryCode.RE, CountryCode.SI, CountryCode.SK, CountryCode.SM, CountryCode.TF, CountryCode.VA, CountryCode.YT),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Fijian_dollar">Fiji Dollar</a>
@@ -729,7 +726,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#JE JE}: JERSEY
    * </ul>
    */
-  GBP("Pound Sterling", 826, 2, CountryCode.GB, CountryCode.GG, CountryCode.IM, CountryCode.JE, CountryCode.SH),
+  GBP("Pound Sterling", 826, 2, CountryCode.GB, CountryCode.GG, CountryCode.IM, CountryCode.JE),
 
   /**
    * <a href="https://en.wikipedia.org/wiki/Georgian_lari">Lari</a>
@@ -1937,8 +1934,8 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#EC EC}: ECUADOR
    * <li>{@link CountryCode#FM FM}: MICRONESIA, FEDERATED STATES OF
    * <li>{@link CountryCode#GU GU}: GUAM
+   * <li>{@link CountryCode#HT HT}: HAITI
    * <li>{@link CountryCode#IO IO}: BRITISH INDIAN OCEAN TERRITORY
-   * <li>{@link CountryCode#LR LR}: LIBERIA
    * <li>{@link CountryCode#MH MH}: MARSHALL ISLANDS
    * <li>{@link CountryCode#MP MP}: NORTHERN MARIANA ISLANDS
    * <li>{@link CountryCode#PA PA}: PANAMA
@@ -1953,7 +1950,7 @@ public enum CurrencyCode {
    * <li>{@link CountryCode#VI VI}: VIRGIN ISLANDS (US)
    * </ul>
    */
-  USD("US Dollar", 840, 2, CountryCode.AS, CountryCode.BQ, CountryCode.EC, CountryCode.FM, CountryCode.GU, CountryCode.IO, CountryCode.LR, CountryCode.MH, CountryCode.MP, CountryCode.PA, CountryCode.PR, CountryCode.PW, CountryCode.SV, CountryCode.TC, CountryCode.TL, CountryCode.UM, CountryCode.US, CountryCode.VG, CountryCode.VI),
+  USD("US Dollar", 840, 2, CountryCode.AS, CountryCode.BQ, CountryCode.EC, CountryCode.FM, CountryCode.GU, CountryCode.HT, CountryCode.IO, CountryCode.MH, CountryCode.MP, CountryCode.PA, CountryCode.PR, CountryCode.PW, CountryCode.SV, CountryCode.TC, CountryCode.TL, CountryCode.UM, CountryCode.US, CountryCode.VG, CountryCode.VI),
 
   /**
    * US Dollar (Next day)
