@@ -127,6 +127,30 @@ class LanguageCodeTest {
 
 
   @Test
+  public void getByCodeWithWithdrawnIwAliasInUpperCaseReturnsNull() {
+    assertThat(getByCode("IW", true)).isNull();
+  }
+
+
+  @Test
+  public void getByCodeWithWithdrawnIwAliasInUpperCaseIgnoringCaseReturnsHe() {
+    assertThat(getByCode("IW", false)).isSameAs(LanguageCode.he);
+  }
+
+
+  @Test
+  public void canonicalizeReturnsNullWhenPassedNull() {
+    assertThat(LanguageCode.canonicalize(null, true)).isNull();
+  }
+
+
+  @Test
+  public void canonicalizeReturnsNullWhenPassedEmptyString() {
+    assertThat(LanguageCode.canonicalize("", true)).isNull();
+  }
+
+
+  @Test
   public void toLocaleWithDeReturnsLocaleGerman() {
     assertThat(LanguageCode.de.toLocale()).isSameAs(Locale.GERMAN);
   }
