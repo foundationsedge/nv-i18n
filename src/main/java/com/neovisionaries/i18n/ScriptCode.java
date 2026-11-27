@@ -37,7 +37,7 @@ public enum ScriptCode {
   Undefined(-1, "Undefined") {
     @Override
     public Locale toLocale() {
-      return LocaleCode.undefined.toLocale();
+      return Locale.ROOT;
     }
   },
 
